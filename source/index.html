@@ -269,13 +269,13 @@
         </h3>
         <p class="preview-card__tags tags">#бургер #бар #футбол #концерт #крафт</p>
         <ul class="preview-card__transports transports">
-          <li class="transports__item" data-tooltip="Авиаперелет">Авиаперелет</li>
+          <li class="transports__item tooltip" data-tooltip="Авиаперелет">Авиаперелет</li>
 
-          <li class="transports__item" data-tooltip="Автотранспорт">Автотранспорт</li>
+          <li class="transports__item tooltip" data-tooltip="Автотранспорт">Автотранспорт</li>
 
-          <li class="transports__item transports__item--disabled" data-tooltip="Велосипед">Велосипед</li>
+          <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед">Велосипед</li>
 
-          <li class="transports__item" data-tooltip="Пешком">Пешком</li>
+          <li class="transports__item tooltip" data-tooltip="Пешком">Пешком</li>
         </ul>
       </li>
     </ul>
@@ -302,6 +302,33 @@
       </li>
     </ol>
     <a href="" class="services__show-tariffs button button--rounded button--transparent">Показать тарифы для бизнеса</a>
+    <div class="services__modal modal">
+      <div class="modal__content">
+        <h3 class="modal__title">Бизнес-тарифы</h3>
+        <ol class="services__business tariffs">
+          <li class="tariffs__item">
+            <p class="tariffs__feature-name">Реклама у блоггера</p>
+            <p class="tariffs__feature-value">300 000 руб./пост</p>
+          </li>
+
+          <li class="tariffs__item">
+            <p class="tariffs__feature-name">Накрутка подписчиков</p>
+            <p class="tariffs__feature-value">от 1 руб./шт.</p>
+          </li>
+
+          <li class="tariffs__item">
+            <p class="tariffs__feature-name">Лайки от ботов</p>
+            <p class="tariffs__feature-value">от 20 коп./лайк</p>
+          </li>
+
+          <li class="tariffs__item">
+            <p class="tariffs__feature-name">Ваш продакт-плейсмент</p>
+            <p class="tariffs__feature-value">Индивидуально</p>
+          </li>
+        </ol>
+      </div>
+      <button class="modal__close">Закрыть окно</button>
+    </>
   </section>
 
   <section class="fast-registration">
