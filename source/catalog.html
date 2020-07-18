@@ -5,426 +5,384 @@
   <title>HTML Academy: Погнали</title>
 </head>
 <body class="page__body">
-<header class="page-header">
 
-  <a class="page-header__logo logo" href="index.html">
+<header class="header">
+  <a class="header__logo logo" href="index.html">
     <img src="https://via.placeholder.com/100x15" alt="Логотип Погнали">
   </a>
-
-  <nav class="main-nav">
-
-    <button class="main-nav__toggle">
+  <nav class="menu">
+    <button class="menu__toggle" type="button">
       <span class="sr-only">Открыть меню</span>
     </button>
-
-    <div class="main-nav__wrapper">
-
-      <ul class="main-nav__list site-list">
+    <div class="menu__wrapper">
+      <ul class="menu__list site-list">
         <li class="site-list__item">
-          <a href="" class="site-list__link">О сервисе</a>
+          <a class="site-list__link" href="">О сервисе</a>
         </li>
         <li class="site-list__item">
-          <a href="form.html" class="site-list__link">Направления</a>
+          <a class="site-list__link" href="form.html">Направления</a>
         </li>
         <li class="site-list__item">
-          <span class="site-list__link">Попутчики</span>
+          <a class="site-list__link">Попутчики</a>
         </li>
       </ul>
-
-      <a class="main-nav__auth-button button button--round" href="">Авторизация</a>
-
-      <ul class="main-nav__contacts contacts-list contacts-list--light">
-        <li class="contacts-list__item">
-          <a href="tel:+88005558628" class="contacts-list__link contacts-list__link--tel">8 800 555-86-28</a>
+      <a class="menu__auth button button--rounded" href="">Авторизация</a>
+      <ul class="menu__contacts contacts contacts--light">
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--tel" href="tel:+88005558628">8 800 555-86-28</a>
         </li>
-        <li class="contacts-list__item">
-          <a href="mailto:mail@htmlacademy.ru" class="contacts-list__link contacts-list__link--email">mail@htmlacademy.ru</a>
+
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </li>
       </ul>
+      <ul class="menu__socials socials socials--white">
+        <li class="socials__item">
+          <a href="" class="socials__link socials__link--facebook">
+            <span class="sr-only">Facebook</span>
+          </a>
+        </li>
 
-      <ul class="main-nav__socials socials-list socials-list--white">
-        <li class="socials-list__item">
-          <a href="" class="socials-list__link socials-list__link--facebook">Facebook</a>
+        <li class="socials__item">
+          <a href="" class="socials__link socials__link--vk">
+            <span class="sr-only">VK</span>
+          </a>
         </li>
-        <li class="socials-list__item">
-          <a href="" class="socials-list__link socials-list__link--vk">VK</a>
-        </li>
-        <li class="socials-list__item">
-          <a href="" class="socials-list__link socials-list__link--instagram">Instagram</a>
+
+        <li class="socials__item">
+          <a href="" class="socials__link socials__link--instagram">
+            <span class="sr-only">Instagram</span>
+          </a>
         </li>
       </ul>
-
     </div>
   </nav>
-
-  <div class="page-header__inner page-inner">
+  <div class="header__inner page-inner">
     <h1 class="page-inner__title">Попутчики</h1>
   </div>
-
 </header>
 
 <main>
   <section class="users">
-    <ul class="users__users-list">
-
-      <li class="user-card">
-
-        <img class="user-card__avatar" src="https://via.placeholder.com/70" alt="Аватар Таня Фирсова">
-        <h2 class="user-card__name user-card__name--offline">
-          <a href="" class="user-card__name-link">
-            Таня Фирсова
-          </a>
+    <ul class="users__list">
+      <li class="users__list-item card">
+        <img class="card__avatar" src="https://via.placeholder.com/70" alt="Аватар Таня Фирсова">
+        <h2 class="card__name card__name--offline">
+          <a class="card__name-link" href="">Таня Фирсова</a>
         </h2>
-
-        <button class="user-card__like-button like-button like-button--checked" aria-checked="true">
+        <button class="card__like like-button like-button--checked" type="button">
           <span class="sr-only">Поставить лайк</span>
         </button>
-
-        <p class="user-card__likes-count">1,5 м</p>
-
-        <p class="user-card__tags">
-          #ЗОЖ #ПП #Фитнес #пляж
-          #авокадо #смузи
-        </p>
-
-        <div class="user-card__countries">
-          <p class="user-card__countries-text">Хочет посетить:</p>
-
-          <ul class="user-card__flags-list flags-list">
-
-            <li class="flags-list__item flag">
-              <!-- Есть идея использовать тоже data-аттрибут и ::after для показывания названия страны флага -->
-              <img class="flags-list__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Шри-Ланка" alt="Флаг Шри-Ланки">
+        <p class="card__likes-count">1,5 м</p>
+        <p class="card__tags tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+        <div class="card__flags-wrapper">
+          <p class="card__flags-text">Хочет посетить:</p>
+          <ul class="card__flags flags">
+            <li class="flags__item flag">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/26x18"
+                data-tooltip="Шри-Ланка" alt="Флаг Шри-Ланки"
+              >
               <span class="flag__name">Шри-Ланка</span>
             </li>
-            <li class="flags-list__item flag">
-              <img class="flags-list__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Тайланд" alt="Флаг Тайланда">
+
+            <li class="flags__item flag">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/26x18"
+                data-tooltip="Тайланд"
+                alt="Флаг Тайланда"
+              >
               <span class="flag__name">Тайланд</span>
             </li>
-            <li class="flags-list__item flag">
-              <img class="flags-list__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Сейшеллы" alt="Флаг Сейшеллов">
+
+            <li class="flags__item flag">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/26x18"
+                data-tooltip="Сейшеллы"
+                alt="Флаг Сейшеллов"
+              >
               <span class="flag__name">Сейшеллы</span>
             </li>
           </ul>
-
         </div>
+        <div class="card__transports-wrapper">
+          <p class="card__transports-text">Транспорт:</p>
+          <ul class="card__transports transports">
+            <li class="transports__item tooltip" data-tooltip="Авиаперелет">Авиаперелет</li>
 
-        <div class="user-card__transports">
-          <p class="user-card__transports-text">Транспорт:</p>
-          <ul class="user-card__transport-list transport-list">
-            <li class="transport-list__item tooltip" data-tooltip="Авиаперелет">
-              Авиаперелет
-            </li>
-            <li class="transport-list__item transport-list__item--disabled tooltip" data-tooltip="Автотранспорт">
-              Автотранспорт
-            </li>
-            <li class="transport-list__item transport-list__item--disabled tooltip" data-tooltip="Велосипед">
-              Велосипед
-            </li>
-            <li class="transport-list__item transport-list__item--disabled tooltip" data-tooltip="Пешком">
-              Пешком
-            </li>
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Автотранспорт">Автотранспорт</li>
 
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед">Велосипед</li>
+
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Пешком">Пешком</li>
           </ul>
         </div>
-
-        <div class="user-card__level-wrapper">
-
-          <span class="user-card__level">Левел:</span>
-
-          <div class="user-card__progress progress">
-            <span class="preview-user-card__value">100</span>
-
-            <div class="preview-user-card__circle">
+        <div class="card__level-wrapper">
+          <span class="card__level-text">Левел:</span>
+          <div class="card__progress progress">
+            <span class="progress__value">100</span>
+            <div class="progress__circle">
               <svg height="100" width="100">
-                <circle cx="50" cy="50" r="40" stroke="orange" stroke-width="5" fill="transparent"
-                        stroke-dasharray="100" stroke-dashoffset="100"
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  stroke="orange"
+                  stroke-width="5"
+                  fill="transparent"
+                  stroke-dasharray="100"
+                  stroke-dashoffset="100"
                 />
               </svg>
             </div>
           </div>
-
         </div>
-
-        <a href="" class="user-card__invite-button button">Позвать</a>
-
+        <a href="" class="card__invite button button--rounded">Позвать</a>
       </li>
 
-      <li class="user-card">
-
-        <img class="user-card__avatar" src="https://via.placeholder.com/70" alt="Аватар Петя Демин">
-        <h2 class="user-card__name user-card__name--online">
-          <a href="" class="user-card__name-link">
-            Петя Демин
-          </a>
+      <li class="card">
+        <img class="card__avatar" src="https://via.placeholder.com/70" alt="Аватар Петя Демин">
+        <h2 class="card__name card__name--online">
+          <a href="" class="card__name-link">Петя Демин</a>
         </h2>
-
-        <button class="user-card__like-button" aria-checked="false">
+        <button class="card__like like-button" type="button">
           <span class="sr-only">Поставить лайк</span>
         </button>
-
-        <p class="user-card__likes-count">1500</p>
-
-        <p class="user-card__tags">
-          #бургер #бар #футбол
-          #концерт #крафт
-        </p>
-
-        <div class="user-card__countries">
-          <p class="user-card__countries-text">Хочет посетить:</p>
-
-          <ul class="user-card__flags-list flags-list">
-
-            <li class="flags-list__item flag">
-              <!-- Есть идея использовать тоже data-аттрибут и ::after для показывания названия страны флага -->
-              <img class="flags-list__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Бельгия" alt="Флаг Бельгии">
+        <p class="card__likes-count">1500</p>
+        <p class="card__tags tags">#бургер #бар #футбол #концерт #крафт</p>
+        <div class="card__flags-wrapper">
+          <p class="card__flags-text">Хочет посетить:</p>
+          <ul class="card__flags flags">
+            <li class="flags__item flag">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/26x18"
+                data-tooltip="Бельгия"
+                alt="Флаг Бельгии"
+              >
               <span class="flag__name">Бельгия</span>
-
             </li>
-            <li class="flags-list__item flag">
-              <img class="flags-list__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Чехия" alt="Флаг Чехии">
+
+            <li class="flags__item flag">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/26x18"
+                data-tooltip="Чехия"
+                alt="Флаг Чехии"
+              >
               <span class="flag__name">Чехия</span>
             </li>
           </ul>
-
         </div>
+        <div class="card__transports-wrapper">
+          <p class="card__transports-text">Транспорт:</p>
+          <ul class="card__transports transports">
+            <li class="transports__item tooltip" data-tooltip="Авиаперелет">Авиаперелет</li>
 
-        <div class="user-card__transports">
-          <p class="user-card__transports-text">Транспорт:</p>
-          <ul class="user-card__transport-list transport-list">
-            <li class="transport-list__item tooltip" data-tooltip="Авиаперелет">
-              Авиаперелет
-            </li>
-            <li class="transport-list__item tooltip" data-tooltip="Автотранспорт">
-              Автотранспорт
-            </li>
-            <li class="transport-list__item transport-list__item--disabled tooltip" data-tooltip="Велосипед">
-              Велосипед
-            </li>
-            <li class="transport-list__item tooltip" data-tooltip="Пешком">
-              Пешком
-            </li>
+            <li class="transports__item tooltip" data-tooltip="Автотранспорт">Автотранспорт</li>
 
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед">Велосипед</li>
+
+            <li class="transports__item tooltip" data-tooltip="Пешком">Пешком</li>
           </ul>
         </div>
-
-        <div class="user-card__level-wrapper">
-
-          <span class="user-card__level">Левел:</span>
-
-          <div class="user-card__progress progress">
-            <span class="preview-user-card__value">80</span>
-
-            <div class="preview-user-card__circle">
+        <div class="card__level-wrapper">
+          <span class="card__level-text">Левел:</span>
+          <div class="card__progress progress">
+            <span class="progress__value">80</span>
+            <div class="progress__circle">
               <svg height="100" width="100">
-                <circle cx="50" cy="50" r="40" stroke="orange" stroke-width="5" fill="transparent"
-                        stroke-dasharray="100" stroke-dashoffset="100"
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  stroke="orange"
+                  stroke-width="5"
+                  fill="transparent"
+                  stroke-dasharray="100"
+                  stroke-dashoffset="100"
                 />
               </svg>
             </div>
           </div>
-
         </div>
-
-        <a href="" class="user-card__invite-button button">Позвать</a>
-
+        <a href="" class="card__invite button button--rounded">Позвать</a>
       </li>
 
-      <li class="user-card">
-
-        <img class="user-card__avatar" src="https://via.placeholder.com/70" alt="Аватар Марк Смолов">
-        <h2 class="user-card__name user-card__name--offline">
-          <a href="" class="user-card__name-link">
-            Марк Смолов
-          </a>
+      <li class="card">
+        <img class="card__avatar" src="https://via.placeholder.com/70" alt="Аватар Марк Смолов">
+        <h2 class="card__name card__name--offline">
+          <a href="" class="card__name-link">Марк Смолов</a>
         </h2>
-
-        <button class="user-card__like-button" aria-checked="false">
+        <button class="card__like like-button" type="button">
           <span class="sr-only">Поставить лайк</span>
         </button>
-
-        <p class="user-card__likes-count">170</p>
-
-        <p class="user-card__tags">
-          #рэп #тату #хайпбист
-          #кроссовки #суприм
-        </p>
-
-        <div class="user-card__countries">
-          <p class="user-card__countries-text">Хочет посетить:</p>
-
-          <ul class="user-card__flags-list flags-list">
-
-            <li class="flags-list__item flag">
-              <!-- Есть идея использовать тоже data-аттрибут и ::after для показывания названия страны флага -->
-              <img class="flags-list__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="США" alt="Флаг США">
+        <p class="card__likes-count">170</p>
+        <p class="card__tags tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+        <div class="card__flags-wrapper">
+          <p class="card__flags-text">Хочет посетить:</p>
+          <ul class="card__flags flags">
+            <li class="flags__item flag">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/26x18"
+                data-tooltip="США"
+                alt="Флаг США"
+              >
               <span class="flag__name">США</span>
-
             </li>
-            <li class="flags-list__item flag">
-              <img class="flags-list__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Австралия" alt="Флаг Австралии">
+
+            <li class="flags__item flag">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/26x18"
+                data-tooltip="Австралия"
+                alt="Флаг Австралии"
+              >
               <span class="flag__name">Австралия</span>
             </li>
-            <li class="flags-list__item flag">
-              <img class="flags-list__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Доминика" alt="Флаг Доминики">
+
+            <li class="flags__item flag">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/26x18"
+                data-tooltip="Доминика"
+                alt="Флаг Доминики"
+              >
               <span class="flag__name">Доминика</span>
             </li>
           </ul>
-
         </div>
+        <div class="card__transports-wrapper">
+          <p class="card__transports-text">Транспорт:</p>
+          <ul class="card__transports transports">
+            <li class="transports__item tooltip" data-tooltip="Авиаперелет">Авиаперелет</li>
 
-        <div class="user-card__transports">
-          <p class="user-card__transports-text">Транспорт:</p>
-          <ul class="user-card__transport-list transport-list">
-            <li class="transport-list__item tooltip" data-tooltip="Авиаперелет">
-              Авиаперелет
-            </li>
-            <li class="transport-list__item transport-list__item--disabled tooltip" data-tooltip="Автотранспорт">
-              Автотранспорт
-            </li>
-            <li class="transport-list__item tooltip" data-tooltip="Велосипед">
-              Велосипед
-            </li>
-            <li class="transport-list__item transport-list__item--disabled tooltip" data-tooltip="Пешком">
-              Пешком
-            </li>
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Автотранспорт">Автотранспорт</li>
 
+            <li class="transports__item tooltip" data-tooltip="Велосипед">Велосипед</li>
+
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Пешком">Пешком</li>
           </ul>
         </div>
-
-        <div class="user-card__level-wrapper">
-
-          <span class="user-card__level">Левел:</span>
-
-          <div class="user-card__progress progress">
-            <span class="preview-user-card__value">25</span>
-
-            <div class="preview-user-card__circle">
+        <div class="card__level-wrapper">
+          <span class="card__level-text">Левел:</span>
+          <div class="card__progress progress">
+            <span class="progress__value">25</span>
+            <div class="progress__circle">
               <svg height="100" width="100">
-                <circle cx="50" cy="50" r="40" stroke="orange" stroke-width="5" fill="transparent"
-                        stroke-dasharray="100" stroke-dashoffset="100"
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  stroke="orange"
+                  stroke-width="5"
+                  fill="transparent"
+                  stroke-dasharray="100"
+                  stroke-dashoffset="100"
                 />
               </svg>
             </div>
           </div>
-
         </div>
-
-        <a href="" class="user-card__invite-button button">Позвать</a>
-
+        <a href="" class="card__invite button button--rounded">Позвать</a>
       </li>
 
-      <li class="user-card">
-
-        <img class="user-card__avatar" src="https://via.placeholder.com/70" alt="Аватар Лариса Роговая">
-        <h2 class="user-card__name user-card__name--online">
-          <a href="" class="user-card__name-link">
-            Лариса Роговая
-          </a>
+      <li class="card">
+        <img class="card__avatar" src="https://via.placeholder.com/70" alt="Аватар Лариса Роговая">
+        <h2 class="card__name card__name--online">
+          <a href="" class="card__name-link">Лариса Роговая</a>
         </h2>
-
-        <button class="user-card__like-button" aria-checked="false">
+        <button class="card__like like-button" type="button">
           <span class="sr-only">Поставить лайк</span>
         </button>
-
-        <p class="user-card__likes-count">23</p>
-
-        <p class="user-card__tags">
-          #образование #карьера
-          #учеба #линкедин
-        </p>
-
-        <div class="user-card__countries">
-          <p class="user-card__countries-text">Хочет посетить:</p>
-
-          <ul class="user-card__flags-list flags-list">
-
-            <li class="flags-list__item flag">
-              <!-- Есть идея использовать тоже data-аттрибут и ::after для показывания названия страны флага -->
-              <img class="flags-list__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Великобритания" alt="Флаг Великобритании">
+        <p class="card__likes-count">23</p>
+        <p class="card__tags tags">#образование #карьера #учеба #линкедин</p>
+        <div class="card__countries-wrapper">
+          <p class="card__countries-text">Хочет посетить:</p>
+          <ul class="card__flags flags">
+            <li class="flags__item flag">
+              <img class="flags__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Великобритания" alt="Флаг Великобритании">
               <span class="flag__name">Великобритания</span>
-
             </li>
-            <li class="flags-list__item flag">
-              <img class="flags-list__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Германия" alt="Флаг Германии">
+
+            <li class="flags__item flag">
+              <img class="flags__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Германия" alt="Флаг Германии">
               <span class="flag__name">Германия</span>
             </li>
-
-          </ul>
-
-        </div>
-
-        <div class="user-card__transports">
-          <p class="user-card__transports-text">Транспорт:</p>
-          <ul class="user-card__transport-list transport-list">
-            <li class="transport-list__item tooltip" data-tooltip="Авиаперелет">
-              Авиаперелет
-            </li>
-            <li class="transport-list__item tooltip" data-tooltip="Автотранспорт">
-              Автотранспорт
-            </li>
-            <li class="transport-list__item transport-list__item--disabled tooltip" data-tooltip="Велосипед">
-              Велосипед
-            </li>
-            <li class="transport-list__item transport-list__item--disabled tooltip" data-tooltip="Пешком">
-              Пешком
-            </li>
-
           </ul>
         </div>
+        <div class="card__transports-wrapper">
+          <p class="card__transports-text">Транспорт:</p>
+          <ul class="card__transports transports">
+            <li class="transports__item tooltip" data-tooltip="Авиаперелет">Авиаперелет</li>
 
-        <div class="user-card__level-wrapper">
+            <li class="transports__item tooltip" data-tooltip="Автотранспорт">Автотранспорт</li>
 
-          <span class="user-card__level">Левел:</span>
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед">Велосипед</li>
 
-          <div class="user-card__progress progress">
-            <span class="preview-user-card__value">50</span>
-
-            <div class="preview-user-card__circle">
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Пешком">Пешком</li>
+          </ul>
+        </div>
+        <div class="card__level-wrapper">
+          <span class="card__level-text">Левел:</span>
+          <div class="card__progress progress">
+            <span class="progress__value">50</span>
+            <div class="progress__circle">
               <svg height="100" width="100">
-                <circle cx="50" cy="50" r="40" stroke="orange" stroke-width="5" fill="transparent"
-                        stroke-dasharray="100" stroke-dashoffset="100"
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  stroke="orange"
+                  stroke-width="5"
+                  fill="transparent"
+                  stroke-dasharray="100"
+                  stroke-dashoffset="100"
                 />
               </svg>
             </div>
           </div>
-
         </div>
-
-        <a href="" class="user-card__invite-button button">Позвать</a>
-
+        <a href="" class="card__invite button button--rounded">Позвать</a>
       </li>
-
     </ul>
-
-    <a href="" class="users__show-more-button button button--borderless">Показать еще</a>
+    <a href="" class="users__show-more button button--transparent button--borderless">Показать еще</a>
   </section>
 </main>
 
-<footer class="page-footer">
-  <a href="index.html" class="page-footer__logo logo">
+<footer class="footer">
+  <a class="footer__logo logo" href="index.html">
     <img src="https://via.placeholder.com/100x15" alt="Логотип Погнали">
   </a>
+  <ul class="footer__socials socials socials--yellow">
+    <li class="socials__item">
+      <a href="" class="socials__link socials__link--facebook">
+        <span class="sr-only">Facebook</span>
+      </a>
+    </li>
 
-  <ul class="page-footer__socials-list socials-list socials-list--yellow">
-    <li class="socials-list__item">
-      <a href="" class="socials-list__link socials-list__link--facebook">Facebook</a>
+    <li class="socials__item">
+      <a href="" class="socials__link socials__link--vk">
+        <span class="sr-only">VK</span>
+      </a>
     </li>
-    <li class="socials-list__item">
-      <a href="" class="socials-list__link socials-list__link--vk">VK</a>
-    </li>
-    <li class="socials-list__item">
-      <a href="" class="socials-list__link socials-list__link--instagram">Instagram</a>
+
+    <li class="socials__item">
+      <a href="" class="socials__link socials__link--instagram">
+        <span class="sr-only">Instagram</span>
+      </a>
     </li>
   </ul>
-
-  <div class="page-footer__copyright">
+  <div class="footer__copyright">
     <p class="copyright__text">Разработано</p>
-    <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo">
+    <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
       <img src="https://via.placeholder.com/27x35" alt="HTML Academy">
     </a>
   </div>
 </footer>
-
 </body>
 </html>
