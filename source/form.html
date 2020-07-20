@@ -83,49 +83,55 @@
         </div>
       </div>
       <img class="profile__avatar" src="https://via.placeholder.com/100" alt="Аватар Петя Демин">
-      <input class="profile__photo-change button button--rounded" type="file">
-
-      <label class="profile__label" for="tags-field">Тэги
-        <textarea class="profile__textarea" name="tags" id="tags-field" cols="30" rows="10">#бургер #бар #футбол #концерт#крафт</textarea>
-      </label>
-
-      <fieldset class="profile__fieldset">
-        <ul class="profile__transports transports checkboxes checkboxes--transports">
+      <a class="profile__photo-change button button--rounded" type="file">Сменить фото</a>
+      <div class="profile__fieldset fieldset">
+        <label class="profile__label fieldset__title">Тэги</label>
+        <textarea class="profile__textarea fieldset__content" name="tags" cols="30" rows="10">#бургер #бар #футбол #концерт#крафт</textarea>
+      </div>
+      <fieldset class="profile__fieldset fieldset">
+        <legend class="fieldset__title">Транспорт</legend>
+        <ul class="profile__transports fieldset___content transports checkboxes checkboxes--transports">
           <li class="checkboxes__item">
-            <label for="air-field" class="check">
-              <input class="check__input" type="checkbox" name="air-eater" id="air-field" checked>
-              <span class="check__box check__box--transport check__box--air tooltip" data-tooltip="Авиаперелет"></span>
-              Авиаперелет
-            </label>
+            <label
+              class="checkboxes__label checkboxes__label--air tooltip"
+              for="air-field"
+              data-tooltip="Авиаперелет"
+              aria-label="Авиаперелет"
+            ></label>
+            <input class="checkboxes__control" type="checkbox" name="air" id="air-field" checked>
           </li>
 
           <li class="checkboxes__item">
-            <label for="bus-field" class="check">
-              <input class="check__input" type="checkbox" name="bus" id="bus-field">
-              <span class="check__box check__box--transport check__box--bus tooltip"
-                    data-tooltip="Автотранспорт"></span>
-              Автотранспорт
-            </label>
+            <label
+              class="checkboxes__label checkboxes__label--bus tooltip"
+              for="bus-field"
+              data-tooltip="Автотранспорт"
+              aria-label="Автотранспорт"
+            ></label>
+            <input class="check__control" type="checkbox" name="bus" id="bus-field">
           </li>
 
           <li class="checkboxes__item">
-            <label for="bicycle-field" class="check">
-              <input class="check__input" type="checkbox" name="bicycle" id="bicycle-field">
-              <span class="check__box check__box--transport check__box--bicycle tooltip"
-                    data-tooltip="Велосипед"></span>
-              Велосипед
-            </label>
+            <label
+              class="checkboxes__label checkboxes__label--bicycle tooltip"
+              for="bicycle-field"
+              data-tooltip="Велосипед"
+              aria-label="Велосипед"
+            ></label>
+            <input class="checkboxes__control" type="checkbox" name="bicycle" id="bicycle-field">
           </li>
+
           <li class="checkboxes__item">
-            <label for="walking-field" class="check">
-              <input class="check__input" type="checkbox" name="walking-vegan" id="walking-field">
-              <span class="check__box check__box--transport check__box--walking tooltip" data-tooltip="Пешком"></span>
-              Пешком
-            </label>
+            <label
+              class="checkboxes__label checkboxes__label--walking tooltip"
+              for="walking-field"
+              data-tooltip="Пешком"
+              aria-label="Пешком"
+            ></label>
+            <input class="checkboxes__control" type="checkbox" name="walking" id="walking-field">
           </li>
         </ul>
       </fieldset>
-
     </form>
   </section>
 
