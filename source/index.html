@@ -154,7 +154,7 @@
         <span class="direction__users">5326</span>
       </li>
     </ul>
-    <button class="directions__show-all button button--primary">Показать все</button>
+    <button class="directions__show-all button button--primary" type="button">Показать все</button>
   </section>
 
   <section class="companions">
@@ -179,6 +179,7 @@
                 fill="transparent"
                 stroke-dasharray="100"
                 stroke-dashoffset="100"
+                stroke-linecap="round"
               />
             </svg>
           </div>
@@ -215,15 +216,27 @@
         <h3 class="preview-card__name preview-card__name--offline">
           <a class="preview-card__name-link" href="">Таня Фирсова</a>
         </h3>
-        <p class="preview-card__tags tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+        <ul class="preview-card__tags tags">
+          <li class="tags__tag">#ЗОЖ</li>
+
+          <li class="tags__tag">#ПП</li>
+
+          <li class="tags__tag">#Фитнес</li>
+
+          <li class="tags__tag">#пляж</li>
+
+          <li class="tags__tag">#авокадо</li>
+
+          <li class="tags__tag">#смузи</li>
+        </ul>
         <ul class="preview-card__transports transports">
-          <li class="transports__item tooltip" data-tooltip="Авиаперелет">Авиаперелет</li>
+          <li class="transports__item tooltip" data-tooltip="Авиаперелет" aria-label="Авиаперелет"></li>
 
-          <li class="transports__item transports__item--disabled tooltip" data-tooltip="Автотранспорт">Автотранспорт</li>
+          <li class="transports__item transports__item--disabled tooltip" data-tooltip="Автотранспорт" aria-label="Автотранспорт"></li>
 
-          <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед">Велосипед</li>
+          <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед" aria-label="Велосипед"></li>
 
-          <li class="transports__item transports__item--disabled tooltip" data-tooltip="Пешком">Пешком</li>
+          <li class="transports__item transports__item--disabled tooltip" data-tooltip="Пешком" aria-label="Пешком"></li>
         </ul>
       </li>
 
@@ -242,6 +255,7 @@
                 fill="transparent"
                 stroke-dasharray="100"
                 stroke-dashoffset="100"
+                stroke-linecap="round"
               />
             </svg>
           </div>
@@ -267,15 +281,25 @@
         <h3 class="preview-card__name preview-card__name--online">
           <a href="" class="preview-card__name-link">Петя Демин</a>
         </h3>
-        <p class="preview-card__tags tags">#бургер #бар #футбол #концерт #крафт</p>
+        <ul class="preview-card__tags tags">
+          <li class="tags__tag">#бургер</li>
+
+          <li class="tags__tag">#бар</li>
+
+          <li class="tags__tag">#футбол</li>
+
+          <li class="tags__tag">#концерт</li>
+
+          <li class="tags__tag">#крафт</li>
+        </ul>
         <ul class="preview-card__transports transports">
-          <li class="transports__item" data-tooltip="Авиаперелет">Авиаперелет</li>
+          <li class="transports__item tooltip" data-tooltip="Авиаперелет" aria-label="Авиаперелет"></li>
 
-          <li class="transports__item" data-tooltip="Автотранспорт">Автотранспорт</li>
+          <li class="transports__item tooltip" data-tooltip="Автотранспорт" aria-label="Автотранспорт"></li>
 
-          <li class="transports__item transports__item--disabled" data-tooltip="Велосипед">Велосипед</li>
+          <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед" aria-label="Велосипед"></li>
 
-          <li class="transports__item" data-tooltip="Пешком">Пешком</li>
+          <li class="transports__item tooltip" data-tooltip="Пешком" aria-label="Пешком"></li>
         </ul>
       </li>
     </ul>
@@ -287,21 +311,46 @@
     <a href="form.html" class="services__title title">Добавьте свой профиль</a>
     <ol class="services__tariffs tariffs">
       <li class="tariffs__item">
-        <p class="tariffs__feature-name">Базовое размещение</p>
-        <p class="tariffs__feature-value">Бесплатно</p>
+        <span class="tariffs__name">Базовое размещение</span>
+        <span class="tariffs__value">Бесплатно</span>
       </li>
 
       <li class="tariffs__item">
-        <p class="tariffs__feature-name">Вывод на первых позициях</p>
-        <p class="tariffs__feature-value">99 руб./мес</p>
+        <span class="tariffs__name">Вывод на первых позициях</span>
+        <span class="tariffs__value">99 руб./мес</span>
       </li>
 
       <li class="tariffs__item">
-        <p class="tariffs__feature-name">Кастомный цвет карточки</p>
-        <p class="tariffs__feature-value">59 руб./мес</p>
+        <span class="tariffs__name">Кастомный цвет карточки</span>
+        <span class="tariffs__value">59 руб./мес</span>
       </li>
     </ol>
     <a href="" class="services__show-tariffs button button--rounded button--transparent">Показать тарифы для бизнеса</a>
+    <div class="services__business modal">
+      <h3 class="services__title">Бизнес-тарифы</h3>
+      <ol class="services__tariffs tariffs">
+        <li class="tariffs__item">
+          <span class="tariffs__name">Реклама у блоггера</span>
+          <span class="tariffs__value">300 000 руб./пост</span>
+        </li>
+
+        <li class="tariffs__item">
+          <span class="tariffs__name">Накрутка подписчиков</span>
+          <span class="tariffs__value">от 1 руб./шт.</span>
+        </li>
+
+        <li class="tariffs__item">
+          <span class="tariffs__name">Лайки от ботов</span>
+          <span class="tariffs__value">от 20 коп./лайк</span>
+        </li>
+
+        <li class="tariffs__item">
+          <span class="tariffs__name">Ваш продакт-плейсмент</span>
+          <span class="tariffs__value">Индивидуально</span>
+        </li>
+      </ol>
+      <button class="tariffs__close" type="button">Закрыть окно</button>
+    </div>
   </section>
 
   <section class="fast-registration">
@@ -370,6 +419,5 @@
     </a>
   </div>
 </footer>
-
 </body>
 </html>

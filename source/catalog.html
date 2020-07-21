@@ -57,12 +57,385 @@
       </ul>
     </div>
   </nav>
-  <div class="header__inner page-inner">
-    <h1 class="page-inner__title">Попутчики</h1>
+  <div class="header__body">
+    <h1 class="header__body-title">Попутчики</h1>
   </div>
 </header>
 
 <main>
+  <section class="countries-filter expander">
+    <h2 class="countries-filter__title expander__title">Фильтрация по странам</h2>
+    <button class="expander__toggle" type="button" aria-label="Открыть фильтр по странам"></button>
+    <div class="expander__content countries-filter__content">
+      <ul class="countries-filter__countries">
+        <li class="countries-filter__countries-item">
+          <a class="countries-filter__countries-link countries-filter__countries-link--highlighted" href="">Европа</a>
+        </li>
+
+        <li class="countries-filter__countries-item">
+          <a class="countries-filter__countries-link" href="">Азия</a>
+        </li>
+
+        <li class="countries-filter__countries-item">
+          <a class="countries-filter__countries-link" href="">Америка</a>
+        </li>
+
+        <li class="countries-filter__countries-item">
+          <a class="countries-filter__countries-link" href="">Острова</a>
+        </li>
+      </ul>
+      <div class="countries-filter__table table">
+        <ul class="table__list">
+          <li class="table__item">
+            <button class="table__letter" type="button">А</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Б</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">В</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Г</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Д</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Е</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">З</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">И</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">К</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Л</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">М</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Н</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">О</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">П</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Р</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">С</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Т</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">У</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Ф</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Х</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Ч</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Ш</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Э</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Ю</button>
+          </li>
+
+          <li class="table__item">
+            <button class="table__letter" type="button">Я</button>
+          </li>
+        </ul>
+        <ul class="table__content">
+          <li class="table__content-item">
+            <a class="table__content-link" href="">Австралия</a>
+          </li>
+
+          <li class="table__content-item">
+            <a class="table__content-link" href="">Австрия</a>
+          </li>
+
+          <li class="table__content-item">
+            <a class="table__content-link" href="">Азербайджан</a>
+          </li>
+
+          <li class="table__content-item">
+            <a class="table__content-link" href="">Албания</a>
+          </li>
+
+          <li class="table__content-item">
+            <a class="table__content-link" href="">Алжир</a>
+          </li>
+
+          <li class="table__content-item">
+            <a class="table__content-link" href="">Ангола</a>
+          </li>
+
+          <li class="table__content-item">
+            <a class="table__content-link" href="">Андорра</a>
+          </li>
+
+          <li class="table__content-item">
+            <a class="table__content-link" href="">Антигуа и Барбуда</a>
+          </li>
+
+          <li class="table__content-item">
+            <a class="table__content-link" href="">Аргентина</a>
+          </li>
+
+          <li class="table__content-item">
+            <a class="table__content-link" href="">Армения</a>
+          </li>
+
+          <li class="table__content-item">
+            <a class="table__content-link" href="">Афганистан</a>
+          </li>
+        </ul>
+        <button class="countries-filter__hide" type="button">Свернуть</button>
+      </div>
+      <button
+        class="countries-filter__close button button--rounded button--borderless button--transparent"
+        type="button"
+      >
+        Свернуть
+      </button>
+    </div>
+  </section>
+
+  <section class="users-filter">
+    <h2 class="sr-only">Фильтр попутчиков</h2>
+    <p class="users-filter__title">Подберите идеального попутчика</p>
+    <form class="users-filter__form" action="https://echo.htmlacademy.ru" method="GET">
+      <ul class="users-filter__criteries criteries">
+        <li class="criteries__item expander">
+          <div class="expander__header">
+            <h3 class="expander__title">Хобби</h3>
+            <button class="expander__toggle" type="button">
+              <span class="sr-only">Открыть</span>
+            </button>
+          </div>
+          <div class="expander__content">
+            <ul class="checkboxes">
+              <li class="checkboxes__item check">
+                <label class="check__label" for="gym-field">Спортзал</label>
+                <input class="check__control" type="checkbox" name="gym" id="gym-field">
+              </li>
+
+              <li class="checkboxes__item check">
+                <label class="check__label" for="hookah-field">Кальян</label>
+                <input class="check__control" type="checkbox" name="hookah" id="hookah-field">
+              </li>
+
+              <li class="checkboxes__item check">
+                <label class="check__label" for="hookah-field">Диван</label>
+                <input class="check__control" type="checkbox" name="sofa" id="sofa-field">
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="criteries__item expander">
+          <div class="expander__header">
+            <h3 class="expander__title">Музыка</h3>
+            <button class="expander__toggle" type="button">
+              <span class="sr-only">Открыть</span>
+            </button>
+          </div>
+          <div class="expander__content">
+            <ul class="checkboxes">
+              <li class="checkboxes__item check">
+                <label class="check__label" for="heavy-rock-field">Тяжелый рок</label>
+                <input class="check__control" type="checkbox" name="heavy-rock" id="heavy-rock-field">
+              </li>
+
+              <li class="checkboxes__item check">
+                <label class="check__label" for="russian-rap-field">Русский рэп</label>
+                <input class="check__control" type="checkbox" name="russian-rap" id="russian-rap-field">
+              </li>
+
+              <li class="checkboxes__item check">
+                <label class="check__label" for="eurodance-field">Евроденс</label>
+                <input class="check__control" type="checkbox" name="eurodance" id="eurodance-field">
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="criteries__item expander">
+          <div class="expander__header">
+            <h3 class="expander__title">Еда</h3>
+            <button class="expander__toggle" type="button">
+              <span class="sr-only">Открыть</span>
+            </button>
+          </div>
+          <div class="expander__content">
+            <ul class="checkboxes">
+              <li class="checkboxes__item check">
+                <label class="check__label" for="meat-eater-field">Мясоед</label>
+                <input class="check__control" type="checkbox" name="meat-eater" id="meat-eater-field">
+              </li>
+
+              <li class="checkboxes__item check">
+                <label class="check__label" for="healthy-diet-field">Сидит на ПП</label>
+                <input class="check__control" type="checkbox" name="healthy-diet" id="healthy-diet-field">
+              </li>
+
+              <li class="checkboxes__item check">
+                <label class="check__label" for="raw-vegan-field">Веган-сыроед</label>
+                <input class="check__control" type="checkbox" name="raw-vegan" id="raw-vegan-field">
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="criteries__item expander">
+          <div class="expander__header">
+            <h3 class="expander__title">Транспорт</h3>
+            <button class="expander__toggle" type="button">
+              <span class="sr-only">Открыть</span>
+            </button>
+          </div>
+          <div class="expander__content">
+            <ul class="checkboxes checkboxes-transports">
+              <li class="checkboxes-transports__item">
+                <label
+                  class="checkboxes-transports__label checkboxes-transports__label--air tooltip"
+                  for="air-field"
+                  data-tooltip="Авиаперелет"
+                  aria-label="Авиаперелет"
+                ></label>
+                <input class="checkboxes-transports__control" type="checkbox" name="air" id="air-field" checked>
+              </li>
+
+              <li class="checkboxes-transports__item">
+                <label
+                  class="checkboxes-transports__label checkboxes-transports__label--bus tooltip"
+                  for="bus-field"
+                  data-tooltip="Автотранспорт"
+                  aria-label="Автотранспорт"
+                ></label>
+                <input class="check__control" type="checkbox" name="bus" id="bus-field">
+              </li>
+
+              <li class="checkboxes-transports__item">
+                <label
+                  class="checkboxes-transports__label checkboxes-transports__label--bicycle tooltip"
+                  for="bicycle-field"
+                  data-tooltip="Велосипед"
+                  aria-label="Велосипед"
+                ></label>
+                <input class="checkboxes-transports__control" type="checkbox" name="bicycle" id="bicycle-field">
+              </li>
+
+              <li class="checkboxes-transports__item">
+                <label
+                  class="checkboxes-transports__label checkboxes-transports__label--walking tooltip"
+                  for="walking-field"
+                  data-tooltip="Пешком"
+                  aria-label="Пешком"
+                ></label>
+                <input class="checkboxes-transports__control" type="checkbox" name="walking" id="walking-field">
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="criteries__item expander">
+          <div class="expander__header">
+            <h3 class="expander__title">Левел</h3>
+            <button class="expander__toggle" type="button">
+              <span class="sr-only">Открыть</span>
+            </button>
+          </div>
+          <div class="expander__content">
+            <div class="filter-range">
+              <div class="filter-range__inputs">
+                <label class="filter-range__label" for="min-price-field" aria-label="от"></label>
+                <input
+                  class="filter-range__input"
+                  type="number"
+                  name="min-price"
+                  id="min-price-field"
+                  value="30"
+                  min="0"
+                  max="100"
+                >
+                <label class="filter-range__label" for="max-price-field" aria-label="до"></label>
+                <input
+                  class="filter-range__input"
+                  type="number"
+                  name="max-price"
+                  id="max-price-field"
+                  value="100"
+                  min="0"
+                  max="100"
+                >
+              </div>
+              <div class="filter-range__controls">
+                <div class="filter-range__scale">
+                  <div class="filter-range__bar"></div>
+                  <button
+                    class="filter-range__toggle-min toggle"
+                    type="button"
+                    aria-label="Ползунок выбора минимального уровня"
+                  >
+                  </button>
+                  <button
+                    class="filter-range__toggle-max toggle"
+                    type="button"
+                    aria-label="Ползунок выбора максимального уровня"
+                  >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button class="users-filter__submit button button--rounded button--white" type="submit">Показать</button>
+    </form>
+  </section>
+
   <section class="users">
     <ul class="users__list">
       <li class="users__list-item card">
@@ -70,11 +443,23 @@
         <h2 class="card__name card__name--offline">
           <a class="card__name-link" href="">Таня Фирсова</a>
         </h2>
-        <button class="card__like like-button like-button--checked" type="button">
+        <button class="card__like button card__like--checked" type="button">
           <span class="sr-only">Поставить лайк</span>
         </button>
         <p class="card__likes-count">1,5 м</p>
-        <p class="card__tags tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+        <ul class="preview-card__tags tags">
+          <li class="tags__tag">#ЗОЖ</li>
+
+          <li class="tags__tag">#ПП</li>
+
+          <li class="tags__tag">#Фитнес</li>
+
+          <li class="tags__tag">#пляж</li>
+
+          <li class="tags__tag">#авокадо</li>
+
+          <li class="tags__tag">#смузи</li>
+        </ul>
         <div class="card__flags-wrapper">
           <p class="card__flags-text">Хочет посетить:</p>
           <ul class="card__flags flags">
@@ -111,13 +496,13 @@
         <div class="card__transports-wrapper">
           <p class="card__transports-text">Транспорт:</p>
           <ul class="card__transports transports">
-            <li class="transports__item tooltip" data-tooltip="Авиаперелет">Авиаперелет</li>
+            <li class="transports__item tooltip" data-tooltip="Авиаперелет" aria-label="Авиаперелет"></li>
 
-            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Автотранспорт">Автотранспорт</li>
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Автотранспорт" aria-label="Автотранспорт"></li>
 
-            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед">Велосипед</li>
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед" aria-label="Велосипед"></li>
 
-            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Пешком">Пешком</li>
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Пешком" aria-label="Пешком"></li>
           </ul>
         </div>
         <div class="card__level-wrapper">
@@ -135,6 +520,7 @@
                   fill="transparent"
                   stroke-dasharray="100"
                   stroke-dashoffset="100"
+                  stroke-linecap="round"
                 />
               </svg>
             </div>
@@ -148,11 +534,21 @@
         <h2 class="card__name card__name--online">
           <a href="" class="card__name-link">Петя Демин</a>
         </h2>
-        <button class="card__like like-button" type="button">
+        <button class="card__like button" type="button">
           <span class="sr-only">Поставить лайк</span>
         </button>
         <p class="card__likes-count">1500</p>
-        <p class="card__tags tags">#бургер #бар #футбол #концерт #крафт</p>
+        <ul class="preview-card__tags tags">
+          <li class="tags__tag">#бургер</li>
+
+          <li class="tags__tag">#бар</li>
+
+          <li class="tags__tag">#футбол</li>
+
+          <li class="tags__tag">#концерт</li>
+
+          <li class="tags__tag">#крафт</li>
+        </ul>
         <div class="card__flags-wrapper">
           <p class="card__flags-text">Хочет посетить:</p>
           <ul class="card__flags flags">
@@ -180,13 +576,13 @@
         <div class="card__transports-wrapper">
           <p class="card__transports-text">Транспорт:</p>
           <ul class="card__transports transports">
-            <li class="transports__item tooltip" data-tooltip="Авиаперелет">Авиаперелет</li>
+            <li class="transports__item tooltip" data-tooltip="Авиаперелет" aria-label="Авиаперелет"></li>
 
-            <li class="transports__item tooltip" data-tooltip="Автотранспорт">Автотранспорт</li>
+            <li class="transports__item tooltip" data-tooltip="Автотранспорт" aria-label="Автотранспорт"></li>
 
-            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед">Велосипед</li>
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед" aria-label="Велосипед"></li>
 
-            <li class="transports__item tooltip" data-tooltip="Пешком">Пешком</li>
+            <li class="transports__item tooltip" data-tooltip="Пешком" aria-label="Пешком"></li>
           </ul>
         </div>
         <div class="card__level-wrapper">
@@ -204,6 +600,7 @@
                   fill="transparent"
                   stroke-dasharray="100"
                   stroke-dashoffset="100"
+                  stroke-linecap="round"
                 />
               </svg>
             </div>
@@ -217,11 +614,22 @@
         <h2 class="card__name card__name--offline">
           <a href="" class="card__name-link">Марк Смолов</a>
         </h2>
-        <button class="card__like like-button" type="button">
+        <button class="card__like button" type="button">
           <span class="sr-only">Поставить лайк</span>
         </button>
         <p class="card__likes-count">170</p>
-        <p class="card__tags tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+        <ul class="preview-card__tags tags">
+          <li class="tags__tag">#рэп</li>
+
+          <li class="tags__tag">#тату</li>
+
+          <li class="tags__tag">#хайпбист</li>
+
+          <li class="tags__tag">#кроссовки</li>
+
+          <li class="tags__tag">#суприм</li>
+        </ul>
+        <p class="card__tags tags">    </p>
         <div class="card__flags-wrapper">
           <p class="card__flags-text">Хочет посетить:</p>
           <ul class="card__flags flags">
@@ -259,13 +667,13 @@
         <div class="card__transports-wrapper">
           <p class="card__transports-text">Транспорт:</p>
           <ul class="card__transports transports">
-            <li class="transports__item tooltip" data-tooltip="Авиаперелет">Авиаперелет</li>
+            <li class="transports__item tooltip" data-tooltip="Авиаперелет" aria-label="Авиаперелет"></li>
 
-            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Автотранспорт">Автотранспорт</li>
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Автотранспорт" aria-label="Автотранспорт"></li>
 
-            <li class="transports__item tooltip" data-tooltip="Велосипед">Велосипед</li>
+            <li class="transports__item tooltip" data-tooltip="Велосипед" aria-label="Велосипед"></li>
 
-            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Пешком">Пешком</li>
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Пешком" aria-label="Пешком"></li>
           </ul>
         </div>
         <div class="card__level-wrapper">
@@ -283,6 +691,7 @@
                   fill="transparent"
                   stroke-dasharray="100"
                   stroke-dashoffset="100"
+                  stroke-linecap="round"
                 />
               </svg>
             </div>
@@ -296,21 +705,40 @@
         <h2 class="card__name card__name--online">
           <a href="" class="card__name-link">Лариса Роговая</a>
         </h2>
-        <button class="card__like like-button" type="button">
+        <button class="card__like button" type="button">
           <span class="sr-only">Поставить лайк</span>
         </button>
         <p class="card__likes-count">23</p>
-        <p class="card__tags tags">#образование #карьера #учеба #линкедин</p>
+        <ul class="preview-card__tags tags">
+          <li class="tags__tag">#образование</li>
+
+          <li class="tags__tag">#карьера</li>
+
+          <li class="tags__tag">#учеба</li>
+
+          <li class="tags__tag">#линкедин</li>
+        </ul>
+        <p class="card__tags tags">   </p>
         <div class="card__countries-wrapper">
           <p class="card__countries-text">Хочет посетить:</p>
           <ul class="card__flags flags">
             <li class="flags__item flag">
-              <img class="flags__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Великобритания" alt="Флаг Великобритании">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/26x18"
+                data-tooltip="Великобритания"
+                alt="Флаг Великобритании"
+              >
               <span class="flag__name">Великобритания</span>
             </li>
 
             <li class="flags__item flag">
-              <img class="flags__image tooltip" src="https://via.placeholder.com/26x18" data-tooltip="Германия" alt="Флаг Германии">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/26x18"
+                data-tooltip="Германия"
+                alt="Флаг Германии"
+              >
               <span class="flag__name">Германия</span>
             </li>
           </ul>
@@ -318,13 +746,13 @@
         <div class="card__transports-wrapper">
           <p class="card__transports-text">Транспорт:</p>
           <ul class="card__transports transports">
-            <li class="transports__item tooltip" data-tooltip="Авиаперелет">Авиаперелет</li>
+            <li class="transports__item tooltip" data-tooltip="Авиаперелет" aria-label="Авиаперелет"></li>
 
-            <li class="transports__item tooltip" data-tooltip="Автотранспорт">Автотранспорт</li>
+            <li class="transports__item tooltip" data-tooltip="Автотранспорт" aria-label="Автотранспорт"></li>
 
-            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед">Велосипед</li>
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Велосипед" aria-label="Велосипед"></li>
 
-            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Пешком">Пешком</li>
+            <li class="transports__item transports__item--disabled tooltip" data-tooltip="Пешком" aria-label="Пешком"></li>
           </ul>
         </div>
         <div class="card__level-wrapper">
@@ -342,6 +770,7 @@
                   fill="transparent"
                   stroke-dasharray="100"
                   stroke-dashoffset="100"
+                  stroke-linecap="round"
                 />
               </svg>
             </div>
