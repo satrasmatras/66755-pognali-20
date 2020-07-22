@@ -1,0 +1,43 @@
+.direction {
+  background-color: $basic-grey;
+  color: $special-grey;
+}
+
+.direction__country {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+
+  color: $basic-black;
+}
+
+.direction__promo {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: rgba($special-grey, 0.3);
+}
+
+.direction__users {
+  position: relative;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: rgba($basic-blue, 0.3);
+  padding-left: 14px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: url("../../img/user.svg");
+    width: 14px;
+    height: 14px;
+    color: rgba($basic-blue-light, 0.1);
+  }
+}

@@ -1,0 +1,38 @@
+.companions {
+  padding-top: 68px;
+  padding-bottom: 35px;
+  background-color: $basic-blue-light;
+  color: $basic-white;
+}
+
+.companions__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+
+  color: $special-orange;
+}
+
+.companions__text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+
+  &--bold {
+    font-weight: bold;
+  }
+}
+
+.companions__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 54px;
+  margin-bottom: 20px;
+}
+
+.companions__item {
+  margin-bottom: 10px;
+}

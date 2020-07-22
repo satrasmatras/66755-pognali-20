@@ -1,0 +1,25 @@
+.users {
+  margin-top: 28px;
+}
+
+.users__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.users__list-item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.users__show-more {
+  margin-top: 20px;
+}
+
+.users__slider {
+  margin-bottom: 45px;
+}

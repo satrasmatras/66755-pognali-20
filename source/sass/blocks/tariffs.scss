@@ -1,0 +1,50 @@
+.tariffs {
+  counter-reset: list-number;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  color: $special-grey;
+}
+
+.tariffs--no-counter {
+  .tariffs__item::after {
+    display: none;
+  }
+}
+
+.tariffs__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  counter-increment: list-number;
+
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+
+    background-color: $special-orange;
+
+    color: $basic-white;
+    content: counter(list-number);
+    width: 34px;
+    height: 34px;
+  }
+}

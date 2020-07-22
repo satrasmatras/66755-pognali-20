@@ -1,0 +1,24 @@
+.footer {
+  padding-top: 35px;
+
+  background-color: $basic-white;
+  color: $special-grey;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.footer__socials {
+  margin-bottom: 50px;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: space-between;
+}

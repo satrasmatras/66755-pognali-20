@@ -1,0 +1,111 @@
+.promo {
+  background-color: $basic-blue;
+  color: $basic-white;
+}
+
+.promo__title {
+  max-width: 238px;
+
+  margin: 0;
+  padding: 0;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+
+  text-align: center;
+}
+
+.promo__blockquote {
+  display: flex;
+  flex-direction: column;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: $basic-white;
+}
+
+.promo__author {
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+.promo__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+
+  counter-reset: my-awesome-counter;
+}
+
+.promo__steps-item {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+
+  color: $basic-blue;
+
+  padding-left: 25px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-right: 21px;
+
+  border-radius: 10px;
+
+  counter-increment: my-awesome-counter;
+
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:first-child) {
+    margin-top: -15px;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: calc(22px + 10px);
+  }
+
+  &:nth-child(1n) {
+    background-color: $special-orange;
+  }
+
+  &:nth-child(2n) {
+    background-color: $special-orange-light;
+  }
+
+  &:nth-child(3n) {
+    background-color: $special-yellow-dark;
+  }
+
+  &:nth-child(4n) {
+    background-color: $basic-yellow;
+  }
+
+  &::after {
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+
+    color: $basic-white;
+
+    display: block;
+    content: counter(my-awesome-counter);
+  }
+}
+
+.promo__steps-text {
+  padding: 0;
+  margin: 0;
+  max-width: 150px;
+}

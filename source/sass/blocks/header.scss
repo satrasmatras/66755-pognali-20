@@ -1,0 +1,42 @@
+.header {
+  background-color: $basic-blue;
+  color: white;
+
+  @media screen and (min-width: 320px) {
+    padding-top: 27px;
+  }
+}
+
+.header__body {
+  padding-top: 22px;
+  padding-bottom: 11px;
+}
+
+.header__body-title {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+
+  width: fit-content;
+
+  color: $basic-white;
+
+  &::after {
+    position: absolute;
+
+    top: 44px;
+    left: 0;
+
+    content: "";
+    width: 100%;
+    height: 5px;
+
+    background-color: $special-orange;
+    border-radius: 4px;
+  }
+}
