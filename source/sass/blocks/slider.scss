@@ -1,0 +1,40 @@
+.slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__button {
+  cursor: pointer;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $basic-white;
+
+  &::after {
+    width: 20px;
+    height: 13px;
+  }
+
+  &--previous {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+
+    &::after {
+      content: url("../../img/triangle-arrow-left.svg");
+    }
+  }
+
+  &--next {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+
+    &::after {
+      content: url("../../img/triangle-arrow-right.svg");
+    }
+  }
+}

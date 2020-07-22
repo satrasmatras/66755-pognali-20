@@ -1,0 +1,78 @@
+.user-nav {
+  display: flex;
+  align-items: stretch;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.user-nav__item {
+  &--icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--grow {
+    flex-grow: 1;
+  }
+}
+
+.user-nav__link {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: $basic-blue;
+  background-color: $basic-yellow;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    width: 18px;
+    height: 17px;
+  }
+
+  &--tel {
+    background-color: $special-orange;
+  }
+
+  &--tel::before {
+    display: block;
+    content: url("../../img/topmenu-phone.svg");
+  }
+
+  &--email {
+    background-color: $special-yellow-dark;
+  }
+
+  &--email::before {
+    display: block;
+    content: url("../../img/topmenu-mail.svg");
+  }
+}

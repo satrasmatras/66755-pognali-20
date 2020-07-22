@@ -1,0 +1,35 @@
+.menu__wrapper {
+  background-color: $basic-white;
+
+  @media screen and (min-width: 320px) {
+    padding-top: 45px;
+  }
+}
+
+.menu__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  background-color: transparent;
+  border: none;
+}
+
+.menu__icon {
+  flex-shrink: 0;
+  fill: $basic-white;
+}
+
+.menu__icon--menu {
+  width: 19px;
+  height: 19px;
+}
+
+.menu__icon-close {
+  display: none;
+}
+
+.menu__list {
+  margin-bottom: 50px;
+}
