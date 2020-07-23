@@ -1,0 +1,10 @@
+.text {
+  padding: 0;
+  margin: 0;
+
+  font-weight: normal;
+
+  &--bold {
+    font-weight: bold;
+  }
+}
