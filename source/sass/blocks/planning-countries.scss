@@ -1,25 +1,9 @@
-.country {
-  width: 100%;
-
+.planning-countries {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.country__dropdown {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-
-  color: $special-blue-light;
-
-  border: 1px solid $fieldset-border;
-  border-radius: 4px;
-
-  background-color: transparent;
-
-  white-space: nowrap;
-
-  padding-top: 13px;
-  padding-bottom: 13px;
+.planning-countries__item {
+  margin-bottom: 22px;
 }

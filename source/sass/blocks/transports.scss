@@ -4,7 +4,7 @@
   list-style: none;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .transports__item {
@@ -17,32 +17,21 @@
 
   margin-right: 5px;
 
+  border-radius: 100%;
+
+  background-color: $basic-grey;
+
   &:last-child {
     margin-right: 0;
   }
+}
 
-  &::before {
-    width: 20px;
-    height: 20px;
-  }
+.transports__item--disabled .transports__icon {
+  fill: rgba($special-blue-light, 0.15);
+}
 
-  &--air::before {
-    content: url("../../img/plane.svg");
-  }
-
-  &--bus::before {
-    content: url("../../img/bus.svg");
-  }
-
-  &--bicycle::before {
-    content: url("../../img/bike.svg");
-  }
-
-  &--walking::before {
-    content: url("../../img/run.svg");
-  }
-
-  &--disabled {
-    opacity: 0.5;
-  }
+.transports__icon {
+  fill: $special-blue-light;
+  width: 17px;
+  height: 16px;
 }

@@ -1,69 +1,35 @@
-.fast-registration {
-  background-color: $basic-blue-light;
-  color: $basic-white;
-
-  padding-top: 72px;
-  padding-bottom: 30px;
+.users-filter {
+  background-color: $basic-yellow;
+  padding-top: 26px;
+  padding-bottom: 22px;
 }
 
-.fast-registration__title {
-  font-size: 24px;
-  line-height: 24px;
+.users-filter__title {
+  padding: 0;
+  margin: 0;
 
-  color: $special-orange;
-
-  margin-bottom: 20px;
-}
-
-.fast-registration__text {
-  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
   line-height: 22px;
 
-  text-align: center;
+  letter-spacing: 0.02em;
 
-  color: $basic-white;
-
-  margin-bottom: 30px;
+  color: $special-blue-light;
 }
 
-.fast-registration__link {
-  color: $basic-yellow;
-  text-decoration-line: underline;
+.users-filter__submit {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
 
-  &:hover {
-    color: $special-orange;
-  }
+  justify-content: center;
 
-  &:active {
-    color: rgba($special-orange, 0.3);
-  }
-}
+  text-transform: uppercase;
 
-.fast-registration__form {
-  display: flex;
-  align-items: center;
+  color: $basic-blue;
+  background-color: $basic-white;
 
-  margin-bottom: 30px;
-}
-
-.fast-registration__input {
-  border: none;
-  border-radius: 10px;
-  flex-grow: 1;
-  padding: 22px 25px;
-
-  &::placeholder {
-    font-size: 18px;
-    line-height: 18px;
-
-    color: #444444;
-    opacity: 0.3;
-  }
-}
-
-.fast-registration__button {
-  height: 60px;
-  width: 62px;
-
-
+  padding-top: 14px;
+  padding-bottom: 15px;
 }

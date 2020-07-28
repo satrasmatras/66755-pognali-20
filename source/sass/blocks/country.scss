@@ -1,23 +1,63 @@
-.text {
-  padding: 0;
-  margin: 0;
+.country {
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 300;
+.country__dropdown {
+  flex-grow: 999;
+  flex-shrink: 1;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
 
-  font-size: 16px;
-  line-height: 22px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
 
-  &--bold {
-    font-weight: bold;
+  color: $special-blue-light;
+
+  border: 1px solid $fieldset-border;
+  border-radius: 4px;
+
+  background-color: transparent;
+
+  white-space: nowrap;
+
+  padding-top: 13px;
+  padding-bottom: 13px;
+
+  &--clicked {
+    background-color: $special-blue-light;
+    color: $basic-white;
+    border: $special-blue-light;
   }
+}
 
-  &--center {
-    text-align: center;
-  }
+.country__cancel {
+  background-color: $basic-grey;
+  border: none;
+  border-radius: 100%;
+  width: 21px;
+  height: 21px;
 
-  &--lc-01em {
-    letter-spacing: 0.01em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: url("../../img/close.svg");
+    width: 9px;
+    height: 9px;
   }
+}
+
+.country__table {
+  display: block;
+  left: 0;
+  right: 0;
+  top: 100%;
+  position: absolute;
+  flex-grow: 9999;
+  flex-shrink: 0;
 }

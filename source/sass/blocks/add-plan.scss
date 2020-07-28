@@ -1,61 +1,12 @@
-.plan {
-  width: 270px;
-  background-color: $basic-white;
-  padding: 24px;
-  border-radius: 10px;
-
-  color: $special-blue-light;
+.add-plan {
+  padding-top: 30px;
+  background-color: $add-plan-background;
 }
 
-.plan__title {
-  padding: 0;
+.add-plan__title {
   margin: 0;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 16px;
+  padding: 0;
 
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.plan__count {
-  display: block;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
-
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-
-  margin-bottom: 5px;
-}
-
-.plan__dates {
-  display: block;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
-
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-
-  margin-bottom: 24px;
-}
-
-.plan__change {
-  display: block;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
-
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-
-  color: rgba($basic-black, 0.3);
-
-  text-decoration: none;
+  margin-bottom: 56px;
+  color: $special-blue-light;
 }

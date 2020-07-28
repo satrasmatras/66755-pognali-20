@@ -1,18 +1,23 @@
-.users-filter {
-  background-color: $basic-yellow;
-  padding-top: 26px;
-}
-
-.users-filter__title {
+.criteries {
   padding: 0;
   margin: 0;
+  list-style: none;
+}
 
+.criteries__checkboxes {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.criteries__item {
   font-style: normal;
   font-weight: bold;
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 18px;
 
-  letter-spacing: 0.02em;
+  text-transform: none;
 
-  color: $special-blue-light;
+  color: $basic-black;
+  margin-bottom: 26px;
 }

@@ -1,27 +1,17 @@
-.about {
-  padding-top: 72px;
-  padding-bottom: 82px;
-  background-color: $basic-blue;
+.logo-image--blue {
+  display: none;
 }
 
-.about__title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 24px;
-
-  color: $special-orange;
+.logo-image--light {
+  display: block;
 }
 
-.about__text {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+.logo--light {
+  .logo-image--blue {
+    display: block;
+  }
 
-  color: $basic-white;
-
-  &--bold {
-    font-weight: bold;
+  .logo-image--light {
+    display: none;
   }
 }

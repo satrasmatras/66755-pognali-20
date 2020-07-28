@@ -1,13 +1,80 @@
-.step__title {
-  font-size: 20px;
-  line-height: 20px;
+.number {
+  position: relative;
+  color: $special-blue-light;
 }
 
-.step__description {
+.number__label {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 16px;
 
-  color: $special-grey;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.number__unit {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  color: rgba($special-blue-light, 0.3);
+}
+
+.number__input {
+  background-color: transparent;
+  border: 1px solid $fieldset-border;
+  border-radius: 4px;
+
+  font: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 14px;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  color: inherit;
+  width: 100%;
+
+  padding-top: 16px;
+  padding-bottom: 13px;
+}
+
+.number__button {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  bottom: 18px;
+
+  border: none;
+  background-color: transparent;
+}
+
+.number__icon {
+  width: 14px;
+  height: 14px;
+
+  fill: $qty-button;
+
+  &:hover {
+    fill: $qty-button-hover;
+  }
+
+  &:active {
+    fill: $qty-button-active;
+  }
+
+  &--minus {
+    left: 0;
+  }
+
+  &--plus {
+    right: 10px;
+  }
 }

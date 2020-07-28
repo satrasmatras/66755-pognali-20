@@ -1,23 +1,18 @@
-.text {
-  padding: 0;
-  margin: 0;
+.check {
+  width: 100%;
+}
 
+.check__label {
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
 
-  font-size: 16px;
-  line-height: 22px;
+  color: inherit;
 
-  &--bold {
-    font-weight: bold;
-  }
-
-  &--center {
-    text-align: center;
-  }
-
-  &--lc-01em {
-    letter-spacing: 0.01em;
+  &--large {
+    font-size: 15px;
+    line-height: 20px;
   }
 }

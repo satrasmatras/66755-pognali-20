@@ -1,11 +1,12 @@
 .preview-card {
-  outline: 1px solid red;
   background-color: $basic-white;
   color: $special-blue-light;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding-bottom: 25px;
 }
 
 .preview-card__avatar {

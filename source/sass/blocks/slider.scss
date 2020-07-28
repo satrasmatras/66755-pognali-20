@@ -16,8 +16,8 @@
   background-color: $basic-white;
 
   &::after {
-    width: 20px;
-    height: 13px;
+    width: 10px;
+    height: 18px;
   }
 
   &--previous {
@@ -25,6 +25,7 @@
     border-top-left-radius: 20px;
 
     &::after {
+
       content: url("../../img/triangle-arrow-left.svg");
     }
   }

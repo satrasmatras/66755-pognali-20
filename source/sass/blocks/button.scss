@@ -1,22 +1,20 @@
 .button {
+  font-family: inherit;
+  border: none;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   width: 100%;
-  height: 100%;
-  border: none;
   background-color: transparent;
   color: $basic-blue;
   text-decoration: none;
 
-  font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
 
   text-align: center;
-  text-transform: uppercase;
   cursor: pointer;
 
   &--rounded {
@@ -32,38 +30,6 @@
     }
   }
 
-  &--primary {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 18px;
-
-    color: $special-blue-light;
-    text-transform: none;
-    text-align: left;
-    border-radius: 10px;
-    background-color: $basic-yellow;
-    padding-top: 22px;
-    padding-bottom: 22px;
-    padding-left: 13px;
-    justify-content: space-between;
-    align-items: baseline;
-
-    &:hover {
-      background-color: $special-yellow-dark;
-    }
-
-    &:active {
-      color: rgba($basic-blue, 0.3);
-    }
-
-    &::after {
-      content: url("../../img/triangle-arrow-right.svg");
-      width: 13px;
-      height: 13px;
-    }
-  }
-
   &--transparent {
     background-color: transparent;
     text-transform: none;
@@ -71,5 +37,63 @@
 
   &--grey {
     background-color: $special-grey-light;
+  }
+
+  &--bordered {
+    border: 3px solid $basic-blue-light;
+  }
+
+  &--primary {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+
+    padding: 22px;
+
+    color: $special-blue-light;
+    background-color: $basic-yellow;
+
+    border-radius: 10px;
+
+    &:hover {
+      background-color: $special-orange;
+    }
+
+    &:active {
+      color: rgba($special-blue-light, 0.3);
+
+      .button__icon {
+        fill: rgba($special-blue-light, 0.3);
+      }
+    }
+
+    .button__icon {
+      display: inline-flex;
+      align-self: center;
+      fill: $special-blue-light;
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &--map-hover {
+    &:hover {
+      background-color: $basic-blue-light;
+      color: $basic-white;
+
+      .button__icon {
+        fill: $basic-white;
+      }
+    }
+
+    &:active {
+      background-color: $basic-blue-light;
+      color: rgba($basic-white, 0.3);
+
+      .button__icon {
+        fill: rgba($basic-white, 0.3);
+      }
+    }
   }
 }

@@ -1,48 +1,42 @@
-.transports {
+.checkboxes-transports {
+  display: flex;
+
   padding: 0;
+  padding-top: 17px;
+  padding-bottom: 17px;
   margin: 0;
   list-style: none;
 
-  display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.transports__item {
-  width: 30px;
-  height: 30px;
+.checkboxes-transports__item {
+  margin-right: 1px;
+}
 
+.checkboxes-transports__control {
+  appearance: none;
+}
+
+.checkboxes-transports__label {
+  width: 31px;
+  height: 31px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin-right: 5px;
+  cursor: pointer;
 
-  &:last-child {
-    margin-right: 0;
-  }
+  background-color: $basic-white;
+  border-radius: 100%;
+}
 
-  &::before {
-    width: 20px;
-    height: 20px;
-  }
+.checkboxes-transports__icon {
+  fill: rgba($special-blue-light, 0.15);
+  width: 17px;
+  height: 16px;
+}
 
-  &--air::before {
-    content: url("../../img/plane.svg");
-  }
-
-  &--bus::before {
-    content: url("../../img/bus.svg");
-  }
-
-  &--bicycle::before {
-    content: url("../../img/bike.svg");
-  }
-
-  &--walking::before {
-    content: url("../../img/run.svg");
-  }
-
-  &--disabled {
-    opacity: 0.5;
-  }
+.checkboxes-transports__control:checked + .checkboxes-transports__label .checkboxes-transports__icon {
+  fill: $special-blue-light;
 }

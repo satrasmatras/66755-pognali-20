@@ -1,17 +1,44 @@
-.steps {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.step {
+  background-color: $basic-white;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 23px;
+  padding-top: 23px;
 
-  counter-reset: list;
-
-  color: $special-blue-light;
+  border-radius: 10px;
 }
 
-.steps__item {
-  counter-increment: list;
+.step__title {
+  font-size: 20px;
+  line-height: 20px;
+}
 
-  &::before {
-    content: counter(list);
-  }
+.step__description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  margin-bottom: 21px;
+
+  color: $special-grey;
+}
+
+.step__calendar {
+  margin-bottom: 22px;
+}
+
+.step__button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+
+  text-transform: uppercase;
+
+  color: $special-blue-light;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

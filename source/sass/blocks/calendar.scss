@@ -1,52 +1,47 @@
-.progress {
-  --pi: 3.141592653589793238462643383279502884197169399375105820974;
-  position: relative;
+.calendar {
+  width: 100%;
+}
 
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-bottom: 33px;
+}
+
+.calendar__button {
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 14px;
+  height: 21px;
+  background-color: transparent;
+
+  &::before {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  &--back::before {
+    content: url("../../img/triangle-arrow-left.svg");
+  }
+
+  &--next::before {
+    content: url("../../img/triangle-arrow-right.svg");
+  }
 }
 
-.progress__description {
-  display: flex;
+.calendar__current-month {
+  margin: 0;
+  padding: 0;
 
-  flex-direction: column;
-  align-items: center;
-}
-
-.progress__value {
-  display: block;
-
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 38px;
-
-  text-align: center;
-
-  color: $basic-blue;
-}
-
-.progress__level {
-  display: block;
   font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 18px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
 
-  text-align: center;
-
-
-  color: $special-grey;
-}
-
-.progress__svg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: rotate(-90deg);
-}
-
-.progress__svg-circle[data-stroke] {
-  stroke-dasharray: calc(var(--progress-radius) * var(--pi) * 2);
-  stroke-dashoffset: calc(var(--progress-radius) * var(--pi) * 2 - var(--progress-level) / 100 * (var(--progress-radius) * var(--pi) * 2));
+  color: $special-blue-light;
 }

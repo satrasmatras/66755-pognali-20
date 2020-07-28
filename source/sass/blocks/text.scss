@@ -2,11 +2,22 @@
   padding: 0;
   margin: 0;
 
-  font-weight: normal;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+
+  font-size: 16px;
+  line-height: 22px;
 
   &--bold {
     font-weight: bold;
   }
-}
 
-// TODO: вынести стили текста сюда
+  &--center {
+    text-align: center;
+  }
+
+  &--lc-01em {
+    letter-spacing: 0.01em;
+  }
+}

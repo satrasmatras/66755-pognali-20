@@ -1,50 +1,67 @@
-.tariffs {
-  counter-reset: list-number;
-  font-style: normal;
-  font-weight: 300;
+.fast-registration {
+  background-color: $basic-blue-light;
+  color: $basic-white;
+
+  padding-top: 72px;
+  padding-bottom: 30px;
+}
+
+.fast-registration__title {
+  font-size: 24px;
+  line-height: 24px;
+
+  color: $special-orange;
+
+  margin-bottom: 20px;
+}
+
+.fast-registration__text {
   font-size: 16px;
-  line-height: 16px;
-  color: $special-grey;
-}
+  line-height: 22px;
 
-.tariffs--no-counter {
-  .tariffs__item::after {
-    display: none;
-  }
-}
+  text-align: center;
 
-.tariffs__item {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  counter-increment: list-number;
+  color: $basic-white;
 
   margin-bottom: 30px;
+}
 
-  &:last-child {
-    margin-bottom: 0;
+.fast-registration__link {
+  color: $basic-yellow;
+  text-decoration-line: underline;
+
+  &:hover {
+    color: $special-orange;
   }
 
-  &::after {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 16px;
-
-    background-color: $special-orange;
-
-    color: $basic-white;
-    content: counter(list-number);
-    width: 34px;
-    height: 34px;
+  &:active {
+    color: rgba($special-orange, 0.3);
   }
+}
+
+.fast-registration__form {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.fast-registration__input {
+  border: none;
+  border-radius: 10px;
+  flex-grow: 1;
+  padding: 22px 25px;
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 18px;
+
+    color: #444444;
+    opacity: 0.3;
+  }
+}
+
+.fast-registration__button {
+  height: 60px;
+  width: 62px;
 }

@@ -1,50 +1,31 @@
-.tariffs {
-  counter-reset: list-number;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 16px;
-  color: $special-grey;
-}
+$tooltip-triangle-height: 7px;
 
-.tariffs--no-counter {
-  .tariffs__item::after {
-    display: none;
-  }
-}
-
-.tariffs__item {
+.tooltip {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-  counter-increment: list-number;
-
-  margin-bottom: 30px;
-
-  &:last-child {
-    margin-bottom: 0;
+  &::after {
+    min-height: 100%;
+    border-radius: 4px;
+    z-index: 9999;
   }
 
-  &::after {
+  &:hover::after {
+    bottom: -60px;
+    left: calc(-50% - 17px);
     position: absolute;
-    right: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
+    display: block;
+    content: attr(data-tooltip);
 
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 20px;
+    line-height: 20px;
 
-    background-color: $special-orange;
+    text-align: center;
 
     color: $basic-white;
-    content: counter(list-number);
-    width: 34px;
-    height: 34px;
+    background-color: $tooltip-background;
+
+    padding: 18px 20px;
   }
 }

@@ -1,27 +1,55 @@
-.about {
-  padding-top: 72px;
-  padding-bottom: 82px;
-  background-color: $basic-blue;
+.progress {
+  --pi: 3.141592653589793238462643383279502884197169399375105820974;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.about__title {
-  font-style: normal;
+.progress__description {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress__value {
+  display: block;
+
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
 
-  color: $special-orange;
+  text-align: center;
+
+  color: $basic-blue;
 }
 
-.about__text {
+.progress--no-level .progress__level {
+  display: none;
+}
+
+.progress__level {
+  display: block;
   font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
 
-  color: $basic-white;
+  text-align: center;
 
-  &--bold {
-    font-weight: bold;
-  }
+  color: $special-grey;
+}
+
+.progress__svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(-90deg);
+}
+
+.progress__svg-circle[data-stroke] {
+  stroke-dasharray: calc(var(--progress-radius) * var(--pi) * 2);
+  stroke-dashoffset: calc(var(--progress-radius) * var(--pi) * 2 - var(--progress-level) / 100 * (var(--progress-radius) * var(--pi) * 2));
 }
