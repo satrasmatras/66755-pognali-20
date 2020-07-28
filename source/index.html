@@ -8,9 +8,10 @@
 <body class="page__body">
 
 <header class="header">
-  <div class="container">
+  <div class="container header__container">
     <a class="header__logo logo">
-      <img src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="100" height="19">
+      <img class="logo__image logo-image--blue" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
+      <img class="logo__image logo-image--light" src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="100" height="19">
     </a>
     <nav class="menu">
       <button class="menu__toggle" type="button" aria-label="Открыть меню">
@@ -19,7 +20,7 @@
           <use class="menu__icon-close" href="img/menu-close.svg#menu-close"></use>
         </svg>
       </button>
-      <div class="menu__wrapper">
+      <div class="menu__wrapper container">
         <ul class="site-list menu__list">
           <li class="site-list__item">
             <a class="site-list__link" href="">О сервисе</a>
@@ -34,11 +35,31 @@
         <a class="menu__auth button button--rounded" href="">Авторизация</a>
         <ul class="menu__contacts contacts contacts--light">
           <li class="contacts__item">
-            <a class="contacts__link contacts__link--tel" href="tel:+88005558628">8 800 555-86-28</a>
+            <a
+              class="contacts__link contacts__link--tel"
+              href="tel:+88005558628"
+            >
+              <div class="contacts__icon-wrapper">
+                <svg class="contacts__icon">
+                  <use href="./img/contacts-phone.svg#contacts-phone"></use>
+                </svg>
+              </div>
+              8 800 555-86-28
+            </a>
           </li>
 
           <li class="contacts__item">
-            <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a
+              class="contacts__link contacts__link--email"
+              href="mailto:mail@htmlacademy.ru"
+            >
+              <div class="contacts__icon-wrapper">
+                <svg class="contacts__icon">
+                  <use href="./img/contacts-mail.svg#contacts-mail"></use>
+                </svg>
+              </div>
+              mail@htmlacademy.ru
+            </a>
           </li>
         </ul>
         <ul class="menu__socials socials socials--white">
@@ -67,11 +88,19 @@
       <p class="promo__title">В путешествие с крутыми попутчиками!</p>
       <ul class="promo__user-nav user-nav">
         <li class="user-nav__item user-nav__item--icon">
-          <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel" aria-label="8 800 555-86-28"></a>
+          <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel" aria-label="8 800 555-86-28">
+            <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
+              <use href="img/topmenu-phone.svg#topmenu-phone"></use>
+            </svg>
+          </a>
         </li>
 
         <li class="user-nav__item user-nav__item--icon">
-          <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email" aria-label="mail@htmlacademy.ru"></a>
+          <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email" aria-label="mail@htmlacademy.ru">
+            <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
+              <use href="img/topmenu-mail.svg#topmenu-mail"></use>
+            </svg>
+          </a>
         </li>
 
         <li class="user-nav__item user-nav__item--grow">
@@ -159,7 +188,15 @@
           <span class="direction__users">5326</span>
         </li>
       </ul>
-      <button class="directions__show-all button button--primary" type="button">Показать все</button>
+      <button
+        class="directions__show-all button button--primary"
+        type="button"
+      >
+        Показать все
+        <svg class="button__icon">
+          <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+        </svg>
+      </button>
     </div>
   </section>
 
@@ -176,16 +213,19 @@
             <span class="progress__value">100</span>
             <span class="progress__level">level</span>
             <div class="progress__circle">
-              <svg height="100" width="100">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="40"
+              <svg class="progress__svg" height="60" width="60">
+                <circle class="progress__svg-circle"
+                        data-stroke="red"
+                        style="
+                        --progress-level: 80;
+                        --progress-radius: 20;
+"
+                  cx="30"
+                  cy="30"
+                  r="20"
                   stroke="orange"
                   stroke-width="5"
                   fill="transparent"
-                  stroke-dasharray="100"
-                  stroke-dashoffset="100"
                   stroke-linecap="round"
                 />
               </svg>
@@ -237,13 +277,45 @@
             <li class="tags__tag">#смузи</li>
           </ul>
           <ul class="preview-card__transports transports">
-            <li class="transports__item transports__item--air tooltip" data-tooltip="Авиаперелет" aria-label="Авиаперелет"></li>
+            <li
+              class="transports__item tooltip"
+              data-tooltip="Авиаперелет"
+              aria-label="Авиаперелет"
+            >
+              <svg class="transports__icon">
+                <use href="img/plane.svg#plane"></use>
+              </svg>
+            </li>
 
-            <li class="transports__item transports__item--bus transports__item--disabled tooltip" data-tooltip="Автотранспорт" aria-label="Автотранспорт"></li>
+            <li
+              class="transports__item tooltip"
+              data-tooltip="Автотранспорт"
+              aria-label="Автотранспорт"
+            >
+              <svg class="transports__icon">
+                <use href="img/bus.svg#bus"></use>
+              </svg>
+            </li>
 
-            <li class="transports__item transports__item--bicycle transports__item--disabled tooltip" data-tooltip="Велосипед" aria-label="Велосипед"></li>
+            <li
+              class="transports__item transports__item--disabled tooltip"
+              data-tooltip="Велосипед"
+              aria-label="Велосипед"
+            >
+              <svg class="transports__icon">
+                <use href="img/bike.svg#bike"></use>
+              </svg>
+            </li>
 
-            <li class="transports__item transports__item--walking transports__item--disabled tooltip" data-tooltip="Пешком" aria-label="Пешком"></li>
+            <li
+              class="transports__item tooltip"
+              data-tooltip="Пешком"
+              aria-label="Пешком"
+            >
+              <svg class="transports__icon">
+                <use href="img/run.svg#run"></use>
+              </svg>
+            </li>
           </ul>
         </li>
 
@@ -271,7 +343,7 @@
           <ul class="preview-card__flags flags">
             <li class="flags__item">
               <img
-                class="flags__image"
+                class="flags__image tooltip"
                 src="https://via.placeholder.com/35x25"
                 data-tooltip="Бельгия"
                 alt="Флаг Бельгии"
@@ -279,7 +351,7 @@
             </li>
             <li class="flags__item">
               <img
-                class="flags__image"
+                class="flags__image tooltip"
                 src="https://via.placeholder.com/35x25"
                 data-tooltip="Чехия"
                 alt="Флаг Чехии"
@@ -301,17 +373,57 @@
             <li class="tags__tag">#крафт</li>
           </ul>
           <ul class="preview-card__transports transports">
-            <li class="transports__item transports__item--air tooltip" data-tooltip="Авиаперелет" aria-label="Авиаперелет"></li>
+            <li
+              class="transports__item tooltip"
+              data-tooltip="Авиаперелет"
+              aria-label="Авиаперелет"
+            >
+              <svg class="transports__icon">
+                <use href="img/plane.svg#plane"></use>
+              </svg>
+            </li>
 
-            <li class="transports__item transports__item--bus tooltip" data-tooltip="Автотранспорт" aria-label="Автотранспорт"></li>
+            <li
+              class="transports__item tooltip"
+              data-tooltip="Автотранспорт"
+              aria-label="Автотранспорт"
+            >
+              <svg class="transports__icon">
+                <use href="img/bus.svg#bus"></use>
+              </svg>
+            </li>
 
-            <li class="transports__item transports__item--bicycle transports__item--disabled tooltip" data-tooltip="Велосипед" aria-label="Велосипед"></li>
+            <li
+              class="transports__item transports__item--disabled tooltip"
+              data-tooltip="Велосипед"
+              aria-label="Велосипед"
+            >
+              <svg class="transports__icon">
+                <use href="img/bike.svg#bike"></use>
+              </svg>
+            </li>
 
-            <li class="transports__item transports__item--walking tooltip" data-tooltip="Пешком" aria-label="Пешком"></li>
+            <li
+              class="transports__item tooltip"
+              data-tooltip="Пешком"
+              aria-label="Пешком"
+            >
+              <svg class="transports__icon">
+                <use href="img/run.svg#run"></use>
+              </svg>
+            </li>
           </ul>
         </li>
       </ul>
-      <a href="" class="companions__show-all button button--primary">Показать всех</a>
+      <a
+        href=""
+        class="companions__show-all button button--primary button--common-hover"
+      >
+        Показать всех
+        <svg class="button__icon">
+          <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+        </svg>
+      </a>
     </div>
   </section>
 
@@ -365,38 +477,81 @@
   </section>
 
   <section class="fast-registration">
-    <h2 class="sr-only">Зарегистрируйтесь сейчас</h2>
-    <p class="fast-registration__title title">Заинтересовались?</p>
-    <p class="fast-registration__text">
-      Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
-      <a href="" class="fast-registration__link">авторизуйтесь</a>.
-    </p>
-    <form class="fast-registration__form" action="https://echo.htmlacademy.ru" method="POST">
-      <label class="sr-only" for="email-field">E-mail</label>
-      <input class="fast-registration__input" type="email" id="email-field" name="email" placeholder="E-mail" required>
-      <button class="fast-registration__button button button--primary" type="submit">
-        <span class="sr-only">Отправить</span>
-      </button>
-    </form>
-    <ul class="fast-registration__contacts contacts contacts--dark">
-      <li class="contacts__item">
-        <a class="contacts__link contacts__link--tel" href="tel:+88005558628" >8 800 555-86-28</a>
-      </li>
+    <div class="container">
+      <h2 class="sr-only">Зарегистрируйтесь сейчас</h2>
+      <p class="title fast-registration__title">Заинтересовались?</p>
+      <p class="text fast-registration__text">
+        Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
+        <a href="" class="fast-registration__link">авторизуйтесь</a>.
+      </p>
+      <form class="fast-registration__form" action="https://echo.htmlacademy.ru" method="POST">
+        <label class="sr-only" for="email-field">E-mail</label>
+        <input class="fast-registration__input" type="email" id="email-field" name="email" placeholder="E-mail" required>
+        <button class="fast-registration__button button button--primary" type="submit" aria-label="Отправить">
+          <svg class="button__icon">
+            <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+          </svg>
+        </button>
+      </form>
+      <p class="text fast-registration__text">Остались вопросы? Мы с радостью на них ответим!</p>
+      <ul class="fast-registration__contacts contacts contacts--dark">
+        <li class="contacts__item">
+          <a
+            class="contacts__link contacts__link--tel"
+            href="tel:+88005558628"
+          >
+            <div class="contacts__icon-wrapper">
+              <svg class="contacts__icon">
+                <use href="./img/contacts-phone.svg#contacts-phone"></use>
+              </svg>
+            </div>
+            8 800 555-86-28
+          </a>
+        </li>
 
-      <li class="contacts__item">
-        <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </li>
-    </ul>
+        <li class="contacts__item">
+          <a
+            class="contacts__link contacts__link--email"
+            href="mailto:mail@htmlacademy.ru"
+          >
+            <div class="contacts__icon-wrapper">
+              <svg class="contacts__icon">
+                <use href="./img/contacts-mail.svg#contacts-mail"></use>
+              </svg>
+            </div>
+            mail@htmlacademy.ru
+          </a>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <section class="map">
+    <div class="container">
+
     <ul class="map__contacts contacts contacts--light">
       <li class="contacts__item">
-        <span class="contacts__link contacts__link--geo">ул. Большая Конюшенная, 19/8</span>
+        <span class="contacts__link contacts__link--email">
+          <div class="contacts__icon-wrapper">
+            <svg class="contacts__icon">
+              <use href="./img/contacts-location.svg#contacts-location"></use>
+            </svg>
+          </div>
+          ул. Большая Конюшенная, 19/8
+        </span>
       </li>
     </ul>
-    <a href="" class="map__make-path button button--transparent button--primary">Проложить маршрут</a>
+    <a
+      class="map__make-path button button--primary button--bordered button--map-hover"
+      href=""
+    >
+      Проложить маршрут
+      <svg class="button__icon">
+        <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+      </svg>
+    </a>
     <img class="map__image" src="https://via.placeholder.com/320x424" alt="Карта. Ул. Большая Конюшенная, 19/8">
+    </div>
   </section>
 </main>
 
@@ -432,5 +587,16 @@
     </div>
   </div>
 </footer>
+<script>
+  const header = document.querySelector('.header');
+  const headerLogo = document.querySelector('.header .logo');
+  const menuToggle = document.querySelector('.menu__toggle');
+  const menu = document.querySelector('.menu');
+  menuToggle.addEventListener('click', () => {
+      headerLogo.classList.toggle('logo--light');
+      header.classList.toggle('header--white');
+      menu.classList.toggle('menu--opened');
+  })
+</script>
 </body>
 </html>
