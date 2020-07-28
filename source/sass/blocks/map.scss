@@ -1,0 +1,75 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: $basic-blue;
+  text-decoration: none;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &--rounded {
+    border-radius: 25px;
+    background-color: $basic-yellow;
+
+    &:hover {
+      background-color: $special-yellow-dark;
+    }
+
+    &:active {
+      color: rgba($basic-blue, 0.3);
+    }
+  }
+
+  &--primary {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+
+    color: $special-blue-light;
+    text-transform: none;
+    text-align: left;
+    border-radius: 10px;
+    background-color: $basic-yellow;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 13px;
+    justify-content: space-between;
+    align-items: baseline;
+
+    &:hover {
+      background-color: $special-yellow-dark;
+    }
+
+    &:active {
+      color: rgba($basic-blue, 0.3);
+    }
+
+    &::after {
+      content: url("../../img/triangle-arrow-right.svg");
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    text-transform: none;
+  }
+
+  &--grey {
+    background-color: $special-grey-light;
+  }
+}

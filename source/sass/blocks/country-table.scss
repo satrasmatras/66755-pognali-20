@@ -1,0 +1,43 @@
+.table {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: rgba($special-grey, 0.3);
+}
+
+.table__cell {
+  font-weight: normal;
+  width: 100% / 7;
+  text-align: center;
+  border: 1px solid $fieldset-border;
+
+  &--selected {
+    color: $basic-white;
+    background-color: $weekend-selected-background;
+  }
+
+  &--available {
+    font-weight: 500;
+    background-color: $basic-grey;
+    color: $special-blue-light;
+  }
+}
+
+.table__header {
+  text-align: center;
+  vertical-align: middle;
+
+  font-weight: normal;
+  color: rgba($special-grey, 1);
+
+  &--weekend {
+    color: $weekend-orange;
+  }
+}
