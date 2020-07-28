@@ -1,8 +1,44 @@
 .menu__wrapper {
-  background-color: $basic-white;
+  display: none;
+  z-index: 1000;
 
   @media screen and (min-width: 320px) {
     padding-top: 45px;
+  }
+}
+
+.menu__icon-menu {
+  display: block;
+  width: 19px;
+  height: 19px;
+}
+
+.menu__icon-close {
+  display: none;
+  width: 19px;
+  height: 19px;
+}
+
+.menu--opened {
+  .menu__icon {
+    fill: $basic-blue-light;
+  }
+
+  .menu__icon-menu {
+    display: none;
+  }
+
+  .menu__icon-close {
+    display: block;
+  }
+
+  .menu__wrapper {
+    display: block;
+    position: absolute;
+    top: 79px;
+    left: 0;
+    right: 0;
+    background-color: $basic-white;
   }
 }
 
@@ -21,15 +57,15 @@
   fill: $basic-white;
 }
 
-.menu__icon--menu {
-  width: 19px;
-  height: 19px;
-}
-
-.menu__icon-close {
-  display: none;
-}
-
 .menu__list {
   margin-bottom: 50px;
+}
+
+.menu__auth {
+  font-size: 17px;
+  line-height: 30px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
 }

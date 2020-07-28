@@ -1,0 +1,17 @@
+.logo-image--blue {
+  display: none;
+}
+
+.logo-image--light {
+  display: block;
+}
+
+.logo--light {
+  .logo-image--blue {
+    display: block;
+  }
+
+  .logo-image--light {
+    display: none;
+  }
+}

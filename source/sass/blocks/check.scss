@@ -1,0 +1,18 @@
+.check {
+  width: 100%;
+}
+
+.check__label {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+
+  color: inherit;
+
+  &--large {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}

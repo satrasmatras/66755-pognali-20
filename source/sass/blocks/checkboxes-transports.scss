@@ -1,0 +1,42 @@
+.checkboxes-transports {
+  display: flex;
+
+  padding: 0;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin: 0;
+  list-style: none;
+
+  justify-content: center;
+}
+
+.checkboxes-transports__item {
+  margin-right: 1px;
+}
+
+.checkboxes-transports__control {
+  appearance: none;
+}
+
+.checkboxes-transports__label {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  background-color: $basic-white;
+  border-radius: 100%;
+}
+
+.checkboxes-transports__icon {
+  fill: rgba($special-blue-light, 0.15);
+  width: 17px;
+  height: 16px;
+}
+
+.checkboxes-transports__control:checked + .checkboxes-transports__label .checkboxes-transports__icon {
+  fill: $special-blue-light;
+}

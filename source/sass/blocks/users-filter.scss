@@ -1,0 +1,35 @@
+.users-filter {
+  background-color: $basic-yellow;
+  padding-top: 26px;
+  padding-bottom: 22px;
+}
+
+.users-filter__title {
+  padding: 0;
+  margin: 0;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+
+  letter-spacing: 0.02em;
+
+  color: $special-blue-light;
+}
+
+.users-filter__submit {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+
+  justify-content: center;
+
+  text-transform: uppercase;
+
+  color: $basic-blue;
+  background-color: $basic-white;
+
+  padding-top: 14px;
+  padding-bottom: 15px;
+}

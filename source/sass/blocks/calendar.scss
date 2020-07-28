@@ -1,0 +1,47 @@
+.calendar {
+  width: 100%;
+}
+
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-bottom: 33px;
+}
+
+.calendar__button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 21px;
+  background-color: transparent;
+
+  &::before {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  &--back::before {
+    content: url("../../img/triangle-arrow-left.svg");
+  }
+
+  &--next::before {
+    content: url("../../img/triangle-arrow-right.svg");
+  }
+}
+
+.calendar__current-month {
+  margin: 0;
+  padding: 0;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: $special-blue-light;
+}

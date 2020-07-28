@@ -1,0 +1,39 @@
+.plans {
+  padding-top: 29px;
+  padding-bottom: 30px;
+
+  background-color: $basic-change-photo;
+}
+
+.plans__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  counter-reset: list;
+}
+
+.plans__item {
+  counter-increment: list;
+
+  &::before {
+    content: counter(list);
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.plans__title {
+  font-size: 24px;
+  line-height: 24px;
+
+  text-align: center;
+
+  color: $special-blue-light;
+}

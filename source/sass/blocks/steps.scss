@@ -1,0 +1,25 @@
+.steps {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  counter-reset: list;
+
+  color: $special-blue-light;
+
+  padding-bottom: 43px;
+}
+
+.steps__item {
+  counter-increment: list;
+
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: counter(list);
+  }
+}

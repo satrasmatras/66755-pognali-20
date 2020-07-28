@@ -1,0 +1,29 @@
+.fieldset {
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+  border: 1px solid $fieldset-border;
+  border-radius: 10px;
+}
+
+.fieldset__title {
+  $font-size: 16px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  position: absolute;
+  top: -($font-size - $font-size/2);
+  left: 0;
+  right: 0;
+
+  font-weight: bold;
+  font-size: $font-size;
+  line-height: 18px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $special-blue-light;
+}

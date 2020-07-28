@@ -1,0 +1,31 @@
+$tooltip-triangle-height: 7px;
+
+.tooltip {
+  position: relative;
+
+  &::after {
+    min-height: 100%;
+    border-radius: 4px;
+    z-index: 9999;
+  }
+
+  &:hover::after {
+    bottom: -60px;
+    left: calc(-50% - 17px);
+    position: absolute;
+    display: block;
+    content: attr(data-tooltip);
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+
+    text-align: center;
+
+    color: $basic-white;
+    background-color: $tooltip-background;
+
+    padding: 18px 20px;
+  }
+}

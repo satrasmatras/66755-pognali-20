@@ -1,0 +1,67 @@
+$scale-height: 2px;
+$toggle-size: 10px;
+
+.filter-range__inputs {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 25px;
+}
+
+.filter-range__input {
+  padding-top: 13px;
+  padding-bottom: 9px;
+
+  width: 50%;
+  background-color: $basic-white;
+  border: 1px solid $fieldset-border;
+
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 13px;
+
+  letter-spacing: 0.06em;
+
+  color: $special-blue-light;
+
+  text-align: center;
+}
+
+.filter-range__scale {
+  position: relative;
+  width: 100%;
+  background-color: rgba($special-blue-light, 0.2);
+  height: $scale-height;
+}
+
+.filter-range__bar {
+  width: 51%;
+  background-color: $special-blue-light;
+  height: $scale-height;
+}
+
+.filter-range__toggle {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+
+  left: 0;
+  // Позже лучше это расположу и понятнее
+  top: -($toggle-size - $toggle-size / 2) + $scale-height / 2;
+
+  width: $toggle-size;
+  height: $toggle-size;
+  background-color: $special-blue-light;
+  border: none;
+  border-radius: 100%;
+
+  &--min {
+    left: 0;
+  }
+
+  &--max {
+    left: 50%;
+  }
+}

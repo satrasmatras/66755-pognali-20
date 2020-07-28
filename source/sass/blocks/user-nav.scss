@@ -45,34 +45,29 @@
   background-color: $basic-yellow;
   text-decoration: none;
 
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
-  &::before {
-    width: 18px;
-    height: 17px;
-  }
-
   &--tel {
     background-color: $special-orange;
   }
 
-  &--tel::before {
-    display: block;
-    content: url("../../img/topmenu-phone.svg");
+  &--tel:hover {
+    background-color: $special-orange-dark;
   }
 
   &--email {
     background-color: $special-yellow-dark;
   }
 
-  &--email::before {
-    display: block;
-    content: url("../../img/topmenu-mail.svg");
+  &--email:hover {
+    background-color: $special-orange;
   }
+
+  &:active {
+    .user-nav__icon {
+      fill-opacity: 0.3;
+    }
+  }
+}
+
+.user-nav__icon {
+  fill: $basic-blue;
 }

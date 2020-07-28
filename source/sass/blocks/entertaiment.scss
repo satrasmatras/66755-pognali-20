@@ -1,0 +1,22 @@
+.entertainment {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.entertainment__country {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+
+  color: $special-blue-light;
+
+  margin-bottom: 14px;
+}
+
+.entertainment__description {
+  padding: 25px;
+  border: 1px solid $fieldset-border;
+  color: $special-grey;
+}

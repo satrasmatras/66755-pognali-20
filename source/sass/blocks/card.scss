@@ -1,3 +1,5 @@
+$user-status-size: 6px;
+
 .card {
   width: 270px;
   background-color: $basic-white;
@@ -26,16 +28,16 @@
   padding: 0;
   margin: 0;
 
-  width: fit-content;
+  padding-right: 114px;
   word-wrap: break-word;
 
   &::before {
     content: "";
     position: absolute;
-    right: -10%;
-    top: 8px;
-    width: 6px;
-    height: 6px;
+    right: 0;
+    top: $user-status-size + $user-status-size/2;
+    width: $user-status-size;
+    height: $user-status-size;
     border-radius: 100%;
   }
 
@@ -61,7 +63,7 @@
 .card__like {
   width: 30px;
   height: 30px;
-  background-color: $special-red-light;
+  background-color: $countries-filter-background;
 
   display: flex;
   justify-content: center;
@@ -73,6 +75,10 @@
     content: url("../../img/heart.svg");
     width: 100%;
     height: 100%;
+  }
+
+  &--checked {
+    background-color: $special-red-light;
   }
 
   &--checked::before {
@@ -115,4 +121,35 @@
   color: $special-grey;
 
   margin-bottom: 20px;
+}
+
+.card__countries-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+
+  color: $special-grey;
+
+  margin-bottom: 20px;
+}
+
+.card__level-text {
+  font-weight: normal;
+}
+
+.card__progress {
+  width: 45px;
+  height: 45px;
+
+  padding: 10px;
+}
+
+.card__invite {
+  font: inherit;
+  text-transform: uppercase;
+  justify-content: center;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
 }

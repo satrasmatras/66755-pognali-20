@@ -1,0 +1,67 @@
+.fast-registration {
+  background-color: $basic-blue-light;
+  color: $basic-white;
+
+  padding-top: 72px;
+  padding-bottom: 30px;
+}
+
+.fast-registration__title {
+  font-size: 24px;
+  line-height: 24px;
+
+  color: $special-orange;
+
+  margin-bottom: 20px;
+}
+
+.fast-registration__text {
+  font-size: 16px;
+  line-height: 22px;
+
+  text-align: center;
+
+  color: $basic-white;
+
+  margin-bottom: 30px;
+}
+
+.fast-registration__link {
+  color: $basic-yellow;
+  text-decoration-line: underline;
+
+  &:hover {
+    color: $special-orange;
+  }
+
+  &:active {
+    color: rgba($special-orange, 0.3);
+  }
+}
+
+.fast-registration__form {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.fast-registration__input {
+  border: none;
+  border-radius: 10px;
+  flex-grow: 1;
+  padding: 22px 25px;
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 18px;
+
+    color: #444444;
+    opacity: 0.3;
+  }
+}
+
+.fast-registration__button {
+  height: 60px;
+  width: 62px;
+}
