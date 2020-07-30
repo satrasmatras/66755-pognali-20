@@ -58,4 +58,13 @@
   color: rgba($basic-black, 0.3);
 
   text-decoration: none;
+
+  &:hover {
+    color: rgba($basic-black, 0.6);
+  }
+
+  &:active {
+    color: rgba($basic-black, 0.1);
+  }
+
 }

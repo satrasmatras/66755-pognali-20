@@ -7,6 +7,12 @@
   justify-content: center;
 }
 
+.transports--transparent {
+  .transports__item {
+    background-color: transparent;
+  }
+}
+
 .transports__item {
   width: 30px;
   height: 30px;
@@ -19,6 +25,7 @@
 
   border-radius: 100%;
 
+  color: $special-blue-light;
   background-color: $basic-grey;
 
   &:last-child {
@@ -26,12 +33,6 @@
   }
 }
 
-.transports__item--disabled .transports__icon {
-  fill: rgba($special-blue-light, 0.15);
-}
-
-.transports__icon {
-  fill: $special-blue-light;
-  width: 17px;
-  height: 16px;
+.transports__item--disabled {
+  color: rgba($special-blue-light, 0.15);
 }

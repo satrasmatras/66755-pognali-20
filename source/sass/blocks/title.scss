@@ -1,10 +1,17 @@
 .title {
-  padding: 0;
   margin: 0;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
+
+  font-size: 24px;
+  line-height: 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 
   &--promo {
     font-size: 36px;

@@ -3,25 +3,90 @@
   padding-bottom: 35px;
   background-color: $basic-blue-light;
   color: $basic-white;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 141px;
+    padding-bottom: 87px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 130px;
+    padding-bottom: 87px;
+  }
+}
+
+.companions__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.companions__description {
+  @media screen and (min-width: 768px) {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
+
+
+.companions__list-wrapper {
+  @media screen and (min-width: 768px) {
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+
+  @media screen and (min-width: 1440px) {
+    flex-grow: 1;
+  }
 }
 
 .companions__title {
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 24px;
 
   color: $special-orange;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 55px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 55px;
+  }
 }
 
 .companions__text {
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+
+  @media screen and (min-width: 768px) {
+    width: 427px;
+
+    margin-bottom: 39px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 427px;
+
+    margin-bottom: 42px;
+  }
 
   &--bold {
     font-weight: bold;
+
+    @media screen and (min-width: 768px) {
+      font-weight: bold;
+      font-size: 21px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -31,8 +96,53 @@
   list-style: none;
   margin-top: 54px;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 59px;
+    margin-bottom: 81px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    justify-content: space-around;
+
+    flex-grow: 1;
+
+    margin-bottom: 0;
+  }
 }
 
 .companions__item {
   margin-bottom: 10px;
+}
+
+.companions__show-all {
+  &--top {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 1440px) {
+      margin-top: 85px;
+
+      display: block;
+    }
+  }
+
+  &--bottom {
+    @media screen and (min-width: 768px) {
+      display: block;
+
+    }
+
+    @media screen and (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+
 }

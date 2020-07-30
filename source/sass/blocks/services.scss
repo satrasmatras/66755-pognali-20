@@ -2,6 +2,16 @@
   background-color: $basic-grey-light;
   color: $special-grey;
   padding-top: 53px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 74px;
+    padding-bottom: 63px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 107px;
+    padding-bottom: 165px;
+  }
 }
 
 .services__title {
@@ -9,9 +19,6 @@
   justify-content: center;
 
   font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 24px;
 
   color: $special-orange;
   text-decoration: none;
@@ -20,6 +27,14 @@
   margin: 0;
 
   margin-bottom: 43px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 74px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 153px;
+  }
 }
 
 .services__tariffs {
@@ -28,6 +43,10 @@
   list-style: none;
 
   margin-bottom: 46px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 31px;
+  }
 }
 
 .services__show-tariffs {

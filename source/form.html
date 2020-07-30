@@ -33,14 +33,14 @@
           </li>
         </ul>
         <a class="menu__auth button button--rounded" href="">Авторизация</a>
-        <ul class="menu__contacts contacts contacts--light">
+        <ul class="menu__contacts contacts contacts--light list list--resetted">
           <li class="contacts__item">
             <a
               class="contacts__link contacts__link--tel"
               href="tel:+88005558628"
             >
               <div class="contacts__icon-wrapper">
-                <svg class="contacts__icon">
+                <svg class="contacts__icon" width="13.5" height="14">
                   <use href="./img/contacts-phone.svg#contacts-phone"></use>
                 </svg>
               </div>
@@ -54,7 +54,7 @@
               href="mailto:mail@htmlacademy.ru"
             >
               <div class="contacts__icon-wrapper">
-                <svg class="contacts__icon">
+                <svg class="contacts__icon" width="19" height="13">
                   <use href="./img/contacts-mail.svg#contacts-mail"></use>
                 </svg>
               </div>
@@ -113,8 +113,8 @@
         </div>
         <a class="button button--rounded profile__photo-change">Сменить фото</a>
         <div class="fieldset profile__fieldset">
-          <label class="profile__label fieldset__title">Тэги</label>
-          <textarea class="profile__textarea textarea fieldset__content" name="tags">#бургер #бар #футбол #концерт#крафт</textarea>
+          <label class="profile__label fieldset__title" for="tags-field">Тэги</label>
+          <textarea class="profile__textarea textarea fieldset__content" name="tags" id="tags-field">#бургер #бар #футбол #концерт#крафт</textarea>
         </div>
         <fieldset class="profile__fieldset fieldset">
           <legend class="fieldset__title">Транспорт</legend>
@@ -127,7 +127,7 @@
                 data-tooltip="Авиаперелет"
                 aria-label="Авиаперелет"
               >
-                <svg class="checkboxes-transports__icon">
+                <svg class="checkboxes-transports__icon" width="14" height="16">
                   <use href="img/plane.svg#plane"></use>
                 </svg>
               </label>
@@ -141,7 +141,7 @@
                 data-tooltip="Автотранспорт"
                 aria-label="Автотранспорт"
               >
-                <svg class="checkboxes-transports__icon">
+                <svg class="checkboxes-transports__icon" width="13" height="16">
                   <use href="img/bus.svg#bus"></use>
                 </svg>
               </label>
@@ -155,7 +155,7 @@
                 data-tooltip="Велосипед"
                 aria-label="Велосипед"
               >
-                <svg class="checkboxes-transports__icon">
+                <svg class="checkboxes-transports__icon" width="15" height="17">
                   <use href="img/bike.svg#bike"></use>
                 </svg>
               </label>
@@ -169,7 +169,7 @@
                 data-tooltip="Пешком"
                 aria-label="Пешком"
               >
-                <svg class="checkboxes-transports__icon">
+                <svg class="checkboxes-transports__icon" width="13" height="17">
                   <use href="img/run.svg#run"></use>
                 </svg>
               </label>
@@ -182,17 +182,17 @@
 
   <section class="plans">
     <div class="container">
-      <h2 class="plans__title">Мои планы:</h2>
+      <h2 class="plans__title title">Мои планы:</h2>
       <ol class="plans__list">
         <li class="plans__item plan">
-          <h3 class="plan__title">Франция, Италия</h3>
+          <h3 class="plan__title title">Франция, Италия</h3>
           <span class="plan__count">3 попутчика</span>
           <span class="plan__dates">26 мар - 29 мар</span>
           <a class="plan__change" href="">Изменить</a>
         </li>
 
         <li class="plans__item plan">
-          <h3 class="plan__title">Таиланд, Индонезия</h3>
+          <h3 class="plan__title title">Таиланд, Индонезия</h3>
           <span class="plan__count">1 попутчик</span>
           <span class="plan__dates">1 июл — 15 июл</span>
           <a class="plan__change" href="">Изменить</a>
@@ -203,11 +203,11 @@
 
   <section class="add-plan">
     <div class="container">
-      <h2 class="add-plan__title">Добавить план:</h2>
+      <h2 class="add-plan__title title">Добавить план:</h2>
       <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="POST">
         <ol class="steps">
           <li class="steps__item step">
-            <h3 class="step__title" id="step-1">Даты пребывания</h3>
+            <h3 class="step__title title" id="step-1">Даты пребывания</h3>
             <p class="step__description">
               Укажите предпочтительное количество попутчиков,
               которых вы хотели бы позвать в поездку и ее предполагаемую длительность.
@@ -331,7 +331,7 @@
           </li>
 
           <li class="steps__item step">
-            <h3 class="step__title" id="step-2">Маршрут</h3>
+            <h3 class="step__title title" id="step-2">Маршрут</h3>
             <p class="step__description">
               Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
             </p>
@@ -468,7 +468,7 @@
           </li>
 
           <li class="steps__item step">
-            <h3 class="step__title" id="step-3">Развлечения</h3>
+            <h3 class="step__title title" id="step-3">Развлечения</h3>
             <p class="step__description">
               Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.
             </p>
@@ -522,33 +522,39 @@
 </main>
 
 <footer class="footer">
-  <div class="container">
+  <div class="footer__wrapper container">
     <a class="footer__logo logo" href="index.html">
       <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
     </a>
     <ul class="footer__socials socials socials--yellow">
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--facebook">
-          <span class="sr-only">Facebook</span>
+        <a href="" class="socials__link" aria-label="Facebook">
+          <svg class="socials__icon" width="11" height="21">
+            <use href="img/facebook.svg#facebook"></use>
+          </svg>
         </a>
       </li>
 
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--vk">
-          <span class="sr-only">VK</span>
+        <a href="" class="socials__link" aria-label="VK">
+          <svg class="socials__icon" width="23" height="12">
+            <use href="img/vk.svg#vk"></use>
+          </svg>
         </a>
       </li>
 
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--instagram">
-          <span class="sr-only">Instagram</span>
+        <a href="" class="socials__link" aria-label="Instagram">
+          <svg class="socials__icon" width="18" height="18">
+            <use href="img/instagram.svg#instagram"></use>
+          </svg>
         </a>
       </li>
     </ul>
     <div class="footer__copyright copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__text text">Разработано</span>
+        <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
       </a>
     </div>
   </div>

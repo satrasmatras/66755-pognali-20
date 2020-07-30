@@ -1,32 +1,82 @@
 .directions {
-  padding-top: 72px;
+  padding-top: 73px;
   padding-bottom: 34px;
   background-color: $basic-grey;
   color: $special-grey;
+}
+
+.directions__wrapper {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
 
 .directions__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 46px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 0;
+  }
+
 }
 
 .directions__title {
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 24px;
 
   color: $special-orange;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 57px;
+  }
 }
 
 .directions__text {
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+
+  @media screen and (min-width: 768px) {
+    width: 378px;
+
+    margin-bottom: 104px;
+  }
 
   &--bold {
     font-weight: bold;
+
+    @media screen and (min-width: 768px) {
+      font-size: 21px;
+      line-height: 24px;
+    }
+  }
+}
+
+.directions__show-all {
+  &--top {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+    @media screen and (min-width: 1440px) {
+      display: block;
+    }
+  }
+
+  &--bottom {
+    @media screen and (min-width: 768px) {
+      display: block;
+      width: 100%;
+    }
+
+    @media screen and (min-width: 1440px) {
+      display: none;
+    }
   }
 }

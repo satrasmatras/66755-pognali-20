@@ -31,11 +31,19 @@ $user-status-size: 6px;
   padding-right: 114px;
   word-wrap: break-word;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::before {
     content: "";
     position: absolute;
     right: 0;
-    top: $user-status-size + $user-status-size/2;
+    top: $user-status-size + $user-status-size / 2;
     width: $user-status-size;
     height: $user-status-size;
     border-radius: 100%;

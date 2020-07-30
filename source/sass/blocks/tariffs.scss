@@ -5,6 +5,10 @@
   font-size: 16px;
   line-height: 16px;
   color: $special-grey;
+
+  @media screen and (min-width: 1440px) {
+    padding-right: 345px;
+  }
 }
 
 .tariffs--no-counter {
@@ -21,6 +25,24 @@
   counter-increment: list-number;
 
   margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+    line-height: 28px;
+
+    padding-left: 90px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 37px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 38px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -40,11 +62,34 @@
     font-size: 16px;
     line-height: 16px;
 
+    color: $basic-white;
+
     background-color: $special-orange;
 
-    color: $basic-white;
     content: counter(list-number);
     width: 34px;
     height: 34px;
+
+    @media screen and (min-width: 768px) {
+
+      left: 0;
+      top: -17px;
+      width: 68px;
+      height: 68px;
+
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+  &:nth-child(3n - 2)::after {
+    background-color: $special-orange;
+  }
+
+  &:nth-child(3n - 1)::after {
+    background-color: $special-yellow-dark;
+  }
+
+  &:nth-child(3n)::after {
+    background-color: $basic-yellow;
   }
 }

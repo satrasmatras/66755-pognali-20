@@ -4,18 +4,44 @@
   background-color: $basic-white;
   color: $special-grey;
 
+  @media screen and (min-width: 768px) {
+    padding-top: 48px;
+    padding-bottom: 32px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 47px;
+    padding-bottom: 43px;
+  }
+}
+
+.footer__wrapper {
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .footer__logo {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__socials {
   margin-bottom: 50px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__copyright {
