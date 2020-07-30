@@ -172,68 +172,56 @@
           Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно
           там заняться.
         </p>
-        <a
-          class="directions__show-all directions__show-all--top button button--normal-size button--primary button--yellow"
-          type="button"
-        >
-          Показать все
-          <svg class="button__append-icon" width="13" height="13">
-            <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
-          </svg>
-        </a>
       </div>
+      <ul class="directions__list">
+        <li class="direction directions__item">
+          <img class="direction__image" src="img/thailand-mobile@1x.jpg" alt="Тайланд">
+          <img
+            class="direction__flag tooltip"
+            src="https://via.placeholder.com/35x24"
+            data-tooltip="Тайланд"
+            alt="Флаг Тайланда"
+          >
+          <h3 class="direction__country">Тайланд</h3>
+          <p class="direction__promo">Джунгли зовут!</p>
+          <span class="direction__users">18321</span>
+        </li>
 
-      <div class="directions__list-wrapper">
-        <ul class="directions__list">
-          <li class="direction directions__item">
-            <img class="direction__image" src="img/thailand-mobile@1x.jpg" alt="Тайланд">
-            <img
-              class="direction__flag tooltip"
-              src="https://via.placeholder.com/35x24"
-              data-tooltip="Тайланд"
-              alt="Флаг Тайланда"
-            >
-            <h3 class="direction__country">Тайланд</h3>
-            <p class="direction__promo">Джунгли зовут!</p>
-            <span class="direction__users">18321</span>
-          </li>
+        <li class="direction directions__item">
+          <img class="direction__image" src="img/france-mobile@1x.jpg" alt="Франция">
+          <img
+            class="direction__flag tooltip"
+            src="https://via.placeholder.com/35x24"
+            data-tooltip="Франция"
+            alt="Флаг Франции"
+          >
+          <h3 class="direction__country">Франция</h3>
+          <p class="direction__promo">Трэ бьен, манифик!</p>
+          <span class="direction__users">12518</span>
+        </li>
 
-          <li class="direction directions__item">
-            <img class="direction__image" src="img/france-mobile@1x.jpg" alt="Франция">
-            <img
-              class="direction__flag tooltip"
-              src="https://via.placeholder.com/35x24"
-              data-tooltip="Франция"
-              alt="Флаг Франции"
-            >
-            <h3 class="direction__country">Франция</h3>
-            <p class="direction__promo">Трэ бьен, манифик!</p>
-            <span class="direction__users">12518</span>
-          </li>
-
-          <li class="direction directions__item">
-            <img class="direction__image" src="img/czech-mobile@1x.jpg" alt="Чехия">
-            <img
-              class="direction__flag tooltip"
-              src="https://via.placeholder.com/35x24"
-              data-tooltip="Чехия"
-              alt="Флаг Чехии"
-            >
-            <h3 class="direction__country">Чехия</h3>
-            <p class="direction__promo">Закоулки старой Европы</p>
-            <span class="direction__users">5326</span>
-          </li>
-        </ul>
-        <a
-          class="directions__show-all directions__show-all--bottom button button--primary button--yellow"
-          type="button"
-        >
-          Показать все
-          <svg class="button__append-icon" width="13" height="13">
-            <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
-          </svg>
-        </a>
-      </div>
+        <li class="direction directions__item">
+          <img class="direction__image" src="img/czech-mobile@1x.jpg" alt="Чехия">
+          <img
+            class="direction__flag tooltip"
+            src="https://via.placeholder.com/35x24"
+            data-tooltip="Чехия"
+            alt="Флаг Чехии"
+          >
+          <h3 class="direction__country">Чехия</h3>
+          <p class="direction__promo">Закоулки старой Европы</p>
+          <span class="direction__users">5326</span>
+        </li>
+      </ul>
+      <a
+        class="directions__show-all button button--normal-size button--primary button--yellow"
+        type="button"
+      >
+        Показать все
+        <svg class="button__append-icon" width="13" height="13">
+          <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+        </svg>
+      </a>
     </div>
   </section>
 
@@ -245,236 +233,225 @@
           Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
         </p>
         <p class="companions__text companions__text--bold text">Теперь можно легко найти единомышленников!</p>
-        <a
-          href=""
-          class="companions__show-all companions__show-all--top button button--normal-size button--primary button--yellow"
-        >
-          Показать всех
-          <svg class="button__append-icon" width="13" height="13">
-            <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
-          </svg>
-        </a>
       </div>
 
-      <div class="companions__list-wrapper">
-        <ul class="companions__list">
-          <li class="companions__item preview-card">
-            <div class="preview-card__progress progress">
-              <span class="progress__value">100</span>
-              <span class="progress__level">level</span>
-              <div class="progress__circle">
-                <svg class="progress__svg" height="60" width="60">
-                  <circle class="progress__svg-circle"
-                          data-stroke="red"
-                          style="
+      <ul class="companions__list">
+        <li class="companions__item preview-card">
+          <div class="preview-card__progress progress">
+            <span class="progress__value">100</span>
+            <span class="progress__level">level</span>
+            <div class="progress__circle">
+              <svg class="progress__svg" height="60" width="60">
+                <circle class="progress__svg-circle"
+                        data-stroke="red"
+                        style="
                         --progress-level: 80;
                         --progress-radius: 20;
 "
-                          cx="30"
-                          cy="30"
-                          r="20"
-                          stroke="orange"
-                          stroke-width="5"
-                          fill="transparent"
-                          stroke-linecap="round"
-                  />
-                </svg>
-              </div>
+                        cx="30"
+                        cy="30"
+                        r="20"
+                        stroke="orange"
+                        stroke-width="5"
+                        fill="transparent"
+                        stroke-linecap="round"
+                />
+              </svg>
             </div>
-            <img class="preview-card__avatar" src="img/firsova-desktop@1x.jpg" alt="Аватар Таня Фирсова">
-            <ul class="preview-card__flags flags">
-              <li class="flags__item">
-                <img
-                  class="flags__image tooltip"
-                  src="https://via.placeholder.com/35x25"
-                  data-tooltip="Шри-Ланка"
-                  alt="Флаг Шри-Ланки"
-                >
-              </li>
-
-              <li class="flags__item">
-                <img
-                  class="flags__image tooltip"
-                  src="https://via.placeholder.com/35x25"
-                  data-tooltip="Тайланд"
-                  alt="Флаг Тайланда"
-                >
-              </li>
-
-              <li class="flags__item">
-                <img
-                  class="flags__image tooltip"
-                  src="https://via.placeholder.com/35x25"
-                  data-tooltip="Сейшеллы"
-                  alt="Флаг Сейшеллов"
-                >
-              </li>
-            </ul>
-            <h3 class="preview-card__name preview-card__name--offline">
-              <a class="preview-card__name-link" href="">Таня Фирсова</a>
-            </h3>
-            <ul class="preview-card__tags tags tags--center">
-              <li class="tags__tag">#ЗОЖ</li>
-
-              <li class="tags__tag">#ПП</li>
-
-              <li class="tags__tag">#Фитнес</li>
-
-              <li class="tags__tag">#пляж</li>
-
-              <li class="tags__tag">#авокадо</li>
-
-              <li class="tags__tag">#смузи</li>
-            </ul>
-            <ul class="preview-card__transports transports transports--transparent">
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Авиаперелет"
-                aria-label="Авиаперелет"
+          </div>
+          <img class="preview-card__avatar" src="img/firsova-desktop@1x.jpg" alt="Аватар Таня Фирсова">
+          <ul class="preview-card__flags flags">
+            <li class="flags__item">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/35x25"
+                data-tooltip="Шри-Ланка"
+                alt="Флаг Шри-Ланки"
               >
-                <svg class="transports__icon" width="14" height="16">
-                  <use href="img/plane.svg#plane"></use>
-                </svg>
-              </li>
+            </li>
 
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Автотранспорт"
-                aria-label="Автотранспорт"
+            <li class="flags__item">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/35x25"
+                data-tooltip="Тайланд"
+                alt="Флаг Тайланда"
               >
-                <svg class="transports__icon" width="13" height="16">
-                  <use href="img/bus.svg#bus"></use>
-                </svg>
-              </li>
+            </li>
 
-              <li
-                class="transports__item transports__item--disabled tooltip"
-                data-tooltip="Велосипед"
-                aria-label="Велосипед"
+            <li class="flags__item">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/35x25"
+                data-tooltip="Сейшеллы"
+                alt="Флаг Сейшеллов"
               >
-                <svg class="transports__icon" width="15" height="17">
-                  <use href="img/bike.svg#bike"></use>
-                </svg>
-              </li>
+            </li>
+          </ul>
+          <h3 class="preview-card__name preview-card__name--offline">
+            <a class="preview-card__name-link" href="">Таня Фирсова</a>
+          </h3>
+          <ul class="preview-card__tags tags tags--center">
+            <li class="tags__tag">#ЗОЖ</li>
 
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Пешком"
-                aria-label="Пешком"
-              >
-                <svg class="transports__icon" width="13" height="17">
-                  <use href="img/run.svg#run"></use>
-                </svg>
-              </li>
-            </ul>
-          </li>
+            <li class="tags__tag">#ПП</li>
 
-          <li class="companions__item preview-card">
-            <div class="preview-card__progress progress">
-              <span class="progress__value">80</span>
-              <span class="progress__level">level</span>
-              <div class="progress__circle">
-                <svg height="100" width="100">
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="40"
-                    stroke="orange"
-                    stroke-width="5"
-                    fill="transparent"
-                    stroke-dasharray="100"
-                    stroke-dashoffset="100"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </div>
+            <li class="tags__tag">#Фитнес</li>
+
+            <li class="tags__tag">#пляж</li>
+
+            <li class="tags__tag">#авокадо</li>
+
+            <li class="tags__tag">#смузи</li>
+          </ul>
+          <ul class="preview-card__transports transports transports--transparent">
+            <li
+              class="transports__item tooltip"
+              data-tooltip="Авиаперелет"
+              aria-label="Авиаперелет"
+            >
+              <svg class="transports__icon" width="14" height="16">
+                <use href="img/plane.svg#plane"></use>
+              </svg>
+            </li>
+
+            <li
+              class="transports__item tooltip"
+              data-tooltip="Автотранспорт"
+              aria-label="Автотранспорт"
+            >
+              <svg class="transports__icon" width="13" height="16">
+                <use href="img/bus.svg#bus"></use>
+              </svg>
+            </li>
+
+            <li
+              class="transports__item transports__item--disabled tooltip"
+              data-tooltip="Велосипед"
+              aria-label="Велосипед"
+            >
+              <svg class="transports__icon" width="15" height="17">
+                <use href="img/bike.svg#bike"></use>
+              </svg>
+            </li>
+
+            <li
+              class="transports__item tooltip"
+              data-tooltip="Пешком"
+              aria-label="Пешком"
+            >
+              <svg class="transports__icon" width="13" height="17">
+                <use href="img/run.svg#run"></use>
+              </svg>
+            </li>
+          </ul>
+        </li>
+
+        <li class="companions__item preview-card">
+          <div class="preview-card__progress progress">
+            <span class="progress__value">80</span>
+            <span class="progress__level">level</span>
+            <div class="progress__circle">
+              <svg height="100" width="100">
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  stroke="orange"
+                  stroke-width="5"
+                  fill="transparent"
+                  stroke-dasharray="100"
+                  stroke-dashoffset="100"
+                  stroke-linecap="round"
+                />
+              </svg>
             </div>
-            <img class="preview-card__avatar" src="img/demin-desktop@1x.jpg" alt="Аватар Таня Фирсова">
-            <ul class="preview-card__flags flags">
-              <li class="flags__item">
-                <img
-                  class="flags__image tooltip"
-                  src="https://via.placeholder.com/35x25"
-                  data-tooltip="Бельгия"
-                  alt="Флаг Бельгии"
-                >
-              </li>
-              <li class="flags__item">
-                <img
-                  class="flags__image tooltip"
-                  src="https://via.placeholder.com/35x25"
-                  data-tooltip="Чехия"
-                  alt="Флаг Чехии"
-                >
-              </li>
-            </ul>
-            <h3 class="preview-card__name preview-card__name--online">
-              <a href="" class="preview-card__name-link">Петя Демин</a>
-            </h3>
-            <ul class="preview-card__tags tags tags--center">
-              <li class="tags__tag">#бургер</li>
-
-              <li class="tags__tag">#бар</li>
-
-              <li class="tags__tag">#футбол</li>
-
-              <li class="tags__tag">#концерт</li>
-
-              <li class="tags__tag">#крафт</li>
-            </ul>
-            <ul class="preview-card__transports transports transports--transparent">
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Авиаперелет"
-                aria-label="Авиаперелет"
+          </div>
+          <img class="preview-card__avatar" src="img/demin-desktop@1x.jpg" alt="Аватар Таня Фирсова">
+          <ul class="preview-card__flags flags">
+            <li class="flags__item">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/35x25"
+                data-tooltip="Бельгия"
+                alt="Флаг Бельгии"
               >
-                <svg class="transports__icon" width="14" height="16">
-                  <use href="img/plane.svg#plane"></use>
-                </svg>
-              </li>
-
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Автотранспорт"
-                aria-label="Автотранспорт"
+            </li>
+            <li class="flags__item">
+              <img
+                class="flags__image tooltip"
+                src="https://via.placeholder.com/35x25"
+                data-tooltip="Чехия"
+                alt="Флаг Чехии"
               >
-                <svg class="transports__icon" width="13" height="16">
-                  <use href="img/bus.svg#bus"></use>
-                </svg>
-              </li>
+            </li>
+          </ul>
+          <h3 class="preview-card__name preview-card__name--online">
+            <a href="" class="preview-card__name-link">Петя Демин</a>
+          </h3>
+          <ul class="preview-card__tags tags tags--center">
+            <li class="tags__tag">#бургер</li>
 
-              <li
-                class="transports__item transports__item--disabled tooltip"
-                data-tooltip="Велосипед"
-                aria-label="Велосипед"
-              >
-                <svg class="transports__icon" width="15" height="17">
-                  <use href="img/bike.svg#bike"></use>
-                </svg>
-              </li>
+            <li class="tags__tag">#бар</li>
 
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Пешком"
-                aria-label="Пешком"
-              >
-                <svg class="transports__icon" width="13" height="17">
-                  <use href="img/run.svg#run"></use>
-                </svg>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <a
-          href=""
-          class="companions__show-all companions__show-all--bottom button button--primary button--yellow"
-        >
-          Показать всех
-          <svg class="button__append-icon" width="13" height="13">
-            <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
-          </svg>
-        </a>
-      </div>
+            <li class="tags__tag">#футбол</li>
+
+            <li class="tags__tag">#концерт</li>
+
+            <li class="tags__tag">#крафт</li>
+          </ul>
+          <ul class="preview-card__transports transports transports--transparent">
+            <li
+              class="transports__item tooltip"
+              data-tooltip="Авиаперелет"
+              aria-label="Авиаперелет"
+            >
+              <svg class="transports__icon" width="14" height="16">
+                <use href="img/plane.svg#plane"></use>
+              </svg>
+            </li>
+
+            <li
+              class="transports__item tooltip"
+              data-tooltip="Автотранспорт"
+              aria-label="Автотранспорт"
+            >
+              <svg class="transports__icon" width="13" height="16">
+                <use href="img/bus.svg#bus"></use>
+              </svg>
+            </li>
+
+            <li
+              class="transports__item transports__item--disabled tooltip"
+              data-tooltip="Велосипед"
+              aria-label="Велосипед"
+            >
+              <svg class="transports__icon" width="15" height="17">
+                <use href="img/bike.svg#bike"></use>
+              </svg>
+            </li>
+
+            <li
+              class="transports__item tooltip"
+              data-tooltip="Пешком"
+              aria-label="Пешком"
+            >
+              <svg class="transports__icon" width="13" height="17">
+                <use href="img/run.svg#run"></use>
+              </svg>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <a
+        href=""
+        class="companions__show-all companions__show-all--top button button--normal-size button--primary button--yellow"
+      >
+        Показать всех
+        <svg class="button__append-icon" width="13" height="13">
+          <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+        </svg>
+      </a>
     </div>
   </section>
 
