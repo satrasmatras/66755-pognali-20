@@ -144,6 +144,15 @@ $user-status-size: 6px;
 
 .card__flags {
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: column;
+  }
 }
 
 .card__transports-wrapper {
@@ -166,6 +175,8 @@ $user-status-size: 6px;
 }
 
 .card__level-text {
+  font-weight: normal;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -175,6 +186,7 @@ $user-status-size: 6px;
   @media screen and (min-width: 768px) {
     flex-direction: column;
   }
+
   @media screen and (min-width: 1440px) {
     flex-direction: row;
   }
@@ -197,20 +209,6 @@ $user-status-size: 6px;
   @media screen and (min-width: 1440px) {
     display: none;
   }
-}
-
-.card__flags {
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-    align-items: center;
-  }
-  @media screen and (min-width: 1440px) {
-    flex-direction: column;
-  }
-}
-
-.card__level-text {
-  font-weight: normal;
 }
 
 .card__progress {
