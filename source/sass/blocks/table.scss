@@ -9,18 +9,46 @@
   font-size: 14px;
   line-height: 18px;
 
+  table-layout: fixed;
+
   color: rgba($special-grey, 0.3);
 }
 
 .table__cell {
+  font-size: 14px;
+  line-height: 18px;
+
+  padding-top: 7px;
+  padding-bottom: 6px;
   font-weight: normal;
-  width: 100% / 7;
+  width: calc(100% / 7);
   text-align: center;
   border: 1px solid $fieldset-border;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 18px;
+
+    padding-top: 25px;
+    padding-bottom: 26px;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    text-align: left;
+    padding-top: 14px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+  }
 
   &--selected {
     color: $basic-white;
     background-color: $weekend-selected-background;
+
+    &:hover {
+      box-shadow: inset 0 0 0 2px red;
+    }
   }
 
   &--available {
@@ -37,7 +65,29 @@
   font-weight: normal;
   color: rgba($special-grey, 1);
 
+  padding-bottom: 10px;
+
   &--weekend {
     color: $weekend-orange;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    text-align: left;
+    padding-top: 14px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+  }
+}
+
+.table__hidden-letter {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: inline;
   }
 }

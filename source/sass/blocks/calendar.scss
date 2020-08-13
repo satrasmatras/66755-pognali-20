@@ -15,23 +15,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 14px;
+  width: 15px;
   height: 21px;
   background-color: transparent;
 
-  &::before {
-    display: block;
-    width: 20px;
-    height: 20px;
+  color: $qty-button;
+
+  cursor: pointer;
+
+  &:hover {
+    color: $qty-button-hover;
   }
 
-  &--back::before {
-    content: url("../../img/triangle-arrow-left.svg");
+  &:active {
+    color: $qty-button-active;
   }
+}
 
-  &--next::before {
-    content: url("../../img/triangle-arrow-right.svg");
-  }
+.calendar__icon {
+  flex-shrink: 0;
 }
 
 .calendar__current-month {
@@ -40,8 +42,6 @@
 
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 20px;
 
   color: $special-blue-light;
 }

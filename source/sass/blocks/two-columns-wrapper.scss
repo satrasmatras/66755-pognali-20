@@ -1,0 +1,17 @@
+.two-columns-wrapper {
+  @media screen and (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: 1fr;
+
+    .two-columns-wrapper__filter {
+      // TODO: почему-то не смог поменять местами фильтр и пользователей через грид-колумн 0_o
+      grid-column: 1;
+      width: 285px;
+    }
+
+    .two-columns-wrapper__users {
+      grid-column: -1;
+    }
+  }
+}

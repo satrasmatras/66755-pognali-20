@@ -1,9 +1,51 @@
-.slider {
+.pagination {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-left: 28px;
+  padding-right: 35px;
+
+  background-color: $basic-white;
 }
 
-.slider__button {
+.pagination__pages-list {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.pagination__arrows {
+  width: 100%;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    width: 53px;
+  }
+  display: flex;
+}
+
+.pagination__pages-link {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+
+  text-transform: uppercase;
+
+  color: $special-blue-light;
+  text-decoration: none;
+
+  padding: 17px 19px 16px 20px;
+  border-radius: 50%;
+
+  &--current {
+    background-color: $basic-yellow;
+  }
+}
+
+.pagination__button {
   cursor: pointer;
   padding-top: 16px;
   padding-bottom: 16px;

@@ -1,8 +1,10 @@
 .country {
   position: relative;
   width: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .country__dropdown {
@@ -27,6 +29,15 @@
   padding-top: 13px;
   padding-bottom: 13px;
 
+  overflow-x: hidden;
+  text-align: left;
+
+  width: 168px;
+
+  &--activator {
+    width: 100%;
+  }
+
   &--clicked {
     background-color: $special-blue-light;
     color: $basic-white;
@@ -35,6 +46,9 @@
 }
 
 .country__cancel {
+  position: absolute;
+  right: 5px;
+  top: -10px;
   background-color: $basic-grey;
   border: none;
   border-radius: 100%;
@@ -44,6 +58,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 
   &::before {
     content: url("../../img/close.svg");
@@ -59,5 +74,9 @@
   top: 100%;
   position: absolute;
   flex-grow: 9999;
+  flex-shrink: 0;
+}
+
+.country__flag {
   flex-shrink: 0;
 }

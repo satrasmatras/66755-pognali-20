@@ -1,6 +1,7 @@
 $user-status-size: 6px;
 
 .card {
+  display: grid;
   width: 270px;
   background-color: $basic-white;
 
@@ -10,9 +11,28 @@ $user-status-size: 6px;
   padding-bottom: 22px;
 
   border-radius: 20px;
+
+  grid-template-areas: "avatar name name" "avatar likes likes" "tags tags tags" "countries countries countries" "transport transport level" "button button button";
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media screen and (min-width: 768px) {
+    width: 688px;
+    grid-template-areas: "avatar name name transport" "avatar tags tags transport" "avatar button likes level" "countries countries countries countries";
+    grid-template-columns: 1fr 1fr 1fr min-content;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 951px;
+    grid-template-areas: "avatar name name countries countries" "avatar tags tags countries countries" "avatar button likes transport level";
+  }
+}
+
+.card__level-wrapper {
+  grid-area: level;
 }
 
 .card__avatar-wrapper {
+  grid-area: avatar;
   width: 70px;
   height: 70px;
   border-radius: 100%;
@@ -24,12 +44,13 @@ $user-status-size: 6px;
 }
 
 .card__name {
+  grid-area: name;
   position: relative;
   padding: 0;
   margin: 0;
 
   padding-right: 114px;
-  word-wrap: break-word;
+  word-wrap: break-spaces;
 
   &:hover {
     opacity: 0.6;
@@ -66,6 +87,11 @@ $user-status-size: 6px;
 
   color: $basic-blue-light;
   text-decoration: none;
+}
+
+.card__likes-wrapper {
+  grid-area: likes;
+  display: flex;
 }
 
 .card__like {
@@ -120,6 +146,10 @@ $user-status-size: 6px;
   margin-bottom: 20px;
 }
 
+.card__transports-wrapper {
+  grid-area: transport;
+}
+
 .card__transports-text {
   font-style: normal;
   font-weight: normal;
@@ -129,6 +159,29 @@ $user-status-size: 6px;
   color: $special-grey;
 
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.card__level-text {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.card__transports {
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+  }
+}
+
+.card__countries-wrapper {
+  grid-area: countries;
 }
 
 .card__countries-text {
@@ -140,6 +193,20 @@ $user-status-size: 6px;
   color: $special-grey;
 
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.card__flags {
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+  @media screen and (min-width: 1440px) {
+    flex-direction: column;
+  }
 }
 
 .card__level-text {
@@ -154,10 +221,16 @@ $user-status-size: 6px;
 }
 
 .card__invite {
+  grid-area: button;
   font: inherit;
   text-transform: uppercase;
   justify-content: center;
 
   padding-top: 14px;
   padding-bottom: 14px;
+}
+
+
+.card__tags {
+  grid-area: tags;
 }

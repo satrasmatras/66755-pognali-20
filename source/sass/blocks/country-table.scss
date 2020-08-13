@@ -1,5 +1,76 @@
 .country-table {
   width: 100%;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 35px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 730px;
+  }
+}
+
+.country-table__table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  @media screen and (min-width: 768px) {
+    width: 262px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 361px;
+    border-collapse: separate;
+    border-spacing: 16px;
+  }
+}
+
+
+.country-table__cell {
+  // TODO: Почему если я поставлю ячейке display: flex, то все ломается?
+  width: calc(100% / 5);
+  padding-top: 12px;
+  padding-right: 19px;
+  padding-bottom: 15px;
+  padding-left: 17px;
+
+  text-align: center;
+  vertical-align: center;
+
+  @media screen and (min-width: 768px) {
+    padding: 27px 22px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-right: 14px;
+  }
+
+  border: 1px solid $fieldset-border;
+
+  &--selected {
+    background-color: $basic-grey;
+    border-bottom: 1px solid $basic-grey;
+
+    @media screen and (min-width: 768px) {
+      background-color: $special-blue-light;
+
+      color: white;
+    }
+  }
+}
+
+.country-table__table--white {
+  .country-table__cell {
+    background-color: $basic-white;
+  }
+  .country-table__cell--selected {
+    background-color: $special-blue-light;
+    color: $basic-white;
+  }
 }
 
 .country-table__list {
@@ -34,6 +105,10 @@
   margin: 0;
   list-style: none;
   padding: 19px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
 }
 
 .country-table__content-item {
@@ -50,4 +125,35 @@
 .country-table__content-link {
   color: inherit;
   text-decoration: none;
+}
+
+
+.country-table--large {
+  @media screen and (min-width: 768px) {
+    border-spacing: 44px;
+
+    .country-table__cell {
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 60px;
+
+      text-transform: uppercase;
+
+      color: rgba($basic-blue-light, 0.3);
+      background-color: transparent;
+      border: none;
+
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .country-table__cell--selected {
+      color: $basic-blue-light;
+      background-color: transparent;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    vertical-align: top;
+  }
 }

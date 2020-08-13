@@ -12,6 +12,11 @@
 
   color: $special-blue-light;
 
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
   margin-bottom: 14px;
 }
 
