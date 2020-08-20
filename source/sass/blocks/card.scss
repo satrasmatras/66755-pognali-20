@@ -1,7 +1,8 @@
 $user-status-size: 6px;
 
 .card {
-  width: 270px;
+  display: grid;
+  width: 100%;
   background-color: $basic-white;
 
   padding-top: 15px;
@@ -10,32 +11,75 @@ $user-status-size: 6px;
   padding-bottom: 22px;
 
   border-radius: 20px;
+
+  grid-template-areas: "avatar name name" "avatar likes likes" "tags tags tags" "countries countries countries" "transport transport level" "button button button";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: min-content min-content min-content;
+
+  @media #{$tablet-width} {
+    grid-template-areas: "avatar name name transport" "avatar tags tags transport" "avatar button likes level" "countries countries countries countries";
+    grid-template-columns: 1fr 1fr 1fr min-content;
+    grid-template-rows: 30px min-content 50px min-content;
+  }
+
+  @media #{$desktop-width} {
+    grid-template-areas: "avatar name name countries countries" "avatar tags tags countries countries" "avatar button likes transport level";
+    grid-template-columns: 1fr 1fr 1fr 1fr min-content;
+    grid-template-rows: 78px 1fr 50px;
+  }
+}
+
+.card__level-wrapper {
+  grid-area: level;
 }
 
 .card__avatar-wrapper {
+  grid-area: avatar;
   width: 70px;
   height: 70px;
   border-radius: 100%;
+
+  overflow: hidden;
+
+  @media #{$tablet-width} {
+    height: 190px;
+    width: 190px;
+
+    border-radius: 0;
+  }
+
+  @media #{$desktop-width} {
+    height: 285px;
+    width: 285px;
+
+    border-radius: 0;
+  }
 }
 
 .card__avatar {
-  max-width: 100%;
-  border-radius: 100%;
+  width: 100%;
 }
 
 .card__name {
+  grid-area: name;
   position: relative;
-  padding: 0;
-  margin: 0;
 
   padding-right: 114px;
-  word-wrap: break-word;
+  word-wrap: break-spaces;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::before {
     content: "";
     position: absolute;
     right: 0;
-    top: $user-status-size + $user-status-size/2;
+    top: $user-status-size + $user-status-size / 2;
     width: $user-status-size;
     height: $user-status-size;
     border-radius: 100%;
@@ -51,8 +95,6 @@ $user-status-size: 6px;
 }
 
 .card__name-link {
-  font-style: normal;
-  font-weight: bold;
   font-size: 20px;
   line-height: 20px;
 
@@ -60,9 +102,17 @@ $user-status-size: 6px;
   text-decoration: none;
 }
 
+.card__likes-wrapper {
+  grid-area: likes;
+  display: flex;
+}
+
 .card__like {
-  width: 30px;
-  height: 30px;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+
+  padding: 9px;
   background-color: $countries-filter-background;
 
   display: flex;
@@ -71,10 +121,19 @@ $user-status-size: 6px;
 
   border-radius: 100%;
 
+  @media #{$tablet-width} {
+    padding: 15px;
+  }
+
   &::before {
     content: url("../../img/heart.svg");
-    width: 100%;
-    height: 100%;
+    width: 12px;
+    height: 12px;
+
+    @media #{$tablet-width} {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &--checked {
@@ -87,8 +146,6 @@ $user-status-size: 6px;
 }
 
 .card__likes-count {
-  font-style: normal;
-  font-weight: bold;
   font-size: 14px;
   line-height: 16px;
 
@@ -98,7 +155,6 @@ $user-status-size: 6px;
 }
 
 .card__flags-text {
-  font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 16px;
@@ -110,32 +166,74 @@ $user-status-size: 6px;
 
 .card__flags {
   margin-bottom: 20px;
+
+  @media #{$tablet-width} {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+
+    margin-bottom: 0;
+  }
+
+  @media #{$desktop-width} {
+    flex-direction: column;
+  }
+}
+
+.card__transports-wrapper {
+  grid-area: transport;
 }
 
 .card__transports-text {
-  font-style: normal;
   font-weight: normal;
+
   font-size: 15px;
   line-height: 16px;
 
   color: $special-grey;
 
   margin-bottom: 20px;
-}
 
-.card__countries-text {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 16px;
-
-  color: $special-grey;
-
-  margin-bottom: 20px;
+  @media #{$tablet-width} {
+    display: none;
+  }
 }
 
 .card__level-text {
   font-weight: normal;
+
+  @media #{$tablet-width} {
+    display: none;
+  }
+}
+
+.card__transports {
+  @media #{$tablet-width} {
+    flex-direction: column;
+  }
+
+  @media #{$desktop-width} {
+    flex-direction: row;
+  }
+}
+
+.card__flags-wrapper {
+  grid-area: countries;
+}
+
+.card__countries-text {
+  font-weight: normal;
+
+  font-size: 15px;
+  line-height: 16px;
+
+  color: $special-grey;
+
+  margin-bottom: 20px;
+
+  @media #{$desktop-width} {
+    display: none;
+  }
 }
 
 .card__progress {
@@ -146,10 +244,15 @@ $user-status-size: 6px;
 }
 
 .card__invite {
-  font: inherit;
+  grid-area: button;
   text-transform: uppercase;
   justify-content: center;
 
   padding-top: 14px;
   padding-bottom: 14px;
+}
+
+
+.card__tags {
+  grid-area: tags;
 }

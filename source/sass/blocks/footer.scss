@@ -4,18 +4,44 @@
   background-color: $basic-white;
   color: $special-grey;
 
+  @media #{$tablet-width} {
+    padding-top: 48px;
+    padding-bottom: 32px;
+  }
+
+  @media #{$desktop-width} {
+    padding-top: 47px;
+    padding-bottom: 43px;
+  }
+}
+
+.footer__wrapper {
   display: flex;
   flex-direction: column;
+
+  @media #{$tablet-width} {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .footer__logo {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+
+  @media #{$tablet-width} {
+    margin-bottom: 0;
+  }
 }
 
 .footer__socials {
   margin-bottom: 50px;
+
+  @media #{$tablet-width} {
+    margin-bottom: 0;
+  }
 }
 
 .footer__copyright {

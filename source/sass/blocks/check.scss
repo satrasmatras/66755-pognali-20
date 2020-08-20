@@ -3,13 +3,20 @@
 }
 
 .check__label {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 15px;
 
   color: inherit;
+
+  @media #{$tablet-width} {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 
   &--large {
     font-size: 15px;

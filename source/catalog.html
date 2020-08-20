@@ -2,159 +2,177 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Погнали</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body page__body--light">
 
 <header class="header">
-  <div class="container header__container">
+  <nav class="container header__container">
     <a class="header__logo logo" href="index.html">
       <img class="logo__image logo-image--blue" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
       <img class="logo__image logo-image--light" src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="100" height="19">
     </a>
-    <nav class="menu">
-      <button class="menu__toggle" type="button" aria-label="Открыть меню">
-        <svg class="menu__icon" aria-hidden="true" width="19" height="19">
-          <use class="menu__icon-menu" href="img/menu.svg#menu"></use>
-          <use class="menu__icon-close" href="img/menu-close.svg#menu-close"></use>
-        </svg>
-      </button>
-      <div class="menu__wrapper container">
-        <ul class="site-list menu__list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="">О сервисе</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Направления</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link">Попутчики</a>
-          </li>
-        </ul>
-        <a class="menu__auth button button--rounded" href="">Авторизация</a>
-        <ul class="menu__contacts contacts contacts--light">
-          <li class="contacts__item">
-            <a
-              class="contacts__link contacts__link--tel"
-              href="tel:+88005558628"
-            >
-              <div class="contacts__icon-wrapper">
-                <svg class="contacts__icon">
-                  <use href="./img/contacts-phone.svg#contacts-phone"></use>
-                </svg>
-              </div>
-              8 800 555-86-28
-            </a>
-          </li>
+    <button class="header__toggle" type="button" aria-label="Открыть меню">
+      <svg class="header__icon" aria-hidden="true" width="19" height="19">
+        <use class="header__icon-menu" href="img/menu.svg#menu"></use>
+        <use class="header__icon-close" href="img/menu-close.svg#menu-close"></use>
+      </svg>
+    </button>
+    <ul class="header__list site-list list">
+      <li class="site-list__item">
+        <a class="site-list__link" href="">О сервисе</a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link" href="form.html">Направления</a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link" href="catalog.html">Попутчики</a>
+      </li>
+    </ul>
+    <ul class="header__user-nav user-nav user-nav--header list">
+      <li class="user-nav__item user-nav__item--icon">
+        <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel" aria-label="8 800 555-86-28">
+          <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
+            <use href="img/topmenu-phone.svg#topmenu-phone"></use>
+          </svg>
+        </a>
+      </li>
 
-          <li class="contacts__item">
-            <a
-              class="contacts__link contacts__link--email"
-              href="mailto:mail@htmlacademy.ru"
-            >
-              <div class="contacts__icon-wrapper">
-                <svg class="contacts__icon">
-                  <use href="./img/contacts-mail.svg#contacts-mail"></use>
-                </svg>
-              </div>
-              mail@htmlacademy.ru
-            </a>
-          </li>
-        </ul>
-        <ul class="menu__socials socials socials--white">
-          <li class="socials__item">
-            <a href="" class="socials__link socials__link--facebook" aria-label="Facebook"></a>
-          </li>
+      <li class="user-nav__item user-nav__item--icon">
+        <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email" aria-label="mail@htmlacademy.ru">
+          <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
+            <use href="img/topmenu-mail.svg#topmenu-mail"></use>
+          </svg>
+        </a>
+      </li>
 
-          <li class="socials__item">
-            <a href="" class="socials__link socials__link--vk" aria-label="VK"></a>
-          </li>
+      <li class="user-nav__item user-nav__item--grow user-nav__item--auth">
+        <a href="" class="button button--rounded user-nav__link user-nav__link--auth">Авторизация</a>
+      </li>
+    </ul>
 
-          <li class="socials__item">
-            <a href="" class="socials__link socials__link--instagram" aria-label="Instagram"></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+    <ul class="header__contacts contacts contacts--light list list--resetted">
+      <li class="contacts__item">
+        <a
+          class="contacts__link contacts__link--tel"
+          href="tel:+88005558628"
+        >
+          <div class="contacts__icon-wrapper">
+            <svg class="contacts__icon" width="13.5" height="14">
+              <use href="./img/contacts-phone.svg#contacts-phone"></use>
+            </svg>
+          </div>
+          8 800 555-86-28
+        </a>
+      </li>
+
+      <li class="contacts__item">
+        <a
+          class="contacts__link contacts__link--email"
+          href="mailto:mail@htmlacademy.ru"
+        >
+          <div class="contacts__icon-wrapper">
+            <svg class="contacts__icon" width="19" height="13">
+              <use href="./img/contacts-mail.svg#contacts-mail"></use>
+            </svg>
+          </div>
+          mail@htmlacademy.ru
+        </a>
+      </li>
+    </ul>
+    <ul class="header__socials socials socials--white list">
+      <li class="socials__item">
+        <a href="" class="socials__link" aria-label="Facebook">
+          <svg class="socials__icon" width="11" height="21">
+            <use href="img/facebook.svg#facebook"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="socials__item">
+        <a href="" class="socials__link" aria-label="VK">
+          <svg class="socials__icon" width="23" height="12">
+            <use href="img/vk.svg#vk"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="socials__item">
+        <a href="" class="socials__link" aria-label="Instagram">
+          <svg class="socials__icon" width="18" height="18">
+            <use href="img/instagram.svg#instagram"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
-<main>
+<main class="page__main">
   <section class="countries-filter expander">
     <div class="container">
-      <h2 class="countries-filter__title expander__title">Фильтрация по странам</h2>
+      <h2 class="countries-filter__title expander__title title">Фильтрация по странам</h2>
       <button class="expander__toggle" type="button" aria-label="Открыть фильтр по странам"></button>
+      <ul class="countries-filter__countries list">
+        <li class="countries-filter__countries-item">
+          <a class="countries-filter__countries-link countries-filter__countries-link--highlighted" href="">Европа</a>
+        </li>
+
+        <li class="countries-filter__countries-item">
+          <a class="countries-filter__countries-link" href="">Азия</a>
+        </li>
+
+        <li class="countries-filter__countries-item">
+          <a class="countries-filter__countries-link" href="">Америка</a>
+        </li>
+
+        <li class="countries-filter__countries-item">
+          <a class="countries-filter__countries-link" href="">Острова</a>
+        </li>
+      </ul>
       <div class="expander__content countries-filter__content">
-        <ul class="countries-filter__countries">
-          <li class="countries-filter__countries-item">
-            <a class="countries-filter__countries-link countries-filter__countries-link--highlighted" href="">Европа</a>
-          </li>
 
-          <li class="countries-filter__countries-item">
-            <a class="countries-filter__countries-link" href="">Азия</a>
-          </li>
-
-          <li class="countries-filter__countries-item">
-            <a class="countries-filter__countries-link" href="">Америка</a>
-          </li>
-
-          <li class="countries-filter__countries-item">
-            <a class="countries-filter__countries-link" href="">Острова</a>
-          </li>
-        </ul>
-        <div class="country__country-table country-table">
-          <ul class="country-table__list">
-            <li class="country-table__item country-table__item--selected">А</li>
-
-            <li class="country-table__item">Б</li>
-
-            <li class="country-table__item">В</li>
-
-            <li class="country-table__item">Г</li>
-
-            <li class="country-table__item">Д</li>
-
-            <li class="country-table__item">Е</li>
-
-            <li class="country-table__item">З</li>
-
-            <li class="country-table__item">И</li>
-
-            <li class="country-table__item">К</li>
-
-            <li class="country-table__item">Л</li>
-
-            <li class="country-table__item">М</li>
-
-            <li class="country-table__item">Н</li>
-
-            <li class="country-table__item">О</li>
-
-            <li class="country-table__item">П</li>
-
-            <li class="country-table__item">Р</li>
-
-            <li class="country-table__item">С</li>
-
-            <li class="country-table__item">Т</li>
-
-            <li class="country-table__item">У</li>
-
-            <li class="country-table__item">Ф</li>
-
-            <li class="country-table__item">Х</li>
-
-            <li class="country-table__item">Ч</li>
-
-            <li class="country-table__item">Ш</li>
-
-            <li class="country-table__item">Щ</li>
-
-            <li class="country-table__item">Э</li>
-
-            <li class="country-table__item">Ю</li>
-          </ul>
+        <div class="country__country-table country-table country-table--large">
+          <table class="country-table__table country-table__table--white">
+            <tr class="country-table__row">
+              <td class="country-table__cell country-table__cell--selected">А
+              <!-- TODO: Могу ли я запихнуть сюда список с названиями на А и по JS'у просто вытаскивать из отсюда и перемещать туда? (в правую часть на меньших размерах)              -->
+              <td class="country-table__cell">Б</td>
+              <td class="country-table__cell">В</td>
+              <td class="country-table__cell">Г</td>
+              <td class="country-table__cell">Д</td>
+            </tr>
+            <tr class="country-table__row">
+              <td class="country-table__cell">Е</td>
+              <td class="country-table__cell">З</td>
+              <td class="country-table__cell">И</td>
+              <td class="country-table__cell">К</td>
+              <td class="country-table__cell">Л</td>
+            </tr>
+            <tr class="country-table__row">
+              <td class="country-table__cell">М</td>
+              <td class="country-table__cell">Н</td>
+              <td class="country-table__cell">О</td>
+              <td class="country-table__cell">П</td>
+              <td class="country-table__cell">Р</td>
+            </tr>
+            <tr class="country-table__row">
+              <td class="country-table__cell">С</td>
+              <td class="country-table__cell">Т</td>
+              <td class="country-table__cell">У</td>
+              <td class="country-table__cell">Ф</td>
+              <td class="country-table__cell">Х</td>
+            </tr>
+            <tr class="country-table__row">
+              <td class="country-table__cell">Ч</td>
+              <td class="country-table__cell">Ш</td>
+              <td class="country-table__cell">Щ</td>
+              <td class="country-table__cell">З</td>
+              <td class="country-table__cell">Ю</td>
+            </tr>
+          </table>
           <ul class="country-table__content">
             <li class="country-table__content-item">
               <a class="country-table__content-link" href="">Австралия</a>
@@ -207,779 +225,810 @@
     </div>
   </section>
 
-  <section class="users-filter">
-    <div class="container">
-      <h2 class="sr-only">Фильтр попутчиков</h2>
-      <p class="users-filter__title">Подберите идеального попутчика</p>
-      <form class="users-filter__form" action="https://echo.htmlacademy.ru" method="GET">
-        <ul class="users-filter__criteries criteries">
-          <li class="criteries__item expander">
-            <div class="expander__header">
-              <h3 class="expander__title">Хобби</h3>
-              <button class="expander__toggle" type="button">
-                <span class="sr-only">Открыть</span>
-              </button>
-            </div>
-            <div class="expander__content">
-              <ul class="criteries__checkboxes checkboxes">
-                <li class="checkboxes__item">
-                  <div class="check criteries__check">
-                    <input class="check__control" type="checkbox" name="gym" id="gym-field">
-                    <span class="check__icon"></span>
-                    <label class="check__label check__label--large" for="gym">Спортзал</label>
-                  </div>
-                </li>
+  <div class="two-columns-wrapper container">
+    <section class="two-columns-wrapper__filter users-filter">
+      <div class="users-filter__wrapper container">
+        <h2 class="sr-only">Фильтр попутчиков</h2>
+        <p class="users-filter__title title">Подберите идеального попутчика</p>
+        <form class="users-filter__form" action="https://echo.htmlacademy.ru" method="GET">
+          <ul class="users-filter__criteries criteries list">
+            <li class="criteries__item expander">
+              <div class="expander__header">
+                <h3 class="expander__title">Хобби</h3>
+                <button class="expander__toggle" type="button">
+                  <span class="sr-only">Открыть</span>
+                </button>
+              </div>
+              <div class="expander__content">
+                <ul class="criteries__checkboxes checkboxes list">
+                  <li class="checkboxes__item">
+                    <div class="check criteries__check">
+                      <input class="check__control" type="checkbox" name="gym" id="gym-field">
+                      <span class="check__icon"></span>
+                      <label class="check__label check__label--large" for="gym">Спортзал</label>
+                    </div>
+                  </li>
 
-                <li class="checkboxes__item">
-                  <div class="check criteries__check">
-                    <input class="check__control" type="checkbox" name="hookah" id="hookah-field">
-                    <span class="check__icon"></span>
-                    <label class="check__label check__label--large" for="hookah-field">Кальян</label>
-                  </div>
-                </li>
+                  <li class="checkboxes__item">
+                    <div class="check criteries__check">
+                      <input class="check__control" type="checkbox" name="hookah" id="hookah-field">
+                      <span class="check__icon"></span>
+                      <label class="check__label check__label--large" for="hookah-field">Кальян</label>
+                    </div>
+                  </li>
 
-                <li class="checkboxes__item">
-                  <div class="check criteries__check">
-                    <input class="check__control" type="checkbox" name="sofa" id="sofa-field">
-                    <span class="check__icon"></span>
-                    <label class="check__label check__label--large" for="sofa-field">Диван</label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
+                  <li class="checkboxes__item">
+                    <div class="check criteries__check">
+                      <input class="check__control" type="checkbox" name="sofa" id="sofa-field">
+                      <span class="check__icon"></span>
+                      <label class="check__label check__label--large" for="sofa-field">Диван</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-          <li class="criteries__item expander">
-            <div class="expander__header">
-              <h3 class="expander__title">Музыка</h3>
-              <button class="expander__toggle" type="button">
-                <span class="sr-only">Открыть</span>
-              </button>
-            </div>
-            <div class="expander__content">
-              <ul class="criteries__checkboxes checkboxes">
-                <li class="checkboxes__item">
-                  <div class="check criteries__check">
-                    <input class="check__control" type="checkbox" name="heavy-rock" id="heavy-rock-field">
-                    <span class="check__icon"></span>
-                    <label class="check__label check__label--large" for="heavy-rock-field">Тяжелый рок</label>
-                  </div>
-                </li>
+            <li class="criteries__item expander">
+              <div class="expander__header">
+                <h3 class="expander__title">Музыка</h3>
+                <button class="expander__toggle" type="button">
+                  <span class="sr-only">Открыть</span>
+                </button>
+              </div>
+              <div class="expander__content">
+                <ul class="criteries__checkboxes checkboxes list">
+                  <li class="checkboxes__item">
+                    <div class="check criteries__check">
+                      <input class="check__control" type="checkbox" name="heavy-rock" id="heavy-rock-field">
+                      <span class="check__icon"></span>
+                      <label class="check__label check__label--large" for="heavy-rock-field">Тяжелый рок</label>
+                    </div>
+                  </li>
 
-                <li class="checkboxes__item">
-                  <div class="check criteries__check">
-                    <input class="check__control" type="checkbox" name="russian-rap" id="russian-rap-field">
-                    <span class="check__icon"></span>
-                    <label class="check__label check__label--large" for="russian-rap-field">Русский рэп</label>
-                  </div>
-                </li>
+                  <li class="checkboxes__item">
+                    <div class="check criteries__check">
+                      <input class="check__control" type="checkbox" name="russian-rap" id="russian-rap-field">
+                      <span class="check__icon"></span>
+                      <label class="check__label check__label--large" for="russian-rap-field">Русский рэп</label>
+                    </div>
+                  </li>
 
-                <li class="checkboxes__item">
-                  <div class="check criteries__check">
-                    <input class="check__control" type="checkbox" name="eurodance" id="eurodance-field">
-                    <span class="check__icon"></span>
-                    <label class="check__label check__label--large" for="eurodance-field">Евроденс</label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
+                  <li class="checkboxes__item">
+                    <div class="check criteries__check">
+                      <input class="check__control" type="checkbox" name="eurodance" id="eurodance-field">
+                      <span class="check__icon"></span>
+                      <label class="check__label check__label--large" for="eurodance-field">Евроденс</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-          <li class="criteries__item expander">
-            <div class="expander__header">
-              <h3 class="expander__title">Еда</h3>
-              <button class="expander__toggle" type="button">
-                <span class="sr-only">Открыть</span>
-              </button>
-            </div>
-            <div class="expander__content">
-              <ul class="criteries__checkboxes checkboxes">
-                <li class="checkboxes__item">
-                  <div class="check criteries__check">
-                    <input class="check__control" type="checkbox" name="meat-eater" id="meat-eater-field">
-                    <span class="check__icon"></span>
-                    <label class="check__label check__label--large" for="meat-eater-field">Мясоед</label>
-                  </div>
-                </li>
+            <li class="criteries__item expander">
+              <div class="expander__header">
+                <h3 class="expander__title">Еда</h3>
+                <button class="expander__toggle" type="button">
+                  <span class="sr-only">Открыть</span>
+                </button>
+              </div>
+              <div class="expander__content">
+                <ul class="criteries__checkboxes checkboxes list">
+                  <li class="checkboxes__item">
+                    <div class="check criteries__check">
+                      <input class="check__control" type="checkbox" name="meat-eater" id="meat-eater-field">
+                      <span class="check__icon"></span>
+                      <label class="check__label check__label--large" for="meat-eater-field">Мясоед</label>
+                    </div>
+                  </li>
 
-                <li class="checkboxes__item">
-                  <div class="check criteries__check">
-                    <input class="check__control" type="checkbox" name="healthy-diet" id="healthy-diet-field">
-                    <span class="check__icon"></span>
-                    <label class="check__label check__label--large" for="healthy-diet-field">Сидит на ПП</label>
-                  </div>
-                </li>
+                  <li class="checkboxes__item">
+                    <div class="check criteries__check">
+                      <input class="check__control" type="checkbox" name="healthy-diet" id="healthy-diet-field">
+                      <span class="check__icon"></span>
+                      <label class="check__label check__label--large" for="healthy-diet-field">Сидит на ПП</label>
+                    </div>
+                  </li>
 
-                <li class="checkboxes__item">
-                  <div class="check criteries__check">
-                    <input class="check__control" type="checkbox" name="raw-vegan" id="raw-vegan-field">
-                    <span class="check__icon"></span>
-                    <label class="check__label check__label--large" for="raw-vegan-field">Веган-сыроед</label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
+                  <li class="checkboxes__item">
+                    <div class="check criteries__check">
+                      <input class="check__control" type="checkbox" name="raw-vegan" id="raw-vegan-field">
+                      <span class="check__icon"></span>
+                      <label class="check__label check__label--large" for="raw-vegan-field">Веган-сыроед</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-          <li class="criteries__item expander">
-            <div class="expander__header">
-              <h3 class="expander__title">Транспорт</h3>
-              <button class="expander__toggle" type="button">
-                <span class="sr-only">Открыть</span>
-              </button>
-            </div>
-            <div class="expander__content">
-              <ul class="criteries__checkboxes checkboxes checkboxes-transports">
-                <li class="checkboxes-transports__item">
-                  <input class="checkboxes-transports__control sr-only" type="checkbox" name="air" id="air-field" checked>
-                  <label
-                    class="checkboxes-transports__label tooltip"
-                    for="air-field"
-                    data-tooltip="Авиаперелет"
-                    aria-label="Авиаперелет"
-                  >
-                    <svg class="checkboxes-transports__icon">
-                      <use href="img/plane.svg#plane"></use>
-                    </svg>
-                  </label>
-                </li>
-
-                <li class="checkboxes-transports__item">
-                  <input class="checkboxes-transports__control sr-only" type="checkbox" name="bus" id="bus-field">
-                  <label
-                    class="checkboxes-transports__label tooltip"
-                    for="bus-field"
-                    data-tooltip="Автотранспорт"
-                    aria-label="Автотранспорт"
-                  >
-                    <svg class="checkboxes-transports__icon">
-                      <use href="img/bus.svg#bus"></use>
-                    </svg>
-                  </label>
-                </li>
-
-                <li class="checkboxes-transports__item">
-                  <input class="checkboxes-transports__control sr-only" type="checkbox" name="bicycle" id="bicycle-field">
-                  <label
-                    class="checkboxes-transports__label tooltip"
-                    for="bicycle-field"
-                    data-tooltip="Велосипед"
-                    aria-label="Велосипед"
-                  >
-                    <svg class="checkboxes-transports__icon">
-                      <use href="img/bike.svg#bike"></use>
-                    </svg>
-                  </label>
-                </li>
-
-                <li class="checkboxes-transports__item">
-                  <input class="checkboxes-transports__control sr-only" type="checkbox" name="walking" id="walking-field">
-                  <label
-                    class="checkboxes-transports__label tooltip"
-                    for="walking-field"
-                    data-tooltip="Пешком"
-                    aria-label="Пешком"
-                  >
-                    <svg class="checkboxes-transports__icon">
-                      <use href="img/run.svg#run"></use>
-                    </svg>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="criteries__item expander">
-            <div class="expander__header">
-              <h3 class="expander__title">Левел</h3>
-              <button class="expander__toggle" type="button">
-                <span class="sr-only">Открыть</span>
-              </button>
-            </div>
-            <div class="expander__content">
-              <div class="filter-range">
-                <div class="filter-range__inputs">
-                  <label class="filter-range__label" for="min-price-field" aria-label="от"></label>
-                  <input
-                    class="filter-range__input"
-                    type="number"
-                    name="min-price"
-                    id="min-price-field"
-                    value="30"
-                    min="0"
-                    max="100"
-                  >
-                  <label class="filter-range__label" for="max-price-field" aria-label="до"></label>
-                  <input
-                    class="filter-range__input"
-                    type="number"
-                    name="max-price"
-                    id="max-price-field"
-                    value="100"
-                    min="0"
-                    max="100"
-                  >
-                </div>
-                <div class="filter-range__controls">
-                  <div class="filter-range__scale">
-                    <div class="filter-range__bar"></div>
-                    <button
-                      class="filter-range__toggle filter-range__toggle--min"
-                      type="button"
-                      aria-label="Ползунок выбора минимального уровня"
+            <li class="criteries__item expander">
+              <div class="expander__header">
+                <h3 class="expander__title">Транспорт</h3>
+                <button class="expander__toggle" type="button">
+                  <span class="sr-only">Открыть</span>
+                </button>
+              </div>
+              <div class="expander__content">
+                <ul class="criteries__checkboxes checkboxes checkboxes-transports list">
+                  <li class="checkboxes-transports__item">
+                    <input class="checkboxes-transports__control sr-only" type="checkbox" name="air" id="air-field" checked>
+                    <label
+                      class="checkboxes-transports__label tooltip"
+                      for="air-field"
+                      data-tooltip="Авиаперелет"
+                      aria-label="Авиаперелет"
                     >
-                    </button>
-                    <button
-                      class="filter-range__toggle filter-range__toggle--max"
-                      type="button"
-                      aria-label="Ползунок выбора максимального уровня"
+                      <svg class="checkboxes-transports__icon" width="14" height="16">
+                        <use href="img/plane.svg#plane"></use>
+                      </svg>
+                    </label>
+                  </li>
+
+                  <li class="checkboxes-transports__item">
+                    <input class="checkboxes-transports__control sr-only" type="checkbox" name="bus" id="bus-field">
+                    <label
+                      class="checkboxes-transports__label tooltip"
+                      for="bus-field"
+                      data-tooltip="Автотранспорт"
+                      aria-label="Автотранспорт"
                     >
-                    </button>
+                      <svg class="checkboxes-transports__icon" width="13" height="16">
+                        <use href="img/bus.svg#bus"></use>
+                      </svg>
+                    </label>
+                  </li>
+
+                  <li class="checkboxes-transports__item">
+                    <input class="checkboxes-transports__control sr-only" type="checkbox" name="bicycle" id="bicycle-field">
+                    <label
+                      class="checkboxes-transports__label tooltip"
+                      for="bicycle-field"
+                      data-tooltip="Велосипед"
+                      aria-label="Велосипед"
+                    >
+                      <svg class="checkboxes-transports__icon" width="15" height="17">
+                        <use href="img/bike.svg#bike"></use>
+                      </svg>
+                    </label>
+                  </li>
+
+                  <li class="checkboxes-transports__item">
+                    <input class="checkboxes-transports__control sr-only" type="checkbox" name="walking" id="walking-field">
+                    <label
+                      class="checkboxes-transports__label tooltip"
+                      for="walking-field"
+                      data-tooltip="Пешком"
+                      aria-label="Пешком"
+                    >
+                      <svg class="checkboxes-transports__icon" width="13" height="17">
+                        <use href="img/run.svg#run"></use>
+                      </svg>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="criteries__item expander">
+              <div class="expander__header">
+                <h3 class="expander__title">Левел</h3>
+                <button class="expander__toggle" type="button">
+                  <span class="sr-only">Открыть</span>
+                </button>
+              </div>
+              <div class="expander__content">
+                <div class="filter-range">
+                  <div class="filter-range__inputs">
+                    <label class="filter-range__label" for="min-price-field" aria-label="от"></label>
+                    <input
+                      class="filter-range__input"
+                      type="number"
+                      name="min-price"
+                      id="min-price-field"
+                      value="30"
+                      min="0"
+                      max="100"
+                    >
+                    <label class="filter-range__label" for="max-price-field" aria-label="до"></label>
+                    <input
+                      class="filter-range__input"
+                      type="number"
+                      name="max-price"
+                      id="max-price-field"
+                      value="100"
+                      min="0"
+                      max="100"
+                    >
+                  </div>
+                  <div class="filter-range__controls">
+                    <div class="filter-range__scale">
+                      <div class="filter-range__bar"></div>
+                      <button
+                        class="filter-range__toggle filter-range__toggle--min"
+                        type="button"
+                        aria-label="Ползунок выбора минимального уровня"
+                      >
+                      </button>
+                      <button
+                        class="filter-range__toggle filter-range__toggle--max"
+                        type="button"
+                        aria-label="Ползунок выбора максимального уровня"
+                      >
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </li>
-        </ul>
-        <button class="users-filter__submit button button--rounded button--white" type="submit">Показать</button>
-      </form>
-    </div>
-  </section>
-
-  <section class="users">
-    <div class="container">
-      <ul class="users__list">
-        <li class="users__list-item card">
-          <div class="card__avatar-wrapper">
-            <img class="card__avatar" src="img/firsova-mobile@1x.jpg" alt="Аватар Таня Фирсова">
-          </div>
-          <h2 class="card__name card__name--offline">
-            <a class="card__name-link" href="">Таня Фирсова</a>
-          </h2>
-          <button class="card__like button card__like--checked" type="button" aria-label="Поставить лайк">
-          </button>
-          <p class="card__likes-count">1,5 м</p>
-          <ul class="card__tags tags">
-            <li class="tags__tag">#ЗОЖ</li>
-
-            <li class="tags__tag">#ПП</li>
-
-            <li class="tags__tag">#Фитнес</li>
-
-            <li class="tags__tag">#пляж</li>
-
-            <li class="tags__tag">#авокадо</li>
-
-            <li class="tags__tag">#смузи</li>
+            </li>
           </ul>
-          <div class="card__flags-wrapper">
-            <p class="card__flags-text">Хочет посетить:</p>
-            <ul class="card__flags flags flags--column">
-              <li class="flags__item flag">
-                <img
-                  class="flag__image tooltip"
-                  src="https://via.placeholder.com/26x18"
-                  data-tooltip="Шри-Ланка" alt="Флаг Шри-Ланки"
-                >
-                <span class="flag__name">Шри-Ланка</span>
-              </li>
+          <button class="users-filter__submit button button--rounded button--white" type="submit">Показать</button>
+        </form>
+      </div>
+    </section>
+    <section class="two-columns-wrapper__users users">
+      <div class="users__wrapper container">
+        <ul class="users__list list">
+          <li class="users__list-item card">
+            <div class="card__avatar-wrapper">
+              <img class="card__avatar" src="img/firsova-mobile@1x.jpg" alt="Аватар Таня Фирсова">
+            </div>
+            <h2 class="card__name card__name--offline title">
+              <a class="card__name-link" href="">Таня Фирсова</a>
+            </h2>
+            <div class="card__likes-wrapper">
+              <button class="card__like card__like--checked" type="button" aria-label="Поставить лайк">
+              </button>
+              <p class="card__likes-count">1,5 м</p>
+            </div>
+            <ul class="card__tags tags list">
+              <li class="tags__tag">#ЗОЖ</li>
 
-              <li class="flags__item flag">
-                <img
-                  class="flag__image tooltip"
-                  src="https://via.placeholder.com/26x18"
-                  data-tooltip="Тайланд"
-                  alt="Флаг Тайланда"
-                >
-                <span class="flag__name">Тайланд</span>
-              </li>
+              <li class="tags__tag">#ПП</li>
 
-              <li class="flags__item flag">
-                <img
-                  class="flag__image tooltip"
-                  src="https://via.placeholder.com/26x18"
-                  data-tooltip="Сейшеллы"
-                  alt="Флаг Сейшеллов"
-                >
-                <span class="flag__name">Сейшеллы</span>
-              </li>
+              <li class="tags__tag">#Фитнес</li>
+
+              <li class="tags__tag">#пляж</li>
+
+              <li class="tags__tag">#авокадо</li>
+
+              <li class="tags__tag">#смузи</li>
             </ul>
-          </div>
-          <div class="card__transports-wrapper">
-            <p class="card__transports-text">Транспорт:</p>
-            <ul class="card__transports transports">
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Авиаперелет"
-                aria-label="Авиаперелет"
-              >
-                <svg class="transports__icon">
-                  <use href="img/plane.svg#plane"></use>
-                </svg>
-              </li>
+            <div class="card__flags-wrapper">
+              <p class="card__flags-text text">Хочет посетить:</p>
+              <ul class="card__flags flags flags--column list">
+                <li class="flags__item flag">
+                  <img
+                    class="flag__image tooltip"
+                    src="https://via.placeholder.com/26x18"
+                    data-tooltip="Шри-Ланка" alt="Флаг Шри-Ланки"
+                  >
+                  <span class="flag__name">Шри-Ланка</span>
+                </li>
 
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Автотранспорт"
-                aria-label="Автотранспорт"
-              >
-                <svg class="transports__icon">
-                  <use href="img/bus.svg#bus"></use>
-                </svg>
-              </li>
+                <li class="flags__item flag">
+                  <img
+                    class="flag__image tooltip"
+                    src="https://via.placeholder.com/26x18"
+                    data-tooltip="Тайланд"
+                    alt="Флаг Тайланда"
+                  >
+                  <span class="flag__name">Тайланд</span>
+                </li>
 
-              <li
-                class="transports__item transports__item--disabled tooltip"
-                data-tooltip="Велосипед"
-                aria-label="Велосипед"
-              >
-                <svg class="transports__icon">
-                  <use href="img/bike.svg#bike"></use>
-                </svg>
-              </li>
+                <li class="flags__item flag">
+                  <img
+                    class="flag__image tooltip"
+                    src="https://via.placeholder.com/26x18"
+                    data-tooltip="Сейшеллы"
+                    alt="Флаг Сейшеллов"
+                  >
+                  <span class="flag__name">Сейшеллы</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card__transports-wrapper">
+              <p class="card__transports-text text">Транспорт:</p>
+              <ul class="card__transports transports transports--transparent list">
+                <li
+                  class="transports__item tooltip"
+                  data-tooltip="Авиаперелет"
+                  aria-label="Авиаперелет"
+                >
+                  <svg class="transports__icon" width="14" height="16">
+                    <use href="img/plane.svg#plane"></use>
+                  </svg>
+                </li>
 
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Пешком"
-                aria-label="Пешком"
-              >
-                <svg class="transports__icon">
-                  <use href="img/run.svg#run"></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
-          <div class="card__level-wrapper">
-            <span class="card__level-text">Левел:</span>
-            <div class="card__progress progress progress--no-level">
-              <span class="progress__value">99</span>
-              <span class="progress__level">level</span>
-              <div class="progress__circle">
-                <svg class="progress__svg" height="45" width="45">
-                  <circle class="progress__svg-circle"
-                          data-stroke="red"
-                          style="
+                <li
+                  class="transports__item tooltip"
+                  data-tooltip="Автотранспорт"
+                  aria-label="Автотранспорт"
+                >
+                  <svg class="transports__icon" width="13" height="16">
+                    <use href="img/bus.svg#bus"></use>
+                  </svg>
+                </li>
+
+                <li
+                  class="transports__item transports__item--disabled tooltip"
+                  data-tooltip="Велосипед"
+                  aria-label="Велосипед"
+                >
+                  <svg class="transports__icon" width="15" height="17">
+                    <use href="img/bike.svg#bike"></use>
+                  </svg>
+                </li>
+
+                <li
+                  class="transports__item tooltip"
+                  data-tooltip="Пешком"
+                  aria-label="Пешком"
+                >
+                  <svg class="transports__icon" width="13" height="17">
+                    <use href="img/run.svg#run"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="card__level-wrapper">
+              <span class="card__level-text text">Левел:</span>
+              <div class="card__progress progress progress--no-level">
+                <span class="progress__value">99</span>
+                <span class="progress__level">level</span>
+                <div class="progress__circle">
+                  <svg class="progress__svg" height="45" width="45">
+                    <circle class="progress__svg-circle"
+                            data-stroke="red"
+                            style="
                         --progress-level: 99;
                         --progress-radius: 16.5;
 "
-                          cx="22.5"
-                          cy="22.5"
-                          r="16.5"
-                          stroke="orange"
-                          stroke-width="3"
-                          fill="transparent"
-                          stroke-linecap="round"
-                  />
-                </svg>
+                            cx="22.5"
+                            cy="22.5"
+                            r="16.5"
+                            stroke="orange"
+                            stroke-width="3"
+                            fill="transparent"
+                            stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-          <a href="" class="card__invite button button--rounded">Позвать</a>
-        </li>
+            <a href="" class="card__invite button button--rounded">Позвать</a>
+          </li>
 
-        <li class="users__list-item card">
-          <div class="card__avatar-wrapper">
-            <img class="card__avatar" src="img/demin-mobile@1x.jpg" alt="Аватар Петя Демин">
-          </div>
-          <h2 class="card__name card__name--online">
-            <a href="" class="card__name-link">Петя Демин</a>
-          </h2>
-          <button class="card__like button" type="button" aria-label="Поставить лайк">
-          </button>
-          <p class="card__likes-count">1500</p>
-          <ul class="card__tags tags">
-            <li class="tags__tag">#бургер</li>
+          <li class="users__list-item card">
+            <div class="card__avatar-wrapper">
+              <img class="card__avatar" src="img/demin-mobile@1x.jpg" alt="Аватар Петя Демин">
+            </div>
+            <h2 class="card__name card__name--online title">
+              <a href="" class="card__name-link">Петя Демин</a>
+            </h2>
+            <div class="card__likes-wrapper">
+              <button class="card__like" type="button" aria-label="Поставить лайк">
+              </button>
+              <p class="card__likes-count">1500</p>
+            </div>
+            <ul class="card__tags tags list">
+              <li class="tags__tag">#бургер</li>
 
-            <li class="tags__tag">#бар</li>
+              <li class="tags__tag">#бар</li>
 
-            <li class="tags__tag">#футбол</li>
+              <li class="tags__tag">#футбол</li>
 
-            <li class="tags__tag">#концерт</li>
+              <li class="tags__tag">#концерт</li>
 
-            <li class="tags__tag">#крафт</li>
-          </ul>
-          <div class="card__flags-wrapper">
-            <p class="card__flags-text">Хочет посетить:</p>
-            <ul class="card__flags flags flags--column">
-              <li class="flags__item flag">
-                <img
-                  class="flag__image tooltip"
-                  src="https://via.placeholder.com/26x18"
-                  data-tooltip="Бельгия"
-                  alt="Флаг Бельгии"
-                >
-                <span class="flag__name">Бельгия</span>
-              </li>
-
-              <li class="flags__item flag">
-                <img
-                  class="flag__image tooltip"
-                  src="https://via.placeholder.com/26x18"
-                  data-tooltip="Чехия"
-                  alt="Флаг Чехии"
-                >
-                <span class="flag__name">Чехия</span>
-              </li>
+              <li class="tags__tag">#крафт</li>
             </ul>
-          </div>
-          <div class="card__transports-wrapper">
-            <p class="card__transports-text">Транспорт:</p>
-            <ul class="card__transports transports">
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Авиаперелет"
-                aria-label="Авиаперелет"
-              >
-                <svg class="transports__icon">
-                  <use href="img/plane.svg#plane"></use>
-                </svg>
-              </li>
+            <div class="card__flags-wrapper">
+              <p class="card__flags-text text">Хочет посетить:</p>
+              <ul class="card__flags flags flags--column list">
+                <li class="flags__item flag">
+                  <img
+                    class="flag__image tooltip"
+                    src="https://via.placeholder.com/26x18"
+                    data-tooltip="Бельгия"
+                    alt="Флаг Бельгии"
+                  >
+                  <span class="flag__name">Бельгия</span>
+                </li>
 
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Автотранспорт"
-                aria-label="Автотранспорт"
-              >
-                <svg class="transports__icon">
-                  <use href="img/bus.svg#bus"></use>
-                </svg>
-              </li>
+                <li class="flags__item flag">
+                  <img
+                    class="flag__image tooltip"
+                    src="https://via.placeholder.com/26x18"
+                    data-tooltip="Чехия"
+                    alt="Флаг Чехии"
+                  >
+                  <span class="flag__name">Чехия</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card__transports-wrapper">
+              <p class="card__transports-text text">Транспорт:</p>
+              <ul class="card__transports transports transports--transparent list">
+                <li
+                  class="transports__item tooltip"
+                  data-tooltip="Авиаперелет"
+                  aria-label="Авиаперелет"
+                >
+                  <svg class="transports__icon" width="14" height="16">
+                    <use href="img/plane.svg#plane"></use>
+                  </svg>
+                </li>
 
-              <li
-                class="transports__item transports__item--disabled tooltip"
-                data-tooltip="Велосипед"
-                aria-label="Велосипед"
-              >
-                <svg class="transports__icon">
-                  <use href="img/bike.svg#bike"></use>
-                </svg>
-              </li>
+                <li
+                  class="transports__item tooltip"
+                  data-tooltip="Автотранспорт"
+                  aria-label="Автотранспорт"
+                >
+                  <svg class="transports__icon" width="13" height="16">
+                    <use href="img/bus.svg#bus"></use>
+                  </svg>
+                </li>
 
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Пешком"
-                aria-label="Пешком"
-              >
-                <svg class="transports__icon">
-                  <use href="img/run.svg#run"></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
-          <div class="card__level-wrapper">
-            <span class="card__level-text">Левел:</span>
-            <div class="card__progress progress progress--no-level">
-              <span class="progress__value">80</span>
-              <span class="progress__level">level</span>
-              <div class="progress__circle">
-                <svg class="progress__svg" height="45" width="45">
-                  <circle class="progress__svg-circle"
-                          data-stroke="red"
-                          style="
+                <li
+                  class="transports__item transports__item--disabled tooltip"
+                  data-tooltip="Велосипед"
+                  aria-label="Велосипед"
+                >
+                  <svg class="transports__icon" width="15" height="17">
+                    <use href="img/bike.svg#bike"></use>
+                  </svg>
+                </li>
+
+                <li
+                  class="transports__item tooltip"
+                  data-tooltip="Пешком"
+                  aria-label="Пешком"
+                >
+                  <svg class="transports__icon" width="13" height="17">
+                    <use href="img/run.svg#run"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="card__level-wrapper">
+              <span class="card__level-text text">Левел:</span>
+              <div class="card__progress progress progress--no-level">
+                <span class="progress__value">80</span>
+                <span class="progress__level">level</span>
+                <div class="progress__circle">
+                  <svg class="progress__svg" height="45" width="45">
+                    <circle class="progress__svg-circle"
+                            data-stroke="red"
+                            style="
                         --progress-level: 80;
                         --progress-radius: 16.5;
 "
-                          cx="22.5"
-                          cy="22.5"
-                          r="16.5"
-                          stroke="orange"
-                          stroke-width="3"
-                          fill="transparent"
-                          stroke-linecap="round"
-                  />
-                </svg>
+                            cx="22.5"
+                            cy="22.5"
+                            r="16.5"
+                            stroke="orange"
+                            stroke-width="3"
+                            fill="transparent"
+                            stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-          <a href="" class="card__invite button button--rounded">Позвать</a>
-        </li>
+            <a href="" class="card__invite button button--rounded">Позвать</a>
+          </li>
 
-        <li class="users__list-item card">
-          <div class="card__avatar-wrapper">
-            <img class="card__avatar" src="img/smolov-mobile@1x.jpg" alt="Аватар Марк Смолов">
-          </div>
-          <h2 class="card__name card__name--offline">
-            <a href="" class="card__name-link">Марк Смолов</a>
-          </h2>
-          <button class="card__like button" type="button" aria-label="Поставить лайк">
-          </button>
-          <p class="card__likes-count">170</p>
-          <ul class="card__tags tags">
-            <li class="tags__tag">#рэп</li>
+          <li class="users__list-item card">
+            <div class="card__avatar-wrapper">
+              <img class="card__avatar" src="img/smolov-mobile@1x.jpg" alt="Аватар Марк Смолов">
+            </div>
+            <h2 class="card__name card__name--offline title">
+              <a href="" class="card__name-link">Марк Смолов</a>
+            </h2>
+            <div class="card__likes-wrapper">
+              <button class="card__like" type="button" aria-label="Поставить лайк">
+              </button>
+              <p class="card__likes-count">170</p>
+            </div>
+            <ul class="card__tags tags list">
+              <li class="tags__tag">#рэп</li>
 
-            <li class="tags__tag">#тату</li>
+              <li class="tags__tag">#тату</li>
 
-            <li class="tags__tag">#хайпбист</li>
+              <li class="tags__tag">#хайпбист</li>
 
-            <li class="tags__tag">#кроссовки</li>
+              <li class="tags__tag">#кроссовки</li>
 
-            <li class="tags__tag">#суприм</li>
-          </ul>
-          <p class="card__tags tags">    </p>
-          <div class="card__flags-wrapper">
-            <p class="card__flags-text">Хочет посетить:</p>
-            <ul class="card__flags flags flags--column">
-              <li class="flags__item flag">
-                <img
-                  class="flag__image tooltip"
-                  src="https://via.placeholder.com/26x18"
-                  data-tooltip="США"
-                  alt="Флаг США"
-                >
-                <span class="flag__name">США</span>
-              </li>
-
-              <li class="flags__item flag">
-                <img
-                  class="flag__image tooltip"
-                  src="https://via.placeholder.com/26x18"
-                  data-tooltip="Австралия"
-                  alt="Флаг Австралии"
-                >
-                <span class="flag__name">Австралия</span>
-              </li>
-
-              <li class="flags__item flag">
-                <img
-                  class="flag__image tooltip"
-                  src="https://via.placeholder.com/26x18"
-                  data-tooltip="Доминика"
-                  alt="Флаг Доминики"
-                >
-                <span class="flag__name">Доминика</span>
-              </li>
+              <li class="tags__tag">#суприм</li>
             </ul>
-          </div>
-          <div class="card__transports-wrapper">
-            <p class="card__transports-text">Транспорт:</p>
-            <ul class="card__transports transports">
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Авиаперелет"
-                aria-label="Авиаперелет"
-              >
-                <svg class="transports__icon">
-                  <use href="img/plane.svg#plane"></use>
-                </svg>
-              </li>
+            <p class="card__tags tags"></p>
+            <div class="card__flags-wrapper">
+              <p class="card__flags-text text">Хочет посетить:</p>
+              <ul class="card__flags flags flags--column list">
+                <li class="flags__item flag">
+                  <img
+                    class="flag__image tooltip"
+                    src="https://via.placeholder.com/26x18"
+                    data-tooltip="США"
+                    alt="Флаг США"
+                  >
+                  <span class="flag__name">США</span>
+                </li>
 
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Автотранспорт"
-                aria-label="Автотранспорт"
-              >
-                <svg class="transports__icon">
-                  <use href="img/bus.svg#bus"></use>
-                </svg>
-              </li>
+                <li class="flags__item flag">
+                  <img
+                    class="flag__image tooltip"
+                    src="https://via.placeholder.com/26x18"
+                    data-tooltip="Австралия"
+                    alt="Флаг Австралии"
+                  >
+                  <span class="flag__name">Австралия</span>
+                </li>
 
-              <li
-                class="transports__item transports__item--disabled tooltip"
-                data-tooltip="Велосипед"
-                aria-label="Велосипед"
-              >
-                <svg class="transports__icon">
-                  <use href="img/bike.svg#bike"></use>
-                </svg>
-              </li>
+                <li class="flags__item flag">
+                  <img
+                    class="flag__image tooltip"
+                    src="https://via.placeholder.com/26x18"
+                    data-tooltip="Доминика"
+                    alt="Флаг Доминики"
+                  >
+                  <span class="flag__name">Доминика</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card__transports-wrapper">
+              <p class="card__transports-text text">Транспорт:</p>
+              <ul class="card__transports transports transports--transparent list">
+                <li
+                  class="transports__item tooltip"
+                  data-tooltip="Авиаперелет"
+                  aria-label="Авиаперелет"
+                >
+                  <svg class="transports__icon" width="14" height="16">
+                    <use href="img/plane.svg#plane"></use>
+                  </svg>
+                </li>
 
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Пешком"
-                aria-label="Пешком"
-              >
-                <svg class="transports__icon">
-                  <use href="img/run.svg#run"></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
-          <div class="card__level-wrapper">
-            <span class="card__level-text">Левел:</span>
-            <div class="card__progress progress progress--no-level">
-              <span class="progress__value">25</span>
-              <span class="progress__level">level</span>
-              <div class="progress__circle">
-                <svg class="progress__svg" height="45" width="45">
-                  <circle class="progress__svg-circle"
-                          data-stroke="red"
-                          style="
+                <li
+                  class="transports__item tooltip"
+                  data-tooltip="Автотранспорт"
+                  aria-label="Автотранспорт"
+                >
+                  <svg class="transports__icon" width="13" height="16">
+                    <use href="img/bus.svg#bus"></use>
+                  </svg>
+                </li>
+
+                <li
+                  class="transports__item transports__item--disabled tooltip"
+                  data-tooltip="Велосипед"
+                  aria-label="Велосипед"
+                >
+                  <svg class="transports__icon" width="15" height="17">
+                    <use href="img/bike.svg#bike"></use>
+                  </svg>
+                </li>
+
+                <li
+                  class="transports__item tooltip"
+                  data-tooltip="Пешком"
+                  aria-label="Пешком"
+                >
+                  <svg class="transports__icon" width="13" height="17">
+                    <use href="img/run.svg#run"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="card__level-wrapper">
+              <span class="card__level-text text">Левел:</span>
+              <div class="card__progress progress progress--no-level">
+                <span class="progress__value">25</span>
+                <span class="progress__level">level</span>
+                <div class="progress__circle">
+                  <svg class="progress__svg" height="45" width="45">
+                    <circle class="progress__svg-circle"
+                            data-stroke="red"
+                            style="
                         --progress-level: 25;
                         --progress-radius: 16.5;
 "
-                          cx="22.5"
-                          cy="22.5"
-                          r="16.5"
-                          stroke="orange"
-                          stroke-width="3"
-                          fill="transparent"
-                          stroke-linecap="round"
-                  />
-                </svg>
+                            cx="22.5"
+                            cy="22.5"
+                            r="16.5"
+                            stroke="orange"
+                            stroke-width="3"
+                            fill="transparent"
+                            stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-          <a href="" class="card__invite button button--rounded">Позвать</a>
-        </li>
+            <a href="" class="card__invite button button--rounded">Позвать</a>
+          </li>
 
-        <li class="users__list-item card">
-          <div class="card__avatar-wrapper">
-            <img class="card__avatar" src="img/rogovaya-mobile@1x.jpg" alt="Аватар Лариса Роговая">
-          </div>
-          <h2 class="card__name card__name--online">
-            <a href="" class="card__name-link">Лариса Роговая</a>
-          </h2>
-          <button class="card__like button" type="button" aria-label="Поставить лайк">
-          </button>
-          <p class="card__likes-count">23</p>
-          <ul class="card__tags tags">
-            <li class="tags__tag">#образование</li>
+          <li class="users__list-item card">
+            <div class="card__avatar-wrapper">
+              <img class="card__avatar" src="img/rogovaya-mobile@1x.jpg" alt="Аватар Лариса Роговая">
+            </div>
+            <h2 class="card__name card__name--online title">
+              <a href="" class="card__name-link">Лариса Роговая</a>
+            </h2>
+            <div class="card__likes-wrapper">
+              <button class="card__like" type="button" aria-label="Поставить лайк">
+              </button>
+              <p class="card__likes-count">23</p>
+            </div>
+            <ul class="card__tags tags list">
+              <li class="tags__tag">#образование</li>
 
-            <li class="tags__tag">#карьера</li>
+              <li class="tags__tag">#карьера</li>
 
-            <li class="tags__tag">#учеба</li>
+              <li class="tags__tag">#учеба</li>
 
-            <li class="tags__tag">#линкедин</li>
-          </ul>
-          <p class="card__tags tags">   </p>
-          <div class="card__countries-wrapper">
-            <p class="card__countries-text">Хочет посетить:</p>
-            <ul class="card__flags flags flags--column">
-              <li class="flags__item flag">
-                <img
-                  class="flag__image tooltip"
-                  src="https://via.placeholder.com/26x18"
-                  data-tooltip="Великобритания"
-                  alt="Флаг Великобритании"
-                >
-                <span class="flag__name">Великобритания</span>
-              </li>
-
-              <li class="flags__item flag">
-                <img
-                  class="flag__image tooltip"
-                  src="https://via.placeholder.com/26x18"
-                  data-tooltip="Германия"
-                  alt="Флаг Германии"
-                >
-                <span class="flag__name">Германия</span>
-              </li>
+              <li class="tags__tag">#линкедин</li>
             </ul>
-          </div>
-          <div class="card__transports-wrapper">
-            <p class="card__transports-text">Транспорт:</p>
-            <ul class="card__transports transports">
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Авиаперелет"
-                aria-label="Авиаперелет"
-              >
-                <svg class="transports__icon">
-                  <use href="img/plane.svg#plane"></use>
-                </svg>
-              </li>
+            <p class="card__tags tags"></p>
+            <div class="card__flags-wrapper">
+              <p class="card__countries-text text">Хочет посетить:</p>
+              <ul class="card__flags flags flags--column list">
+                <li class="flags__item flag">
+                  <img
+                    class="flag__image tooltip"
+                    src="https://via.placeholder.com/26x18"
+                    data-tooltip="Великобритания"
+                    alt="Флаг Великобритании"
+                  >
+                  <span class="flag__name">Великобритания</span>
+                </li>
 
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Автотранспорт"
-                aria-label="Автотранспорт"
-              >
-                <svg class="transports__icon">
-                  <use href="img/bus.svg#bus"></use>
-                </svg>
-              </li>
+                <li class="flags__item flag">
+                  <img
+                    class="flag__image tooltip"
+                    src="https://via.placeholder.com/26x18"
+                    data-tooltip="Германия"
+                    alt="Флаг Германии"
+                  >
+                  <span class="flag__name">Германия</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card__transports-wrapper">
+              <p class="card__transports-text text">Транспорт:</p>
+              <ul class="card__transports transports transports--transparent list">
+                <li
+                  class="transports__item tooltip"
+                  data-tooltip="Авиаперелет"
+                  aria-label="Авиаперелет"
+                >
+                  <svg class="transports__icon" width="14" height="16">
+                    <use href="img/plane.svg#plane"></use>
+                  </svg>
+                </li>
 
-              <li
-                class="transports__item transports__item--disabled tooltip"
-                data-tooltip="Велосипед"
-                aria-label="Велосипед"
-              >
-                <svg class="transports__icon">
-                  <use href="img/bike.svg#bike"></use>
-                </svg>
-              </li>
+                <li
+                  class="transports__item tooltip"
+                  data-tooltip="Автотранспорт"
+                  aria-label="Автотранспорт"
+                >
+                  <svg class="transports__icon" width="13" height="16">
+                    <use href="img/bus.svg#bus"></use>
+                  </svg>
+                </li>
 
-              <li
-                class="transports__item tooltip"
-                data-tooltip="Пешком"
-                aria-label="Пешком"
-              >
-                <svg class="transports__icon">
-                  <use href="img/run.svg#run"></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
-          <div class="card__level-wrapper">
-            <span class="card__level-text">Левел:</span>
-            <div class="card__progress progress progress--no-level">
-              <span class="progress__value">50</span>
-              <span class="progress__level">level</span>
-              <div class="progress__circle">
-                <svg class="progress__svg" height="45" width="45">
-                  <circle class="progress__svg-circle"
-                          data-stroke="red"
-                          style="
+                <li
+                  class="transports__item transports__item--disabled tooltip"
+                  data-tooltip="Велосипед"
+                  aria-label="Велосипед"
+                >
+                  <svg class="transports__icon" width="15" height="17">
+                    <use href="img/bike.svg#bike"></use>
+                  </svg>
+                </li>
+
+                <li
+                  class="transports__item tooltip"
+                  data-tooltip="Пешком"
+                  aria-label="Пешком"
+                >
+                  <svg class="transports__icon" width="13" height="17">
+                    <use href="img/run.svg#run"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="card__level-wrapper">
+              <span class="card__level-text text">Левел:</span>
+              <div class="card__progress progress progress--no-level">
+                <span class="progress__value">50</span>
+                <span class="progress__level">level</span>
+                <div class="progress__circle">
+                  <svg class="progress__svg" height="45" width="45">
+                    <circle class="progress__svg-circle"
+                            data-stroke="red"
+                            style="
                         --progress-level: 50;
                         --progress-radius: 16.5;
 "
-                          cx="22.5"
-                          cy="22.5"
-                          r="16.5"
-                          stroke="orange"
-                          stroke-width="3"
-                          fill="transparent"
-                          stroke-linecap="round"
-                  />
-                </svg>
+                            cx="22.5"
+                            cy="22.5"
+                            r="16.5"
+                            stroke="orange"
+                            stroke-width="3"
+                            fill="transparent"
+                            stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
+            <a href="" class="card__invite button button--rounded">Позвать</a>
+          </li>
+        </ul>
+        <a href="" class="users__show-more button button--transparent button--borderless">
+          <svg class="button__prepend-icon" width="18" height="18">
+            <use href="img/show-more-plus.svg#show-more-plus"></use>
+          </svg>
+          Показать еще
+        </a>
+        <div class="users__pagination pagination">
+          <ul class="pagination__pages-list list list--resetted">
+            <li class="pagination__pages-item">
+              <a href="" class="pagination__pages-link pagination__pages-link--current">1</a>
+            </li>
+            <li class="pagination__pages-item">
+              <a href="" class="pagination__pages-link">2</a>
+            </li>
+            <li class="pagination__pages-item">
+              <a href="" class="pagination__pages-link">3</a>
+            </li>
+            <li class="pagination__pages-item">
+              <a href="" class="pagination__pages-link">4</a>
+            </li>
+          </ul>
+          <div class="pagination__arrows">
+            <a class="pagination__button pagination__button--previous" href="" aria-label="Перейти на предыдущую страницу"></a>
+            <a class="pagination__button pagination__button--next" href="" aria-label="Перейти на следующую страницу"></a>
           </div>
-          <a href="" class="card__invite button button--rounded">Позвать</a>
-        </li>
-      </ul>
-      <a href="" class="users__show-more button button--transparent button--borderless">
-        <svg class="button__prepend-icon" width="18" height="18">
-          <use href="img/show-more-plus.svg#show-more-plus"></use>
-        </svg>
-        Показать еще
-      </a>
-      <div class="users__slider slider">
-        <a class="slider__button slider__button--previous" href="" aria-label="Перейти на предыдущую страницу"></a>
-        <a class="slider__button slider__button--next" href="" aria-label="Перейти на следующую страницу"></a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </main>
 
 <footer class="footer">
-  <div class="container">
+  <div class="footer__wrapper container">
     <a class="footer__logo logo" href="index.html">
       <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
     </a>
-    <ul class="footer__socials socials socials--yellow">
+    <ul class="footer__socials socials socials--yellow list">
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--facebook">
-          <span class="sr-only">Facebook</span>
+        <a href="" class="socials__link" aria-label="Facebook">
+          <svg class="socials__icon" width="11" height="21">
+            <use href="img/facebook.svg#facebook"></use>
+          </svg>
         </a>
       </li>
 
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--vk">
-          <span class="sr-only">VK</span>
+        <a href="" class="socials__link" aria-label="VK">
+          <svg class="socials__icon" width="23" height="12">
+            <use href="img/vk.svg#vk"></use>
+          </svg>
         </a>
       </li>
 
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--instagram">
-          <span class="sr-only">Instagram</span>
+        <a href="" class="socials__link" aria-label="Instagram">
+          <svg class="socials__icon" width="18" height="18">
+            <use href="img/instagram.svg#instagram"></use>
+          </svg>
         </a>
       </li>
     </ul>
     <div class="footer__copyright copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__text text">Разработано</span>
+        <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
       </a>
     </div>
   </div>
@@ -987,12 +1036,11 @@
 <script>
     const header = document.querySelector('.header');
     const headerLogo = document.querySelector('.header .logo');
-    const menuToggle = document.querySelector('.menu__toggle');
-    const menu = document.querySelector('.menu');
+    const menuToggle = document.querySelector('.header__toggle');
     menuToggle.addEventListener('click', () => {
         headerLogo.classList.toggle('logo--light');
         header.classList.toggle('header--white');
-        menu.classList.toggle('menu--opened');
+        header.classList.toggle('header--opened');
     })
 </script>
 </body>

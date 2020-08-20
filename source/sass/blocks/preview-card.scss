@@ -14,11 +14,8 @@
 }
 
 .preview-card__name {
-  margin: 0;
-  padding: 0;
   position: relative;
-  font-style: normal;
-  font-weight: bold;
+
   font-size: 21px;
   line-height: 21px;
   width: fit-content;
@@ -28,6 +25,14 @@
   text-align: center;
 
   color: $special-blue-light;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::before {
     content: "";

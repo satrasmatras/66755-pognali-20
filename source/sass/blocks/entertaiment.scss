@@ -1,9 +1,3 @@
-.entertainment {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
 .entertainment__country {
   font-style: normal;
   font-weight: 500;
@@ -11,6 +5,11 @@
   line-height: 18px;
 
   color: $special-blue-light;
+
+  @media #{$tablet-width} {
+    font-size: 30px;
+    line-height: 30px;
+  }
 
   margin-bottom: 14px;
 }

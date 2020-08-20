@@ -1,22 +1,71 @@
 .plan {
-  width: 270px;
+  width: 100%;
   background-color: $basic-white;
   padding: 24px;
   border-radius: 10px;
 
   color: $special-blue-light;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media #{$tablet-width} {
+    padding-top: 40px;
+    padding-left: 36px;
+
+    padding-bottom: 15px;
+  }
+
+  @media #{$desktop-width} {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-left: 95px;
+
+    padding-bottom: 38px;
+  }
 }
 
 .plan__title {
-  padding: 0;
-  margin: 0;
-  font-style: normal;
-  font-weight: bold;
   font-size: 16px;
   line-height: 16px;
 
   text-align: center;
   margin-bottom: 20px;
+
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  @media #{$tablet-width} {
+    font-size: 24px;
+    line-height: 24px;
+
+    margin-bottom: 53px;
+  }
+
+  @media #{$desktop-width} {
+    width: 430px;
+    flex-grow: 0;
+
+    text-align: left;
+
+    margin-bottom: 0;
+  }
+}
+
+.plan__content {
+  width: 100%;
+
+  @media #{$tablet-width} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media #{$tablet-width} {
+    width: 587px;
+  }
 }
 
 .plan__count {
@@ -30,6 +79,19 @@
   text-transform: uppercase;
 
   margin-bottom: 5px;
+
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  @media #{$tablet-width} {
+    font-size: 20px;
+    line-height: 20px;
+
+    letter-spacing: 0.1em;
+
+    flex-grow: 0;
+    margin-bottom: 0;
+  }
 }
 
 .plan__dates {
@@ -43,6 +105,19 @@
   text-transform: uppercase;
 
   margin-bottom: 24px;
+
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  @media #{$tablet-width} {
+    font-size: 20px;
+    line-height: 20px;
+
+    letter-spacing: 0.06em;
+
+    flex-grow: 0;
+    margin-bottom: 0;
+  }
 }
 
 .plan__change {
@@ -58,4 +133,25 @@
   color: rgba($basic-black, 0.3);
 
   text-decoration: none;
+
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  @media #{$tablet-width} {
+    font-size: 20px;
+    line-height: 20px;
+
+    letter-spacing: 0.1em;
+
+    flex-grow: 0;
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    color: rgba($basic-black, 0.6);
+  }
+
+  &:active {
+    color: rgba($basic-black, 0.1);
+  }
 }

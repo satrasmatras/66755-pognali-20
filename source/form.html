@@ -2,84 +2,114 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Погнали</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body page__body--light">
 <header class="header">
-  <div class="container header__container">
+  <nav class="container header__container">
     <a class="header__logo logo" href="index.html">
       <img class="logo__image logo-image--blue" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
       <img class="logo__image logo-image--light" src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="100" height="19">
     </a>
-    <nav class="menu">
-      <button class="menu__toggle" type="button" aria-label="Открыть меню">
-        <svg class="menu__icon" aria-hidden="true" width="19" height="19">
-          <use class="menu__icon-menu" href="img/menu.svg#menu"></use>
-          <use class="menu__icon-close" href="img/menu-close.svg#menu-close"></use>
-        </svg>
-      </button>
-      <div class="menu__wrapper container">
-        <ul class="site-list menu__list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="">О сервисе</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link">Направления</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Попутчики</a>
-          </li>
-        </ul>
-        <a class="menu__auth button button--rounded" href="">Авторизация</a>
-        <ul class="menu__contacts contacts contacts--light">
-          <li class="contacts__item">
-            <a
-              class="contacts__link contacts__link--tel"
-              href="tel:+88005558628"
-            >
-              <div class="contacts__icon-wrapper">
-                <svg class="contacts__icon">
-                  <use href="./img/contacts-phone.svg#contacts-phone"></use>
-                </svg>
-              </div>
-              8 800 555-86-28
-            </a>
-          </li>
+    <button class="header__toggle" type="button" aria-label="Открыть меню">
+      <svg class="header__icon" aria-hidden="true" width="19" height="19">
+        <use class="header__icon-menu" href="img/menu.svg#menu"></use>
+        <use class="header__icon-close" href="img/menu-close.svg#menu-close"></use>
+      </svg>
+    </button>
+    <ul class="header__list site-list list">
+      <li class="site-list__item">
+        <a class="site-list__link" href="">О сервисе</a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link" href="form.html">Направления</a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link" href="catalog.html">Попутчики</a>
+      </li>
+    </ul>
+    <ul class="header__user-nav user-nav user-nav--header list">
+      <li class="user-nav__item user-nav__item--icon">
+        <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel" aria-label="8 800 555-86-28">
+          <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
+            <use href="img/topmenu-phone.svg#topmenu-phone"></use>
+          </svg>
+        </a>
+      </li>
 
-          <li class="contacts__item">
-            <a
-              class="contacts__link contacts__link--email"
-              href="mailto:mail@htmlacademy.ru"
-            >
-              <div class="contacts__icon-wrapper">
-                <svg class="contacts__icon">
-                  <use href="./img/contacts-mail.svg#contacts-mail"></use>
-                </svg>
-              </div>
-              mail@htmlacademy.ru
-            </a>
-          </li>
-        </ul>
-        <ul class="menu__socials socials socials--white">
-          <li class="socials__item">
-            <a href="" class="socials__link socials__link--facebook" aria-label="Facebook"></a>
-          </li>
+      <li class="user-nav__item user-nav__item--icon">
+        <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email" aria-label="mail@htmlacademy.ru">
+          <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
+            <use href="img/topmenu-mail.svg#topmenu-mail"></use>
+          </svg>
+        </a>
+      </li>
 
-          <li class="socials__item">
-            <a href="" class="socials__link socials__link--vk" aria-label="VK"></a>
-          </li>
+      <li class="user-nav__item user-nav__item--grow user-nav__item--auth">
+        <a href="" class="button button--rounded user-nav__link user-nav__link--auth">Авторизация</a>
+      </li>
+    </ul>
 
-          <li class="socials__item">
-            <a href="" class="socials__link socials__link--instagram" aria-label="Instagram"></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+    <ul class="header__contacts contacts contacts--light list list--resetted">
+      <li class="contacts__item">
+        <a
+          class="contacts__link contacts__link--tel"
+          href="tel:+88005558628"
+        >
+          <div class="contacts__icon-wrapper">
+            <svg class="contacts__icon" width="13.5" height="14">
+              <use href="./img/contacts-phone.svg#contacts-phone"></use>
+            </svg>
+          </div>
+          8 800 555-86-28
+        </a>
+      </li>
+
+      <li class="contacts__item">
+        <a
+          class="contacts__link contacts__link--email"
+          href="mailto:mail@htmlacademy.ru"
+        >
+          <div class="contacts__icon-wrapper">
+            <svg class="contacts__icon" width="19" height="13">
+              <use href="./img/contacts-mail.svg#contacts-mail"></use>
+            </svg>
+          </div>
+          mail@htmlacademy.ru
+        </a>
+      </li>
+    </ul>
+    <ul class="header__socials socials socials--white list">
+      <li class="socials__item">
+        <a href="" class="socials__link" aria-label="Facebook">
+          <svg class="socials__icon" width="11" height="21">
+            <use href="img/facebook.svg#facebook"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="socials__item">
+        <a href="" class="socials__link" aria-label="VK">
+          <svg class="socials__icon" width="23" height="12">
+            <use href="img/vk.svg#vk"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="socials__item">
+        <a href="" class="socials__link" aria-label="Instagram">
+          <svg class="socials__icon" width="18" height="18">
+            <use href="img/instagram.svg#instagram"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
-<main>
+<main class="page__main">
   <section class="profile-form">
     <div class="container">
       <form class="profile-form__form profile" action="https://echo.htmlacademy.ru" method="POST">
@@ -110,14 +140,16 @@
         <div class="profile__avatar-wrapper">
           <img class="profile__avatar" src="img/demin-tablet@1x.jpg" alt="Аватар Петя Демин">
         </div>
-        <a class="button button--rounded profile__photo-change">Сменить фото</a>
-        <div class="fieldset profile__fieldset">
-          <label class="profile__label fieldset__title">Тэги</label>
-          <textarea class="profile__textarea textarea fieldset__content" name="tags">#бургер #бар #футбол #концерт#крафт</textarea>
+        <a class="button button--rounded profile__photo-change">
+          <span class="profile__photo-change-hidden-text">Сменить</span> фото
+        </a>
+        <div class="profile__fieldset profile__fieldset--tags fieldset">
+          <label class="profile__label fieldset__title" for="tags-field">Тэги</label>
+          <textarea class="profile__textarea textarea fieldset__content" name="tags" id="tags-field">#бургер #бар #футбол #концерт#крафт</textarea>
         </div>
-        <fieldset class="profile__fieldset fieldset">
+        <fieldset class="profile__fieldset profile__fieldset--transport fieldset">
           <legend class="fieldset__title">Транспорт</legend>
-          <ul class="profile__transports fieldset___content transports checkboxes checkboxes-transports">
+          <ul class="profile__transports fieldset___content transports checkboxes checkboxes-transports list">
             <li class="checkboxes-transports__item">
               <input class="checkboxes-transports__control sr-only" type="checkbox" name="air" id="air-field" checked>
               <label
@@ -126,7 +158,7 @@
                 data-tooltip="Авиаперелет"
                 aria-label="Авиаперелет"
               >
-                <svg class="checkboxes-transports__icon">
+                <svg class="checkboxes-transports__icon" width="14" height="16">
                   <use href="img/plane.svg#plane"></use>
                 </svg>
               </label>
@@ -140,7 +172,7 @@
                 data-tooltip="Автотранспорт"
                 aria-label="Автотранспорт"
               >
-                <svg class="checkboxes-transports__icon">
+                <svg class="checkboxes-transports__icon" width="13" height="16">
                   <use href="img/bus.svg#bus"></use>
                 </svg>
               </label>
@@ -154,7 +186,7 @@
                 data-tooltip="Велосипед"
                 aria-label="Велосипед"
               >
-                <svg class="checkboxes-transports__icon">
+                <svg class="checkboxes-transports__icon" width="15" height="17">
                   <use href="img/bike.svg#bike"></use>
                 </svg>
               </label>
@@ -168,7 +200,7 @@
                 data-tooltip="Пешком"
                 aria-label="Пешком"
               >
-                <svg class="checkboxes-transports__icon">
+                <svg class="checkboxes-transports__icon" width="13" height="17">
                   <use href="img/run.svg#run"></use>
                 </svg>
               </label>
@@ -181,20 +213,24 @@
 
   <section class="plans">
     <div class="container">
-      <h2 class="plans__title">Мои планы:</h2>
+      <h2 class="plans__title title title--normal">Мои планы:</h2>
       <ol class="plans__list">
         <li class="plans__item plan">
-          <h3 class="plan__title">Франция, Италия</h3>
-          <span class="plan__count">3 попутчика</span>
-          <span class="plan__dates">26 мар - 29 мар</span>
-          <a class="plan__change" href="">Изменить</a>
+          <h3 class="plan__title title">Франция, Италия</h3>
+          <div class="plan__content">
+            <span class="plan__count">3 попутчика</span>
+            <span class="plan__dates">26 мар - 29 мар</span>
+            <a class="plan__change" href="">Изменить</a>
+          </div>
         </li>
 
         <li class="plans__item plan">
-          <h3 class="plan__title">Таиланд, Индонезия</h3>
-          <span class="plan__count">1 попутчик</span>
-          <span class="plan__dates">1 июл — 15 июл</span>
-          <a class="plan__change" href="">Изменить</a>
+          <h3 class="plan__title title">Таиланд, Индонезия</h3>
+          <div class="plan__content">
+            <span class="plan__count">1 попутчик</span>
+            <span class="plan__dates">1 июл — 15 июл</span>
+            <a class="plan__change" href="">Изменить</a>
+          </div>
         </li>
       </ol>
     </div>
@@ -202,67 +238,114 @@
 
   <section class="add-plan">
     <div class="container">
-      <h2 class="add-plan__title">Добавить план:</h2>
+      <h2 class="add-plan__title title title--normal">Добавить план:</h2>
       <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="POST">
-        <ol class="steps">
+        <ol class="steps list">
           <li class="steps__item step">
-            <h3 class="step__title" id="step-1">Даты пребывания</h3>
+            <div class="step__header">
+              <h3 class="step__title title" id="step-1">Даты пребывания</h3>
+              <!-- TODO: доработать список с точками, к которому добавляются слова при десктопе -->
+              <ul class="step__navigation list">
+                <li class="step__navigation-item step__navigation-item--current">
+                  <span class="step__navigation-icon"></span>
+                  <a class="step__navigation-link">Даты</a>
+                </li>
+
+                <li class="step__navigation-item">
+                  <span class="step__navigation-icon"></span>
+                  <a class="step__navigation-link" href="#step-2">Маршрут</a>
+                </li>
+
+                <li class="step__navigation-item">
+                  <span class="step__navigation-icon"></span>
+                  <a class="step__navigation-link" href="#step-3">Развлечения</a>
+                </li>
+              </ul>
+            </div>
             <p class="step__description">
               Укажите предпочтительное количество попутчиков,
               которых вы хотели бы позвать в поездку и ее предполагаемую длительность.
             </p>
-            <div class="step__number-input number">
-              <label for="companions-count-field" class="number__label">Ищу попутчиков</label>
-              <span class="number__unit">чел.</span>
-              <button class="number__button number__icon--minus" type="button" aria-label="Понизить на 1">
-                <svg class="number__icon">
-                  <use href="img/qty-minus-mobile.svg#minus-mobile"></use>
-                </svg>
-              </button>
-              <input class="number__input" type="number" name="companions-count" id="companions-count-field" value="2">
-              <button class="number__button number__icon--plus" type="button" aria-label="Увеличить на 1">
-                <svg class="number__icon">
-                  <use href="img/qty-plus-mobile.svg#plus-mobile"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="step__number-input number">
-              <label for="days-count-field" class="number__label">Длительность</label>
-              <span class="number__unit">дн.</span>
-              <button class="number__button number__icon--minus" type="button" aria-label="Понизить на 1">
-                <svg class="number__icon">
-                  <use href="img/qty-minus-mobile.svg#minus-mobile"></use>
-                </svg>
-              </button>
-              <input class="number__input" type="number" name="days-count" id="days-count-field" value="2">
-              <button class="number__button number__icon--plus" type="button" aria-label="Увеличить на 1">
-                <svg class="number__icon">
-                  <use href="img/qty-plus-mobile.svg#plus-mobile"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="check step__check">
-              <input class="check__control" type="checkbox" name="with-children" id="with-children-field">
-              <span class="check__icon"></span>
-              <label class="check__label" for="with-children-field">Можно с детьми</label>
+            <div class="step__inputs">
+              <div class="step__number-input step__number-input--companions number">
+                <label for="companions-count-field" class="number__label">Ищу попутчиков</label>
+                <span class="number__unit">чел.</span>
+                <div class="number__input-wrapper">
+                  <button class="number__button number__icon--minus" type="button" aria-label="Понизить на 1">
+                    <svg class="number__icon" width="14" height="14">
+                      <use href="img/qty-minus-mobile.svg#minus-mobile"></use>
+                    </svg>
+                  </button>
+                  <input class="number__input" type="number" name="companions-count" id="companions-count-field" value="2">
+                  <button class="number__button number__icon--plus" type="button" aria-label="Увеличить на 1">
+                    <svg class="number__icon" width="14" height="14">
+                      <use href="img/qty-plus-mobile.svg#plus-mobile"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="step__check step__check--children check">
+                <input class="check__control" type="checkbox" name="with-children" id="with-children-field">
+                <span class="check__icon"></span>
+                <label class="check__label" for="with-children-field">Можно с детьми</label>
+              </div>
+              <div class="step__number-input step__number-input--companions number">
+                <label for="days-count-field" class="number__label">Длительность</label>
+                <span class="number__unit">дн.</span>
+                <div class="number__input-wrapper">
+                  <button class="number__button number__icon--minus" type="button" aria-label="Понизить на 1">
+                    <svg class="number__icon" width="14" height="14">
+                      <use href="img/qty-minus-mobile.svg#minus-mobile"></use>
+                    </svg>
+                  </button>
+                  <input class="number__input" type="number" name="days-count" id="days-count-field" value="2">
+                  <button class="number__button number__icon--plus" type="button" aria-label="Увеличить на 1">
+                    <svg class="number__icon" width="14" height="14">
+                      <use href="img/qty-plus-mobile.svg#plus-mobile"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="step__calendar calendar">
               <input type="hidden" name="plan-start" id="plan-start-id" value="26.03.2019">
               <input type="hidden" name="plan-end" id="plan-end-id" value="28.03.2019">
               <div class="calendar__header">
-                <button class="calendar__button calendar__button--back" type="button" aria-label="На месяц назад"></button>
-                <p class="calendar__current-month">Март 2019</p>
-                <button class="calendar__button calendar__button--next" type="button" aria-label="На месяц вперед"></button>
+                <button class="calendar__button calendar__button--back" type="button" aria-label="На месяц назад">
+                  <svg class="calendar__icon" width="9" height="18">
+                    <use href="img/triangle-arrow-left.svg#triangle-arrow-left"></use>
+                  </svg>
+                </button>
+                <p class="calendar__current-month title">Март 2019</p>
+                <button class="calendar__button calendar__button--next" type="button" aria-label="На месяц вперед">
+                  <svg class="calendar__icon" width="9" height="18">
+                    <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+                  </svg>
+                </button>
               </div>
               <table class="calendar__table table">
                 <tr class="table__row">
-                  <th class="table__header">П</th>
-                  <th class="table__header">В</th>
-                  <th class="table__header">С</th>
-                  <th class="table__header">Ч</th>
-                  <th class="table__header">П</th>
-                  <th class="table__header table__header--weekend">С</th>
-                  <th class="table__header table__header--weekend">В</th>
+                  <th class="table__header">
+                    П<span class="table__hidden-letter">н</span>
+                  </th>
+                  <th class="table__header">
+                    В<span class="table__hidden-letter">т</span>
+                  </th>
+                  <th class="table__header">
+                    С<span class="table__hidden-letter">р</span>
+                  </th>
+                  <th class="table__header">
+                    Ч<span class="table__hidden-letter">т</span>
+                  </th>
+                  <th class="table__header">
+                    П<span class="table__hidden-letter">т</span>
+                  </th>
+                  <th class="table__header table__header--weekend">
+                    С<span class="table__hidden-letter">б</span>
+                  </th>
+                  <th class="table__header table__header--weekend">
+                    В<span class="table__hidden-letter">к</span>
+                  </th>
                 </tr>
 
                 <tr class="table__row">
@@ -326,15 +409,17 @@
                 </tr>
               </table>
             </div>
-            <a class="step__button button button--rounded" href="#step-2">Следующий шаг</a>
+            <div class="step__footer">
+              <a class="step__button button button--rounded" href="#step-2">Следующий шаг</a>
+            </div>
           </li>
 
           <li class="steps__item step">
-            <h3 class="step__title" id="step-2">Маршрут</h3>
+            <h3 class="step__title title" id="step-2">Маршрут</h3>
             <p class="step__description">
               Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
             </p>
-            <ul class="step__planning-countries planning-countries">
+            <ul class="step__planning-countries planning-countries list">
               <li class="planning-countries__item country">
                 <button class="country__dropdown country__dropdown--selected" type="button">Босния и Герцеговина
                 </button>
@@ -361,57 +446,43 @@
               <li class="planning-countries__item country">
                 <button class="country__dropdown country__dropdown--activator country__dropdown--clicked" type="button">Выберите страну</button>
                 <div class="country__country-table country-table">
-                  <ul class="country-table__list">
-                    <li class="country-table__item country-table__item--selected">А</li>
-
-                    <li class="country-table__item">Б</li>
-
-                    <li class="country-table__item">В</li>
-
-                    <li class="country-table__item">Г</li>
-
-                    <li class="country-table__item">Д</li>
-
-                    <li class="country-table__item">Е</li>
-
-                    <li class="country-table__item">З</li>
-
-                    <li class="country-table__item">И</li>
-
-                    <li class="country-table__item">К</li>
-
-                    <li class="country-table__item">Л</li>
-
-                    <li class="country-table__item">М</li>
-
-                    <li class="country-table__item">Н</li>
-
-                    <li class="country-table__item">О</li>
-
-                    <li class="country-table__item">П</li>
-
-                    <li class="country-table__item">Р</li>
-
-                    <li class="country-table__item">С</li>
-
-                    <li class="country-table__item">Т</li>
-
-                    <li class="country-table__item">У</li>
-
-                    <li class="country-table__item">Ф</li>
-
-                    <li class="country-table__item">Х</li>
-
-                    <li class="country-table__item">Ч</li>
-
-                    <li class="country-table__item">Ш</li>
-
-                    <li class="country-table__item">Щ</li>
-
-                    <li class="country-table__item">Э</li>
-
-                    <li class="country-table__item">Ю</li>
-                  </ul>
+                  <table class="country-table__table">
+                    <tr class="country-table__row">
+                      <td class="country-table__cell country-table__cell--selected">А</td>
+                      <td class="country-table__cell">Б</td>
+                      <td class="country-table__cell">В</td>
+                      <td class="country-table__cell">Г</td>
+                      <td class="country-table__cell">Д</td>
+                    </tr>
+                    <tr class="country-table__row">
+                      <td class="country-table__cell">Е</td>
+                      <td class="country-table__cell">З</td>
+                      <td class="country-table__cell">И</td>
+                      <td class="country-table__cell">К</td>
+                      <td class="country-table__cell">Л</td>
+                    </tr>
+                    <tr class="country-table__row">
+                      <td class="country-table__cell">М</td>
+                      <td class="country-table__cell">Н</td>
+                      <td class="country-table__cell">О</td>
+                      <td class="country-table__cell">П</td>
+                      <td class="country-table__cell">Р</td>
+                    </tr>
+                    <tr class="country-table__row">
+                      <td class="country-table__cell">С</td>
+                      <td class="country-table__cell">Т</td>
+                      <td class="country-table__cell">У</td>
+                      <td class="country-table__cell">Ф</td>
+                      <td class="country-table__cell">Х</td>
+                    </tr>
+                    <tr class="country-table__row">
+                      <td class="country-table__cell">Ч</td>
+                      <td class="country-table__cell">Ш</td>
+                      <td class="country-table__cell">Э</td>
+                      <td class="country-table__cell">Ю</td>
+                      <td class="country-table__cell">Я</td>
+                    </tr>
+                  </table>
                   <ul class="country-table__content">
                     <li class="country-table__content-item">
                       <a class="country-table__content-link" href="">Австралия</a>
@@ -454,24 +525,25 @@
                     </li>
                   </ul>
                 </div>
-                <!-- Кнопка должна же быть в разметке?-->
-                <!-- <button class="country__cancel" type="button" aria-label="Отменить страну в плане"></button> -->
+                <button class="country__cancel" type="button" aria-label="Отменить страну в плане"></button>
               </li>
 
               <li class="planning-countries__item country">
                 <button class="country__dropdown country__dropdown--add-new" type="button">Добавить страну</button>
               </li>
             </ul>
-            <a class="step__button button button--rounded" href="#step-3">Следующий шаг</a>
-            <a class="step__button button button--rounded button--transparent" href="#step-1">На шаг назад</a>
+            <div class="step__footer">
+              <a class="step__button button button--rounded" href="#step-3">Следующий шаг</a>
+              <a class="step__button button button--rounded button--transparent" href="#step-1">На шаг назад</a>
+            </div>
           </li>
 
           <li class="steps__item step">
-            <h3 class="step__title" id="step-3">Развлечения</h3>
+            <h3 class="step__title title" id="step-3">Развлечения</h3>
             <p class="step__description">
               Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.
             </p>
-            <ul class="entertainments">
+            <ul class="entertainments list">
               <li class="entertainments__item entertainment">
                 <label class="entertainment__country" for="entertainment-country-1-field">Босния и Герцеговина</label>
                 <img
@@ -511,8 +583,10 @@
               </textarea>
               </li>
             </ul>
-            <button class="step__button button button--rounded" type="submit">Отправить</button>
-            <a class="step__button button button--rounded button--transparent" href="#step-2">На шаг назад</a>
+            <div class="step__footer">
+              <button class="step__button button button--rounded" type="submit">Отправить</button>
+              <a class="step__button button button--rounded button--transparent" href="#step-2">На шаг назад</a>
+            </div>
           </li>
         </ol>
       </form>
@@ -521,33 +595,39 @@
 </main>
 
 <footer class="footer">
-  <div class="container">
+  <div class="footer__wrapper container">
     <a class="footer__logo logo" href="index.html">
       <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
     </a>
-    <ul class="footer__socials socials socials--yellow">
+    <ul class="footer__socials socials socials--yellow list">
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--facebook">
-          <span class="sr-only">Facebook</span>
+        <a href="" class="socials__link" aria-label="Facebook">
+          <svg class="socials__icon" width="11" height="21">
+            <use href="img/facebook.svg#facebook"></use>
+          </svg>
         </a>
       </li>
 
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--vk">
-          <span class="sr-only">VK</span>
+        <a href="" class="socials__link" aria-label="VK">
+          <svg class="socials__icon" width="23" height="12">
+            <use href="img/vk.svg#vk"></use>
+          </svg>
         </a>
       </li>
 
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--instagram">
-          <span class="sr-only">Instagram</span>
+        <a href="" class="socials__link" aria-label="Instagram">
+          <svg class="socials__icon" width="18" height="18">
+            <use href="img/instagram.svg#instagram"></use>
+          </svg>
         </a>
       </li>
     </ul>
     <div class="footer__copyright copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__text text">Разработано</span>
+        <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
       </a>
     </div>
   </div>
@@ -555,12 +635,11 @@
 <script>
     const header = document.querySelector('.header');
     const headerLogo = document.querySelector('.header .logo');
-    const menuToggle = document.querySelector('.menu__toggle');
-    const menu = document.querySelector('.menu');
+    const menuToggle = document.querySelector('.header__toggle');
     menuToggle.addEventListener('click', () => {
         headerLogo.classList.toggle('logo--light');
         header.classList.toggle('header--white');
-        menu.classList.toggle('menu--opened');
+        header.classList.toggle('header--opened');
     })
 </script>
 </body>

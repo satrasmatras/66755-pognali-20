@@ -4,26 +4,54 @@
 
   padding-top: 72px;
   padding-bottom: 30px;
+
+  @media #{$tablet-width} {
+    padding-top: 76px;
+    padding-bottom: 60px;
+  }
+
+  @media #{$desktop-width} {
+    padding-top: 109px;
+    padding-bottom: 60px;
+  }
 }
 
 .fast-registration__title {
-  font-size: 24px;
-  line-height: 24px;
-
   color: $special-orange;
+  text-align: center;
 
   margin-bottom: 20px;
+
+  @media #{$tablet-width} {
+    margin-bottom: 59px;
+  }
+
+  @media #{$desktop-width} {
+    margin-bottom: 57px;
+  }
 }
 
 .fast-registration__text {
-  font-size: 16px;
-  line-height: 22px;
-
   text-align: center;
 
   color: $basic-white;
 
   margin-bottom: 30px;
+
+  @media #{$tablet-width} {
+    font-size: 28px;
+    line-height: 32px;
+
+    margin-bottom: 65px;
+  }
+
+  @media #{$desktop-width} {
+    width: 655px;
+    font-size: 28px;
+    line-height: 31px;
+
+    margin-bottom: 60px;
+  }
 }
 
 .fast-registration__link {
@@ -41,27 +69,80 @@
 
 .fast-registration__form {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   margin-bottom: 30px;
 }
 
 .fast-registration__input {
-  border: none;
+  font: inherit;
+
   border-radius: 10px;
   flex-grow: 1;
-  padding: 22px 25px;
+  padding: 20px 25px;
+
+  border: 4px solid transparent;
+  color: rgba($special-grey, 0.3);
+
+  @media #{$tablet-width} {
+    padding: 28px 36px;
+    margin-bottom: 60px;
+  }
+
+  @media #{$desktop-width} {
+    margin-bottom: 60px;
+  }
+
+  &:hover {
+    color: rgba($special-grey, 0.5);
+
+    &::placeholder {
+      color: rgba($special-grey, 0.5);
+    }
+  }
+
+  &:focus {
+    background-color: transparent;
+    color: $basic-white;
+    border: 4px solid $basic-white;
+  }
 
   &::placeholder {
     font-size: 18px;
     line-height: 18px;
 
-    color: #444444;
-    opacity: 0.3;
+    color: rgba($special-grey, 0.3);
+  }
+
+  &:invalid {
+    color: $input-invalid;
+    background-color: $basic-white;
   }
 }
 
 .fast-registration__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   height: 60px;
   width: 62px;
+
+  @media #{$tablet-width} {
+    width: 80px;
+    height: 80px;
+  }
+
+  @media #{$desktop-width} {
+    min-width: 330px;
+    min-height: 81px;
+  }
+}
+
+.fast-registration__button-text {
+  display: none;
+
+  @media #{$desktop-width} {
+    display: inline;
+  }
 }

@@ -1,0 +1,20 @@
+.two-columns-wrapper {
+  padding-top: 40px;
+
+  @media #{$desktop-width} {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: 1fr;
+
+    .two-columns-wrapper__filter {
+      width: 285px;
+      order: 1;
+
+      height: max-content;
+    }
+
+    .two-columns-wrapper__users {
+      margin-top: 0;
+    }
+  }
+}

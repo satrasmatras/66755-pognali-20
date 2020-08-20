@@ -4,6 +4,13 @@
   background-color: $basic-yellow;
 }
 
+.map__header {
+  @media #{$desktop-width} {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 .map__contacts {
   margin-bottom: 30px;
 }
@@ -14,4 +21,8 @@
 
 .map__make-path {
   margin-bottom: 35px;
+
+  @media #{$desktop-width} {
+    max-width: 324px;
+  }
 }

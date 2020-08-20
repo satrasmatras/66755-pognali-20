@@ -1,9 +1,36 @@
+.expander {
+  @media #{$tablet-width} and (max-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .expander__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.expander__toggle {
+  @media #{$tablet-width} and (max-width: 1440px) {
+    display: none;
+  }
+}
+
 .expander__title {
+  @media #{$tablet-width} and (max-width: 1440px) {
+    width: 104px;
+  }
+
   color: $special-blue-light;
+  font-size: 16px;
+  line-height: 18px;
+
+  text-transform: uppercase;
+}
+
+.expander__content {
+  @media #{$tablet-width} and (max-width: 1440px) {
+    flex-grow: 1;
+  }
 }

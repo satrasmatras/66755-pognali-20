@@ -3,36 +3,130 @@
   padding-bottom: 35px;
   background-color: $basic-blue-light;
   color: $basic-white;
+
+  @media #{$tablet-width} {
+    padding-top: 141px;
+    padding-bottom: 87px;
+  }
+
+  @media #{$desktop-width} {
+    padding-top: 130px;
+    padding-bottom: 87px;
+  }
+}
+
+.companions__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media #{$tablet-width} {
+    display: grid;
+    justify-content: center;
+    align-items: start;
+
+    grid-template-rows: min-content min-content min-content;
+  }
+
+  @media #{$desktop-width} {
+    display: grid;
+
+    grid-template-columns: 428px 630px;
+    grid-template-rows: min-content 1fr;
+  }
+}
+
+.companions__description {
+  @media #{$tablet-width} {
+    grid-row: 1/2;
+  }
+
+  @media #{$desktop-width} {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 }
 
 .companions__title {
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 24px;
 
   color: $special-orange;
+
+  margin-bottom: 19px;
+
+  @media #{$tablet-width} {
+    margin-bottom: 55px;
+  }
+
+  @media #{$desktop-width} {
+    margin-bottom: 55px;
+  }
 }
 
 .companions__text {
-  font-style: normal;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+
+  @media #{$tablet-width} {
+    width: 427px;
+
+    margin-bottom: 39px;
+  }
+
+  @media #{$desktop-width} {
+    width: 427px;
+
+    margin-bottom: 42px;
+  }
 
   &--bold {
     font-weight: bold;
+
+    @media #{$tablet-width} {
+      font-size: 21px;
+      line-height: 24px;
+    }
   }
 }
 
 .companions__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
   margin-top: 54px;
   margin-bottom: 20px;
+
+  @media #{$tablet-width} {
+    margin-top: 59px;
+    margin-bottom: 81px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    grid-row: 2/3;
+  }
+
+  @media #{$desktop-width} {
+    display: flex;
+    justify-content: space-around;
+
+    margin-bottom: 0;
+    margin-top: 0;
+
+    grid-row: 1 / -1;
+    grid-column: -1 / -2;
+  }
 }
 
 .companions__item {
   margin-bottom: 10px;
+}
+
+.companions__show-all {
+  @media #{$tablet-width} {
+    grid-row: -1/-2;
+  }
+
+  @media #{$tablet-width} {
+    grid-row: -1/-2;
+    grid-column: 1/2;
+  }
 }

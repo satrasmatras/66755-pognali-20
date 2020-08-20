@@ -1,0 +1,17 @@
+.copyright__link {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
