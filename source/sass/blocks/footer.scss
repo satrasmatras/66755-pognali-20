@@ -4,12 +4,12 @@
   background-color: $basic-white;
   color: $special-grey;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     padding-top: 48px;
     padding-bottom: 32px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     padding-top: 47px;
     padding-bottom: 43px;
   }
@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,7 @@
   justify-content: center;
   margin-bottom: 40px;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     margin-bottom: 0;
   }
 }
@@ -39,7 +39,7 @@
 .footer__socials {
   margin-bottom: 50px;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     margin-bottom: 0;
   }
 }

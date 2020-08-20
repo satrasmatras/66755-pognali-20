@@ -1,1 +1,5 @@
 // mixins
+@mixin font($fsz, $lh) {
+  font-size: $fsz;
+  line-height: $lh;
+}

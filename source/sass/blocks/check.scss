@@ -3,15 +3,13 @@
 }
 
 .check__label {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 15px;
 
   color: inherit;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;

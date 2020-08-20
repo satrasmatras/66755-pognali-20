@@ -4,18 +4,18 @@
   background-color: $basic-grey;
   color: $special-grey;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     padding-bottom: 80px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     padding-top: 166px;
     padding-bottom: 138px;
   }
 }
 
 .directions__wrapper {
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     display: grid;
     justify-content: center;
     align-items: start;
@@ -24,7 +24,7 @@
     grid-template-columns: none;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     display: grid;
 
     grid-template-columns: 559px 519px;
@@ -33,15 +33,11 @@
 }
 
 .directions__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     margin-bottom: 46px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     margin-bottom: 0;
 
     grid-row: 1 / -1;
@@ -50,32 +46,30 @@
 }
 
 .directions__description {
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     grid-row: 1 / 2;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     grid-row: 1 / 2;
     grid-column: -1/-2;
   }
 }
 
 .directions__title {
-  font-style: normal;
-  font-weight: bold;
-
   color: $special-orange;
 
-  @media screen and (min-width: 768px) {
+  margin-bottom: 19px;
+
+  @media #{$tablet-width} {
     margin-bottom: 57px;
   }
 }
 
 .directions__text {
-  font-style: normal;
   font-weight: 300;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     width: 378px;
 
     margin-bottom: 104px;
@@ -84,19 +78,19 @@
   &--bold {
     font-weight: bold;
 
-    @media screen and (min-width: 768px) {
-      font-size: 21px;
-      line-height: 24px;
-    }
+    //@media #{$tablet-width} {
+    //  font-size: 21px;
+    //  line-height: 24px;
+    //}
   }
 }
 
 .directions__show-all {
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     grid-row: -1 / -2;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     grid-row: -1/-2;
     grid-column: 2/3;
   }

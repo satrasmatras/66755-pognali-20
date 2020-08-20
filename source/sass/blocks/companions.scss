@@ -4,12 +4,12 @@
   background-color: $basic-blue-light;
   color: $basic-white;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     padding-top: 141px;
     padding-bottom: 87px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     padding-top: 130px;
     padding-bottom: 87px;
   }
@@ -20,7 +20,7 @@
   justify-content: space-between;
   flex-direction: column;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     display: grid;
     justify-content: center;
     align-items: start;
@@ -28,7 +28,7 @@
     grid-template-rows: min-content min-content min-content;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     display: grid;
 
     grid-template-columns: 428px 630px;
@@ -37,11 +37,11 @@
 }
 
 .companions__description {
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     grid-row: 1/2;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     grid-column: 1/2;
     grid-row: 1/2;
   }
@@ -53,26 +53,27 @@
 
   color: $special-orange;
 
-  @media screen and (min-width: 768px) {
+  margin-bottom: 19px;
+
+  @media #{$tablet-width} {
     margin-bottom: 55px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     margin-bottom: 55px;
   }
 }
 
 .companions__text {
-  font-style: normal;
   font-weight: 300;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     width: 427px;
 
     margin-bottom: 39px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     width: 427px;
 
     margin-bottom: 42px;
@@ -81,8 +82,7 @@
   &--bold {
     font-weight: bold;
 
-    @media screen and (min-width: 768px) {
-      font-weight: bold;
+    @media #{$tablet-width} {
       font-size: 21px;
       line-height: 24px;
     }
@@ -90,13 +90,10 @@
 }
 
 .companions__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
   margin-top: 54px;
   margin-bottom: 20px;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     margin-top: 59px;
     margin-bottom: 81px;
 
@@ -107,11 +104,12 @@
     grid-row: 2/3;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     display: flex;
     justify-content: space-around;
 
     margin-bottom: 0;
+    margin-top: 0;
 
     grid-row: 1 / -1;
     grid-column: -1 / -2;
@@ -123,11 +121,11 @@
 }
 
 .companions__show-all {
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     grid-row: -1/-2;
   }
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     grid-row: -1/-2;
     grid-column: 1/2;
   }

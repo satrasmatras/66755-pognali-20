@@ -37,11 +37,13 @@
 }
 
 .calendar__current-month {
-  margin: 0;
-  padding: 0;
-
-  font-style: normal;
-  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
 
   color: $special-blue-light;
+
+  @media #{$tablet-width} {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }

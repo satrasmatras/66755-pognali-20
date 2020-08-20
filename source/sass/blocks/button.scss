@@ -9,8 +9,6 @@
   color: $basic-blue;
   text-decoration: none;
 
-  font-style: normal;
-  font-weight: bold;
   font-size: 17px;
   line-height: 30px;
 
@@ -26,7 +24,7 @@
   }
 
   &--normal-size {
-    @media screen and (min-width: 1440px) {
+    @media #{$desktop-width} {
       max-width: 276px;
     }
   }
@@ -36,6 +34,9 @@
   }
 
   &--rounded {
+    padding-top: 7px;
+    padding-bottom: 7px;
+
     border-radius: 25px;
     background-color: $basic-yellow;
 

@@ -3,15 +3,8 @@
 }
 
 .users__wrapper {
-  @media screen and (min-width: 1440px) {
-    width: 100%;
-  }
-}
-
-.users__list {
+  width: 100%;
   padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 .users__list-item {

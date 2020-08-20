@@ -1,14 +1,14 @@
 .country-table {
   width: 100%;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     display: flex;
     justify-content: space-between;
 
     padding-top: 35px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     width: 730px;
   }
 }
@@ -18,11 +18,11 @@
   table-layout: fixed;
   border-collapse: collapse;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     width: 262px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     width: 361px;
     border-collapse: separate;
     border-spacing: 16px;
@@ -31,7 +31,6 @@
 
 
 .country-table__cell {
-  // TODO: Почему если я поставлю ячейке display: flex, то все ломается?
   width: calc(100% / 5);
   padding-top: 12px;
   padding-right: 19px;
@@ -41,11 +40,11 @@
   text-align: center;
   vertical-align: center;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     padding: 27px 22px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     margin-right: 14px;
   }
 
@@ -55,7 +54,7 @@
     background-color: $basic-grey;
     border-bottom: 1px solid $basic-grey;
 
-    @media screen and (min-width: 768px) {
+    @media #{$tablet-width} {
       background-color: $special-blue-light;
 
       color: white;
@@ -72,17 +71,6 @@
     background-color: $special-blue-light;
     color: $basic-white;
   }
-}
-
-.country-table__list {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-
-  border: 1px solid $fieldset-border;
 }
 
 .country-table__item {
@@ -107,13 +95,12 @@
   list-style: none;
   padding: 19px;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     padding: 0;
   }
 }
 
 .country-table__content-item {
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
@@ -130,7 +117,7 @@
 
 
 .country-table--large {
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     border-spacing: 44px;
 
     .country-table__cell {
@@ -154,7 +141,7 @@
     }
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     vertical-align: top;
   }
 }

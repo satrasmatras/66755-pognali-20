@@ -1,12 +1,11 @@
 .tariffs {
   counter-reset: list-number;
-  font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 16px;
   color: $special-grey;
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     padding-right: 345px;
   }
 }
@@ -26,7 +25,7 @@
 
   margin-bottom: 30px;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     font-size: 28px;
     line-height: 28px;
 
@@ -40,7 +39,7 @@
     margin-bottom: 37px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     margin-bottom: 38px;
   }
 
@@ -70,8 +69,7 @@
     width: 34px;
     height: 34px;
 
-    @media screen and (min-width: 768px) {
-
+    @media #{$tablet-width} {
       left: 0;
       top: -17px;
       width: 68px;

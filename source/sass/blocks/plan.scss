@@ -10,14 +10,14 @@
   flex-direction: column;
   align-items: flex-start;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     padding-top: 40px;
     padding-left: 36px;
 
     padding-bottom: 15px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     flex-direction: row;
     justify-content: space-between;
     padding-top: 35px;
@@ -28,10 +28,6 @@
 }
 
 .plan__title {
-  padding: 0;
-  margin: 0;
-  font-style: normal;
-  font-weight: bold;
   font-size: 16px;
   line-height: 16px;
 
@@ -41,14 +37,14 @@
   flex-grow: 1;
   flex-shrink: 0;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     font-size: 24px;
     line-height: 24px;
 
     margin-bottom: 53px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     width: 430px;
     flex-grow: 0;
 
@@ -61,13 +57,13 @@
 .plan__content {
   width: 100%;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     width: 587px;
   }
 }
@@ -87,7 +83,7 @@
   flex-grow: 1;
   flex-shrink: 0;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     font-size: 20px;
     line-height: 20px;
 
@@ -113,7 +109,7 @@
   flex-grow: 1;
   flex-shrink: 0;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     font-size: 20px;
     line-height: 20px;
 
@@ -141,7 +137,7 @@
   flex-grow: 1;
   flex-shrink: 0;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     font-size: 20px;
     line-height: 20px;
 

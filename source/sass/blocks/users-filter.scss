@@ -5,27 +5,19 @@
 }
 
 .users-filter__wrapper {
-  @media screen and (min-width: 1440px) {
-    width: 285px;
-  }
+  width: 100%;
 }
 
 .users-filter__title {
-  padding: 0;
-  margin: 0;
-
-  font-style: normal;
-  font-weight: bold;
-
   letter-spacing: 0.02em;
 
   color: $special-blue-light;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     letter-spacing: 0;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     font-size: 30px;
     line-height: 30px;
     word-wrap: break-spaces;
@@ -33,7 +25,9 @@
 }
 
 .users-filter__submit {
+  font-style: normal;
   font-weight: bold;
+
   font-size: 17px;
   line-height: 17px;
 

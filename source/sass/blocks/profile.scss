@@ -11,11 +11,11 @@
   width: 100px;
   height: 100px;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     order: -2;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     order: -2;
     margin-left: 830px;
     margin-right: 44px;
@@ -26,7 +26,7 @@
   width: 100px;
   height: 100px;
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     order: -1;
     width: 190px;
     height: 190px;
@@ -38,7 +38,7 @@
   max-width: 100%;
   border-radius: 10px;
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     border-radius: 0;
   }
 }
@@ -47,7 +47,7 @@
   color: $basic-blue;
   background-color: $basic-change-photo;
   font-family: inherit;
-  font-style: normal;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 18px;
@@ -62,7 +62,7 @@
 
   margin-top: 18px;
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     width: 190px;
 
     flex-shrink: 0;
@@ -85,7 +85,7 @@
 }
 
 .profile__photo-change-hidden-text {
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     display: none;
   }
 }
@@ -101,18 +101,18 @@
   flex-shrink: 0;
 
   &--tags {
-    @media screen and (min-width: 1440px) {
+    @media #{$desktop-width} {
       width: 732px;
     }
   }
 
   &--transport {
-    @media screen and (min-width: 768px) {
+    @media #{$tablet-width} {
       order: -1;
       width: 308px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media #{$desktop-width} {
       order: 0;
       width: 384px;
     }

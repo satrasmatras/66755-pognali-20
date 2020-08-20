@@ -4,7 +4,6 @@
   margin: 0;
   border-collapse: collapse;
 
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
@@ -25,7 +24,7 @@
   text-align: center;
   border: 1px solid $fieldset-border;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     font-size: 18px;
     line-height: 18px;
 
@@ -35,7 +34,7 @@
     padding-right: 29px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     text-align: left;
     padding-top: 14px;
     padding-bottom: 40px;
@@ -71,12 +70,12 @@
     color: $weekend-orange;
   }
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     font-size: 18px;
     line-height: 18px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     text-align: left;
     padding-top: 14px;
     padding-bottom: 40px;
@@ -87,7 +86,7 @@
 .table__hidden-letter {
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     display: inline;
   }
 }

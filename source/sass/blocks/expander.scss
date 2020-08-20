@@ -1,5 +1,5 @@
 .expander {
-  @media screen and (min-width: 768px) and (max-width: 1440px) {
+  @media #{$tablet-width} and (max-width: 1440px) {
     display: flex;
     justify-content: space-between;
   }
@@ -12,19 +12,17 @@
 }
 
 .expander__toggle {
-  @media screen and (min-width: 768px) and (max-width: 1440px) {
+  @media #{$tablet-width} and (max-width: 1440px) {
     display: none;
   }
 }
 
 .expander__title {
-  @media screen and (min-width: 768px) and (max-width: 1440px) {
+  @media #{$tablet-width} and (max-width: 1440px) {
     width: 104px;
   }
 
   color: $special-blue-light;
-  font-style: normal;
-  font-weight: bold;
   font-size: 16px;
   line-height: 18px;
 
@@ -32,7 +30,7 @@
 }
 
 .expander__content {
-  @media screen and (min-width: 768px) and (max-width: 1440px) {
+  @media #{$tablet-width} and (max-width: 1440px) {
     flex-grow: 1;
   }
 }

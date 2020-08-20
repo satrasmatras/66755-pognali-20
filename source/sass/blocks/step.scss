@@ -14,6 +14,13 @@
 
 .step__title {
   flex-grow: 1;
+  font-size: 20px;
+  line-height: 20px;
+
+  @media #{$tablet-width} {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .step__navigation {
@@ -29,7 +36,7 @@
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -40,7 +47,7 @@
 .step__number-input {
   margin-bottom: 21px;
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     width: 50%;
   }
 
@@ -52,13 +59,17 @@
 .step__check {
   margin-bottom: 27px;
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     width: 50%;
     text-align: right;
   }
 
   &--children {
-    order: 1;
+    order: 3;
+
+    @media #{$desktop-width} {
+      order: 0;
+    }
   }
 }
 
@@ -67,12 +78,11 @@
 }
 
 .step__description {
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     font-size: 20px;
     line-height: 24px;
   }
@@ -87,8 +97,6 @@
 }
 
 .step__button {
-  font-style: normal;
-  font-weight: bold;
   font-size: 17px;
   line-height: 30px;
 
@@ -100,13 +108,13 @@
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     max-width: 284px;
   }
 }
 
 .step__footer {
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

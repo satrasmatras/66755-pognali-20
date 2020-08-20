@@ -4,14 +4,14 @@
 
   background-color: $basic-change-photo;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     display: flex;
     flex-direction: column;
 
     padding-bottom: 76px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     padding-bottom: 64px;
   }
 }
@@ -38,7 +38,7 @@
     font-size: 20px;
     line-height: 20px;
 
-    @media screen and (min-width: 1440px) {
+    @media #{$desktop-width} {
       left: 43px;
       top: 40px;
     }
@@ -54,11 +54,11 @@
 
   margin-bottom: 29px;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     margin-bottom: 40px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     margin-bottom: 49px;
   }
 }

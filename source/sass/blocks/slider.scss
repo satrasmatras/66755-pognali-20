@@ -11,7 +11,7 @@
 .pagination__pages-list {
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     display: flex;
   }
 }
@@ -20,7 +20,7 @@
   width: 100%;
   justify-content: space-between;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     width: 53px;
   }
   display: flex;
@@ -28,7 +28,6 @@
 
 .pagination__pages-link {
   display: block;
-  font-weight: bold;
   font-size: 20px;
   line-height: 20px;
 

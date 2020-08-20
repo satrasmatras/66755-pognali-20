@@ -5,7 +5,7 @@
 }
 
 .map__header {
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     display: flex;
     justify-content: space-around;
   }
@@ -22,7 +22,7 @@
 .map__make-path {
   margin-bottom: 35px;
 
-  @media screen and (min-width: 1440px) {
+  @media #{$desktop-width} {
     max-width: 324px;
   }
 }

@@ -9,99 +9,113 @@
 <body class="page__body page__body--light">
 
 <header class="header">
-  <div class="container header__container">
+  <nav class="container header__container">
     <a class="header__logo logo" href="index.html">
       <img class="logo__image logo-image--blue" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
       <img class="logo__image logo-image--light" src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="100" height="19">
     </a>
-    <nav class="menu">
-      <button class="menu__toggle" type="button" aria-label="Открыть меню">
-        <svg class="menu__icon" aria-hidden="true" width="19" height="19">
-          <use class="menu__icon-menu" href="img/menu.svg#menu"></use>
-          <use class="menu__icon-close" href="img/menu-close.svg#menu-close"></use>
-        </svg>
-      </button>
-      <div class="menu__wrapper container">
-        <ul class="site-list menu__list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="">О сервисе</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Направления</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link">Попутчики</a>
-          </li>
-        </ul>
-        <a class="menu__auth button button--rounded" href="">Авторизация</a>
-        <ul class="menu__contacts contacts contacts--light list list--resetted">
-          <li class="contacts__item">
-            <a
-              class="contacts__link contacts__link--tel"
-              href="tel:+88005558628"
-            >
-              <div class="contacts__icon-wrapper">
-                <svg class="contacts__icon" width="13.5" height="14">
-                  <use href="./img/contacts-phone.svg#contacts-phone"></use>
-                </svg>
-              </div>
-              8 800 555-86-28
-            </a>
-          </li>
+    <button class="header__toggle" type="button" aria-label="Открыть меню">
+      <svg class="header__icon" aria-hidden="true" width="19" height="19">
+        <use class="header__icon-menu" href="img/menu.svg#menu"></use>
+        <use class="header__icon-close" href="img/menu-close.svg#menu-close"></use>
+      </svg>
+    </button>
+    <ul class="header__list site-list list">
+      <li class="site-list__item">
+        <a class="site-list__link" href="">О сервисе</a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link" href="form.html">Направления</a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link" href="catalog.html">Попутчики</a>
+      </li>
+    </ul>
+    <ul class="header__user-nav user-nav user-nav--header list">
+      <li class="user-nav__item user-nav__item--icon">
+        <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel" aria-label="8 800 555-86-28">
+          <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
+            <use href="img/topmenu-phone.svg#topmenu-phone"></use>
+          </svg>
+        </a>
+      </li>
 
-          <li class="contacts__item">
-            <a
-              class="contacts__link contacts__link--email"
-              href="mailto:mail@htmlacademy.ru"
-            >
-              <div class="contacts__icon-wrapper">
-                <svg class="contacts__icon" width="19" height="13">
-                  <use href="./img/contacts-mail.svg#contacts-mail"></use>
-                </svg>
-              </div>
-              mail@htmlacademy.ru
-            </a>
-          </li>
-        </ul>
-        <ul class="menu__socials socials socials--white">
-          <li class="socials__item">
-            <a href="" class="socials__link" aria-label="Facebook">
-              <svg class="socials__icon" width="11" height="21">
-                <use href="img/facebook.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
+      <li class="user-nav__item user-nav__item--icon">
+        <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email" aria-label="mail@htmlacademy.ru">
+          <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
+            <use href="img/topmenu-mail.svg#topmenu-mail"></use>
+          </svg>
+        </a>
+      </li>
 
-          <li class="socials__item">
-            <a href="" class="socials__link" aria-label="VK">
-              <svg class="socials__icon" width="23" height="12">
-                <use href="img/vk.svg#vk"></use>
-              </svg>
-            </a>
-          </li>
+      <li class="user-nav__item user-nav__item--grow user-nav__item--auth">
+        <a href="" class="button button--rounded user-nav__link user-nav__link--auth">Авторизация</a>
+      </li>
+    </ul>
 
-          <li class="socials__item">
-            <a href="" class="socials__link" aria-label="Instagram">
-              <svg class="socials__icon" width="18" height="18">
-                <use href="img/instagram.svg#instagram"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-  <div class="header__body">
-  <h1 class="header__body-title">Попутчики</h1>
-</div>
+    <ul class="header__contacts contacts contacts--light list list--resetted">
+      <li class="contacts__item">
+        <a
+          class="contacts__link contacts__link--tel"
+          href="tel:+88005558628"
+        >
+          <div class="contacts__icon-wrapper">
+            <svg class="contacts__icon" width="13.5" height="14">
+              <use href="./img/contacts-phone.svg#contacts-phone"></use>
+            </svg>
+          </div>
+          8 800 555-86-28
+        </a>
+      </li>
+
+      <li class="contacts__item">
+        <a
+          class="contacts__link contacts__link--email"
+          href="mailto:mail@htmlacademy.ru"
+        >
+          <div class="contacts__icon-wrapper">
+            <svg class="contacts__icon" width="19" height="13">
+              <use href="./img/contacts-mail.svg#contacts-mail"></use>
+            </svg>
+          </div>
+          mail@htmlacademy.ru
+        </a>
+      </li>
+    </ul>
+    <ul class="header__socials socials socials--white list">
+      <li class="socials__item">
+        <a href="" class="socials__link" aria-label="Facebook">
+          <svg class="socials__icon" width="11" height="21">
+            <use href="img/facebook.svg#facebook"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="socials__item">
+        <a href="" class="socials__link" aria-label="VK">
+          <svg class="socials__icon" width="23" height="12">
+            <use href="img/vk.svg#vk"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="socials__item">
+        <a href="" class="socials__link" aria-label="Instagram">
+          <svg class="socials__icon" width="18" height="18">
+            <use href="img/instagram.svg#instagram"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
-<main>
+<main class="page__main">
   <section class="countries-filter expander">
     <div class="container">
       <h2 class="countries-filter__title expander__title title">Фильтрация по странам</h2>
       <button class="expander__toggle" type="button" aria-label="Открыть фильтр по странам"></button>
-      <ul class="countries-filter__countries">
+      <ul class="countries-filter__countries list">
         <li class="countries-filter__countries-item">
           <a class="countries-filter__countries-link countries-filter__countries-link--highlighted" href="">Европа</a>
         </li>
@@ -217,7 +231,7 @@
         <h2 class="sr-only">Фильтр попутчиков</h2>
         <p class="users-filter__title title">Подберите идеального попутчика</p>
         <form class="users-filter__form" action="https://echo.htmlacademy.ru" method="GET">
-          <ul class="users-filter__criteries criteries">
+          <ul class="users-filter__criteries criteries list">
             <li class="criteries__item expander">
               <div class="expander__header">
                 <h3 class="expander__title">Хобби</h3>
@@ -226,7 +240,7 @@
                 </button>
               </div>
               <div class="expander__content">
-                <ul class="criteries__checkboxes checkboxes">
+                <ul class="criteries__checkboxes checkboxes list">
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control" type="checkbox" name="gym" id="gym-field">
@@ -262,7 +276,7 @@
                 </button>
               </div>
               <div class="expander__content">
-                <ul class="criteries__checkboxes checkboxes">
+                <ul class="criteries__checkboxes checkboxes list">
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control" type="checkbox" name="heavy-rock" id="heavy-rock-field">
@@ -298,7 +312,7 @@
                 </button>
               </div>
               <div class="expander__content">
-                <ul class="criteries__checkboxes checkboxes">
+                <ul class="criteries__checkboxes checkboxes list">
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control" type="checkbox" name="meat-eater" id="meat-eater-field">
@@ -334,7 +348,7 @@
                 </button>
               </div>
               <div class="expander__content">
-                <ul class="criteries__checkboxes checkboxes checkboxes-transports">
+                <ul class="criteries__checkboxes checkboxes checkboxes-transports list">
                   <li class="checkboxes-transports__item">
                     <input class="checkboxes-transports__control sr-only" type="checkbox" name="air" id="air-field" checked>
                     <label
@@ -452,20 +466,20 @@
     </section>
     <section class="two-columns-wrapper__users users">
       <div class="users__wrapper container">
-        <ul class="users__list">
+        <ul class="users__list list">
           <li class="users__list-item card">
             <div class="card__avatar-wrapper">
               <img class="card__avatar" src="img/firsova-mobile@1x.jpg" alt="Аватар Таня Фирсова">
             </div>
-            <h2 class="card__name card__name--offline">
+            <h2 class="card__name card__name--offline title">
               <a class="card__name-link" href="">Таня Фирсова</a>
             </h2>
             <div class="card__likes-wrapper">
-              <button class="card__like button card__like--checked" type="button" aria-label="Поставить лайк">
+              <button class="card__like card__like--checked" type="button" aria-label="Поставить лайк">
               </button>
               <p class="card__likes-count">1,5 м</p>
             </div>
-            <ul class="card__tags tags">
+            <ul class="card__tags tags list">
               <li class="tags__tag">#ЗОЖ</li>
 
               <li class="tags__tag">#ПП</li>
@@ -480,7 +494,7 @@
             </ul>
             <div class="card__flags-wrapper">
               <p class="card__flags-text text">Хочет посетить:</p>
-              <ul class="card__flags flags flags--column">
+              <ul class="card__flags flags flags--column list">
                 <li class="flags__item flag">
                   <img
                     class="flag__image tooltip"
@@ -513,7 +527,7 @@
             </div>
             <div class="card__transports-wrapper">
               <p class="card__transports-text text">Транспорт:</p>
-              <ul class="card__transports transports transports--transparent">
+              <ul class="card__transports transports transports--transparent list">
                 <li
                   class="transports__item tooltip"
                   data-tooltip="Авиаперелет"
@@ -587,15 +601,15 @@
             <div class="card__avatar-wrapper">
               <img class="card__avatar" src="img/demin-mobile@1x.jpg" alt="Аватар Петя Демин">
             </div>
-            <h2 class="card__name card__name--online">
+            <h2 class="card__name card__name--online title">
               <a href="" class="card__name-link">Петя Демин</a>
             </h2>
             <div class="card__likes-wrapper">
-              <button class="card__like button" type="button" aria-label="Поставить лайк">
+              <button class="card__like" type="button" aria-label="Поставить лайк">
               </button>
               <p class="card__likes-count">1500</p>
             </div>
-            <ul class="card__tags tags">
+            <ul class="card__tags tags list">
               <li class="tags__tag">#бургер</li>
 
               <li class="tags__tag">#бар</li>
@@ -608,7 +622,7 @@
             </ul>
             <div class="card__flags-wrapper">
               <p class="card__flags-text text">Хочет посетить:</p>
-              <ul class="card__flags flags flags--column">
+              <ul class="card__flags flags flags--column list">
                 <li class="flags__item flag">
                   <img
                     class="flag__image tooltip"
@@ -632,7 +646,7 @@
             </div>
             <div class="card__transports-wrapper">
               <p class="card__transports-text text">Транспорт:</p>
-              <ul class="card__transports transports transports--transparent">
+              <ul class="card__transports transports transports--transparent list">
                 <li
                   class="transports__item tooltip"
                   data-tooltip="Авиаперелет"
@@ -706,15 +720,15 @@
             <div class="card__avatar-wrapper">
               <img class="card__avatar" src="img/smolov-mobile@1x.jpg" alt="Аватар Марк Смолов">
             </div>
-            <h2 class="card__name card__name--offline">
+            <h2 class="card__name card__name--offline title">
               <a href="" class="card__name-link">Марк Смолов</a>
             </h2>
             <div class="card__likes-wrapper">
-              <button class="card__like button" type="button" aria-label="Поставить лайк">
+              <button class="card__like" type="button" aria-label="Поставить лайк">
               </button>
               <p class="card__likes-count">170</p>
             </div>
-            <ul class="card__tags tags">
+            <ul class="card__tags tags list">
               <li class="tags__tag">#рэп</li>
 
               <li class="tags__tag">#тату</li>
@@ -728,7 +742,7 @@
             <p class="card__tags tags"></p>
             <div class="card__flags-wrapper">
               <p class="card__flags-text text">Хочет посетить:</p>
-              <ul class="card__flags flags flags--column">
+              <ul class="card__flags flags flags--column list">
                 <li class="flags__item flag">
                   <img
                     class="flag__image tooltip"
@@ -762,7 +776,7 @@
             </div>
             <div class="card__transports-wrapper">
               <p class="card__transports-text text">Транспорт:</p>
-              <ul class="card__transports transports transports--transparent">
+              <ul class="card__transports transports transports--transparent list">
                 <li
                   class="transports__item tooltip"
                   data-tooltip="Авиаперелет"
@@ -836,15 +850,15 @@
             <div class="card__avatar-wrapper">
               <img class="card__avatar" src="img/rogovaya-mobile@1x.jpg" alt="Аватар Лариса Роговая">
             </div>
-            <h2 class="card__name card__name--online">
+            <h2 class="card__name card__name--online title">
               <a href="" class="card__name-link">Лариса Роговая</a>
             </h2>
             <div class="card__likes-wrapper">
-              <button class="card__like button" type="button" aria-label="Поставить лайк">
+              <button class="card__like" type="button" aria-label="Поставить лайк">
               </button>
               <p class="card__likes-count">23</p>
             </div>
-            <ul class="card__tags tags">
+            <ul class="card__tags tags list">
               <li class="tags__tag">#образование</li>
 
               <li class="tags__tag">#карьера</li>
@@ -854,9 +868,9 @@
               <li class="tags__tag">#линкедин</li>
             </ul>
             <p class="card__tags tags"></p>
-            <div class="card__countries-wrapper">
+            <div class="card__flags-wrapper">
               <p class="card__countries-text text">Хочет посетить:</p>
-              <ul class="card__flags flags flags--column">
+              <ul class="card__flags flags flags--column list">
                 <li class="flags__item flag">
                   <img
                     class="flag__image tooltip"
@@ -880,7 +894,7 @@
             </div>
             <div class="card__transports-wrapper">
               <p class="card__transports-text text">Транспорт:</p>
-              <ul class="card__transports transports transports--transparent">
+              <ul class="card__transports transports transports--transparent list">
                 <li
                   class="transports__item tooltip"
                   data-tooltip="Авиаперелет"
@@ -986,7 +1000,7 @@
     <a class="footer__logo logo" href="index.html">
       <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
     </a>
-    <ul class="footer__socials socials socials--yellow">
+    <ul class="footer__socials socials socials--yellow list">
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Facebook">
           <svg class="socials__icon" width="11" height="21">
@@ -1022,12 +1036,11 @@
 <script>
     const header = document.querySelector('.header');
     const headerLogo = document.querySelector('.header .logo');
-    const menuToggle = document.querySelector('.menu__toggle');
-    const menu = document.querySelector('.menu');
+    const menuToggle = document.querySelector('.header__toggle');
     menuToggle.addEventListener('click', () => {
         headerLogo.classList.toggle('logo--light');
         header.classList.toggle('header--white');
-        menu.classList.toggle('menu--opened');
+        header.classList.toggle('header--opened');
     })
 </script>
 </body>

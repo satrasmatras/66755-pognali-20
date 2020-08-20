@@ -1,34 +1,50 @@
 .number {
   position: relative;
   color: $special-blue-light;
-}
 
-.number__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 
-  margin-bottom: 8px;
+  @media #{$desktop-width} {
+    flex-wrap: nowrap;
+
+    max-width: 475px;
+  }
 }
 
+//.number__header {
+//  display: flex;
+//  justify-content: space-between;
+//
+//  margin-bottom: 8px;
+//}
+
 .number__label {
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
 
-  @media screen and (min-width: 768px) {
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  @media #{$tablet-width} {
     font-size: 20px;
     line-height: 18px;
 
     letter-spacing: 0.1em;
   }
 
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  @media #{$desktop-width} {
+    order: 1;
+
+    font-size: 20px;
+    line-height: 18px;
+  }
 }
 
 .number__unit {
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
@@ -38,11 +54,30 @@
 
   color: rgba($special-blue-light, 0.3);
 
-  @media screen and (min-width: 768px) {
+
+  @media #{$tablet-width} {
     font-size: 20px;
     line-height: 18px;
 
     letter-spacing: 0.08em;
+  }
+
+  @media #{$desktop-width} {
+    order: 3;
+
+    color: rgba($special-blue-light, 1);
+  }
+}
+
+.number__input-wrapper {
+  position: relative;
+  margin-top: 8px;
+  width: 100%;
+
+  @media #{$desktop-width} {
+    order: 2;
+
+    width: 180px;
   }
 }
 
@@ -52,7 +87,6 @@
   border-radius: 4px;
 
   font: inherit;
-  font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 14px;
@@ -66,7 +100,7 @@
   padding-top: 16px;
   padding-bottom: 13px;
 
-  @media screen and (min-width: 768px) {
+  @media #{$tablet-width} {
     font-size: 20px;
     line-height: 18px;
   }
