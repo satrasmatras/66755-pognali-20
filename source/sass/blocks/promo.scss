@@ -1,10 +1,15 @@
 .promo {
-  padding-top: 30px;
+  padding-top: 15px;
   background-color: $basic-blue;
   color: $basic-white;
 
+  @media #{$tablet-width} {
+    padding-top: 0;
+  }
+
   @media #{$desktop-width} {
-    padding-top: 110px;
+    padding-top: 83px;
+    padding-bottom: 121px;
   }
 }
 
@@ -23,25 +28,35 @@
 
   text-align: center;
 
-  @media (min-width: 320px) {
-    margin-bottom: 245px;
-  }
+  margin-bottom: 245px;
+
+  padding-left: 7px;
+  padding-right: 6px;
 
   @media #{$tablet-width} {
     font-size: 60px;
     line-height: 70px;
 
     margin-bottom: 86px;
+
+    padding: 0;
+    padding-left: 142px;
+    padding-right: 142px;
   }
 
   @media #{$desktop-width} {
-    width: 418px;
+    width: 497px;
+    padding: 0;
+    padding-left: 67px;
     margin-right: auto;
     margin-bottom: 0;
+    text-align: left;
   }
 }
 
 .promo__user-nav {
+  margin-bottom: 23px;
+
   @media #{$tablet-width} {
     display: none;
   }
@@ -55,6 +70,11 @@
   font-size: 16px;
   line-height: 22px;
 
+  padding-left: 25px;
+
+  width: 185px;
+  margin-bottom: 29px;
+
   color: $basic-white;
 
   @media #{$tablet-width} {
@@ -62,11 +82,19 @@
     line-height: 33px;
 
     margin-bottom: 211px;
+
+    padding: 0;
+    padding-left: 33px;
+
+    width: 300px;
   }
 
   @media #{$desktop-width} {
+    padding: 0;
     margin-left: auto;
-    width: 264px;
+    width: 285px;
+    padding-top: 10px;
+    margin-bottom: 120px;
   }
 }
 
@@ -79,6 +107,17 @@
   @media #{$tablet-width} {
     font-size: 21px;
     line-height: 25px;
+
+    width: 251px;
+    margin-top: 46px;
+  }
+}
+
+.promo__position {
+  display: inline;
+
+  @media #{$tablet-width} {
+    display: inline-block;
   }
 }
 
@@ -95,42 +134,117 @@
   }
 
   @media #{$desktop-width} {
-    margin-top: 100px;
+    margin-top: 0;
   }
 }
 
+$additional-height: 60px;
+
 .promo__steps-item {
+  display: flex;
+  justify-content: space-between;
+
   font-size: 18px;
   line-height: 18px;
 
   color: $basic-blue;
 
-  padding-left: 25px;
   padding-top: 22px;
-  padding-bottom: 22px;
+  padding-left: 24px;
   padding-right: 21px;
+  padding-bottom: 23px + $additional-height;
 
   border-radius: 10px;
 
   counter-increment: my-awesome-counter;
 
-  display: flex;
-  justify-content: space-between;
+  margin-top: -$additional-height;
+
+  &::after {
+    font-size: 18px;
+    line-height: 18px;
+
+    color: $basic-white;
+
+    display: block;
+    content: counter(my-awesome-counter);
+
+    @media #{$tablet-width} {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    @media #{$desktop-width} {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 23px;
+  }
 
   @media #{$tablet-width} {
+    margin-top: 0;
+
+    $additional-width: 21px;
+
+    flex-direction: column;
+
+    padding: 0;
+    margin: 0;
+
+    padding-top: 31px;
+    padding-left: 33px;
+    padding-right: $additional-width;
+    padding-bottom: 21px;
+
+    font-size: 24px;
+    line-height: 24px;
+
     flex-grow: 1;
     flex-shrink: 0;
     width: 344px;
-
-    margin-top: -15px;
   }
 
   @media #{$desktop-width} {
-    width: calc(100% / 4);
-  }
+    $additional-width: 30px;
+    $step-width: 315px;
+    flex-direction: row;
 
-  &:not(:first-child) {
-    margin-top: -15px;
+    padding: 0;
+    padding-left: 34px;
+    padding-top: 26px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+
+    border-radius: 20px;
+
+    flex-grow: 0;
+
+    &:nth-child(n + 1) {
+      width: $step-width + $additional-width * 2;
+    }
+
+    &:first-child {
+      width: $step-width + $additional-width;
+    }
+
+    &:last-child {
+      width: $step-width;
+    }
+
+    &:not(:nth-child(4n - 3)) {
+      margin-left: -$additional-width;
+    }
+
+    &:not(:nth-child(4n)) {
+      padding-right: $additional-width + 30px;
+    }
   }
 
   &:nth-child(4n - 3) {
@@ -148,22 +262,18 @@
   &:nth-child(4n) {
     background-color: $basic-yellow;
   }
-
-  &::after {
-    font-size: 18px;
-    line-height: 18px;
-
-    color: $basic-white;
-
-    display: block;
-    content: counter(my-awesome-counter);
-  }
 }
 
 .promo__steps-text {
-  max-width: 150px;
+  padding-right: 50px;
 
   @media #{$tablet-width} {
+    padding-right: 0;
+    width: 205px;
     margin-bottom: 10px;
+  }
+
+  @media #{$desktop-width} {
+    margin-bottom: 0;
   }
 }

@@ -22,7 +22,19 @@
 .map__make-path {
   margin-bottom: 35px;
 
+  width: 100%;
+
   @media #{$desktop-width} {
     max-width: 324px;
+  }
+
+  &:hover {
+    background-color: $basic-blue-light;
+    color: $basic-white;
+  }
+
+  &:active {
+    background-color: $basic-blue-light;
+    color: rgba($basic-white, 0.3);
   }
 }

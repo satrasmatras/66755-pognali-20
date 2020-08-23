@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Academy: Погнали</title>
+  <t  itle>HTML Academy: Погнали</title>
   <link rel="stylesheet" href="css/style.css">
-</head>
+</hea>
 <body class="page__body">
 
 <header class="header">
@@ -118,7 +118,7 @@
       <p class="promo__title title">В путешествие с крутыми попутчиками!</p>
       <ul class="promo__user-nav user-nav list">
         <li class="user-nav__item user-nav__item--icon">
-          <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel" aria-label="8 800 555-86-28">
+          <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel user-nav__link--promo" aria-label="8 800 555-86-28">
             <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
               <use href="img/topmenu-phone.svg#topmenu-phone"></use>
             </svg>
@@ -126,7 +126,7 @@
         </li>
 
         <li class="user-nav__item user-nav__item--icon">
-          <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email" aria-label="mail@htmlacademy.ru">
+          <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email user-nav__link--promo" aria-label="mail@htmlacademy.ru">
             <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
               <use href="img/topmenu-mail.svg#topmenu-mail"></use>
             </svg>
@@ -134,12 +134,12 @@
         </li>
 
         <li class="user-nav__item user-nav__item--grow">
-          <a href="" class="button button--rounded user-nav__link user-nav__link--auth">Авторизация</a>
+          <a href="" class="button button--rounded user-nav__link user-nav__link--auth user-nav__link--promo">Авторизация</a>
         </li>
       </ul>
-      <blockquote class="promo__blockquote">
+      <blockquote class="promo__blockquote blockquote">
         «Лучшее приложение, что я видел в жизни!»
-        <cite class="promo__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+        <cite class="promo__author">Мурат Эльтазин <span class="promo__position">главный редактор газеты</span> «гаджетлайф»</cite>
       </blockquote>
       <ol class="promo__steps list">
         <li class="promo__steps-item">
@@ -147,11 +147,12 @@
         </li>
 
         <li class="promo__steps-item">
-          <p class="promo__steps-text text text--bold">Изучите идеи путешественников</p>
+          <p class="promo__steps-text text text--bold">Изучите идеи<br> путешественников</p>
         </li>
 
         <li class="promo__steps-item">
-          <p class="promo__steps-text text text--bold">Находите тех, кто похож на вас</p>
+          <p class="promo__steps-text text text--bold">Находите тех,<br> кто похож на вас</p>
+          <!-- TODO: поставил здесь br, вроде это норм ШИРИНОЙ НЕ ПОЛУЧАЕТСЯ          -->
         </li>
 
         <li class="promo__steps-item">
@@ -164,16 +165,16 @@
   <section class="about">
     <div class="about__wrapper container">
       <h2 class="about__title title title--normal">О сервисе</h2>
-      <p class="about__text text">
-        Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
-        Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+      <p class="about__text text text--normal">
+        Любое путешествие веселее с попутчиками, которые на одной волне<br class="break break--tablet"> с тобой! Делитесь своими идеями путешествий <br class="break break--tablet"> и  черпайте вдохновение в чужих.
       </p>
-      <p class="about__text text text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+      <p class="about__text text text--normal text--small-tablet text--bold">А если найдете кого-то близкого по духу —
+        <br class="break break--desktop"> скорее зовите в совместный трип!</p>
       <a
         href=""
         class="about__more button button--normal-size button--primary button--yellow"
       >
-        Подробнее
+        <span class="button__text">Подробнее</span>
         <svg class="button__append-icon" width="13" height="13">
           <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
         </svg>
@@ -185,54 +186,71 @@
     <div class="directions__wrapper container">
       <div class="directions__description">
         <h2 class="directions__title title title--normal">Направления</h2>
-        <p class="directions__text text">
-          Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно
+        <p class="directions__text text text--normal">
+          Мы не продаем туры <br> и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно
           там заняться.
         </p>
       </div>
       <ul class="directions__list list">
         <li class="direction directions__item">
-          <img class="direction__image" src="img/thailand-mobile@1x.jpg" alt="Тайланд">
-          <img
-            class="direction__flag tooltip"
-            src="https://via.placeholder.com/35x24"
-            data-tooltip="Тайланд"
-            alt="Флаг Тайланда"
-          >
-          <h3 class="direction__country">Тайланд</h3>
-          <p class="direction__promo">Джунгли зовут!</p>
-          <span class="direction__users">18321</span>
+          <div class="direction__image-wrapper">
+            <img class="direction__image" src="img/thailand-mobile@1x.jpg" alt="Тайланд">
+          </div>
+          <div class="direction__flag-wrapper">
+            <img
+              class="direction__flag tooltip"
+              src="https://via.placeholder.com/35x24"
+              data-tooltip="Тайланд"
+              alt="Флаг Тайланда"
+            >
+          </div>
+          <div class="direction__meta">
+            <h3 class="direction__country title">Тайланд</h3>
+            <span class="direction__promo">Джунгли зовут!</span>
+            <span class="direction__users">18321</span>
+          </div>
         </li>
 
         <li class="direction directions__item">
-          <img class="direction__image" src="img/france-mobile@1x.jpg" alt="Франция">
-          <img
-            class="direction__flag tooltip"
-            src="https://via.placeholder.com/35x24"
-            data-tooltip="Франция"
-            alt="Флаг Франции"
-          >
-          <h3 class="direction__country">Франция</h3>
-          <p class="direction__promo">Трэ бьен, манифик!</p>
-          <span class="direction__users">12518</span>
+          <div class="direction__image-wrapper">
+            <img class="direction__image" src="img/france-mobile@1x.jpg" alt="Франция">
+          </div>
+          <div class="direction__flag-wrapper">
+            <img
+              class="direction__flag tooltip"
+              src="https://via.placeholder.com/35x24"
+              data-tooltip="Франция"
+              alt="Флаг Франции"
+            >
+          </div>
+          <div class="direction__meta">
+            <h3 class="direction__country title">Франция</h3>
+            <span class="direction__promo">Трэ бьен, манифик!</span>
+            <span class="direction__users">12518</span>
+          </div>
         </li>
 
         <li class="direction directions__item">
+          <div class="direction__image-wrapper">
           <img class="direction__image" src="img/czech-mobile@1x.jpg" alt="Чехия">
-          <img
-            class="direction__flag tooltip"
-            src="https://via.placeholder.com/35x24"
-            data-tooltip="Чехия"
-            alt="Флаг Чехии"
-          >
-          <h3 class="direction__country">Чехия</h3>
-          <p class="direction__promo">Закоулки старой Европы</p>
-          <span class="direction__users">5326</span>
+          </div>
+          <div class="direction__flag-wrapper">
+            <img
+              class="direction__flag tooltip"
+              src="https://via.placeholder.com/35x24"
+              data-tooltip="Чехия"
+              alt="Флаг Чехии"
+            >
+          </div>
+          <div class="direction__meta">
+            <h3 class="direction__country title">Чехия</h3>
+            <span class="direction__promo ">Закоулки старой Европы</span>
+            <span class="direction__users">5326</span>
+          </div>
         </li>
       </ul>
       <a
         class="directions__show-all button button--normal-size button--primary button--yellow"
-        type="button"
       >
         Показать все
         <svg class="button__append-icon" width="13" height="13">
@@ -246,38 +264,42 @@
     <div class="companions__wrapper container">
       <div class="companions__description">
         <h2 class="companions__title title title--normal">Попутчики</h2>
-        <p class="companions__text text">
-          Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+        <p class="companions__text text text--normal">
+          Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <br class="break break--tablet break--desktop">а другому маршрут для хайкинга.
         </p>
-        <p class="companions__text companions__text--bold text">Теперь можно легко найти единомышленников!</p>
+        <p class="companions__text text text--small-tablet text--bold">Теперь можно легко <br class="break break--tablet break--desktop"> найти единомышленников!</p>
       </div>
 
       <ul class="companions__list list">
         <li class="companions__item preview-card">
-          <div class="preview-card__progress progress">
-            <span class="progress__value">100</span>
-            <span class="progress__level">level</span>
-            <div class="progress__circle">
-              <svg class="progress__svg" height="60" width="60">
+          <div class="preview-card__progress progress progress--preview">
+            <div class="progress__description">
+              <span class="progress__value">99</span>
+              <span class="progress__level">level</span>
+            </div>
+              <svg class="progress__svg" width="60" height="60"
+                   viewBox="0 0 60 60">
                 <circle class="progress__svg-circle"
+                        vector-effect="non-scaling-stroke"
                         data-stroke="red"
                         style="
-                        --progress-level: 80;
-                        --progress-radius: 20;
+                        --progress-level: 99;
+                        --progress-radius: 28;
 "
                         cx="30"
                         cy="30"
-                        r="20"
+                        r="28"
                         stroke="orange"
-                        stroke-width="5"
+                        stroke-width="4"
                         fill="transparent"
                         stroke-linecap="round"
                 />
               </svg>
-            </div>
           </div>
-          <img class="preview-card__avatar" src="img/firsova-desktop@1x.jpg" alt="Аватар Таня Фирсова">
-          <ul class="preview-card__flags flags list">
+          <div class="preview-card__avatar-wrapper">
+            <img class="preview-card__avatar" src="img/firsova-desktop@1x.jpg" alt="Аватар Таня Фирсова">
+          </div>
+          <ul class="preview-card__flags flags flags--row list">
             <li class="flags__item">
               <img
                 class="flags__image tooltip"
@@ -365,27 +387,34 @@
         </li>
 
         <li class="companions__item preview-card">
-          <div class="preview-card__progress progress">
-            <span class="progress__value">80</span>
-            <span class="progress__level">level</span>
-            <div class="progress__circle">
-              <svg height="100" width="100">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="40"
-                  stroke="orange"
-                  stroke-width="5"
-                  fill="transparent"
-                  stroke-dasharray="100"
-                  stroke-dashoffset="100"
-                  stroke-linecap="round"
-                />
-              </svg>
+          <div class="preview-card__progress progress progress--preview">
+            <div class="progress__description">
+              <span class="progress__value">80</span>
+              <span class="progress__level">level</span>
             </div>
+            <svg class="progress__svg" width="60" height="60"
+                 viewBox="0 0 60 60">
+              <circle class="progress__svg-circle"
+                      vector-effect="non-scaling-stroke"
+                      data-stroke="red"
+                      style="
+                        --progress-level: 80;
+                        --progress-radius: 28;
+"
+                      cx="30"
+                      cy="30"
+                      r="28"
+                      stroke="orange"
+                      stroke-width="4"
+                      fill="transparent"
+                      stroke-linecap="round"
+              />
+            </svg>
           </div>
-          <img class="preview-card__avatar" src="img/demin-desktop@1x.jpg" alt="Аватар Таня Фирсова">
-          <ul class="preview-card__flags flags list">
+          <div class="preview-card__avatar-wrapper">
+            <img class="preview-card__avatar" src="img/demin-desktop@1x.jpg" alt="Аватар Таня Фирсова">
+          </div>
+          <ul class="preview-card__flags flags flags--row list">
             <li class="flags__item">
               <img
                 class="flags__image tooltip"
@@ -518,7 +547,7 @@
             <span class="tariffs__value">Индивидуально</span>
           </li>
         </ol>
-        <button class="services__close button button--grey button--uppercase" type="button">Закрыть окно</button>
+        <button class="services__close button button--uppercase" type="button">Закрыть окно</button>
       </div>
     </div>
   </section>
@@ -590,7 +619,7 @@
           </li>
         </ul>
         <a
-          class="map__make-path button button--primary button--bordered button--map-hover"
+          class="map__make-path button button--primary button--normal-size button--bordered"
           href=""
         >
           Проложить маршрут

@@ -1,17 +1,17 @@
 .companions {
   padding-top: 68px;
-  padding-bottom: 35px;
+  padding-bottom: 30px;
   background-color: $basic-blue-light;
   color: $basic-white;
 
   @media #{$tablet-width} {
-    padding-top: 141px;
-    padding-bottom: 87px;
+    padding-top: 143px;
+    padding-bottom: 80px;
   }
 
   @media #{$desktop-width} {
-    padding-top: 130px;
-    padding-bottom: 87px;
+    padding-top: 100px;
+    padding-bottom: 138px;
   }
 }
 
@@ -25,25 +25,43 @@
     justify-content: center;
     align-items: start;
 
+    padding-left: 40px;
+
     grid-template-rows: min-content min-content min-content;
   }
 
   @media #{$desktop-width} {
     display: grid;
 
-    grid-template-columns: 428px 630px;
+    padding-left: 132px;
+
+    grid-template-columns: 427px 1fr;
     grid-template-rows: min-content 1fr;
+
+    grid-column-gap: 190px;
   }
 }
 
 .companions__description {
+  padding-left: 24px;
+  padding-right: 31px;
+
+  margin-bottom: 55px;
+
   @media #{$tablet-width} {
+    padding-left: 0;
     grid-row: 1/2;
+
+    margin-bottom: 0;
   }
 
   @media #{$desktop-width} {
     grid-column: 1/2;
     grid-row: 1/2;
+
+    padding-right: 0px;
+
+    margin-bottom: 84px;
   }
 }
 
@@ -65,12 +83,16 @@
 }
 
 .companions__text {
-  font-weight: 300;
+  margin-bottom: 23px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   @media #{$tablet-width} {
     width: 427px;
 
-    margin-bottom: 39px;
+    margin-bottom: 43px;
   }
 
   @media #{$desktop-width} {
@@ -78,24 +100,14 @@
 
     margin-bottom: 42px;
   }
-
-  &--bold {
-    font-weight: bold;
-
-    @media #{$tablet-width} {
-      font-size: 21px;
-      line-height: 24px;
-    }
-  }
 }
 
 .companions__list {
-  margin-top: 54px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 
   @media #{$tablet-width} {
     margin-top: 59px;
-    margin-bottom: 81px;
+    margin-bottom: 78px;
 
     display: flex;
     justify-content: space-around;
@@ -118,6 +130,15 @@
 
 .companions__item {
   margin-bottom: 10px;
+
+  @media #{$tablet-width} {
+    margin-bottom: 0;
+    margin-right: 50px;
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
 }
 
 .companions__show-all {

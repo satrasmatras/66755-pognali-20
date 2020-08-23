@@ -1,7 +1,28 @@
 .site-list {
+  position: relative;
   display: flex;
   text-align: center;
   justify-content: space-between;
+
+  @media #{$tablet-width} {
+    text-align: left;
+  }
+
+  @media #{$desktop-width} {
+    padding-left: 106px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 1px;
+      top: 27px;
+
+      height: 2px;
+      width: 60px;
+
+      background-color: $basic-white;
+    }
+  }
 }
 
 .site-list__link {
@@ -14,8 +35,12 @@
   color: inherit;
   text-decoration: none;
 
+  @media #{$tablet-width} {
+    font-size: 60px;
+    line-height: 71px;
+  }
+
   @media #{$desktop-width} {
-    font-weight: 500;
     font-size: 20px;
     line-height: 20px;
   }

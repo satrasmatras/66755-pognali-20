@@ -1,6 +1,10 @@
 .socials {
   display: flex;
   justify-content: center;
+
+  @media #{$tablet-width} {
+    justify-content: flex-start;
+  }
 }
 
 .socials__link {

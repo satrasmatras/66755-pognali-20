@@ -10,13 +10,14 @@
 @import "blocks/tooltip.scss";
 @import "blocks/textarea.scss";
 @import "blocks/title.scss";
+@import "blocks/break.scss";
+@import "blocks/blockquote.scss";
 @import "blocks/check.scss";
 @import "blocks/container.scss";
 @import "blocks/two-columns-wrapper";
 @import "blocks/socials.scss";
 @import "blocks/user-nav.scss";
 @import "blocks/site-list.scss";
-@import "blocks/header.scss";
 @import "blocks/menu.scss";
 @import "blocks/contacts.scss";
 @import "blocks/copyright.scss";
@@ -25,7 +26,6 @@
 @import "blocks/directions.scss";
 @import "blocks/direction.scss";
 @import "blocks/companions.scss";
-@import "blocks/preview-card.scss";
 @import "blocks/flags.scss";
 @import "blocks/tags.scss";
 @import "blocks/transports.scss";
@@ -63,3 +63,6 @@
 @import "blocks/users-filter.scss";
 @import "blocks/criteries.scss";
 @import "blocks/filter-range.scss";
+@import "blocks/header.scss";
+@import "blocks/preview-card.scss";
+

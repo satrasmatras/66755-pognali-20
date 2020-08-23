@@ -21,6 +21,11 @@
   text-decoration: none;
 
   text-transform: uppercase;
+
+  @media #{$tablet-width} {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .contacts__icon-wrapper {
@@ -36,6 +41,20 @@
   margin-right: 16px;
 
   border-radius: 100%;
+
+  @media #{$tablet-width} {
+    width: 68px;
+    height: 68px;
+
+    margin-right: 23px;
+  }
+}
+
+.contacts__icon {
+  @media #{$tablet-width} {
+    height: 19px;
+    width: 28px;
+  }
 }
 
 .contacts--light {

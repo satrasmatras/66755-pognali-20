@@ -1,10 +1,21 @@
 .progress {
   --pi: 3.141592653589793238462643383279502884197169399375105820974;
-  position: relative;
+  //position: relative;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border-radius: 50%;
+
+  &--preview {
+    background-color: rgba($basic-black, 0.6);
+
+    width: 60px;
+    height: 60px;
+
+    color: $basic-white;
+  }
 }
 
 .progress__description {
@@ -12,6 +23,8 @@
 
   flex-direction: column;
   align-items: center;
+
+  padding-top: 8px;
 }
 
 .progress__value {
@@ -22,7 +35,7 @@
 
   text-align: center;
 
-  color: $basic-blue;
+  color: inherit;
 }
 
 .progress--no-level .progress__level {
@@ -37,12 +50,14 @@
 
   text-align: center;
 
-  color: $special-grey;
+  color: inherit;
 }
 
 .progress__svg {
   position: absolute;
   left: 0;
+  right: 0;
+  bottom: 0;
   top: 0;
   transform: rotate(-90deg);
 }
@@ -50,4 +65,11 @@
 .progress__svg-circle[data-stroke] {
   stroke-dasharray: calc(var(--progress-radius) * var(--pi) * 2);
   stroke-dashoffset: calc(var(--progress-radius) * var(--pi) * 2 - var(--progress-level) / 100 * (var(--progress-radius) * var(--pi) * 2));
+}
+
+.progress--preview {
+  .progress__level {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }

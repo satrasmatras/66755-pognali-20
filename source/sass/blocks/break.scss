@@ -1,0 +1,25 @@
+.break {
+  display: none;
+
+  &--block {
+    display: block;
+  }
+
+  &--mobile {
+    @media #{$only-phone-width} {
+      display: inline-block;
+    }
+  }
+
+  &--tablet {
+    @media #{$only-tablet-width} {
+      display: inline-block;
+    }
+  }
+
+  &--desktop {
+    @media #{$desktop-width} {
+      display: inline-block;
+    }
+  }
+}
