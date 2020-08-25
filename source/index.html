@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <t  itle>HTML Academy: Погнали</title>
+  <title>HTML Academy: Погнали</title>
   <link rel="stylesheet" href="css/style.css">
 </hea>
 <body class="page__body">
@@ -277,8 +277,7 @@
               <span class="progress__value">99</span>
               <span class="progress__level">level</span>
             </div>
-              <svg class="progress__svg" width="60" height="60"
-                   viewBox="0 0 60 60">
+              <svg class="progress__svg" width="60" height="60" viewBox="0 0 60 60">
                 <circle class="progress__svg-circle"
                         vector-effect="non-scaling-stroke"
                         data-stroke="red"
@@ -349,7 +348,7 @@
               data-tooltip="Авиаперелет"
               aria-label="Авиаперелет"
             >
-              <svg class="transports__icon" width="14" height="16">
+              <svg class="transports__icon" width="18" height="19">
                 <use href="img/plane.svg#plane"></use>
               </svg>
             </li>
@@ -359,7 +358,7 @@
               data-tooltip="Автотранспорт"
               aria-label="Автотранспорт"
             >
-              <svg class="transports__icon" width="13" height="16">
+              <svg class="transports__icon" width="17" height="19">
                 <use href="img/bus.svg#bus"></use>
               </svg>
             </li>
@@ -369,7 +368,7 @@
               data-tooltip="Велосипед"
               aria-label="Велосипед"
             >
-              <svg class="transports__icon" width="15" height="17">
+              <svg class="transports__icon" width="21" height="18">
                 <use href="img/bike.svg#bike"></use>
               </svg>
             </li>
@@ -379,7 +378,7 @@
               data-tooltip="Пешком"
               aria-label="Пешком"
             >
-              <svg class="transports__icon" width="13" height="17">
+              <svg class="transports__icon" width="16" height="19">
                 <use href="img/run.svg#run"></use>
               </svg>
             </li>
@@ -392,8 +391,7 @@
               <span class="progress__value">80</span>
               <span class="progress__level">level</span>
             </div>
-            <svg class="progress__svg" width="60" height="60"
-                 viewBox="0 0 60 60">
+            <svg class="progress__svg" width="60" height="60" viewBox="0 0 60 60">
               <circle class="progress__svg-circle"
                       vector-effect="non-scaling-stroke"
                       data-stroke="red"
@@ -502,7 +500,7 @@
   </section>
 
   <section class="services">
-    <div class="container">
+    <div class="services__wrapper container">
       <h2 class="sr-only">Дополнительные услуги</h2>
       <a href="form.html" class="services__title title title--normal">Добавьте свой профиль</a>
       <ol class="services__tariffs tariffs list">
@@ -521,12 +519,17 @@
           <span class="tariffs__value">59 руб./мес</span>
         </li>
       </ol>
-      <a class="services__show-tariffs button button--normal-size button--rounded button--transparent" href="">
+      <a class="services__show-tariffs button button--rounded button--transparent" href="">
+        <span class="services__button-svg-wrapper">
+          <svg class="services__button-svg" width="27" height="27">
+            <use сlass="services__button-icon" href="img/user.svg#user"></use>
+          </svg>
+        </span>
         Показать тарифы для бизнеса
       </a>
-      <div class="services__business modal">
-        <h3 class="services__title title title--normal">Бизнес-тарифы</h3>
-        <ol class="services__tariffs tariffs tariffs--no-counter list">
+      <div class="services__business">
+        <h3 class="services__title services__title--business title title--normal">Бизнес-тарифы</h3>
+        <ol class="services__tariffs services__tariffs--business tariffs tariffs--business tariffs--no-counter list">
           <li class="tariffs__item">
             <span class="tariffs__name">Реклама у блоггера</span>
             <span class="tariffs__value">300 000 руб./пост</span>
@@ -553,24 +556,25 @@
   </section>
 
   <section class="fast-registration">
-    <div class="container">
+    <div class="fast-registration__wrapper container">
       <h2 class="sr-only">Зарегистрируйтесь сейчас</h2>
       <p class="fast-registration__title title title--normal">Заинтересовались?</p>
-      <p class="fast-registration__text text">
-        Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
+      <p class="fast-registration__text text text--normal">
+        Зарегистрируйтесь, <br class="break break--mobile"> это быстро и бесплатно! <br class="break break--block"> Уже зарегистрированы? Тогда скорее
         <a href="" class="fast-registration__link">авторизуйтесь</a>.
       </p>
       <form class="fast-registration__form" action="https://echo.htmlacademy.ru" method="POST">
+<!--        TODO: почему здесь высота такая на десктопе??-->
         <label class="sr-only" for="email-field">E-mail</label>
-        <input class="fast-registration__input" type="email" id="email-field" name="email" placeholder="E-mail" required>
+        <input class="fast-registration__input input" type="email" id="email-field" name="email" placeholder="E-mail" required>
         <button class="fast-registration__button button button--primary button--yellow" type="submit" aria-label="Отправить">
           <span class="fast-registration__button-text">Регистрация</span>
-          <svg class="button__append-icon" width="13" height="13">
+          <svg class="button__append-icon button__append-icon--center" width="13" height="13">
             <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
           </svg>
         </button>
       </form>
-      <p class="fast-registration__text text">Остались вопросы? Мы с радостью на них ответим!</p>
+      <p class="fast-registration__text fast-registration__text--questions text text--normal">Остались вопросы?<br class="break break--mobile"> Мы с радостью на них ответим!</p>
       <ul class="fast-registration__contacts contacts contacts--dark contacts--row list list--resetted">
         <li class="contacts__item">
           <a
@@ -628,7 +632,11 @@
           </svg>
         </a>
       </div>
-      <img class="map__image" src="https://via.placeholder.com/320x424" alt="Карта. Ул. Большая Конюшенная, 19/8">
+      <div class="map__image-wrapper">
+        <img class="map__image map__image--mobile" src="https://via.placeholder.com/320x424" alt="Карта. Ул. Большая Конюшенная, 19/8">
+        <img class="map__image map__image--tablet" src="https://via.placeholder.com/768x581" alt="Карта. Ул. Большая Конюшенная, 19/8">
+        <img class="map__image map__image--desktop" src="https://via.placeholder.com/1440x584" alt="Карта. Ул. Большая Конюшенная, 19/8">
+      </div>
     </div>
   </section>
 </main>

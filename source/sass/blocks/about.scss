@@ -7,7 +7,6 @@ $padding-left: 25px;
 
   @media #{$tablet-width} {
     padding-top: 138px;
-    padding-left: 28px;
     padding-bottom: 88px;
   }
 
@@ -19,7 +18,8 @@ $padding-left: 25px;
 
 .about__wrapper {
   @media #{$tablet-width} {
-    padding-left: 61px;
+    padding-left: 89px;
+    padding-right: 61px;
   }
 
   @media #{$desktop-width} {
@@ -82,8 +82,5 @@ $padding-left: 25px;
 
   @media #{$tablet-width} {
     display: inline-flex;
-  }
-
-  @media #{$desktop-width} {
   }
 }

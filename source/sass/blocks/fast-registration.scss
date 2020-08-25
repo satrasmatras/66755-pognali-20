@@ -2,17 +2,29 @@
   background-color: $basic-blue-light;
   color: $basic-white;
 
-  padding-top: 72px;
+  padding-top: 64px;
   padding-bottom: 30px;
 
   @media #{$tablet-width} {
-    padding-top: 76px;
+    padding-top: 57px;
     padding-bottom: 60px;
   }
 
   @media #{$desktop-width} {
-    padding-top: 109px;
-    padding-bottom: 60px;
+    padding-top: 55px;
+    padding-bottom: 90px;
+  }
+}
+
+.fast-registration__wrapper {
+  @media #{$tablet-width} {
+    padding-left: 76px;
+    padding-right: 75px;
+  }
+
+  @media #{$desktop-width} {
+    padding-left: 131px;
+    padding-right: 132px;
   }
 }
 
@@ -35,13 +47,18 @@
   text-align: center;
 
   color: $basic-white;
-
+  width: 237px;
+  margin: 0 auto;
   margin-bottom: 30px;
 
+  &--questions {
+    margin-bottom: 18px;
+  }
+
   @media #{$tablet-width} {
+    width: auto;
     font-size: 28px;
     line-height: 32px;
-
     margin-bottom: 65px;
   }
 
@@ -72,6 +89,10 @@
   align-items: flex-start;
 
   margin-bottom: 30px;
+
+  @media #{$desktop-width} {
+    margin-bottom: 10px;
+  }
 }
 
 .fast-registration__input {
@@ -79,14 +100,31 @@
 
   border-radius: 10px;
   flex-grow: 1;
-  padding: 20px 25px;
+
+  padding: 20px 21px;
+  padding-bottom: 17px;
 
   border: 4px solid transparent;
   color: rgba($special-grey, 0.3);
 
   @media #{$tablet-width} {
+    font-style: normal;
+    font-weight: bold;
+
     padding: 28px 36px;
+    padding-top: 22px;
+    padding-left: 32px;
+    padding-bottom: 24px;
+
     margin-bottom: 60px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 0;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 
   @media #{$desktop-width} {
@@ -108,10 +146,16 @@
   }
 
   &::placeholder {
+    font: inherit;
     font-size: 18px;
     line-height: 18px;
 
     color: rgba($special-grey, 0.3);
+
+    @media #{$tablet-width} {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 
   &:invalid {
@@ -128,14 +172,28 @@
   height: 60px;
   width: 62px;
 
+  padding: 0;
+
   @media #{$tablet-width} {
     width: 80px;
     height: 80px;
+
+    border-radius: 0;
+
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   @media #{$desktop-width} {
-    min-width: 330px;
-    min-height: 81px;
+    font-weight: bold;
+    min-width: 326px;
+    min-height: 82px;
+    text-align: left;
+    justify-content: space-between;
+
+    padding-left: 37px;
+    padding-right: 36px;
+    padding-top: 7px;
   }
 }
 

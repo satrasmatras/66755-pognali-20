@@ -15,3 +15,9 @@
     opacity: 0.3;
   }
 }
+
+.copyright__logo {
+  @media #{$tablet-width} {
+    margin-left: 20px;
+  }
+}

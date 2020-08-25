@@ -41,13 +41,16 @@ $direction-padding-left: 25px;
     grid-column-gap: 175px;
 
     padding-left: 128px;
+    padding-right: 0;
   }
 }
 
 .directions__list {
+  margin-bottom: 6px;
+
   @media #{$tablet-width} {
     margin-bottom: 43px;
-    padding-top: 44px;
+    padding-top: 0;
 
     grid-column: 1/-1;
   }
@@ -64,8 +67,8 @@ $direction-padding-left: 25px;
 .directions__item {
   margin-bottom: 10px;
 
-  &:last-of-type {
-    margin-bottom: 6px;
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -98,8 +101,8 @@ $direction-padding-left: 25px;
 
   margin-bottom: 20px;
 
-  &:last-of-type {
-    margin-bottom: 61px;
+  &:last-child {
+    margin-bottom: 105px;
 
     @media #{$desktop-width} {
       margin-bottom: 110px;
@@ -111,7 +114,6 @@ $direction-padding-left: 25px;
 
     margin-bottom: 104px;
   }
-
 }
 
 .directions__show-all {

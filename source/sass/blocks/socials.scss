@@ -17,6 +17,11 @@
 
   color: $special-blue-light;
   text-decoration: none;
+
+  @media #{$tablet-width} {
+    width: 62px;
+    height: 62px;
+  }
 }
 
 .socials--yellow {

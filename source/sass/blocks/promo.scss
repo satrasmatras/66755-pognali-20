@@ -135,6 +135,8 @@
 
   @media #{$desktop-width} {
     margin-top: 0;
+
+    justify-content: center;
   }
 }
 
@@ -189,8 +191,6 @@ $additional-height: 60px;
   }
 
   @media #{$tablet-width} {
-    margin-top: 0;
-
     $additional-width: 21px;
 
     flex-direction: column;

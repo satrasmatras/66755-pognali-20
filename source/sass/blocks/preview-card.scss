@@ -16,13 +16,10 @@
     width: 285px;
 
     border-radius: 20px;
-  }
 
-  @media #{$desktop-width} {
-    padding-bottom: 0;
+    padding-bottom: 20px;
   }
 }
-
 
 .preview-card__avatar-wrapper {
   width: 270px;
@@ -104,6 +101,8 @@
   padding-left: 41px;
   padding-right: 35px;
 
+  margin-bottom: 10px;
+
   @media #{$tablet-width} {
     font-size: 20px;
     line-height: 23px;
@@ -116,7 +115,7 @@
 }
 
 .preview-card__transports {
-  margin-bottom: 22px;
+  margin-bottom: 0;
 }
 
 .preview-card__progress {
@@ -139,9 +138,9 @@
 .preview-card__flags {
   margin-top: -12px;
   margin-bottom: 10px;
-  width: 145px;
+  width: 250px;
 
-  justify-content: space-around;
+  justify-content: center;
 
   @media #{$desktop-width} {
     margin-bottom: 16px;

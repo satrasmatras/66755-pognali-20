@@ -10,14 +10,10 @@
 }
 
 .transports__item {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-right: 5px;
 
   border-radius: 100%;
 
@@ -31,4 +27,9 @@
 
 .transports__item--disabled {
   color: rgba($special-blue-light, 0.15);
+}
+
+.transports__icon {
+  display: flex;
+  margin: auto;
 }

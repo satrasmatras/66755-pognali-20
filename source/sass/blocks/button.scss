@@ -17,14 +17,6 @@ $large-button-size: 324px;
 
   cursor: pointer;
 
-  .button__prepend-icon {
-    margin-right: 15px;
-  }
-
-  .button__append-icon {
-    margin-left: auto;
-  }
-
   // TODO: в видео 4.1 был совет о юзании text + icon и icon + text
   //&__text + &__icon {
   //  margin-left: auto;
@@ -35,7 +27,7 @@ $large-button-size: 324px;
   //}
 
   &--normal-size {
-    min-width: 276px;
+    width: 276px;
 
     @media #{$desktop-width} {
       max-width: 276px;
@@ -52,14 +44,6 @@ $large-button-size: 324px;
 
     border-radius: 25px;
     background-color: $basic-yellow;
-
-    &:hover {
-      background-color: $special-yellow-dark;
-    }
-
-    &:active {
-      color: rgba($basic-blue, 0.3);
-    }
   }
 
   &--transparent {
@@ -138,5 +122,17 @@ $large-button-size: 324px;
         opacity: 0.3;
       }
     }
+  }
+}
+
+.button__prepend-icon {
+  margin-right: 15px;
+}
+
+.button__append-icon {
+  margin-left: auto;
+
+  &--center {
+    margin-left: 0;
   }
 }

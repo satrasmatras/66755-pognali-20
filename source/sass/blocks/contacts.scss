@@ -7,7 +7,17 @@
   @media #{$desktop-width} {
     &--row {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+    }
+  }
+}
+
+.contacts__item {
+  @media #{$desktop-width} {
+    margin-right: 100px;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
@@ -45,6 +55,13 @@
   @media #{$tablet-width} {
     width: 68px;
     height: 68px;
+
+    margin-right: 23px;
+  }
+
+  @media #{$desktop-width} {
+    width: 90px;
+    height: 90px;
 
     margin-right: 23px;
   }

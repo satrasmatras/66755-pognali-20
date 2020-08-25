@@ -2,26 +2,21 @@
   position: relative;
   display: flex;
   text-align: center;
-  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+
+  flex-wrap: wrap;
 
   @media #{$tablet-width} {
     text-align: left;
   }
+}
 
-  @media #{$desktop-width} {
-    padding-left: 106px;
+.site-list__item {
+  margin-right: 34px;
 
-    &::before {
-      position: absolute;
-      content: "";
-      left: 1px;
-      top: 27px;
-
-      height: 2px;
-      width: 60px;
-
-      background-color: $basic-white;
-    }
+  &:last-child {
+    margin-right: 0;
   }
 }
 

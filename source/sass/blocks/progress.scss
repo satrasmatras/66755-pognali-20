@@ -15,6 +15,11 @@
     height: 60px;
 
     color: $basic-white;
+
+    .progress__level {
+      font-size: 14px;
+      line-height: 14px;
+    }
   }
 }
 
@@ -65,11 +70,4 @@
 .progress__svg-circle[data-stroke] {
   stroke-dasharray: calc(var(--progress-radius) * var(--pi) * 2);
   stroke-dashoffset: calc(var(--progress-radius) * var(--pi) * 2 - var(--progress-level) / 100 * (var(--progress-radius) * var(--pi) * 2));
-}
-
-.progress--preview {
-  .progress__level {
-    font-size: 14px;
-    line-height: 14px;
-  }
 }

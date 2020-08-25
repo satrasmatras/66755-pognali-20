@@ -26,7 +26,7 @@
 
 .header__container {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -46,7 +46,7 @@
 
     background: $basic-white;
 
-    margin-right: 40px;
+    margin-right: 145px;
   }
 }
 
@@ -193,7 +193,7 @@
     order: 0;
 
     margin-top: 95px;
-    padding-left: 57px;
+    padding-left: 0;
 
     margin-bottom: 129px;
   }
@@ -202,7 +202,7 @@
     order: -2;
     display: flex;
 
-    width: 495px;
+    width: 620px;
 
     color: white;
 
@@ -210,9 +210,22 @@
     line-height: 20px;
 
     margin-top: 0;
-
     margin-bottom: 0;
-    padding-top: 20px;
+
+    padding-top: 0;
+    padding-left: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      left: -105px;
+      top: calc(50% - 2px);
+
+      height: 2px;
+      width: 60px;
+      background-color: $basic-white;
+    }
   }
 }
 
@@ -271,6 +284,5 @@
 
   @media #{$tablet-width} {
     padding-left: 57px;
-
   }
 }

@@ -5,18 +5,56 @@
 }
 
 .map__header {
+  @media #{$tablet-width} {
+    padding-left: 35px;
+  }
+
   @media #{$desktop-width} {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    padding-top: 21px;
+    padding-left: 225px;
+    padding-right: 75px;
+
+    margin-bottom: 28px;
   }
 }
 
 .map__contacts {
   margin-bottom: 30px;
+  padding-right: 19px;
+
+  @media #{$tablet-width} {
+    padding-right: 0;
+  }
+}
+
+.map__image-wrapper {
+  width: 100%;
 }
 
 .map__image {
   max-width: 100%;
+
+  display: none;
+
+  &--mobile {
+    @media #{$only-phone-width} {
+      display: block;
+    }
+  }
+
+  &--tablet {
+    @media #{$only-tablet-width} {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    @media #{$desktop-width} {
+      display: block;
+    }
+  }
 }
 
 .map__make-path {
@@ -26,6 +64,8 @@
 
   @media #{$desktop-width} {
     max-width: 324px;
+
+    margin-left: auto;
   }
 
   &:hover {
