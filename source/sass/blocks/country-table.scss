@@ -3,9 +3,10 @@
 
   @media #{$tablet-width} {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     padding-top: 35px;
+    border-spacing: 0;
   }
 
   @media #{$desktop-width} {
@@ -19,11 +20,15 @@
   border-collapse: collapse;
 
   @media #{$tablet-width} {
-    width: 262px;
+    width: 382px;
+    margin-left: -14px;
+    margin-top: -12px;
+    border-spacing: 0 22px;
+    border-collapse: separate;
   }
 
   @media #{$desktop-width} {
-    width: 361px;
+    width: 100%;
     border-collapse: separate;
     border-spacing: 16px;
   }
@@ -31,33 +36,66 @@
 
 
 .country-table__cell {
-  width: calc(100% / 5);
-  padding-top: 12px;
-  padding-right: 19px;
-  padding-bottom: 15px;
-  padding-left: 17px;
-
+  padding-top: 14px;
+  padding-right: 21px;
+  padding-bottom: 11px;
+  padding-left: 18px;
+  border: 1px solid $fieldset-border;
   text-align: center;
   vertical-align: center;
 
   @media #{$tablet-width} {
-    padding: 27px 22px;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 60px;
+
+    text-transform: uppercase;
+
+    color: rgba($basic-blue-light, 0.3);
+    background-color: transparent;
+    border: none;
+
+    padding: 0;
+    cursor: pointer;
   }
 
   @media #{$desktop-width} {
     margin-right: 14px;
+    text-align: left;
+    padding-left: 15px;
+
+    vertical-align: top;
+
+    &:last-child {
+      padding-left: 4px;
+    }
+
+    color: $basic-blue-light;
   }
 
-  border: 1px solid $fieldset-border;
-
   &--selected {
-    background-color: $basic-grey;
-    border-bottom: 1px solid $basic-grey;
+    @media #{$only-phone-width} {
+      position: relative;
+      background-color: $basic-grey;
+
+      &::before {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        content: "";
+        box-shadow: 0 0 0 0.5px $special-blue-light;
+        z-index: 10;
+      }
+    }
 
     @media #{$tablet-width} {
-      background-color: $special-blue-light;
-
-      color: white;
+      color: $basic-blue-light;
+      background-color: transparent;
     }
   }
 }
@@ -91,12 +129,19 @@
 }
 
 .country-table__content {
-  margin: 0;
-  list-style: none;
-  padding: 19px;
+  padding-top: 15px;
+  padding-left: 3px;
+  margin-bottom: 31px;
 
   @media #{$tablet-width} {
+    width: 172px;
     padding: 0;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  @media #{$desktop-width} {
+    display: none;
   }
 }
 
@@ -107,7 +152,12 @@
 
   color: $special-grey;
 
-  margin-bottom: 5px;
+  margin-bottom: 0;
+
+  @media #{$tablet-width} {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .country-table__content-link {
@@ -115,33 +165,32 @@
   text-decoration: none;
 }
 
-
-.country-table--large {
-  @media #{$tablet-width} {
-    border-spacing: 44px;
-
-    .country-table__cell {
-      font-weight: bold;
-      font-size: 60px;
-      line-height: 60px;
-
-      text-transform: uppercase;
-
-      color: rgba($basic-blue-light, 0.3);
-      background-color: transparent;
-      border: none;
-
-      padding: 0;
-      cursor: pointer;
-    }
-
-    .country-table__cell--selected {
-      color: $basic-blue-light;
-      background-color: transparent;
-    }
+.country-table__letter-countries {
+  @media #{$desktop-width} {
+    margin-bottom: 37px;
   }
+}
+
+.country-table__letter {
+  @media #{$desktop-width} {
+    margin-bottom: 31px;
+    display: block;
+  }
+}
+
+.country-table__letter-link {
+  display: none;
 
   @media #{$desktop-width} {
-    vertical-align: top;
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+
+    text-transform: none;
+    text-decoration: none;
+
+    color: $special-grey;
   }
 }

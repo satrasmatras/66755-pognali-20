@@ -9,7 +9,7 @@
 }
 
 .flags__item {
-  margin-bottom: 20px;
+  margin-bottom: 6px;
 
   &:last-child {
     margin-bottom: 0;
@@ -25,5 +25,12 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+
+.flags--card {
+  .flags__item {
+    margin-right: 26px;
   }
 }

@@ -1,11 +1,50 @@
 .transports {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .transports--transparent {
   .transports__item {
     background-color: transparent;
+  }
+}
+
+.transports--card {
+  .transports__item {
+    @media #{$tablet-width} {
+      background-color: transparent;
+    }
+  }
+
+  .transports__icon {
+    &--plane {
+      @media #{$tablet-width} {
+        width: 23px;
+        height: 22px;
+      }
+    }
+
+    &--bus {
+      @media #{$tablet-width} {
+        width: 19px;
+        height: 20px;
+      }
+    }
+
+    &--bike {
+      @media #{$tablet-width} {
+        width: 26px;
+        height: 25px;
+      }
+    }
+
+    &--run {
+      @media #{$tablet-width} {
+        width: 23px;
+        height: 24px;
+      }
+    }
   }
 }
 

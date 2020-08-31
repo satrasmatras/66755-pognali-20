@@ -1,0 +1,24 @@
+.checkboxes__item {
+  @media #{$tablet-width} {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+
+    color: $basic-black;
+
+    margin-bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  margin-bottom: 11px;
+
+  @media #{$desktop-width} {
+    margin-bottom: 15px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,5 +1,9 @@
 .users {
   margin-top: 28px;
+
+  @media #{$tablet-width} {
+    margin-top: 42px;
+  }
 }
 
 .users__wrapper {
@@ -10,16 +14,61 @@
 .users__list-item {
   margin-bottom: 10px;
 
+  @media #{$tablet-width} {
+    margin-bottom: 41px;
+  }
+
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media #{$tablet-width} {
+    margin-bottom: 41px;
+  }
+
+  @media #{$desktop-width} {
+    margin-bottom: 30px;
   }
 }
 
 .users__show-more {
-  margin-top: 20px;
+  margin-top: 18px;
+  margin-bottom: 12px;
+
   text-transform: uppercase;
   font-size: 17px;
   line-height: 30px;
+  width: 100%;
+
+  color: $special-blue-light;
+  padding-top: 0;
+  padding-bottom: 7px;
+
+  @media #{$tablet-width} {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-top: 33px;
+    margin-bottom: 39px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  @media #{$desktop-width} {
+    padding-right: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    margin-bottom: 40px;
+  }
+}
+
+.users__show-more-icon {
+  @media #{$tablet-width} {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .users__pagination {

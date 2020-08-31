@@ -1,13 +1,15 @@
 $user-status-size: 6px;
+$additional-mobile-padding: 5px;
 
 .card {
+  overflow-y: hidden;
   display: grid;
   width: 100%;
   background-color: $basic-white;
 
   padding-top: 15px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 22px;
 
   border-radius: 20px;
@@ -18,19 +20,25 @@ $user-status-size: 6px;
 
   @media #{$tablet-width} {
     grid-template-areas: "avatar name name transport" "avatar tags tags transport" "avatar button likes level" "countries countries countries countries";
-    grid-template-columns: 1fr 1fr 1fr min-content;
-    grid-template-rows: 30px min-content 50px min-content;
+    grid-template-columns: 1fr 1fr 1fr max-content;
+    grid-template-rows: max-content 1fr max-content min-content;
+
+    padding-top: 35px;
+    padding-left: 36px;
+    padding-bottom: 10px;
   }
 
   @media #{$desktop-width} {
-    grid-template-areas: "avatar name name countries countries" "avatar tags tags countries countries" "avatar button likes transport level";
-    grid-template-columns: 1fr 1fr 1fr 1fr min-content;
-    grid-template-rows: 78px 1fr 50px;
-  }
-}
+    padding: 0;
+    grid-template-areas: "avatar . . . ." "avatar name name countries countries" "avatar tags tags countries countries" "avatar button likes transport level" "avatar . . . .";
+    grid-template-columns: max-content 150px 141px 216px 60px;
+    grid-template-rows: 44px max-content min-content min-content 30px;
+    max-width: 949px;
 
-.card__level-wrapper {
-  grid-area: level;
+    overflow: auto;
+
+    align-items: start;
+  }
 }
 
 .card__avatar-wrapper {
@@ -41,11 +49,14 @@ $user-status-size: 6px;
 
   overflow: hidden;
 
+  margin-left: -2px;
+
   @media #{$tablet-width} {
     height: 190px;
     width: 190px;
 
-    border-radius: 0;
+    border-radius: 20px;
+    margin-right: 30px;
   }
 
   @media #{$desktop-width} {
@@ -53,6 +64,7 @@ $user-status-size: 6px;
     width: 285px;
 
     border-radius: 0;
+    margin-right: 56px;
   }
 }
 
@@ -64,8 +76,15 @@ $user-status-size: 6px;
   grid-area: name;
   position: relative;
 
-  padding-right: 114px;
+  padding-right: 40px;
   word-wrap: break-spaces;
+
+  padding-left: 7px;
+
+  font-size: 20px;
+  line-height: 20px;
+
+  white-space: initial;
 
   &:hover {
     opacity: 0.6;
@@ -78,11 +97,26 @@ $user-status-size: 6px;
   &::before {
     content: "";
     position: absolute;
-    right: 0;
-    top: $user-status-size + $user-status-size / 2;
+    right: 2px;
+    top: $user-status-size;
     width: $user-status-size;
     height: $user-status-size;
     border-radius: 100%;
+
+    @media #{$tablet-width} {
+      $user-status-size: 8px;
+      width: $user-status-size;
+      height: $user-status-size;
+
+      right: auto;
+      left: calc(100% + #{$user-status-size} + 19px);
+      top: calc(#{$user-status-size});
+    }
+
+    @media #{$desktop-width} {
+      left: -18px;
+      top: 13px;
+    }
   }
 
   &--offline::before {
@@ -92,12 +126,27 @@ $user-status-size: 6px;
   &--online::before {
     background-color: $special-green;
   }
+
+  @media #{$tablet-width} {
+    font-size: 30px;
+    line-height: 30px;
+
+    padding-left: 0;
+    padding-right: 0;
+
+    max-width: 80%;
+    height: fit-content;
+    width: fit-content;
+
+    margin-bottom: 5px;
+  }
+
+  @media #{$desktop-width} {
+    padding-left: 9px;
+  }
 }
 
 .card__name-link {
-  font-size: 20px;
-  line-height: 20px;
-
   color: $basic-blue-light;
   text-decoration: none;
 }
@@ -105,6 +154,18 @@ $user-status-size: 6px;
 .card__likes-wrapper {
   grid-area: likes;
   display: flex;
+  align-items: baseline;
+  margin-left: -32px;
+
+  @media #{$tablet-width} {
+    margin-top: auto;
+    margin-left: -32px;
+  }
+
+  @media #{$desktop-width} {
+    margin-top: 0;
+    margin-left: 0;
+  }
 }
 
 .card__like {
@@ -121,27 +182,41 @@ $user-status-size: 6px;
 
   border-radius: 100%;
 
+  margin-right: 6px;
+
   @media #{$tablet-width} {
     padding: 15px;
   }
 
-  &::before {
-    content: url("../../img/heart.svg");
-    width: 12px;
-    height: 12px;
+  &--checked {
+    color: $liked-color;
+    background-color: $special-red-light;
 
-    @media #{$tablet-width} {
-      width: 20px;
-      height: 20px;
+    .card__like-icon--checked {
+      display: block;
+    }
+
+    .card__like-icon--no-checked {
+      display: none;
     }
   }
+}
 
-  &--checked {
-    background-color: $special-red-light;
-  }
+.card__like-icon--checked {
+  display: none;
+}
 
-  &--checked::before {
-    content: url("../../img/heart-active.svg");
+.card__like-icon--no-checked {
+  display: block;
+}
+
+.card__like-svg {
+  width: 12px;
+  height: 12px;
+
+  @media #{$tablet-width} {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -152,20 +227,57 @@ $user-status-size: 6px;
   text-transform: uppercase;
 
   color: $basic-blue;
+
+  @media #{$tablet-width} {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .card__flags-text {
+  position: relative;
+
   font-weight: normal;
   font-size: 15px;
   line-height: 16px;
 
   color: $special-grey;
 
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+
+  text-transform: lowercase;
+  background-color: $basic-white;
+
+  z-index: 1;
+
+  width: fit-content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 1px;
+
+    background-color: $basic-grey;
+    right: 0;
+    top: calc(50% - 1px);
+    left: -100px;
+
+    // TODO: не могу с помощью z-index сделать текст прям выше его псевдоэлемента
+    z-index: -1;
+  }
+
+  @media #{$tablet-width} {
+    padding-left: 49px;
+  }
+
+  @media #{$desktop-width} {
+    display: none;
+  }
 }
 
 .card__flags {
-  margin-bottom: 20px;
+  margin-bottom: 0;
 
   @media #{$tablet-width} {
     flex-direction: row;
@@ -182,6 +294,11 @@ $user-status-size: 6px;
 
 .card__transports-wrapper {
   grid-area: transport;
+  padding-left: $additional-mobile-padding;
+
+  @media #{$tablet-width} {
+    padding-left: 0;
+  }
 }
 
 .card__transports-text {
@@ -192,33 +309,97 @@ $user-status-size: 6px;
 
   color: $special-grey;
 
-  margin-bottom: 20px;
+  margin-bottom: 17px;
+
+  text-transform: lowercase;
 
   @media #{$tablet-width} {
     display: none;
+  }
+}
+
+.card__level-wrapper {
+  grid-area: level;
+
+  text-align: right;
+
+  padding-right: $additional-mobile-padding;
+
+  display: flex;
+  flex-direction: column;
+
+  @media #{$desktop-width} {
+    padding-right: 5px;
   }
 }
 
 .card__level-text {
   font-weight: normal;
+  text-transform: lowercase;
+
+  margin-bottom: 12px;
 
   @media #{$tablet-width} {
     display: none;
   }
 }
 
+.card__progress {
+  width: 45px;
+  height: 45px;
+
+  margin-left: auto;
+  margin-right: -3px;
+  padding: 0;
+
+  @media #{$desktop-width} {
+    width: 100%;
+
+    margin: 0;
+  }
+}
+
 .card__transports {
+  justify-content: flex-start;
+  margin-left: -3px;
+
   @media #{$tablet-width} {
     flex-direction: column;
   }
 
   @media #{$desktop-width} {
     flex-direction: row;
+    padding-left: 43px;
+    padding-top: 13px;
   }
 }
 
 .card__flags-wrapper {
   grid-area: countries;
+  margin-bottom: 7px;
+  padding-left: $additional-mobile-padding;
+
+  @media #{$tablet-width} {
+    padding-top: 23px;
+    padding-left: 0;
+  }
+
+  @media #{$desktop-width} {
+    padding-left: 44px;
+    padding-top: 8px;
+  }
+}
+
+.card__image-wrapper {
+  @media #{$desktop-width} {
+    margin-right: 19px;
+  }
+}
+
+.card__flag {
+  @media #{$desktop-width} {
+    margin-bottom: 10px;
+  }
 }
 
 .card__countries-text {
@@ -236,23 +417,58 @@ $user-status-size: 6px;
   }
 }
 
-.card__progress {
-  width: 45px;
-  height: 45px;
-
-  padding: 10px;
-}
-
 .card__invite {
   grid-area: button;
   text-transform: uppercase;
   justify-content: center;
 
   padding-top: 14px;
-  padding-bottom: 14px;
-}
+  padding-bottom: 10px;
 
+  margin-top: 12px;
+
+  font-size: 17px;
+  line-height: 17px;
+
+  width: 100%;
+
+  @media #{$tablet-width} {
+    font-size: 20px;
+    line-height: 20px;
+
+    width: fit-content;
+    padding-left: 33px;
+    padding-right: 32px;
+
+    margin-top: auto;
+    padding-top: 21px;
+  }
+
+  @media #{$desktop-width} {
+    margin-top: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    padding-top: 19px;
+  }
+}
 
 .card__tags {
   grid-area: tags;
+  padding-left: $additional-mobile-padding;
+  margin-top: 14px;
+  margin-bottom: 12px;
+
+  @media #{$tablet-width} {
+    font-size: 20px;
+    line-height: 23px;
+    padding-right: 75px;
+    padding-left: 7px;
+  }
+
+  @media #{$desktop-width} {
+    margin-bottom: 28px;
+    padding-right: 45px;
+  }
 }

@@ -12,8 +12,26 @@
   text-transform: uppercase;
 
   color: $basic-blue-light;
+
+  @media #{$tablet-width} {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.flag__image-wrapper {
+  display: block;
+
+  @media #{$tablet-width} {
+    width: 35px;
+    height: 24px;
+    background-color: red;
+
+    margin-right: 11px;
+  }
 }
 
 .flag__image {
   margin-right: 15px;
+  max-width: 100%;
 }

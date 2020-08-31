@@ -13,10 +13,12 @@
 }
 
 .site-list__item {
-  margin-right: 34px;
+  @media #{$desktop-width} {
+    margin-right: 34px;
 
-  &:last-child {
-    margin-right: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 

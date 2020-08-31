@@ -30,14 +30,14 @@
 @import "blocks/flags.scss";
 @import "blocks/tags.scss";
 @import "blocks/transports.scss";
+@import "blocks/checkboxes.scss";
 @import "blocks/services.scss";
 @import "blocks/tariffs.scss";
 @import "blocks/footer.scss";
 @import "blocks/users.scss";
-@import "blocks/card.scss";
 @import "blocks/page.scss";
 @import "blocks/flag.scss";
-@import "blocks/slider.scss";
+@import "blocks/pagination.scss";
 @import "blocks/logo.scss";
 @import "blocks/progress.scss";
 @import "blocks/fast-registration.scss";
@@ -66,3 +66,4 @@
 @import "blocks/filter-range.scss";
 @import "blocks/header.scss";
 @import "blocks/preview-card.scss";
+@import "blocks/card.scss";
