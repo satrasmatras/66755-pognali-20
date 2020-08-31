@@ -5,13 +5,85 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border-radius: 50%;
+
+  --progress-radius: 20px;
+
+  &--preview {
+    background-color: rgba($basic-black, 0.6);
+
+    width: 60px;
+    height: 60px;
+
+    color: $basic-white;
+
+    .progress__level {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
 }
+
+.progress__svg-circle[data-stroke] {
+  stroke-dasharray: calc(var(--progress-radius) * var(--pi) * 2);
+  stroke-dashoffset: calc(var(--progress-radius) * var(--pi) * 2 - var(--progress-level) / 100 * (var(--progress-radius) * var(--pi) * 2));
+}
+
+.progress--card {
+  @media #{$tablet-width} {
+    $progress-size: 60px;
+    $radius: 30px;
+    $stroke-width: 3px;
+
+    width: $progress-size;
+    height: $progress-size;
+
+    .progress__svg {
+      width: $progress-size;
+      height: $progress-size;
+
+      overflow: visible;
+    }
+
+    .progress__svg-circle {
+      width: $progress-size;
+      height: $progress-size;
+
+      cx: $progress-size / 2;
+      cy: $progress-size / 2;
+      r: $progress-size / 2;
+
+      --progress-radius: $progress-size / 2 - $stroke-width / 2;
+
+      stroke-width: $stroke-width;
+      stroke-dasharray: calc(var(--progress-radius) * var(--pi) * 2);
+      stroke-dashoffset: calc(var(--progress-radius) * var(--pi) * 2 - var(--progress-level) / 100 * (var(--progress-radius) * var(--pi) * 2));
+    }
+
+    .progress__description {
+      padding-top: 0;
+    }
+  }
+
+  @media #{$desktop-width} {
+    .progress__description {
+      width: 100%;
+      height: 100%;
+      padding-top: 10px;
+      padding-left: 3px;
+    }
+  }
+}
+
 
 .progress__description {
   display: flex;
 
   flex-direction: column;
   align-items: center;
+
+  padding-top: 8px;
 }
 
 .progress__value {
@@ -22,7 +94,7 @@
 
   text-align: center;
 
-  color: $basic-blue;
+  color: inherit;
 }
 
 .progress--no-level .progress__level {
@@ -37,17 +109,14 @@
 
   text-align: center;
 
-  color: $special-grey;
+  color: inherit;
 }
 
 .progress__svg {
   position: absolute;
   left: 0;
+  right: 0;
+  bottom: 0;
   top: 0;
   transform: rotate(-90deg);
-}
-
-.progress__svg-circle[data-stroke] {
-  stroke-dasharray: calc(var(--progress-radius) * var(--pi) * 2);
-  stroke-dashoffset: calc(var(--progress-radius) * var(--pi) * 2 - var(--progress-level) / 100 * (var(--progress-radius) * var(--pi) * 2));
 }

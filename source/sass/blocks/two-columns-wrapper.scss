@@ -1,10 +1,12 @@
 .two-columns-wrapper {
-  padding-top: 40px;
+  padding-top: 21px;
 
   @media #{$desktop-width} {
     display: grid;
     grid-template-columns: 1fr min-content;
     grid-template-rows: 1fr;
+
+    margin-bottom: 32px;
 
     .two-columns-wrapper__filter {
       width: 285px;
@@ -15,6 +17,7 @@
 
     .two-columns-wrapper__users {
       margin-top: 0;
+      padding-right: 86px;
     }
   }
 }

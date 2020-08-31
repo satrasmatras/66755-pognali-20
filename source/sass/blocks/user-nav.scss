@@ -29,9 +29,6 @@
 
 .user-nav__item {
   &--icon {
-    //width: 40px;
-    //height: 40px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,6 +80,9 @@
 
   &--auth {
     padding: 16px 28px 14px 29px;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   &:active {
@@ -90,4 +90,15 @@
       fill-opacity: 0.3;
     }
   }
+}
+
+.user-nav__link--promo {
+  padding: 12px;
+}
+
+.user-nav__link--promo.user-nav__item--auth {
+  padding-top: 13px;
+  padding-bottom: 7px;
+  font-size: 17px;
+  line-height: 20px;
 }

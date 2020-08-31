@@ -1,3 +1,4 @@
-$phone-width: 320px;
+$only-phone-width: "(min-width: 320px) and (max-width: 768px)";
+$only-tablet-width: "(min-width: 768px) and (max-width: 1440px)";
 $tablet-width: "(min-width: 768px)";
 $desktop-width: "(min-width: 1440px)";

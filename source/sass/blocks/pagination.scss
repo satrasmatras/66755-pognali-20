@@ -2,10 +2,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 28px;
-  padding-right: 35px;
 
   background-color: $basic-white;
+
+  border-radius: 20px;
+
+  @media #{$tablet-width} {
+    padding-top: 24px;
+    padding-left: 29px;
+    padding-bottom: 23px;
+    padding-right: 18px;
+  }
 }
 
 .pagination__pages-list {
@@ -19,9 +26,29 @@
 .pagination__arrows {
   width: 100%;
   justify-content: space-between;
+  position: relative;
+
+  @media #{$only-phone-width} {
+    &::before {
+      position: absolute;
+      content: "";
+
+      height: 100%;
+      width: 1px;
+      background-color: $basic-grey;
+
+      left: 50%;
+      top: 0;
+    }
+  }
 
   @media #{$tablet-width} {
-    width: 53px;
+    padding-top: 3px;
+    width: 85px;
+  }
+
+  @media #{$desktop-width} {
+    width: 99px;
   }
   display: flex;
 }

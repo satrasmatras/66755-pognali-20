@@ -1,6 +1,10 @@
 .socials {
   display: flex;
   justify-content: center;
+
+  @media #{$tablet-width} {
+    justify-content: flex-start;
+  }
 }
 
 .socials__link {
@@ -13,6 +17,11 @@
 
   color: $special-blue-light;
   text-decoration: none;
+
+  @media #{$tablet-width} {
+    width: 62px;
+    height: 62px;
+  }
 }
 
 .socials--yellow {

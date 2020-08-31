@@ -1,21 +1,124 @@
+$direction-padding-top: 11px;
+
 .direction {
+  width: 100%;
   background-color: $basic-grey;
   color: $special-grey;
+
+  border-radius: 10px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  //  TODO: если убрать, то z-index не робит и не получилось сделать наложение
+
+  @media #{$tablet-width} {
+    flex-direction: row-reverse;
+    border-radius: 20px;
+  }
+}
+
+.direction__image-wrapper {
+  height: 110px;
+  width: 270px;
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  @media #{$tablet-width} {
+    width: 186px;
+    height: 140px;
+
+    border-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+
+.direction__image {
+  @media #{$tablet-width} {
+    width: 186px;
+    height: 140px;
+  }
+}
+
+.direction__flag-wrapper {
+  position: absolute;
+
+  top: 86px;
+  left: 25px;
+
+  width: 35px;
+  height: 24px;
+
+  z-index: 10;
+
+  @media #{$tablet-width} {
+    width: 70px;
+    height: 47px;
+
+    top: 17px;
+    left: auto;
+    right: 150px;
+    background-color: rgba(tomato, 0.3);
+  }
+}
+
+.direction__meta {
+  background-color: $basic-white;
+
+  margin-top: -$direction-padding-top;
+
+  padding: 26px 24px 24px;
+  border-radius: 10px;
+
+  z-index: 5;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // Без направления не робило 0_ooo
+  align-items: flex-start;
+
+  @media #{$tablet-width} {
+    flex-grow: 1;
+
+    flex-direction: column;
+
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 31px;
+    padding-right: 30px;
+    margin-top: 0;
+
+    border-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+
+  @media #{$desktop-width} {
+    padding-top: 22px;
+  }
 }
 
 .direction__country {
+  max-width: 140px;
+
   font-size: 21px;
   line-height: 21px;
 
   color: $basic-black;
-}
 
-.direction__promo {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
+  @media #{$tablet-width} {
+    max-width: none;
 
-  color: rgba($special-grey, 0.3);
+    font-size: 24px;
+    line-height: 24px;
+    order: 0;
+  }
 }
 
 .direction__users {
@@ -25,7 +128,25 @@
   line-height: 20px;
 
   color: rgba($basic-blue, 0.3);
-  padding-left: 14px;
+
+  text-align: left;
+
+  margin-left: auto;
+
+  order: 2;
+
+  @media #{$tablet-width} {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-left: 0;
+
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 30px;
+
+    order: 0;
+  }
 
   &::before {
     position: absolute;
@@ -35,5 +156,27 @@
     width: 14px;
     height: 14px;
     color: rgba($basic-blue-light, 0.1);
+  }
+}
+
+.direction__promo {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: rgba($special-grey, 0.3);
+
+  flex-grow: 1;
+
+  order: 3;
+
+  @media #{$tablet-width} {
+    padding-top: 3px;
+    font-size: 20px;
+    line-height: 20px;
+
+    width: 100%;
+
+    order: 0;
   }
 }

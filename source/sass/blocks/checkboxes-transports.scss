@@ -38,6 +38,11 @@
     filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
     color: rgba($special-blue-light, 0.1);
   }
+
+  @media #{$tablet-width} {
+    width: 43px;
+    height: 43px;
+  }
 }
 
 .checkboxes-transports__control:checked + .checkboxes-transports__label {

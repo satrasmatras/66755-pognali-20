@@ -21,7 +21,6 @@
 
   @media #{$tablet-width} {
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
   }
 }
@@ -29,10 +28,24 @@
 .footer__logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 
   @media #{$tablet-width} {
     margin-bottom: 0;
+    margin-right: 86px;
+
+    width: 164px;
+    height: 42px;
+    background-color: $basic-black;
+  }
+
+  @media #{$desktop-width} {
+    margin-bottom: 0;
+    margin-right: 365px;
+
+    width: 200px;
+    height: 55px;
+    background-color: $basic-black;
   }
 }
 
@@ -47,4 +60,15 @@
 .footer__copyright {
   display: flex;
   justify-content: space-between;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+
+  @media #{$tablet-width} {
+    margin-left: auto;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

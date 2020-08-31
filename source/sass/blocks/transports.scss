@@ -1,6 +1,7 @@
 .transports {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .transports--transparent {
@@ -9,15 +10,49 @@
   }
 }
 
+.transports--card {
+  .transports__item {
+    @media #{$tablet-width} {
+      background-color: transparent;
+    }
+  }
+
+  .transports__icon {
+    &--plane {
+      @media #{$tablet-width} {
+        width: 23px;
+        height: 22px;
+      }
+    }
+
+    &--bus {
+      @media #{$tablet-width} {
+        width: 19px;
+        height: 20px;
+      }
+    }
+
+    &--bike {
+      @media #{$tablet-width} {
+        width: 26px;
+        height: 25px;
+      }
+    }
+
+    &--run {
+      @media #{$tablet-width} {
+        width: 23px;
+        height: 24px;
+      }
+    }
+  }
+}
+
 .transports__item {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-right: 5px;
 
   border-radius: 100%;
 
@@ -31,4 +66,9 @@
 
 .transports__item--disabled {
   color: rgba($special-blue-light, 0.15);
+}
+
+.transports__icon {
+  display: flex;
+  margin: auto;
 }
