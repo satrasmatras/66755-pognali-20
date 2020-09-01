@@ -12,9 +12,6 @@
   @media #{$tablet-width} {
     padding-top: 42px;
     padding-bottom: 72px;
-
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
   }
 
   @media #{$desktop-width} {
@@ -28,8 +25,15 @@
 
   &--with-body {
     padding-bottom: 0;
+
+    @media #{$tablet-width} {
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
   }
 }
+
+
 
 .header__container {
   display: flex;

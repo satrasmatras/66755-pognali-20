@@ -1825,7 +1825,7 @@
         header.classList.toggle('header--opened');
     })
 
-  const expanderHeaders = document.querySelectorAll('.expander__header');
+    const expanderHeaders = document.querySelectorAll('.expander__header');
 
     expanderHeaders.forEach(expanderHeader => {
         expanderHeader.addEventListener('click', (event) => {
@@ -1840,6 +1840,14 @@
 
     filterToggle.addEventListener('click', (event) => {
         filter.classList.toggle('countries-filter--opened');
+    })
+
+    const likeButtons = document.querySelectorAll('.card__like');
+
+    likeButtons.forEach(likeButton => {
+        likeButton.addEventListener('click', () => {
+            likeButton.classList.toggle('card__like--checked')
+        })
     })
 </script>
 </body>
