@@ -120,7 +120,7 @@
 </header>
 
 <main class="page__main">
-  <section class="countries-filter countries-filter__opened">
+  <section class="countries-filter">
     <div class="countries-filter__wrapper container">
       <svg class="countries-filter__filter-icon" width="15" height="10">
         <use href="img/filter.svg#filter"></use>
@@ -994,24 +994,21 @@
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="gym" id="gym-field">
-                      <span class="check__icon"></span>
-                      <label class="check__label check__label--large" for="gym-field">Спортзал</label>
+                      <label class="check__label" for="gym-field">Спортзал</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="hookah" id="hookah-field">
-                      <span class="check__icon"></span>
-                      <label class="check__label check__label--large" for="hookah-field">Кальян</label>
+                      <label class="check__label" for="hookah-field">Кальян</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="sofa" id="sofa-field">
-                      <span class="check__icon"></span>
-                      <label class="check__label check__label--large" for="sofa-field">Диван</label>
+                      <label class="check__label" for="sofa-field">Диван</label>
                     </div>
                   </li>
                 </ul>
@@ -1030,24 +1027,21 @@
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="heavy-rock" id="heavy-rock-field">
-                      <span class="check__icon"></span>
-                      <label class="check__label check__label--large" for="heavy-rock-field">Тяжелый рок</label>
+                      <label class="check__label" for="heavy-rock-field">Тяжелый рок</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="russian-rap" id="russian-rap-field">
-                      <span class="check__icon"></span>
-                      <label class="check__label check__label--large" for="russian-rap-field">Русский рэп</label>
+                      <label class="check__label" for="russian-rap-field">Русский рэп</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="eurodance" id="eurodance-field">
-                      <span class="check__icon"></span>
-                      <label class="check__label check__label--large" for="eurodance-field">Евроденс</label>
+                      <label class="check__label" for="eurodance-field">Евроденс</label>
                     </div>
                   </li>
                 </ul>
@@ -1066,24 +1060,21 @@
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="meat-eater" id="meat-eater-field">
-                      <span class="check__icon"></span>
-                      <label class="check__label check__label--large" for="meat-eater-field">Мясоед</label>
+                      <label class="check__label" for="meat-eater-field">Мясоед</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="healthy-diet" id="healthy-diet-field">
-                      <span class="check__icon"></span>
-                      <label class="check__label check__label--large" for="healthy-diet-field">Сидит на ПП</label>
+                      <label class="check__label" for="healthy-diet-field">Сидит на ПП</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="raw-vegan" id="raw-vegan-field">
-                      <span class="check__icon"></span>
-                      <label class="check__label check__label--large" for="raw-vegan-field">Веган-сыроед</label>
+                      <label class="check__label" for="raw-vegan-field">Веган-сыроед</label>
                     </div>
                   </li>
                 </ul>
@@ -1107,7 +1098,7 @@
                       data-tooltip="Авиаперелет"
                       aria-label="Авиаперелет"
                     >
-                      <svg class="checkboxes-transports__icon" width="14" height="16">
+                      <svg class="checkboxes-transports__icon checkboxes-transports__icon--plane" width="14" height="16">
                         <use href="img/plane.svg#plane"></use>
                       </svg>
                     </label>
@@ -1121,7 +1112,7 @@
                       data-tooltip="Автотранспорт"
                       aria-label="Автотранспорт"
                     >
-                      <svg class="checkboxes-transports__icon" width="13" height="16">
+                      <svg class="checkboxes-transports__icon checkboxes-transports__icon--bus" width="13" height="16">
                         <use href="img/bus.svg#bus"></use>
                       </svg>
                     </label>
@@ -1135,7 +1126,7 @@
                       data-tooltip="Велосипед"
                       aria-label="Велосипед"
                     >
-                      <svg class="checkboxes-transports__icon" width="15" height="17">
+                      <svg class="checkboxes-transports__icon checkboxes-transports__icon--bike" width="15" height="17">
                         <use href="img/bike.svg#bike"></use>
                       </svg>
                     </label>
@@ -1149,7 +1140,7 @@
                       data-tooltip="Пешком"
                       aria-label="Пешком"
                     >
-                      <svg class="checkboxes-transports__icon" width="13" height="17">
+                      <svg class="checkboxes-transports__icon checkboxes-transports__icon--run" width="13" height="17">
                         <use href="img/run.svg#run"></use>
                       </svg>
                     </label>
@@ -1168,7 +1159,6 @@
               <div class="expander__content">
                 <div class="filter-range">
                   <div class="filter-range__inputs">
-                    <!--  TODO: непонятно как центрировать ползунки при их увеличении на ховере. Пока оставил -->
                     <label class="filter-range__label" for="min-price-field" aria-label="от"></label>
                     <input
                       class="filter-range__input filter-range__input--min"
@@ -1840,6 +1830,11 @@
 
     filterToggle.addEventListener('click', (event) => {
         filter.classList.toggle('countries-filter--opened');
+    });
+
+    const filterCloseButton = document.querySelector('.countries-filter__close');
+    filterCloseButton.addEventListener('click', () => {
+        filter.classList.toggle('countries-filter--opened');
     })
 
     const likeButtons = document.querySelectorAll('.card__like');
@@ -1849,6 +1844,7 @@
             likeButton.classList.toggle('card__like--checked')
         })
     })
+
 </script>
 </body>
 </html>

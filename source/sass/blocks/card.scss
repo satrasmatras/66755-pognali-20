@@ -1,5 +1,7 @@
 $user-status-size: 6px;
 $additional-mobile-padding: 5px;
+$card-mobile-padding: 20px;
+$card-tablet-padding: 36px;
 
 .card {
   overflow-y: hidden;
@@ -8,8 +10,8 @@ $additional-mobile-padding: 5px;
   background-color: $basic-white;
 
   padding-top: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: $card-mobile-padding;
+  padding-right: $card-mobile-padding;
   padding-bottom: 22px;
 
   border-radius: 20px;
@@ -159,7 +161,9 @@ $additional-mobile-padding: 5px;
 
   @media #{$tablet-width} {
     margin-top: auto;
-    margin-left: -32px;
+    margin-left: -21px;
+
+    align-items: center;
   }
 
   @media #{$desktop-width} {
@@ -174,6 +178,7 @@ $additional-mobile-padding: 5px;
   cursor: pointer;
 
   padding: 9px;
+  color: rgba($basic-blue, 0.3);
   background-color: $countries-filter-background;
 
   display: flex;
@@ -188,6 +193,15 @@ $additional-mobile-padding: 5px;
     padding: 15px;
   }
 
+  &:hover {
+    background-color: rgba($countries-filter-background, 0.6);
+    color: rgba($basic-blue, 1);
+  }
+
+  &:active {
+    color: rgba($basic-blue, 0.1);
+  }
+
   &--checked {
     color: $liked-color;
     background-color: $special-red-light;
@@ -198,6 +212,15 @@ $additional-mobile-padding: 5px;
 
     .card__like-icon--no-checked {
       display: none;
+    }
+
+    &:hover {
+      background-color: $special-red-light-hover;
+      color: $liked-color;
+    }
+
+    &:active {
+      color: rgba($liked-color, 0.3);
     }
   }
 }
@@ -234,47 +257,6 @@ $additional-mobile-padding: 5px;
   }
 }
 
-.card__flags-text {
-  position: relative;
-
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 16px;
-
-  color: $special-grey;
-
-  margin-bottom: 20px;
-
-  text-transform: lowercase;
-  background-color: $basic-white;
-
-  z-index: 1;
-
-  width: fit-content;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 500px;
-    height: 1px;
-
-    background-color: $basic-grey;
-    right: 0;
-    top: calc(50% - 1px);
-    left: -100px;
-
-    // TODO: не могу с помощью z-index сделать текст прям выше его псевдоэлемента
-    z-index: -1;
-  }
-
-  @media #{$tablet-width} {
-    padding-left: 49px;
-  }
-
-  @media #{$desktop-width} {
-    display: none;
-  }
-}
 
 .card__flags {
   margin-bottom: 0;
@@ -293,8 +275,31 @@ $additional-mobile-padding: 5px;
 }
 
 .card__transports-wrapper {
+  position: relative;
   grid-area: transport;
-  padding-left: $additional-mobile-padding;
+
+  padding-left: $additional-mobile-padding + $card-mobile-padding;
+
+  margin-left: -$card-mobile-padding;
+
+  background-color: $basic-white;
+
+
+  @media #{$only-phone-width} {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+
+      background-color: $basic-grey;
+      right: 0;
+      top: 7px;
+      left: 0;
+
+      z-index: 1;
+    }
+  }
 
   @media #{$tablet-width} {
     padding-left: 0;
@@ -302,6 +307,7 @@ $additional-mobile-padding: 5px;
 }
 
 .card__transports-text {
+  position: relative;
   font-weight: normal;
 
   font-size: 15px;
@@ -313,20 +319,49 @@ $additional-mobile-padding: 5px;
 
   text-transform: lowercase;
 
+  padding-left: 11px;
+  padding-right: 11px;
+  margin-left: -9px;
+
+  background-color: $basic-white;
+
+  z-index: 1;
+
+  width: fit-content;
+
   @media #{$tablet-width} {
     display: none;
   }
 }
 
 .card__level-wrapper {
+  position: relative;
   grid-area: level;
 
   text-align: right;
 
-  padding-right: $additional-mobile-padding;
+  padding-right: $additional-mobile-padding + $card-mobile-padding;
+
+  margin-right: -$card-mobile-padding;
+  padding-left: 24px;
 
   display: flex;
   flex-direction: column;
+
+  @media #{$only-phone-width} {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+
+      background-color: $basic-grey;
+      right: 0;
+      top: 7px;
+      left: 0;
+    }
+  }
+
 
   @media #{$desktop-width} {
     padding-right: 5px;
@@ -338,6 +373,16 @@ $additional-mobile-padding: 5px;
   text-transform: lowercase;
 
   margin-bottom: 12px;
+
+  padding-left: 11px;
+  padding-right: 11px;
+  margin-right: -10px;
+
+  background-color: $basic-white;
+
+  z-index: 1;
+
+  color: rgba($special-grey, 1);
 
   @media #{$tablet-width} {
     display: none;
@@ -375,18 +420,82 @@ $additional-mobile-padding: 5px;
 }
 
 .card__flags-wrapper {
+  position: relative;
   grid-area: countries;
   margin-bottom: 7px;
-  padding-left: $additional-mobile-padding;
+  padding-left: $additional-mobile-padding + $card-mobile-padding;
+
+  margin-left: -$card-mobile-padding;
+  margin-right: -$card-mobile-padding;
+
+  @media #{$only-phone-width} {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+
+      background-color: $basic-grey;
+      right: 0;
+      top: 7px;
+      left: 0;
+    }
+  }
+
+  @media #{$only-tablet-width} {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+
+      background-color: $basic-grey;
+      right: 0;
+      top: 30px;
+      left: 0;
+    }
+  }
 
   @media #{$tablet-width} {
     padding-top: 23px;
-    padding-left: 0;
+    margin-left: -$card-tablet-padding;
+    padding-left: $card-tablet-padding;
   }
 
   @media #{$desktop-width} {
     padding-left: 44px;
     padding-top: 8px;
+  }
+}
+
+.card__flags-text {
+  position: relative;
+
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+
+  color: rgba($special-grey, 1);
+
+  margin-bottom: 20px;
+
+  text-transform: lowercase;
+  background-color: $basic-white;
+
+  width: fit-content;
+
+  padding-left: 11px;
+  padding-right: 11px;
+  margin-left: -10px;
+
+  z-index: 1;
+
+  @media #{$tablet-width} {
+    margin-left: 37px;
+  }
+
+  @media #{$desktop-width} {
+    display: none;
   }
 }
 
