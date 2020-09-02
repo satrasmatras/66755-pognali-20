@@ -23,7 +23,6 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
 
-
   color: $special-blue-light;
 
   border: 1px solid $fieldset-border;
@@ -37,22 +36,25 @@
   padding-left: 9px;
   padding-top: 14px;
 
-  overflow-x: hidden;
+  overflow-x: visible;
+  overflow-y: visible;
+
   text-align: left;
 
-  &:not(&--activator)::before {
+  &--selected::before {
+    content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 1px;
     right: 0;
-    content: linear-gradient(to left, $basic-white 80%, rgba($basic-white, 0));
+    height: calc(100% - 2px);
     width: 50px;
-
     background-size: 16px 12px;
     background-image: url("../../img/dropdown-form.svg");
     background-repeat: no-repeat;
     background-position: center;
-    z-index: 1;
+    border-radius: 9.4px;
+    z-index: 10;
+    opacity: 0.3;
   }
 
   &::after {
@@ -125,6 +127,35 @@
   }
 }
 
+.country__dropdown:not(.country__dropdown--selected) {
+  &::after {
+    background-color: transparent;
+    border: 1px solid $fieldset-border;
+  }
+}
+
+.country__dropdown-text {
+  display: block;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.country__dropdown--selected {
+  .country__dropdown-text {
+    &:not(&--activator)::before {
+      position: absolute;
+      top: 1px;
+      right: 0;
+      height: calc(100% - 2px);
+      content: linear-gradient(to left, $basic-white 80%, rgba($basic-white, 0));
+      width: 50px;
+      border-radius: 9.4px;
+      z-index: 1;
+      overflow: hidden;
+    }
+  }
+}
+
 .country__cancel {
   position: absolute;
   right: -10px;
@@ -172,7 +203,7 @@
 }
 
 .country__flag-wrapper {
-  position: static;
+  position: relative;
   border: 1px solid $fieldset-border;
   border-radius: 4px;
   flex-grow: 1;
@@ -180,7 +211,8 @@
   justify-content: center;
   align-items: center;
   margin-left: -1px;
-  z-index: 1;
+
+  background-color: $basic-white;
 
   @media #{$tablet-width} {
     flex-grow: 0;
@@ -201,6 +233,7 @@
   position: absolute;
   top: 40px;
   z-index: 50;
+  background-color: $basic-white;
 
   @media #{$tablet-width} {
     top: 68px;

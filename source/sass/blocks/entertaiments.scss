@@ -1,8 +1,24 @@
 // Entertaiments.scss
 
+.entertainments {
+  @media #{$tablet-width} {
+    padding-top: 36px;
+    border-top: 1px solid $fieldset-border;
+  }
+
+  @media #{$desktop-width} {
+    padding-top: 80px;
+    padding-right: 240px;
+  }
+}
+
 .entertainments__item {
   margin-bottom: 20px;
   position: relative;
+
+  @media #{$tablet-width} {
+    margin-bottom: 51px;
+  }
 
   &:not(:last-child)::before {
     position: absolute;
@@ -14,6 +30,18 @@
     left: -14px;
 
     background-color: $special-blue-light;
+
+    @media #{$tablet-width} {
+      height: calc(100% + 60px);
+      top: 12px;
+      left: auto;
+      right: 3px;
+      z-index: 20;
+    }
+
+    @media #{$desktop-width} {
+      right: -15px;
+    }
   }
 
   &::after {
@@ -26,6 +54,20 @@
     left: -3px;
 
     border-radius: 50%;
+
+    @media #{$tablet-width} {
+      width: 14px;
+      height: 14px;
+      right: -3px;
+      top: 9px;
+      left: auto;
+      z-index: 20;
+    }
+
+    @media #{$desktop-width} {
+      right: -21px;
+      top: 7px;
+    }
   }
 
 

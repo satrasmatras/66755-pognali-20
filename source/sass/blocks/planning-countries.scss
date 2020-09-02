@@ -6,19 +6,20 @@
       content: "";
       position: absolute;
       width: 1px;
-      height: 100%;
+      height: calc(100% + 25px);
       top: 0;
-      right: 141px;
+      right: 137px;
 
-      background-color: 1px solid $fieldset-border;
+      background-color: $fieldset-border;
 
       z-index: 100;
     }
   }
 
-  @media #{$tablet-width} {
+  @media #{$desktop-width} {
     &::before {
       right: 227px;
+      height: calc(100% + 148px);
     }
   }
 }
