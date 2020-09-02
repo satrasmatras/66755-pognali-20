@@ -103,6 +103,15 @@
   @media #{$desktop-width} {
     padding-right: 40px;
   }
+
+  &:hover,
+  &:focus {
+    color: rgba($basic-blue-light, 0.6);
+  }
+
+  &:active {
+    color: rgba($basic-blue-light, 0.3);
+  }
 }
 
 .countries-filter__toggle-text {
@@ -223,6 +232,15 @@
   &--highlighted {
     color: rgba($basic-blue-light, 1);
   }
+
+  &:hover,
+  &:focus {
+    color: rgba($basic-blue-light, 0.6);
+  }
+
+  &:active {
+    color: rgba($basic-blue-light, 1);
+  }
 }
 
 .countries-filter__close {
@@ -242,6 +260,14 @@
   padding-top: 12px;
   padding-bottom: 7px;
   padding-right: 6px;
+
+  &:hover {
+    background-color: $blue-light-button-hover;
+  }
+
+  &:active {
+    color: rgba($basic-blue-light, 0.3);
+  }
 
   @media #{$tablet-width} {
     font-size: 20px;

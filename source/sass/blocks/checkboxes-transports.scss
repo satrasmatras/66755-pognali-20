@@ -56,3 +56,44 @@
     color: rgba($special-blue-light, 0.3);
   }
 }
+
+
+.checkboxes-transports__icon {
+  flex-shrink: 0;
+  &--plane {
+    @media #{$tablet-width} {
+      width: 23px;
+      height: 22px;
+    }
+    @media #{$desktop-width} {
+
+    }
+  }
+  &--bus {
+    @media #{$tablet-width} {
+      width: 23px;
+      height: 22px;
+    }
+    @media #{$desktop-width} {
+
+    }
+  }
+  &--bike {
+    @media #{$tablet-width} {
+      width: 21px;
+      height: 17px;
+    }
+    @media #{$desktop-width} {
+
+    }
+  }
+  &--run {
+    @media #{$tablet-width} {
+      width: 17.5px;
+      height: 18px;
+    }
+    @media #{$desktop-width} {
+
+    }
+  }
+}

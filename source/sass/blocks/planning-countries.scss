@@ -1,3 +1,57 @@
+.planning-countries {
+  position: relative;
+
+  @media #{$tablet-width} {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: calc(100% + 25px);
+      top: 0;
+      right: 137px;
+
+      background-color: $fieldset-border;
+
+      z-index: 100;
+    }
+  }
+
+  @media #{$desktop-width} {
+    &::before {
+      right: 227px;
+      height: calc(100% + 148px);
+    }
+  }
+}
+
 .planning-countries__item {
   margin-bottom: 22px;
+  position: relative;
+
+  @media #{$tablet-width} {
+    margin-bottom: 17px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media #{$only-phone-width} {
+    &:not(:last-child)::before {
+      content: "";
+      position: absolute;
+
+      left: 163px;
+      width: 8px;
+      height: 11px;
+      bottom: -16px;
+
+      background-image: url("../../img/small-arrow.svg");
+      background-repeat: no-repeat;
+      background-size: 8px 11px;
+      background-position: center;
+
+      opacity: 0.3;
+    }
+  }
 }

@@ -5,9 +5,30 @@
 .calendar__header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  margin-bottom: 22px;
+  padding-top: 11px;
+  padding-bottom: 10px;
 
-  margin-bottom: 33px;
+  border-top: 1px solid $calendar-header-border;
+  border-bottom: 1px solid $calendar-header-border;
+
+  @media #{$tablet-width} {
+    padding-top: 27px;
+    padding-bottom: 22px;
+
+    padding-left: 21px;
+    padding-right: 20px;
+
+    margin-bottom: 38px;
+  }
+
+  @media #{$desktop-width} {
+    padding-left: 0;
+    padding-right: 0;
+
+    margin-bottom: 3px;
+  }
 }
 
 .calendar__button {
@@ -23,6 +44,27 @@
 
   cursor: pointer;
 
+  @media #{$tablet-width} {
+    width: 19px;
+    height: 34px;
+  }
+
+  &--back {
+    margin-left: -3px;
+
+    @media #{$tablet-width} {
+      margin-right: auto;
+    }
+  }
+
+  &--next {
+    margin-right: -3px;
+
+    @media #{$tablet-width} {
+      margin-left: auto;
+    }
+  }
+
   &:hover {
     color: $qty-button-hover;
   }
@@ -34,6 +76,16 @@
 
 .calendar__icon {
   flex-shrink: 0;
+
+  @media #{$tablet-width} {
+    width: 19px;
+    height: 34px;
+  }
+
+  @media #{$desktop-width} {
+    width: 15.5px;
+    height: 28px;
+  }
 }
 
 .calendar__current-month {

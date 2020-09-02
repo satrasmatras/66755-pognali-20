@@ -39,6 +39,12 @@ $toggle-hover-size: 19px;
     z-index: 20;
 
     background-color: $fieldset-border;
+
+    @media #{$tablet-width} {
+      left: 43.3%;
+      top: 48%;
+      width: 21px;
+    }
   }
 
   &::after {
@@ -80,6 +86,11 @@ $toggle-hover-size: 19px;
     line-height: 20px;
 
     letter-spacing: 0.04em;
+  }
+
+  @media #{$desktop-width} {
+    padding-top: 12px;
+    padding-bottom: 10px;
   }
 
   &::-webkit-outer-spin-button,
@@ -167,9 +178,7 @@ $toggle-hover-size: 19px;
   border-radius: 100%;
 
   &:hover {
-    width: $toggle-hover-size;
-    height: $toggle-hover-size;
-    top: -($toggle-hover-size - $toggle-hover-size / 2) + $scale-height / 2;
+    transform: scale(1.46);
   }
 
   &:active {

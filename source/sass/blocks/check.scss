@@ -4,33 +4,6 @@
   align-items: center;
 }
 
-.check__icon {
-  height: 18px;
-  width: 18px;
-
-  border-radius: 4px;
-
-  border: 1px solid $fieldset-border;
-  background-color: $basic-white;
-  display: flex;
-
-  justify-content: center;
-
-  margin-right: 9px;
-
-  @media #{$tablet-width} {
-    width: 24px;
-    height: 24px;
-  }
-
-  @media #{$desktop-width} {
-    width: 25px;
-    height: 25px;
-
-    margin-right: 11px;
-  }
-}
-
 .check__control:hover ~ .check__icon,
 .check__control:focus ~ .check__icon {
   background-color: rgba($basic-white, 0.6);
@@ -81,17 +54,137 @@
 }
 
 .check__label {
+  position: relative;
+  padding-left: 27px;
   font-weight: normal;
   font-size: 15px;
   line-height: 15px;
 
   color: inherit;
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -3px;
+
+    height: 18px;
+    width: 18px;
+
+    border-radius: 4px;
+
+    background-color: $basic-white;
+    background-repeat: no-repeat;
+    background-size: 8px 9px;
+
+    background-position: center;
+
+    margin-right: 9px;
+
+    @media #{$tablet-width} {
+      width: 24px;
+      height: 24px;
+      top: -4px;
+
+      background-size: 10px 11px;
+    }
+
+    @media #{$desktop-width} {
+      width: 25px;
+      height: 25px;
+
+      margin-right: 11px;
+    }
+  }
+
   @media #{$tablet-width} {
     font-weight: normal;
     font-size: 20px;
     line-height: 20px;
 
-    color: $basic-black;
+    padding-left: 36px;
+  }
+}
+
+.check--bordered {
+  .check__label::before {
+    border: 1px solid $fieldset-border;
+  }
+}
+
+.check--large {
+  .check__label {
+    padding-left: 39px;
+
+    @media #{$tablet-width} {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+
+      padding-left: 60px;
+    }
+  }
+
+  .check__label::before {
+    width: 26px;
+    height: 26px;
+
+    top: -8px;
+
+    @media #{$tablet-width} {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+.check__control:checked + .check__label {
+  &::before {
+    background-image: url("../../img/tick.svg");
+  }
+}
+
+.check__control:hover + .check__label {
+  &:hover {
+    color: rgba($basic-black, 0.6);
+
+    &::before {
+      background-color: rgba($basic-white, 0.6);
+    }
+  }
+}
+
+.check__control:active + .check__label {
+  &:hover {
+    color: rgba($basic-black, 0.3);
+
+    &::before {
+      background-color: rgba($basic-white, 0.3);
+    }
+  }
+}
+
+
+.check__control:checked:hover + .check__label {
+  &:hover {
+    color: rgba($basic-black, 0.6);
+
+    &::before {
+      background-color: rgba($basic-white, 0.6);
+    }
+  }
+}
+
+.check__control:checked:active + .check__label {
+  &:hover {
+    color: rgba($basic-black, 0.3);
+
+    &::before {
+      background-color: rgba($basic-white, 1);
+      opacity: 0.3;
+    }
   }
 }

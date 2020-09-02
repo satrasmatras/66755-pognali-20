@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body page__body--light">
-<header class="header">
+<header class="header header--with-body">
   <nav class="container header__container">
     <a class="header__logo logo" href="index.html">
       <img class="logo__image logo-image--blue" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
@@ -107,13 +107,16 @@
       </li>
     </ul>
   </nav>
+  <div class="header__body container">
+    <h1 class="header__body-title title">Направления</h1>
+  </div>
 </header>
 
 <main class="page__main">
   <section class="profile-form">
     <div class="container">
       <form class="profile-form__form profile" action="https://echo.htmlacademy.ru" method="POST">
-        <div class="profile__progress progress">
+        <div class="profile__progress progress progress--form">
           <div class="progress__description">
             <span class="progress__value">80</span>
             <span class="progress__level">level</span>
@@ -141,13 +144,13 @@
           <img class="profile__avatar" src="img/demin-tablet@1x.jpg" alt="Аватар Петя Демин">
         </div>
         <a class="button button--rounded profile__photo-change">
-          <span class="profile__photo-change-hidden-text">Сменить</span> фото
+          <span class="profile__photo-change-hidden-text">Сменить</span><span>фото</span>
         </a>
-        <div class="profile__fieldset profile__fieldset--tags fieldset">
+        <div class="profile__fieldset profile__fieldset--tags fieldset fieldset--tags">
           <label class="profile__label fieldset__title" for="tags-field">Тэги</label>
-          <textarea class="profile__textarea textarea fieldset__content" name="tags" id="tags-field">#бургер #бар #футбол #концерт#крафт</textarea>
+          <textarea class="profile__textarea textarea fieldset__content" name="tags" id="tags-field">#бургер #бар #футбол #концерт #крафт</textarea>
         </div>
-        <fieldset class="profile__fieldset profile__fieldset--transport fieldset">
+        <fieldset class="profile__fieldset profile__fieldset--transport fieldset fieldset--transport">
           <legend class="fieldset__title">Транспорт</legend>
           <ul class="profile__transports fieldset___content transports checkboxes checkboxes-transports list">
             <li class="checkboxes-transports__item">
@@ -212,20 +215,21 @@
   </section>
 
   <section class="plans">
-    <div class="container">
+<!-- TODO: из-за другого дефиса непонятно как под пп подгонять, потому что то 3 попутчикА, то 1 попутчик разная длина-->
+    <div class="plans__wrapper container">
       <h2 class="plans__title title title--normal">Мои планы:</h2>
       <ol class="plans__list">
         <li class="plans__item plan">
           <h3 class="plan__title title">Франция, Италия</h3>
           <div class="plan__content">
             <span class="plan__count">3 попутчика</span>
-            <span class="plan__dates">26 мар - 29 мар</span>
+            <span class="plan__dates">26 мар — 29 мар</span>
             <a class="plan__change" href="">Изменить</a>
           </div>
         </li>
 
         <li class="plans__item plan">
-          <h3 class="plan__title title">Таиланд, Индонезия</h3>
+          <h3 class="plan__title title">Тайланд, Индонезия</h3>
           <div class="plan__content">
             <span class="plan__count">1 попутчик</span>
             <span class="plan__dates">1 июл — 15 июл</span>
@@ -237,38 +241,42 @@
   </section>
 
   <section class="add-plan">
-    <div class="container">
-      <h2 class="add-plan__title title title--normal">Добавить план:</h2>
+    <div class="add-plan__wrapper container">
+      <div class="add-plan__header">
+        <h2 class="add-plan__title title title--normal">Добавить план:</h2>
+        <ul class="add-plan__dots list">
+          <li class="add-plan__dots-item add-plan__dots-item--active"></li>
+          <li class="add-plan__dots-item"></li>
+          <li class="add-plan__dots-item"></li>
+        </ul>
+      </div>
       <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="POST">
         <ol class="steps list">
           <li class="steps__item step">
             <div class="step__header">
+              <span class="step__count">Шаг 1.</span>
               <h3 class="step__title title" id="step-1">Даты пребывания</h3>
-              <!-- TODO: доработать список с точками, к которому добавляются слова при десктопе -->
               <ul class="step__navigation list">
-                <li class="step__navigation-item step__navigation-item--current">
-                  <span class="step__navigation-icon"></span>
-                  <a class="step__navigation-link">Даты</a>
+                <li class="step__navigation-item">
+                  <a class="step__navigation-link step__navigation-link--current">Даты</a>
                 </li>
 
                 <li class="step__navigation-item">
-                  <span class="step__navigation-icon"></span>
                   <a class="step__navigation-link" href="#step-2">Маршрут</a>
                 </li>
 
                 <li class="step__navigation-item">
-                  <span class="step__navigation-icon"></span>
                   <a class="step__navigation-link" href="#step-3">Развлечения</a>
                 </li>
               </ul>
+              <p class="step__description text">
+                Укажите предпочтительное количество попутчиков,
+                которых <br class="break break--desktop"> вы хотели бы позвать в поездку и ее предполагаемую длительность.
+              </p>
             </div>
-            <p class="step__description">
-              Укажите предпочтительное количество попутчиков,
-              которых вы хотели бы позвать в поездку и ее предполагаемую длительность.
-            </p>
             <div class="step__inputs">
               <div class="step__number-input step__number-input--companions number">
-                <label for="companions-count-field" class="number__label">Ищу попутчиков</label>
+                <label for="companions-count-field" class="number__label">Ищу попутчиков:</label>
                 <span class="number__unit">чел.</span>
                 <div class="number__input-wrapper">
                   <button class="number__button number__icon--minus" type="button" aria-label="Понизить на 1">
@@ -284,13 +292,12 @@
                   </button>
                 </div>
               </div>
-              <div class="step__check step__check--children check">
+              <div class="step__check step__check--children check check--bordered check--large">
                 <input class="check__control sr-only" type="checkbox" name="with-children" id="with-children-field">
-                <span class="check__icon"></span>
                 <label class="check__label" for="with-children-field">Можно с детьми</label>
               </div>
-              <div class="step__number-input step__number-input--companions number">
-                <label for="days-count-field" class="number__label">Длительность</label>
+              <div class="step__number-input step__number-input--duration number">
+                <label for="days-count-field" class="number__label">Длительность:</label>
                 <span class="number__unit">дн.</span>
                 <div class="number__input-wrapper">
                   <button class="number__button number__icon--minus" type="button" aria-label="Понизить на 1">
@@ -313,13 +320,13 @@
               <div class="calendar__header">
                 <button class="calendar__button calendar__button--back" type="button" aria-label="На месяц назад">
                   <svg class="calendar__icon" width="9" height="18">
-                    <use href="img/triangle-arrow-left.svg#triangle-arrow-left"></use>
+                    <use href="img/month-arrow-left.svg#month-arrow-left"></use>
                   </svg>
                 </button>
                 <p class="calendar__current-month title">Март 2019</p>
                 <button class="calendar__button calendar__button--next" type="button" aria-label="На месяц вперед">
                   <svg class="calendar__icon" width="9" height="18">
-                    <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+                    <use href="img/month-arrow-right.svg#month-arrow-right"></use>
                   </svg>
                 </button>
               </div>
@@ -410,118 +417,148 @@
               </table>
             </div>
             <div class="step__footer">
-              <a class="step__button button button--rounded" href="#step-2">Следующий шаг</a>
+              <a class="step__button button button--rounded button--primary" href="#step-2">
+                Следующий шаг
+                <svg class="step__button-icon button__append-icon" width="13" height="13">
+                  <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+                </svg>
+              </a>
             </div>
           </li>
 
           <li class="steps__item step">
-            <h3 class="step__title title" id="step-2">Маршрут</h3>
-            <p class="step__description">
-              Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
-            </p>
+            <div class="step__header step__header--second">
+              <span class="step__count">Шаг 2.</span>
+              <h3 class="step__title title" id="step-2">Маршрут</h3>
+              <ul class="step__navigation list">
+                <li class="step__navigation-item">
+                  <a class="step__navigation-link" href="#step-1">Даты</a>
+                </li>
+
+                <li class="step__navigation-item">
+                  <a class="step__navigation-link step__navigation-link--current">Маршрут</a>
+                </li>
+
+                <li class="step__navigation-item">
+                  <a class="step__navigation-link" href="#step-3">Развлечения</a>
+                </li>
+              </ul>
+              <p class="step__description step__description--step-2 text">
+                Укажите страны, которые вы хотели посетить. <br class="break break--desktop">Это может быть одна или сразу несколько.
+              </p>
+            </div>
+
             <ul class="step__planning-countries planning-countries list">
               <li class="planning-countries__item country">
-                <button class="country__dropdown country__dropdown--selected" type="button">Босния и Герцеговина
+                <!--                TODO: не могу поднять кружочек выше флаг враппера. Как задать бэкграунд-image опасити :C. СДелал стрелочку через псевдо, который делает тень, но этой стрелочки не видно. Иногда появляется прокрутка в дропдауне-->
+                <button class="country__dropdown country__dropdown--selected" type="button">
+                    <span class="country__dropdown-text">
+                      Босния и Герцеговина
+                    </span>
                 </button>
-                <img
-                  class="country__flag tooltip"
-                  src="https://via.placeholder.com/35x25"
-                  data-tooltip="Босния и Герцеговина"
-                  alt="Флаг Боснии и Герцеговины"
-                >
+                <div class="country__flag-wrapper">
+                  <img
+                    class="country__flag tooltip"
+                    src="https://via.placeholder.com/35x25"
+                    data-tooltip="Босния и Герцеговина"
+                    alt="Флаг Боснии и Герцеговины"
+                  >
+                </div>
                 <button class="country__cancel" type="button" aria-label="Отменить страну в плане"></button>
               </li>
 
               <li class="planning-countries__item country">
                 <button class="country__dropdown country__dropdown--selected" type="button">Чехия</button>
-                <img
-                  class="country__flag tooltip"
-                  src="https://via.placeholder.com/35x25"
-                  data-tooltip="Чехия"
-                  alt="Флаг Чехии"
-                >
+                <div class="country__flag-wrapper">
+                  <img
+                    class="country__flag tooltip"
+                    src="https://via.placeholder.com/35x25"
+                    data-tooltip="Чехия"
+                    alt="Флаг Чехии"
+                  >
+                </div>
                 <button class="country__cancel" type="button" aria-label="Отменить страну в плане"></button>
               </li>
 
               <li class="planning-countries__item country">
-                <button class="country__dropdown country__dropdown--activator country__dropdown--clicked" type="button">Выберите страну</button>
-                <div class="country__country-table country-table">
-                  <table class="country-table__table">
-                    <tr class="country-table__row">
-                      <td class="country-table__cell country-table__cell--selected">А</td>
-                      <td class="country-table__cell">Б</td>
-                      <td class="country-table__cell">В</td>
-                      <td class="country-table__cell">Г</td>
-                      <td class="country-table__cell">Д</td>
+                <button class="country__dropdown country__dropdown--activator" type="button">Выберите страну</button>
+                <div class="country__dropdown-country-table dropdown-country-table">
+                  <table class="dropdown-country-table__table">
+                    <tr class="dropdown-country-table__row">
+                      <td class="dropdown-country-table__cell dropdown-country-table__cell--selected">А</td>
+                      <td class="dropdown-country-table__cell">Б</td>
+                      <td class="dropdown-country-table__cell">В</td>
+                      <td class="dropdown-country-table__cell">Г</td>
+                      <td class="dropdown-country-table__cell">Д</td>
                     </tr>
-                    <tr class="country-table__row">
-                      <td class="country-table__cell">Е</td>
-                      <td class="country-table__cell">З</td>
-                      <td class="country-table__cell">И</td>
-                      <td class="country-table__cell">К</td>
-                      <td class="country-table__cell">Л</td>
+                    <tr class="dropdown-country-table__row">
+                      <td class="dropdown-country-table__cell">Е</td>
+                      <td class="dropdown-country-table__cell">З</td>
+                      <td class="dropdown-country-table__cell">И</td>
+                      <td class="dropdown-country-table__cell">К</td>
+                      <td class="dropdown-country-table__cell">Л</td>
                     </tr>
-                    <tr class="country-table__row">
-                      <td class="country-table__cell">М</td>
-                      <td class="country-table__cell">Н</td>
-                      <td class="country-table__cell">О</td>
-                      <td class="country-table__cell">П</td>
-                      <td class="country-table__cell">Р</td>
+                    <tr class="dropdown-country-table__row">
+                      <td class="dropdown-country-table__cell">М</td>
+                      <td class="dropdown-country-table__cell">Н</td>
+                      <td class="dropdown-country-table__cell">О</td>
+                      <td class="dropdown-country-table__cell">П</td>
+                      <td class="dropdown-country-table__cell">Р</td>
                     </tr>
-                    <tr class="country-table__row">
-                      <td class="country-table__cell">С</td>
-                      <td class="country-table__cell">Т</td>
-                      <td class="country-table__cell">У</td>
-                      <td class="country-table__cell">Ф</td>
-                      <td class="country-table__cell">Х</td>
+                    <tr class="dropdown-country-table__row">
+                      <td class="dropdown-country-table__cell">С</td>
+                      <td class="dropdown-country-table__cell">Т</td>
+                      <td class="dropdown-country-table__cell">У</td>
+                      <td class="dropdown-country-table__cell">Ф</td>
+                      <td class="dropdown-country-table__cell">Х</td>
                     </tr>
-                    <tr class="country-table__row">
-                      <td class="country-table__cell">Ч</td>
-                      <td class="country-table__cell">Ш</td>
-                      <td class="country-table__cell">Э</td>
-                      <td class="country-table__cell">Ю</td>
-                      <td class="country-table__cell">Я</td>
+                    <tr class="dropdown-country-table__row">
+                      <td class="dropdown-country-table__cell">Ч</td>
+                      <td class="dropdown-country-table__cell">Ш</td>
+                      <td class="dropdown-country-table__cell">Э</td>
+                      <td class="dropdown-country-table__cell">Ю</td>
+                      <td class="dropdown-country-table__cell">Я</td>
                     </tr>
                   </table>
-                  <ul class="country-table__content">
-                    <li class="country-table__content-item">
-                      <a class="country-table__content-link" href="">Австралия</a>
+                  <ul class="dropdown-country-table__content list">
+                    <li class="dropdown-country-table__content-item">
+                      <a class="dropdown-country-table__content-link" href="">Австралия</a>
                     </li>
 
-                    <li class="country-table__content-item">
-                      <a class="country-table__content-link" href="">Австрия</a>
+                    <li class="dropdown-country-table__content-item">
+                      <a class="dropdown-country-table__content-link" href="">Австрия</a>
                     </li>
 
-                    <li class="country-table__content-item">
-                      <a class="country-table__content-link" href="">Азербайджан</a>
+                    <li class="dropdown-country-table__content-item">
+                      <a class="dropdown-country-table__content-link" href="">Азербайджан</a>
                     </li>
 
-                    <li class="country-table__content-item">
-                      <a class="country-table__content-link" href="">Албания</a>
+                    <li class="dropdown-country-table__content-item">
+                      <a class="dropdown-country-table__content-link" href="">Албания</a>
                     </li>
 
-                    <li class="country-table__content-item">
-                      <a class="country-table__content-link" href="">Алжир</a>
+                    <li class="dropdown-country-table__content-item">
+                      <a class="dropdown-country-table__content-link" href="">Алжир</a>
                     </li>
 
-                    <li class="country-table__content-item">
-                      <a class="country-table__content-link" href="">Ангола</a>
+                    <li class="dropdown-country-table__content-item">
+                      <a class="dropdown-country-table__content-link" href="">Ангола</a>
                     </li>
 
-                    <li class="country-table__content-item">
-                      <a class="country-table__content-link" href="">Андорра</a>
+                    <li class="dropdown-country-table__content-item">
+                      <a class="dropdown-country-table__content-link" href="">Андорра</a>
                     </li>
 
-                    <li class="country-table__content-item">
-                      <a class="country-table__content-link" href="">Антигуа и Барбуда</a>
+                    <li class="dropdown-country-table__content-item">
+                      <a class="dropdown-country-table__content-link" href="">Антигуа и Барбуда</a>
                     </li>
 
-                    <li class="country-table__content-item">
-                      <a class="country-table__content-link" href="">Аргентина</a>
+                    <li class="dropdown-country-table__content-item">
+                      <a class="dropdown-country-table__content-link" href="">Аргентина</a>
                     </li>
 
-                    <li class="country-table__content-item">
-                      <a class="country-table__content-link" href="">Армения</a>
+                    <li class="dropdown-country-table__content-item">
+                      <a class="dropdown-country-table__content-link" href="">Армения</a>
                     </li>
                   </ul>
                 </div>
@@ -533,25 +570,49 @@
               </li>
             </ul>
             <div class="step__footer">
-              <a class="step__button button button--rounded" href="#step-3">Следующий шаг</a>
+              <a class="step__button button button--rounded button--primary" href="#step-3">
+                Следующий шаг
+                <svg class="step__button-icon button__append-icon" width="13" height="13">
+                  <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+                </svg>
+              </a>
               <a class="step__button button button--rounded button--transparent" href="#step-1">На шаг назад</a>
             </div>
           </li>
 
           <li class="steps__item step">
-            <h3 class="step__title title" id="step-3">Развлечения</h3>
-            <p class="step__description">
-              Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.
-            </p>
+            <div class="step__header step__header--third">
+              <span class="step__count">Шаг 3.</span>
+              <h3 class="step__title title" id="step-3">Развлечения</h3>
+              <ul class="step__navigation list">
+                <li class="step__navigation-item">
+                  <a class="step__navigation-link" href="#step-1">Даты</a>
+                </li>
+
+                <li class="step__navigation-item">
+                  <a class="step__navigation-link">Маршрут</a>
+                </li>
+
+                <li class="step__navigation-item">
+                  <a class="step__navigation-link step__navigation-link--current" href="#step-3">Развлечения</a>
+                </li>
+              </ul>
+              <p class="step__description step__description--step-3 text">
+                Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.
+              </p>
+            </div>
+
             <ul class="entertainments list">
               <li class="entertainments__item entertainment">
                 <label class="entertainment__country" for="entertainment-country-1-field">Босния и Герцеговина</label>
-                <img
-                  class="entertainment__flag tooltip"
-                  src="https://via.placeholder.com/35x25"
-                  data-tooltip="Босния и Герцеговина"
-                  alt="Флаг Боснии и Герцеговины"
-                >
+                <div class="entertainment__flag-wrapper">
+                  <img
+                    class="entertainment__flag tooltip"
+                    src="https://via.placeholder.com/35x25"
+                    data-tooltip="Босния и Герцеговина"
+                    alt="Флаг Боснии и Герцеговины"
+                  >
+                </div>
                 <textarea
                   class="entertainment__description textarea"
                   name="entertainment-country-1"
@@ -565,12 +626,14 @@
 
               <li class="entertainments__item entertainment">
                 <label class="entertainment__country" for="entertainment-country-2-field">Чехия</label>
-                <img
-                  class="entertainment__flag tooltip"
-                  src="https://via.placeholder.com/35x25"
-                  data-tooltip="Чехия"
-                  alt="Флаг Чехии"
-                >
+                <div class="entertainment__flag-wrapper">
+                  <img
+                    class="entertainment__flag tooltip"
+                    src="https://via.placeholder.com/35x25"
+                    data-tooltip="Чехия"
+                    alt="Флаг Чехии"
+                  >
+                </div>
                 <textarea
                   class="entertainment__description textarea"
                   name="entertainment-country-2"
@@ -584,7 +647,7 @@
               </li>
             </ul>
             <div class="step__footer">
-              <button class="step__button button button--rounded" type="submit">Отправить</button>
+              <button class="step__button button button--primary button--rounded" type="submit">Отправить</button>
               <a class="step__button button button--rounded button--transparent" href="#step-2">На шаг назад</a>
             </div>
           </li>
@@ -640,6 +703,13 @@
         headerLogo.classList.toggle('logo--light');
         header.classList.toggle('header--white');
         header.classList.toggle('header--opened');
+    })
+
+  const dropdownActivator = document.querySelector('.country__dropdown--activator');
+  const dropdownCountryTable = document.querySelector('.dropdown-country-table');
+    dropdownActivator.addEventListener('click', () => {
+        dropdownActivator.classList.toggle('country__dropdown--clicked');
+        dropdownCountryTable.classList.toggle('dropdown-country-table--opened');
     })
 </script>
 </body>

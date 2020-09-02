@@ -1,0 +1,227 @@
+.dropdown-country-table {
+  display: none;
+
+  background-color: $basic-white;
+  border-radius: 4px;
+  box-shadow: 0 2px 16px rgba(212, 217, 235, 0.25);
+
+  border-bottom: 1px solid $fieldset-border;
+  // TODO: затык с бордерами таблички
+  border-left: 1px solid $fieldset-border;
+  border-right: 1px solid $fieldset-border;
+
+
+  &--opened {
+    width: 220px;
+    display: block;
+
+    @media #{$tablet-width} {
+
+      width: 575px;
+      display: flex;
+      justify-content: flex-start;
+
+      padding-left: 27px;
+
+      padding-top: 35px;
+      border-spacing: 0;
+    }
+
+    @media #{$desktop-width} {
+      position: absolute;
+      display: flex;
+
+      width: 730px;
+      padding-left: 11px;
+
+      border-collapse: separate;
+      padding-top: 18px;
+      padding-bottom: 19px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 100%;
+        right: 239px;
+        top: 0;
+
+        background-color: $fieldset-border;
+      }
+    }
+  }
+}
+
+.dropdown-country-table__table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  @media #{$tablet-width} {
+    width: 262px;
+  }
+
+  @media #{$desktop-width} {
+    width: 361px;
+    border-collapse: separate;
+    border-spacing: 16px;
+  }
+}
+
+.dropdown-country-table__cell {
+  padding-top: 14.9px;
+  padding-right: 21px;
+  padding-bottom: 11px;
+  padding-left: 18px;
+  border: 1px solid $fieldset-border;
+  text-align: center;
+  vertical-align: center;
+
+  @media #{$tablet-width} {
+    background-color: transparent;
+
+    padding: 27px 22px;
+    padding-bottom: 22px;
+    cursor: pointer;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $basic-blue-light;
+
+    &--selected {
+      color: rgba($basic-blue-light, 1);
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba($basic-blue-light, 0.6);
+    }
+
+    &:active {
+      color: rgba($basic-blue-light, 1);
+    }
+  }
+
+  @media #{$desktop-width} {
+    width: 60px;
+    height: 70px;
+
+  }
+
+  &--selected {
+    background-color: $special-blue-light;
+    color: $basic-white;
+    border-bottom: 1px solid $basic-grey;
+
+    @media #{$desktop-width} {
+      border: 1px solid $special-blue-light;
+    }
+  }
+}
+
+.dropdown-country-table__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  min-height: 41px;
+
+  background-color: $basic-white;
+
+  border: 1px solid $fieldset-border;
+
+  &--selected {
+    background-color: $basic-grey;
+    border: none;
+  }
+}
+
+.dropdown-country-table__content {
+  padding-top: 16px;
+  padding-left: 19px;
+  margin-bottom: 31px;
+
+  @media #{$tablet-width} {
+    width: 172px;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 7px;
+    margin-top: -3px;
+  }
+
+  @media #{$desktop-width} {
+    padding: 0;
+    padding-top: 16px;
+    width: 206px;
+  }
+}
+
+.dropdown-country-table__content-item {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: $special-grey;
+
+  margin-bottom: 5px;
+
+  @media #{$tablet-width} {
+    font-size: 20px;
+    line-height: 30px;
+
+    margin-bottom: 1px;
+  }
+
+  @media #{$desktop-width} {
+    margin-bottom: 0.1px;
+  }
+}
+
+.dropdown-country-table__content-link {
+  color: $special-grey;
+  text-decoration: none;
+
+  &:hover {
+    color: $special-blue-light;
+  }
+
+  &:active {
+    color: rgba($special-blue-light, 0.3);
+  }
+}
+
+.dropdown-country-table__letter-countries {
+  @media #{$desktop-width} {
+    margin-bottom: 37px;
+  }
+}
+
+.dropdown-country-table__letter {
+  @media #{$desktop-width} {
+    margin-bottom: 31px;
+    display: block;
+  }
+}
+
+.dropdown-country-table__letter-link {
+  display: none;
+
+  @media #{$desktop-width} {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+
+    text-transform: none;
+    text-decoration: none;
+
+    color: $special-grey;
+  }
+}

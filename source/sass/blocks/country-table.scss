@@ -34,7 +34,6 @@
   }
 }
 
-
 .country-table__cell {
   padding-top: 14px;
   padding-right: 21px;
@@ -51,12 +50,26 @@
 
     text-transform: uppercase;
 
-    color: rgba($basic-blue-light, 0.3);
     background-color: transparent;
     border: none;
 
     padding: 0;
     cursor: pointer;
+
+    color: rgba($basic-blue-light, 0.3);
+
+    &--selected {
+      color: rgba($basic-blue-light, 1);
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba($basic-blue-light, 0.6);
+    }
+
+    &:active {
+      color: rgba($basic-blue-light, 1);
+    }
   }
 
   @media #{$desktop-width} {
@@ -161,8 +174,16 @@
 }
 
 .country-table__content-link {
-  color: inherit;
+  color: $special-grey;
   text-decoration: none;
+
+  &:hover {
+    color: $special-blue-light;
+  }
+
+  &:active {
+    color: rgba($special-blue-light, 0.3);
+  }
 }
 
 .country-table__letter-countries {

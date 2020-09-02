@@ -3,13 +3,19 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
+
+  @media #{$tablet-width} {
+    align-items: center;
+  }
 }
 
 .country__dropdown {
-  flex-grow: 999;
-  flex-shrink: 1;
+  position: relative;
+  width: 168px;
+  font-family: inherit;
+  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
@@ -26,15 +32,66 @@
 
   white-space: nowrap;
 
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding-bottom: 8px;
+  padding-left: 9px;
+  padding-top: 14px;
 
-  overflow-x: hidden;
+  overflow-x: visible;
+  overflow-y: visible;
+
   text-align: left;
 
-  width: 168px;
+  &--selected::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 0;
+    height: calc(100% - 2px);
+    width: 50px;
+    background-size: 16px 12px;
+    background-image: url("../../img/dropdown-form.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 9.4px;
+    z-index: 10;
+    opacity: 0.3;
+  }
+
+  &::after {
+    position: absolute;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    content: "";
+    background-color: $special-blue-light;
+    left: 162px;
+    top: 16px;
+    z-index: 20;
+
+    @media #{$tablet-width} {
+      width: 14px;
+      height: 14px;
+      right: -35px;
+      top: 25px;
+      left: auto;
+
+      z-index: 100;
+    }
+
+    @media #{$desktop-width} {
+      right: -53px;
+    }
+  }
 
   &--activator {
+    width: 100%;
+    letter-spacing: 0.02em;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  &--add-new {
     width: 100%;
   }
 
@@ -42,12 +99,66 @@
     background-color: $special-blue-light;
     color: $basic-white;
     border: $special-blue-light;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  @media #{$tablet-width} {
+    width: 369px;
+
+    padding-bottom: 21px;
+    padding-left: 25px;
+    padding-top: 26px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    margin-right: 54px;
+  }
+
+  @media #{$desktop-width} {
+    width: 730px;
+    margin-right: 87px;
+  }
+}
+
+.country__dropdown:not(.country__dropdown--selected) {
+  &::after {
+    background-color: transparent;
+    border: 1px solid $fieldset-border;
+  }
+}
+
+.country__dropdown-text {
+  display: block;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.country__dropdown--selected {
+  .country__dropdown-text {
+    &:not(&--activator)::before {
+      position: absolute;
+      top: 1px;
+      right: 0;
+      height: calc(100% - 2px);
+      content: linear-gradient(to left, $basic-white 80%, rgba($basic-white, 0));
+      width: 50px;
+      border-radius: 9.4px;
+      z-index: 1;
+      overflow: hidden;
+    }
   }
 }
 
 .country__cancel {
   position: absolute;
-  right: 5px;
+  right: -10px;
   top: -10px;
   background-color: $basic-grey;
   border: none;
@@ -55,15 +166,29 @@
   width: 21px;
   height: 21px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
+  background-image: url("../../img/close.svg");
+  background-position: center;
+  background-size: 9px;
+  background-repeat: no-repeat;
 
-  &::before {
-    content: url("../../img/close.svg");
-    width: 9px;
-    height: 9px;
+  z-index: 20;
+
+  opacity: 0.1;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.05;
+  }
+
+  @media #{$tablet-width} {
+    position: static;
+
+    background-size: 22px 24px;
+    margin-left: auto;
+    margin-right: -3px;
   }
 }
 
@@ -77,6 +202,44 @@
   flex-shrink: 0;
 }
 
+.country__flag-wrapper {
+  position: relative;
+  border: 1px solid $fieldset-border;
+  border-radius: 4px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -1px;
+
+  background-color: $basic-white;
+
+  @media #{$tablet-width} {
+    flex-grow: 0;
+    width: 70px;
+    height: 47px;
+    background-color: red;
+
+    border-radius: 6px;
+    margin-right: 0;
+  }
+}
+
 .country__flag {
   flex-shrink: 0;
+}
+
+.country__dropdown-country-table {
+  position: absolute;
+  top: 40px;
+  z-index: 50;
+  background-color: $basic-white;
+
+  @media #{$tablet-width} {
+    top: 68px;
+  }
+
+  @media #{$desktop-width} {
+    top: 68px;
+  }
 }

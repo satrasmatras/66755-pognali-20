@@ -12,9 +12,6 @@
   @media #{$tablet-width} {
     padding-top: 42px;
     padding-bottom: 72px;
-
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
   }
 
   @media #{$desktop-width} {
@@ -28,8 +25,15 @@
 
   &--with-body {
     padding-bottom: 0;
+
+    @media #{$tablet-width} {
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
   }
 }
+
+
 
 .header__container {
   display: flex;
@@ -320,6 +324,11 @@
 
     min-height: 127px;
   }
+
+  @media #{$desktop-width} {
+    max-width: 700px;
+    word-break: break-all;
+  }
 }
 
 .header__aside-link {
@@ -343,6 +352,15 @@
     padding-left: 20px;
 
     flex-wrap: wrap;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

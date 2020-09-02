@@ -120,3 +120,115 @@
   top: 0;
   transform: rotate(-90deg);
 }
+
+.progress--form {
+  $progress-size: 100px;
+  $radius: 50px;
+  $stroke-width: 3px;
+
+  width: $progress-size;
+  height: $progress-size;
+
+  .progress__value {
+    font-size: 38px;
+    line-height: 38px;
+
+    text-align: center;
+
+    color: $special-blue-light;
+
+    margin-bottom: 5px;
+  }
+
+  .progress__level {
+    font-size: 18px;
+    line-height: 18px;
+
+    text-align: center;
+
+    color: $special-grey;
+  }
+
+  .progress__svg {
+    width: $progress-size;
+    height: $progress-size;
+
+    overflow: visible;
+  }
+
+  .progress__svg-circle {
+    width: $progress-size;
+    height: $progress-size;
+
+    cx: $progress-size / 2;
+    cy: $progress-size / 2;
+    r: $progress-size / 2;
+  }
+
+  .progress__description {
+    padding-top: 0;
+    margin-top: -8px;
+
+    align-items: flex-start;
+  }
+
+  @media #{$tablet-width} {
+    $progress-size: 94px;
+    $radius: 47px;
+    $stroke-width: 3px;
+
+    width: $progress-size;
+    height: $progress-size;
+
+    .progress__svg {
+      width: $progress-size;
+      height: $progress-size;
+
+      overflow: visible;
+    }
+
+    .progress__svg-circle {
+      width: $progress-size;
+      height: $progress-size;
+
+      cx: $progress-size / 2;
+      cy: $progress-size / 2;
+      r: $progress-size / 2;
+    }
+  }
+
+  //@media #{$tablet-width} {
+  //  $progress-size: 60px;
+  //  $radius: 30px;
+  //  $stroke-width: 3px;
+  //
+  //  width: $progress-size;
+  //  height: $progress-size;
+  //
+  //  .progress__svg {
+  //    width: $progress-size;
+  //    height: $progress-size;
+  //
+  //    overflow: visible;
+  //  }
+  //
+  //  .progress__svg-circle {
+  //    width: $progress-size;
+  //    height: $progress-size;
+  //
+  //    cx: $progress-size / 2;
+  //    cy: $progress-size / 2;
+  //    r: $progress-size / 2;
+  //
+  //    --progress-radius: $progress-size / 2 - $stroke-width / 2;
+  //
+  //    stroke-width: $stroke-width;
+  //    stroke-dasharray: calc(var(--progress-radius) * var(--pi) * 2);
+  //    stroke-dashoffset: calc(var(--progress-radius) * var(--pi) * 2 - var(--progress-level) / 100 * (var(--progress-radius) * var(--pi) * 2));
+  //  }
+  //
+  //  .progress__description {
+  //    padding-top: 0;
+  //  }
+  //}
+}
