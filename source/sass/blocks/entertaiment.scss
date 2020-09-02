@@ -1,3 +1,11 @@
+.entertainment {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .entertainment__country {
   font-style: normal;
   font-weight: 500;
@@ -6,12 +14,38 @@
 
   color: $special-blue-light;
 
+  padding-left: 10px;
+
+  width: 100%;
+
+  overflow-x: hidden;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: linear-gradient(to left, $basic-white 80%, rgba($basic-white, 0));
+    width: 70px;
+    height: 20px;
+
+    z-index: 1;
+  }
+
   @media #{$tablet-width} {
     font-size: 30px;
     line-height: 30px;
   }
 
   margin-bottom: 14px;
+}
+
+.entertainment__flag-wrapper {
+  position: absolute;
+  right: 0;
+  top: -5px;
+
+  z-index: 10;
 }
 
 .entertainment__description {

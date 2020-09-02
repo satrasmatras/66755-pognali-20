@@ -7,17 +7,22 @@
   border-radius: 10px;
 }
 
-.fieldset__title {
+.fieldset__title {;
   $font-size: 16px;
   display: flex;
   justify-content: center;
-  width: 100%;
 
   position: absolute;
   top: -($font-size - $font-size/2);
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding-left: 16px;
+  padding-right: 18px;
+
   right: 0;
 
+  z-index: 1;
   font-weight: bold;
   font-size: $font-size;
   line-height: 18px;
@@ -25,5 +30,28 @@
   text-align: center;
   text-transform: uppercase;
 
+  width: fit-content;
+
   color: $special-blue-light;
+  background-color: $basic-grey;
+
+  @media #{$tablet-width} {
+    $font-size: 20px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    letter-spacing: 0.08em;
+    top: initial;
+    bottom: -($font-size - $font-size/2);
+  }
+}
+
+.fieldset--tags {
+  @media #{$desktop-width} {
+    .fieldset__title {
+      left: 63px;
+    }
+  }
 }

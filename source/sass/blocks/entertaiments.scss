@@ -1,1 +1,35 @@
 // Entertaiments.scss
+
+.entertainments__item {
+  margin-bottom: 20px;
+  position: relative;
+
+  &:not(:last-child)::before {
+    position: absolute;
+    content: "";
+
+    width: 2px;
+    height: 100%;
+    top: 8px;
+    left: -14px;
+
+    background-color: $special-blue-light;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: $special-blue-light;
+    top: 5px;
+    left: -3px;
+
+    border-radius: 50%;
+  }
+
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

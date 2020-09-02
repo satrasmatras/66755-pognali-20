@@ -73,8 +73,6 @@
 
     border-radius: 4px;
 
-    //border: 1px solid $fieldset-border;
-
     background-color: $basic-white;
     background-repeat: no-repeat;
     background-size: 8px 9px;
@@ -105,8 +103,41 @@
     line-height: 20px;
 
     padding-left: 36px;
+  }
+}
 
-    color: $basic-black;
+.check--bordered {
+  .check__label::before {
+    border: 1px solid $fieldset-border;
+  }
+}
+
+.check--large {
+  .check__label {
+    padding-left: 39px;
+
+    @media #{$tablet-width} {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+
+      padding-left: 60px;
+    }
+  }
+
+  .check__label::before {
+    width: 26px;
+    height: 26px;
+
+    top: -8px;
+
+    @media #{$tablet-width} {
+      width: 36px;
+      height: 36px;
+    }
   }
 }
 
