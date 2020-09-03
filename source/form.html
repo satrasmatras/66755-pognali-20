@@ -161,7 +161,7 @@
                 data-tooltip="Авиаперелет"
                 aria-label="Авиаперелет"
               >
-                <svg class="checkboxes-transports__icon" width="14" height="16">
+                <svg class="checkboxes-transports__icon checkboxes-transports__icon--plane" width="14" height="16">
                   <use href="img/plane.svg#plane"></use>
                 </svg>
               </label>
@@ -175,7 +175,7 @@
                 data-tooltip="Автотранспорт"
                 aria-label="Автотранспорт"
               >
-                <svg class="checkboxes-transports__icon" width="13" height="16">
+                <svg class="checkboxes-transports__icon checkboxes-transports__icon--bus" width="13" height="16">
                   <use href="img/bus.svg#bus"></use>
                 </svg>
               </label>
@@ -189,7 +189,7 @@
                 data-tooltip="Велосипед"
                 aria-label="Велосипед"
               >
-                <svg class="checkboxes-transports__icon" width="15" height="17">
+                <svg class="checkboxes-transports__icon checkboxes-transports__icon--bike" width="15" height="17">
                   <use href="img/bike.svg#bike"></use>
                 </svg>
               </label>
@@ -203,7 +203,7 @@
                 data-tooltip="Пешком"
                 aria-label="Пешком"
               >
-                <svg class="checkboxes-transports__icon" width="13" height="17">
+                <svg class="checkboxes-transports__icon checkboxes-transports__icon--run" width="13" height="17">
                   <use href="img/run.svg#run"></use>
                 </svg>
               </label>
@@ -647,7 +647,12 @@
               </li>
             </ul>
             <div class="step__footer">
-              <button class="step__button button button--primary button--rounded" type="submit">Отправить</button>
+              <button class="step__button button button--rounded button--primary" href="#step-3" type="submit">
+                Отправить
+                <svg class="step__button-icon button__append-icon" width="13" height="13">
+                  <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+                </svg>
+              </button>
               <a class="step__button button button--rounded button--transparent" href="#step-2">На шаг назад</a>
             </div>
           </li>
