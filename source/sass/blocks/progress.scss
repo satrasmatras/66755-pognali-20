@@ -138,6 +138,10 @@
     color: $special-blue-light;
 
     margin-bottom: 5px;
+
+    @media #{$desktop-width} {
+      color: $basic-white;
+    }
   }
 
   .progress__level {
@@ -147,6 +151,10 @@
     text-align: center;
 
     color: $special-grey;
+
+    @media #{$desktop-width} {
+      color: $basic-white;
+    }
   }
 
   .progress__svg {
