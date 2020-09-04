@@ -34,27 +34,8 @@
 }
 
 .map__image {
+  width: 100%;
   max-width: 100%;
-
-  display: none;
-
-  &--mobile {
-    @media #{$only-phone-width} {
-      display: block;
-    }
-  }
-
-  &--tablet {
-    @media #{$only-tablet-width} {
-      display: block;
-    }
-  }
-
-  &--desktop {
-    @media #{$desktop-width} {
-      display: block;
-    }
-  }
 }
 
 .map__make-path {

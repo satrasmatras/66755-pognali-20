@@ -4,6 +4,7 @@
   @media #{$tablet-width} {
     padding-top: 36px;
     border-top: 1px solid $fieldset-border;
+    margin-bottom: 28px;
   }
 
   @media #{$desktop-width} {
@@ -21,6 +22,7 @@
   }
 
   &:not(:last-child)::before {
+    // TODO: у меня не отображается псевдо, а у тебя? :)
     position: absolute;
     content: "";
 

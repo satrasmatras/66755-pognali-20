@@ -43,22 +43,28 @@
 
 .header__logo {
   order: -3;
+  width: 100px;
 
   @media #{$tablet-width} {
     width: 166px;
     height: 42px;
 
-    background-color: $basic-white;
+    background-color: rgba($basic-white, 0.3);
   }
 
   @media #{$desktop-width} {
     width: 200px;
     height: 52px;
 
-    background: $basic-white;
+    background-color: rgba($basic-white, 0.3);
 
     margin-right: 145px;
   }
+}
+
+.header__logo-image {
+  max-width: 100%;
+  width: 100px;
 }
 
 .header__wrapper {

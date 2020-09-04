@@ -202,7 +202,6 @@
                   </li>
                 </ul>
               </td>
-              <!-- TODO: Могу ли я запихнуть сюда список с названиями на А и по JS'у просто вытаскивать из отсюда и перемещать туда? (в правую часть на меньших размерах)              -->
               <td class="country-table__cell">
                 <span class="country-table__letter">Б</span>
                 <ul class="country-table__letter-countries list">
@@ -1212,7 +1211,11 @@
         <ul class="users__list list">
           <li class="users__list-item card">
             <div class="card__avatar-wrapper">
-              <img class="card__avatar" src="img/firsova-mobile@1x.jpg" alt="Аватар Таня Фирсова">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                <img class="card__avatar" src="img/firsova-mobile@1x.jpg" alt="Аватар Таня Фирсова" srcset="img/firsova-mobile@2x.jpg">
+              </picture>
             </div>
             <h2 class="card__name card__name--offline title">
               <a class="card__name-link" href="">Таня Фирсова</a>
@@ -1245,9 +1248,11 @@
                 <li class="card__flag flags__item flag">
                   <div class="card__image-wrapper flag__image-wrapper">
                     <img
-                      class="flag__image tooltip"
-                      src="https://via.placeholder.com/26x18"
+                      class="card__flag-image flag__image tooltip"
+                      src="img/flag-sri-lanka.svg"
                       data-tooltip="Шри-Ланка" alt="Флаг Шри-Ланки"
+                      width="26"
+                      height="18"
                     >
                   </div>
                   <span class="flag__name">Шри-Ланка</span>
@@ -1256,10 +1261,12 @@
                 <li class="card__flag flags__item flag">
                   <div class="card__image-wrapper flag__image-wrapper">
                     <img
-                      class="flag__image tooltip"
-                      src="https://via.placeholder.com/26x18"
+                      class="card__flag-image flag__image tooltip"
+                      src="img/flag-thailand.svg"
                       data-tooltip="Тайланд"
                       alt="Флаг Тайланда"
+                      width="26"
+                      height="18"
                     >
                   </div>
                   <span class="flag__name">Тайланд</span>
@@ -1268,10 +1275,12 @@
                 <li class="card__flag flags__item flag">
                   <div class="card__image-wrapper flag__image-wrapper">
                     <img
-                      class="flag__image tooltip"
-                      src="https://via.placeholder.com/26x18"
+                      class="card__flag-image flag__image tooltip"
+                      src="img/flag-seychelles.svg"
                       data-tooltip="Сейшелы"
                       alt="Флаг Сейшелов"
+                      width="26"
+                      height="18"
                     >
                   </div>
                   <span class="flag__name">Сейшелы</span>
@@ -1350,7 +1359,11 @@
 
           <li class="users__list-item card">
             <div class="card__avatar-wrapper">
-              <img class="card__avatar" src="img/demin-mobile@1x.jpg" alt="Аватар Петя Демин">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                <img class="card__avatar" src="img/demin-mobile@1x.jpg" alt="Аватар Петя Демин" srcset="img/demin-mobile@2x.jpg">
+              </picture>
             </div>
             <h2 class="card__name card__name--online title">
               <a href="" class="card__name-link">Петя Демин</a>
@@ -1381,10 +1394,12 @@
                 <li class="card__flag flags__item flag">
                   <div class="card__image-wrapper flag__image-wrapper">
                     <img
-                      class="flag__image tooltip"
-                      src="https://via.placeholder.com/26x18"
+                      class="card__flag-image flag__image tooltip"
+                      src="img/flag-belgium.svg"
                       data-tooltip="Бельгия"
                       alt="Флаг Бельгии"
+                      width="26"
+                      height="18"
                     >
                   </div>
                   <span class="flag__name">Бельгия</span>
@@ -1393,10 +1408,12 @@
                 <li class="card__flag flags__item flag">
                   <div class="card__image-wrapper flag__image-wrapper">
                     <img
-                      class="flag__image tooltip"
-                      src="https://via.placeholder.com/26x18"
+                      class="card__flag-image flag__image tooltip"
+                      src="img/flag-czech.svg"
                       data-tooltip="Чехия"
                       alt="Флаг Чехии"
+                      width="26"
+                      height="18"
                     >
                   </div>
                   <span class="flag__name">Чехия</span>
@@ -1475,7 +1492,11 @@
 
           <li class="users__list-item card">
             <div class="card__avatar-wrapper">
-              <img class="card__avatar" src="img/smolov-mobile@1x.jpg" alt="Аватар Марк Смолов">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                <img class="card__avatar" src="img/smolov-mobile@1x.jpg" alt="Аватар Марк Смолов" srcset="img/smolov-mobile@2x.jpg">
+              </picture>
             </div>
             <h2 class="card__name card__name--offline title">
               <a href="" class="card__name-link">Марк Смолов</a>
@@ -1507,10 +1528,12 @@
                 <li class="card__flag flags__item flag">
                   <div class="card__image-wrapper flag__image-wrapper">
                     <img
-                      class="flag__image tooltip"
-                      src="https://via.placeholder.com/26x18"
+                      class="card__flag-image flag__image tooltip"
+                      src="img/flag-usa.svg"
                       data-tooltip="США"
                       alt="Флаг США"
+                      width="26"
+                      height="18"
                     >
                   </div>
                   <span class="flag__name">США</span>
@@ -1519,10 +1542,12 @@
                 <li class="card__flag flags__item flag">
                   <div class="card__image-wrapper flag__image-wrapper">
                     <img
-                      class="flag__image tooltip"
-                      src="https://via.placeholder.com/26x18"
+                      class="card__flag-image flag__image tooltip"
+                      src="img/flag-australia.svg"
                       data-tooltip="Австралия"
                       alt="Флаг Австралии"
+                      width="26"
+                      height="18"
                     >
                   </div>
                   <span class="flag__name">Австралия</span>
@@ -1531,10 +1556,12 @@
                 <li class="card__flag flags__item flag">
                   <div class="card__image-wrapper flag__image-wrapper">
                     <img
-                      class="flag__image tooltip"
-                      src="https://via.placeholder.com/26x18"
+                      class="card__flag-image flag__image tooltip"
+                      src="img/flag-dominica.svg"
                       data-tooltip="Доминика"
                       alt="Флаг Доминики"
+                      width="26"
+                      height="18"
                     >
                   </div>
                   <span class="flag__name">Доминика</span>
@@ -1613,7 +1640,11 @@
 
           <li class="users__list-item card">
             <div class="card__avatar-wrapper">
-              <img class="card__avatar" src="img/rogovaya-mobile@1x.jpg" alt="Аватар Лариса Роговая">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                <img class="card__avatar" src="img/rogovaya-mobile@1x.jpg" alt="Аватар Лариса Роговая" srcset="img/rogovaya-mobile@2x.jpg">
+              </picture>
             </div>
             <h2 class="card__name card__name--online title">
               <a href="" class="card__name-link">Лариса Роговая</a>
@@ -1643,10 +1674,12 @@
                 <li class="card__flag flags__item flag">
                   <div class="card__image-wrapper flag__image-wrapper">
                     <img
-                      class="flag__image tooltip"
-                      src="https://via.placeholder.com/26x18"
+                      class="card__flag-image flag__image tooltip"
+                      src="img/flag-united-kingdom.svg"
                       data-tooltip="Великобритания"
                       alt="Флаг Великобритании"
+                      width="26"
+                      height="18"
                     >
                   </div>
                   <span class="flag__name">Великобритания</span>
@@ -1655,10 +1688,12 @@
                 <li class="card__flag flags__item flag">
                   <div class="card__image-wrapper flag__image-wrapper">
                     <img
-                      class="flag__image tooltip"
-                      src="https://via.placeholder.com/26x18"
+                      class="card__flag-image flag__image tooltip"
+                      src="img/flag-germany.svg"
                       data-tooltip="Германия"
                       alt="Флаг Германии"
+                      width="26"
+                      height="18"
                     >
                   </div>
                   <span class="flag__name">Германия</span>
@@ -1740,7 +1775,6 @@
             <use href="img/show-more-plus.svg#show-more-plus"></use>
           </svg>
           Показать еще
-        <!-- TODO: под ПП непонятно как подогнать при центрировании по центру          -->
         </a>
         <div class="users__pagination pagination">
           <ul class="pagination__pages-list list list--resetted">

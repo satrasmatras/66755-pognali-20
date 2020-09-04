@@ -12,8 +12,6 @@ $direction-padding-top: 11px;
   display: flex;
   flex-direction: column;
 
-  //  TODO: если убрать, то z-index не робит и не получилось сделать наложение
-
   @media #{$tablet-width} {
     flex-direction: row-reverse;
     border-radius: 20px;
@@ -64,6 +62,10 @@ $direction-padding-top: 11px;
     right: 150px;
     background-color: rgba(tomato, 0.3);
   }
+}
+
+.direction__flag {
+  max-width: 100%;
 }
 
 .direction__meta {

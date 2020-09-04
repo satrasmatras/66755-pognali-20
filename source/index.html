@@ -11,8 +11,45 @@
 <header class="header">
   <nav class="container header__container">
     <a class="header__logo logo">
-      <img class="logo__image logo-image--blue" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
-      <img class="logo__image logo-image--light" src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="100" height="19">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.png 1x,
+                  img/logo-desktop-blue@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.png 1x,
+                  img/logo-tablet-blue@2x.png 2x"
+        >
+        <img
+          class="logo__image logo-image--blue"
+          src="img/logo-mobile-blue@1x.png"
+          srcset="img/logo-mobile-blue@2x.png"
+          alt="Логотип Погнали"
+
+        >
+      </picture>
+
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-white@1x.png 1x,
+                  img/logo-desktop-white@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-white@1x.png 1x,
+                  img/logo-tablet-white@2x.png 2x"
+
+        >
+        <img
+          class="logo__image logo-image--light"
+          src="img/logo-mobile-white@1x.png"
+          srcset="img/logo-mobile-white@2x.png"
+          alt="Логотип Погнали"
+        >
+      </picture>
     </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню">
       <svg class="header__icon" aria-hidden="true" width="19" height="19">
@@ -152,7 +189,6 @@
 
         <li class="promo__steps-item">
           <p class="promo__steps-text text text--bold">Находите тех,<br> кто похож на вас</p>
-          <!-- TODO: поставил здесь br, вроде это норм ШИРИНОЙ НЕ ПОЛУЧАЕТСЯ          -->
         </li>
 
         <li class="promo__steps-item">
@@ -194,12 +230,25 @@
       <ul class="directions__list list">
         <li class="direction directions__item">
           <div class="direction__image-wrapper">
-            <img class="direction__image" src="img/thailand-mobile@1x.jpg" alt="Тайланд">
+            <picture>
+              <source media="(min-width: 768px)"
+                      srcset="
+                      img/thailand-desktop@1x.jpg 1x,
+                      img/thailand-desktop@2x.jpg 2x
+                      "
+              >
+              <img
+                class="direction__image"
+                src="img/thailand-mobile@1x.jpg"
+                srcset="img/thailand-mobile@2x.jpg 2x"
+                alt="Тайланд"
+              >
+            </picture>
           </div>
           <div class="direction__flag-wrapper">
             <img
               class="direction__flag tooltip"
-              src="https://via.placeholder.com/35x24"
+              src="img/flag-thailand.svg"
               data-tooltip="Тайланд"
               alt="Флаг Тайланда"
             >
@@ -213,12 +262,25 @@
 
         <li class="direction directions__item">
           <div class="direction__image-wrapper">
-            <img class="direction__image" src="img/france-mobile@1x.jpg" alt="Франция">
+            <picture>
+              <source media="(min-width: 768px)"
+                      srcset="
+                      img/france-desktop@1x.jpg 1x,
+                      img/france-desktop@2x.jpg 2x
+                      "
+              >
+              <img
+                class="direction__image"
+                src="img/france-mobile@1x.jpg"
+                srcset="img/france-mobile@2x.jpg 2x"
+                alt="Франция"
+              >
+            </picture>
           </div>
           <div class="direction__flag-wrapper">
             <img
               class="direction__flag tooltip"
-              src="https://via.placeholder.com/35x24"
+              src="img/flag-france.svg"
               data-tooltip="Франция"
               alt="Флаг Франции"
             >
@@ -232,12 +294,25 @@
 
         <li class="direction directions__item">
           <div class="direction__image-wrapper">
-          <img class="direction__image" src="img/czech-mobile@1x.jpg" alt="Чехия">
+            <picture>
+              <source media="(min-width: 768px)"
+                      srcset="
+                      img/czech-desktop@1x.jpg 1x,
+                      img/czech-desktop@2x.jpg 2x
+                      "
+              >
+              <img
+                class="direction__image"
+                src="img/czech-mobile@1x.jpg"
+                srcset="img/czech-mobile@2x.jpg 2x"
+                alt="Чехия"
+              >
+            </picture>
           </div>
           <div class="direction__flag-wrapper">
             <img
               class="direction__flag tooltip"
-              src="https://via.placeholder.com/35x24"
+              src="img/flag-czech.svg"
               data-tooltip="Чехия"
               alt="Флаг Чехии"
             >
@@ -267,7 +342,7 @@
         <p class="companions__text text text--normal">
           Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <br class="break break--tablet break--desktop">а другому маршрут для хайкинга.
         </p>
-        <p class="companions__text text text--small-tablet text--bold">Теперь можно легко <br class="break break--tablet break--desktop"> найти единомышленников!</p>
+        <p class="companions__text companions__text--small text text--small-tablet text--bold">Теперь можно легко <br class="break break--tablet break--desktop"> найти единомышленников!</p>
       </div>
 
       <ul class="companions__list list">
@@ -296,34 +371,46 @@
               </svg>
           </div>
           <div class="preview-card__avatar-wrapper">
-            <img class="preview-card__avatar" src="img/firsova-desktop@1x.jpg" alt="Аватар Таня Фирсова">
+            <img class="preview-card__avatar" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg" alt="Аватар Таня Фирсова">
           </div>
           <ul class="preview-card__flags flags flags--row list">
             <li class="flags__item">
-              <img
-                class="flags__image tooltip"
-                src="https://via.placeholder.com/35x25"
-                data-tooltip="Шри-Ланка"
-                alt="Флаг Шри-Ланки"
-              >
+              <div class="flags__image-wrapper">
+                <img
+                  class="flags__image tooltip"
+                  src="img/flag-sri-lanka.svg"
+                  data-tooltip="Шри-Ланка"
+                  alt="Флаг Шри-Ланки"
+                  width="35"
+                  height="25"
+                >
+              </div>
             </li>
 
             <li class="flags__item">
-              <img
-                class="flags__image tooltip"
-                src="https://via.placeholder.com/35x25"
-                data-tooltip="Тайланд"
-                alt="Флаг Тайланда"
-              >
+              <div class="flags__image-wrapper">
+                <img
+                  class="flags__image tooltip"
+                  src="img/flag-thailand.svg"
+                  data-tooltip="Тайланд"
+                  alt="Флаг Тайланда"
+                  width="35"
+                  height="25"
+                >
+              </div>
             </li>
 
             <li class="flags__item">
-              <img
-                class="flags__image tooltip"
-                src="https://via.placeholder.com/35x25"
-                data-tooltip="Сейшеллы"
-                alt="Флаг Сейшеллов"
-              >
+              <div class="flags__image-wrapper">
+                <img
+                  class="flags__image tooltip"
+                  src="img/flag-seychelles.svg"
+                  data-tooltip="Сейшеллы"
+                  alt="Флаг Сейшеллов"
+                  width="35"
+                  height="25"
+                >
+              </div>
             </li>
           </ul>
           <h3 class="preview-card__name preview-card__name--offline title">
@@ -410,24 +497,32 @@
             </svg>
           </div>
           <div class="preview-card__avatar-wrapper">
-            <img class="preview-card__avatar" src="img/demin-desktop@1x.jpg" alt="Аватар Таня Фирсова">
+            <img class="preview-card__avatar" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg" alt="Аватар Петя Демин">
           </div>
           <ul class="preview-card__flags flags flags--row list">
             <li class="flags__item">
-              <img
-                class="flags__image tooltip"
-                src="https://via.placeholder.com/35x25"
-                data-tooltip="Бельгия"
-                alt="Флаг Бельгии"
-              >
+              <div class="flags__image-wrapper">
+                <img
+                  class="flags__image tooltip"
+                  src="img/flag-belgium.svg"
+                  data-tooltip="Бельгия"
+                  alt="Флаг Бельгии"
+                  width="35"
+                  height="25"
+                >
+              </div>
             </li>
             <li class="flags__item">
-              <img
-                class="flags__image tooltip"
-                src="https://via.placeholder.com/35x25"
-                data-tooltip="Чехия"
-                alt="Флаг Чехии"
-              >
+              <div class="flags__image-wrapper">
+                <img
+                  class="flags__image tooltip"
+                  src="img/flag-czech.svg"
+                  data-tooltip="Чехия"
+                  alt="Флаг Чехии"
+                  width="35"
+                  height="25"
+                >
+              </div>
             </li>
           </ul>
           <h3 class="preview-card__name preview-card__name--online title">
@@ -564,7 +659,6 @@
         <a href="" class="fast-registration__link">авторизуйтесь</a>.
       </p>
       <form class="fast-registration__form" action="https://echo.htmlacademy.ru" method="POST">
-<!--        TODO: почему здесь высота такая на десктопе??-->
         <label class="sr-only" for="email-field">E-mail</label>
         <input class="fast-registration__input input" type="email" id="email-field" name="email" placeholder="E-mail" required>
         <button class="fast-registration__button button button--primary button--yellow" type="submit" aria-label="Отправить">
@@ -608,7 +702,7 @@
   </section>
 
   <section class="map">
-    <div class="container">
+    <div class="map__wrapper container">
       <div class="map__header">
         <ul class="map__contacts contacts contacts--light list list--resetted">
           <li class="contacts__item">
@@ -632,12 +726,28 @@
           </svg>
         </a>
       </div>
-      <div class="map__image-wrapper">
-        <img class="map__image map__image--mobile" src="https://via.placeholder.com/320x424" alt="Карта. Ул. Большая Конюшенная, 19/8">
-        <img class="map__image map__image--tablet" src="https://via.placeholder.com/768x581" alt="Карта. Ул. Большая Конюшенная, 19/8">
-        <img class="map__image map__image--desktop" src="https://via.placeholder.com/1440x584" alt="Карта. Ул. Большая Конюшенная, 19/8">
-      </div>
     </div>
+
+    <div class="map__image-wrapper">
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="img/map-desktop@1x.jpg 1x,
+                  img/map-desktop@2x.jpg 2x"
+          >
+          <source
+            media="(min-width: 768px)"
+            srcset="img/map-tablet@1x.jpg 1x,
+                    img/map-tablet@2x.jpg 2x"
+          >
+          <img
+            class="map__image"
+            src="img/map-mobile@1x.jpg"
+            srcset="img/map-mobile@2x.jpg 2x"
+            alt="Карта. Ул. Большая Конюшенная, 19/8"
+          >
+        </picture>
+      </div>
   </section>
 </main>
 

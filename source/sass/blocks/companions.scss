@@ -10,7 +10,7 @@
   }
 
   @media #{$desktop-width} {
-    padding-top: 100px;
+    padding-top: 131px;
     padding-bottom: 138px;
   }
 }
@@ -20,6 +20,22 @@
   justify-content: space-between;
   flex-direction: column;
 
+  position: relative;
+
+  background-image:
+    url("../../img/smolov-back-desktop@1x.png"),
+    url("../../img/rogovaya-back-mobile@1x.png");
+
+  background-position: calc(100% - 25px) -32px, -12px 240px;
+  background-repeat: no-repeat;
+  background-size: 143px 143px, 73px 71px;
+
+  @include retina {
+    background-image:
+      url("../../img/smolov-back-desktop@2x.png"),
+      url("../../img/rogovaya-back-mobile@2x.png");
+  }
+
   @media #{$tablet-width} {
     display: grid;
     justify-content: center;
@@ -28,6 +44,21 @@
     padding-left: 40px;
 
     grid-template-rows: min-content min-content min-content;
+
+
+    background-image:
+      url("../../img/smolov-back-desktop@1x.png"),
+      url("../../img/rogovaya-back-desktop@1x.png");
+
+    background-position: 40px 284px, calc(100% - 74px) -63px;
+    background-repeat: no-repeat;
+    background-size: 143px 143px, 285px 285px;
+
+    @include retina {
+      background-image:
+        url("../../img/smolov-back-desktop@2x.png"),
+        url("../../img/rogovaya-back-desktop@2x.png");
+    }
   }
 
   @media #{$desktop-width} {
@@ -39,6 +70,8 @@
     grid-template-rows: min-content 1fr;
 
     grid-column-gap: 190px;
+
+    background-position: 547px 3px, 190px 256px;
   }
 }
 
@@ -66,6 +99,7 @@
 }
 
 .companions__title {
+  position: relative;
   font-style: normal;
   font-weight: bold;
 
@@ -73,17 +107,50 @@
 
   margin-bottom: 19px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: -34px;
+    left: -68px;
+
+    width: 132px;
+    height: 132px;
+
+    background-color: $decoration-block;
+    border-radius: 20px;
+  }
+
   @media #{$tablet-width} {
     margin-bottom: 55px;
+
+    &::before {
+      top: -71px;
+      left: -34px;
+      width: 212px;
+      height: 212px;
+    }
   }
 
   @media #{$desktop-width} {
     margin-bottom: 55px;
+
+    &::before {
+      top: -61px;
+      left: -72px;
+    }
   }
 }
 
 .companions__text {
   margin-bottom: 23px;
+
+  &--small {
+    @media #{$only-phone-width} {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
 
   &:last-of-type {
     margin-bottom: 0;

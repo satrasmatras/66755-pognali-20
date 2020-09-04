@@ -3,51 +3,144 @@
 
   background-color: $basic-white;
   border-radius: 4px;
-  box-shadow: 0 2px 16px rgba(212, 217, 235, 0.25);
-
-  border-bottom: 1px solid $fieldset-border;
-  // TODO: затык с бордерами таблички
-  border-left: 1px solid $fieldset-border;
-  border-right: 1px solid $fieldset-border;
-
 
   &--opened {
     width: 220px;
     display: block;
 
     @media #{$tablet-width} {
-
       width: 575px;
-      display: flex;
-      justify-content: flex-start;
 
-      padding-left: 27px;
+      padding-left: 0;
 
-      padding-top: 35px;
+      padding-top: 0;
       border-spacing: 0;
+      background-color: transparent;
     }
 
     @media #{$desktop-width} {
       position: absolute;
-      display: flex;
 
       width: 730px;
-      padding-left: 11px;
 
       border-collapse: separate;
-      padding-top: 18px;
-      padding-bottom: 19px;
+    }
+  }
+}
 
-      &::after {
-        position: absolute;
-        content: "";
-        width: 1px;
-        height: 100%;
-        right: 239px;
-        top: 0;
+.dropdown-country-table__header {
+  z-index: 1;
 
-        background-color: $fieldset-border;
-      }
+  @media #{$tablet-width} {
+    background-color: transparent;
+  }
+}
+
+.dropdown-country-table__toggle {
+  position: relative;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  letter-spacing: 0.016em;
+  text-transform: uppercase;
+
+  color: $special-blue-light;
+
+  border-radius: 4px;
+
+  background-color: transparent;
+
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-top: 12px;
+
+  text-align: left;
+
+  background-color: $special-blue-light;
+  color: $basic-white;
+  border: 1px solid $special-blue-light;
+
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  @media #{$tablet-width} {
+    width: 369px;
+
+    padding-bottom: 21px;
+    padding-left: 25px;
+    padding-top: 26px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    margin-right: 54px;
+  }
+
+  @media #{$desktop-width} {
+    width: 730px;
+    margin: 0;
+  }
+}
+
+.dropdown-country-table__toggle-icon {
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media #{$tablet-width} {
+    right: 22px;
+    width: 22px;
+    height: 21px;
+
+    color: rgba($basic-white, 0.3);
+  }
+}
+
+.dropdown-country-table__inner {
+  background-color: $basic-white;
+
+  box-shadow: 0 2px 16px rgba(212, 217, 235, 0.25);
+
+  @media #{$tablet-width} {
+    display: flex;
+    padding-left: 28px;
+    padding-right: 27px;
+    padding-bottom: 33px;
+
+    padding-top: 33px;
+
+    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      right: 205px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+
+      background-color: $fieldset-border;
+    }
+  }
+
+  @media #{$desktop-width} {
+    padding-left: 12px;
+    padding-right: 7px;
+    padding-bottom: 19px;
+    padding-top: 16px;
+
+    &::after {
+      right: 239px;
     }
   }
 }
@@ -56,9 +149,12 @@
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
+  margin-top: -1px;
 
   @media #{$tablet-width} {
     width: 262px;
+
+    margin-top: 0;
   }
 
   @media #{$desktop-width} {
@@ -69,19 +165,19 @@
 }
 
 .dropdown-country-table__cell {
-  padding-top: 14.9px;
-  padding-right: 21px;
-  padding-bottom: 11px;
-  padding-left: 18px;
+  padding-top: 15.7px;
+  padding-bottom: 10px;
+
   border: 1px solid $fieldset-border;
   text-align: center;
   vertical-align: center;
 
+
   @media #{$tablet-width} {
     background-color: transparent;
 
-    padding: 27px 22px;
-    padding-bottom: 22px;
+    padding: 27px 0;
+    padding-bottom: 21px;
     cursor: pointer;
 
     font-weight: 500;
@@ -92,10 +188,6 @@
     text-transform: uppercase;
 
     color: $basic-blue-light;
-
-    &--selected {
-      color: rgba($basic-blue-light, 1);
-    }
 
     &:hover,
     &:focus {
@@ -111,15 +203,43 @@
     width: 60px;
     height: 70px;
 
+    border-radius: 4px;
   }
 
   &--selected {
-    background-color: $special-blue-light;
-    color: $basic-white;
+    background-color: $basic-grey;
     border-bottom: 1px solid $basic-grey;
+
+    @media #{$tablet-width} {
+      background-color: $special-blue-light;
+      border: 1px solid $fieldset-border;
+      color: $basic-white;
+
+      position: relative;
+
+      &::before {
+        // TODO: Осторожно. Возможно гавнокод!!!
+        position: absolute;
+        display: block;
+        width: calc(100% + 4px);
+        height: calc(100% + 2px);
+        left: -1px;
+        right: -2px;
+        top: -1px;
+        bottom: 0;
+        content: "";
+        box-shadow: inset 0 0 0 3px $special-blue-light;
+        background-color: transparent;
+      }
+    }
 
     @media #{$desktop-width} {
       border: 1px solid $special-blue-light;
+      color: $basic-white;
+
+      &::before {
+        display: none;
+      }
     }
   }
 }
@@ -144,15 +264,23 @@
 .dropdown-country-table__content {
   padding-top: 16px;
   padding-left: 19px;
-  margin-bottom: 31px;
+  padding-bottom: 13px;
+
+  border-left: 0.5px solid $fieldset-border;
+  border-right: 0.5px solid $fieldset-border;
+  border-bottom: 0.5px solid $fieldset-border;
 
   @media #{$tablet-width} {
     width: 172px;
     padding: 0;
     margin: 0;
     margin-left: auto;
-    margin-right: 7px;
-    margin-top: -3px;
+    margin-right: 0;
+
+    border: 0;
+
+    padding-top: 0;
+    padding-left: 17px;
   }
 
   @media #{$desktop-width} {
@@ -173,13 +301,12 @@
 
   @media #{$tablet-width} {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 29px;
 
     margin-bottom: 1px;
   }
 
   @media #{$desktop-width} {
-    margin-bottom: 0.1px;
   }
 }
 

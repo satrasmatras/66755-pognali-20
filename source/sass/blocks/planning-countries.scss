@@ -1,24 +1,22 @@
 .planning-countries {
   position: relative;
 
-  @media #{$tablet-width} {
-    &::before {
+  &::before {
+    @media #{$tablet-width} {
       content: "";
+      display: block;
       position: absolute;
       width: 1px;
-      height: calc(100% + 25px);
       top: 0;
-      right: 137px;
+      right: 136px;
+      bottom: 0;
 
-      background-color: $fieldset-border;
-
-      z-index: 100;
+      background: linear-gradient(to top, rgba($fieldset-border, 0) 0, $fieldset-border 100%);
+      z-index: 0;
     }
-  }
 
-  @media #{$desktop-width} {
-    &::before {
-      right: 227px;
+    @media #{$desktop-width} {
+      right: 226px;
       height: calc(100% + 148px);
     }
   }

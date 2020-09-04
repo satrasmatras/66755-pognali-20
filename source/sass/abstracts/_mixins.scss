@@ -3,3 +3,9 @@
   font-size: $fsz;
   line-height: $lh;
 }
+
+@mixin retina() {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
+}
