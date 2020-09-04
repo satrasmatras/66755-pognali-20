@@ -10,14 +10,14 @@
 
   border-radius: 10px;
 
-  padding-bottom: 8px;
+  padding-bottom: 17px;
 
   @media #{$tablet-width} {
     width: 285px;
 
     border-radius: 20px;
 
-    padding-bottom: 20px;
+    padding-bottom: 23px;
   }
 }
 
@@ -61,8 +61,7 @@
     font-size: 24px;
     line-height: 22px;
 
-    padding-right: 10px;
-    margin-bottom: 26px;
+    margin-bottom: 23px;
   }
 
   &:hover {
@@ -76,11 +75,18 @@
   &::before {
     content: "";
     position: absolute;
-    left: -10px;
+    left: -16px;
     top: 6px;
     width: 6px;
     height: 6px;
     border-radius: 100%;
+
+    @media #{$tablet-width} {
+      width: 8px;
+      height: 8px;
+
+      left: -22px;
+    }
   }
 
   &--offline::before {
@@ -98,9 +104,8 @@
 }
 
 .preview-card__tags {
-  padding-left: 41px;
-  padding-right: 35px;
-
+  padding-left: 36px;
+  padding-right: 31px;
   margin-bottom: 10px;
 
   @media #{$tablet-width} {
@@ -141,6 +146,10 @@
   width: 250px;
 
   justify-content: center;
+
+  @media #{$tablet-width} {
+    margin-bottom: 14px;
+  }
 
   @media #{$desktop-width} {
     margin-bottom: 16px;

@@ -274,6 +274,13 @@ $card-tablet-padding: 36px;
   }
 }
 
+.card__flag-image {
+  @media #{$tablet-width} {
+    width: 35px;
+    height: 24px;
+  }
+}
+
 .card__transports-wrapper {
   position: relative;
   grid-area: transport;

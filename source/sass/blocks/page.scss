@@ -1,3 +1,15 @@
 .page__body--light {
   background-color: $basic-grey;
 }
+
+.page__main {
+  margin-top: -79px;
+
+  @media #{$tablet-width} {
+    margin-top: -164px;
+  }
+
+  @media #{$desktop-width} {
+    margin-top: -128px;
+  }
+}

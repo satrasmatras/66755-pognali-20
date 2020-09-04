@@ -141,7 +141,7 @@
           </div>
         </div>
         <div class="profile__avatar-wrapper">
-          <img class="profile__avatar" src="img/demin-tablet@1x.jpg" alt="Аватар Петя Демин">
+          <img class="profile__avatar" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" alt="Аватар Петя Демин">
         </div>
         <a class="button button--rounded profile__photo-change">
           <span class="profile__photo-change-hidden-text">Сменить</span><span>фото</span>
@@ -161,7 +161,7 @@
                 data-tooltip="Авиаперелет"
                 aria-label="Авиаперелет"
               >
-                <svg class="checkboxes-transports__icon" width="14" height="16">
+                <svg class="checkboxes-transports__icon checkboxes-transports__icon--plane" width="14" height="16">
                   <use href="img/plane.svg#plane"></use>
                 </svg>
               </label>
@@ -175,7 +175,7 @@
                 data-tooltip="Автотранспорт"
                 aria-label="Автотранспорт"
               >
-                <svg class="checkboxes-transports__icon" width="13" height="16">
+                <svg class="checkboxes-transports__icon checkboxes-transports__icon--bus" width="13" height="16">
                   <use href="img/bus.svg#bus"></use>
                 </svg>
               </label>
@@ -189,7 +189,7 @@
                 data-tooltip="Велосипед"
                 aria-label="Велосипед"
               >
-                <svg class="checkboxes-transports__icon" width="15" height="17">
+                <svg class="checkboxes-transports__icon checkboxes-transports__icon--bike" width="15" height="17">
                   <use href="img/bike.svg#bike"></use>
                 </svg>
               </label>
@@ -203,7 +203,7 @@
                 data-tooltip="Пешком"
                 aria-label="Пешком"
               >
-                <svg class="checkboxes-transports__icon" width="13" height="17">
+                <svg class="checkboxes-transports__icon checkboxes-transports__icon--run" width="13" height="17">
                   <use href="img/run.svg#run"></use>
                 </svg>
               </label>
@@ -215,7 +215,6 @@
   </section>
 
   <section class="plans">
-<!-- TODO: из-за другого дефиса непонятно как под пп подгонять, потому что то 3 попутчикА, то 1 попутчик разная длина-->
     <div class="plans__wrapper container">
       <h2 class="plans__title title title--normal">Мои планы:</h2>
       <ol class="plans__list">
@@ -450,7 +449,6 @@
 
             <ul class="step__planning-countries planning-countries list">
               <li class="planning-countries__item country">
-                <!--                TODO: не могу поднять кружочек выше флаг враппера. Как задать бэкграунд-image опасити :C. СДелал стрелочку через псевдо, который делает тень, но этой стрелочки не видно. Иногда появляется прокрутка в дропдауне-->
                 <button class="country__dropdown country__dropdown--selected" type="button">
                     <span class="country__dropdown-text">
                       Босния и Герцеговина
@@ -459,12 +457,14 @@
                 <div class="country__flag-wrapper">
                   <img
                     class="country__flag tooltip"
-                    src="https://via.placeholder.com/35x25"
+                    src="img/flag-bosnia.svg"
                     data-tooltip="Босния и Герцеговина"
                     alt="Флаг Боснии и Герцеговины"
+                    width="26"
+                    height="18"
                   >
                 </div>
-                <button class="country__cancel" type="button" aria-label="Отменить страну в плане"></button>
+                <button class="country__cancel button" type="button" aria-label="Отменить страну в плане"></button>
               </li>
 
               <li class="planning-countries__item country">
@@ -472,97 +472,109 @@
                 <div class="country__flag-wrapper">
                   <img
                     class="country__flag tooltip"
-                    src="https://via.placeholder.com/35x25"
+                    src="img/flag-czech.svg"
                     data-tooltip="Чехия"
                     alt="Флаг Чехии"
+                    width="26"
+                    height="18"
                   >
                 </div>
-                <button class="country__cancel" type="button" aria-label="Отменить страну в плане"></button>
+                <button class="country__cancel button" type="button" aria-label="Отменить страну в плане"></button>
               </li>
 
               <li class="planning-countries__item country">
                 <button class="country__dropdown country__dropdown--activator" type="button">Выберите страну</button>
                 <div class="country__dropdown-country-table dropdown-country-table">
-                  <table class="dropdown-country-table__table">
-                    <tr class="dropdown-country-table__row">
-                      <td class="dropdown-country-table__cell dropdown-country-table__cell--selected">А</td>
-                      <td class="dropdown-country-table__cell">Б</td>
-                      <td class="dropdown-country-table__cell">В</td>
-                      <td class="dropdown-country-table__cell">Г</td>
-                      <td class="dropdown-country-table__cell">Д</td>
-                    </tr>
-                    <tr class="dropdown-country-table__row">
-                      <td class="dropdown-country-table__cell">Е</td>
-                      <td class="dropdown-country-table__cell">З</td>
-                      <td class="dropdown-country-table__cell">И</td>
-                      <td class="dropdown-country-table__cell">К</td>
-                      <td class="dropdown-country-table__cell">Л</td>
-                    </tr>
-                    <tr class="dropdown-country-table__row">
-                      <td class="dropdown-country-table__cell">М</td>
-                      <td class="dropdown-country-table__cell">Н</td>
-                      <td class="dropdown-country-table__cell">О</td>
-                      <td class="dropdown-country-table__cell">П</td>
-                      <td class="dropdown-country-table__cell">Р</td>
-                    </tr>
-                    <tr class="dropdown-country-table__row">
-                      <td class="dropdown-country-table__cell">С</td>
-                      <td class="dropdown-country-table__cell">Т</td>
-                      <td class="dropdown-country-table__cell">У</td>
-                      <td class="dropdown-country-table__cell">Ф</td>
-                      <td class="dropdown-country-table__cell">Х</td>
-                    </tr>
-                    <tr class="dropdown-country-table__row">
-                      <td class="dropdown-country-table__cell">Ч</td>
-                      <td class="dropdown-country-table__cell">Ш</td>
-                      <td class="dropdown-country-table__cell">Э</td>
-                      <td class="dropdown-country-table__cell">Ю</td>
-                      <td class="dropdown-country-table__cell">Я</td>
-                    </tr>
-                  </table>
-                  <ul class="dropdown-country-table__content list">
-                    <li class="dropdown-country-table__content-item">
-                      <a class="dropdown-country-table__content-link" href="">Австралия</a>
-                    </li>
+                  <div class="dropdown-country-table__header">
+                    <button class="dropdown-country-table__toggle" type="button">
+                      Выберите страну
+                      <svg class="dropdown-country-table__toggle-icon" width="8" height="9">
+                        <use href="img/close.svg#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="dropdown-country-table__inner">
+                    <table class="dropdown-country-table__table">
+                      <tr class="dropdown-country-table__row">
+                        <td class="dropdown-country-table__cell dropdown-country-table__cell--selected">А</td>
+                        <td class="dropdown-country-table__cell">Б</td>
+                        <td class="dropdown-country-table__cell">В</td>
+                        <td class="dropdown-country-table__cell">Г</td>
+                        <td class="dropdown-country-table__cell">Д</td>
+                      </tr>
+                      <tr class="dropdown-country-table__row">
+                        <td class="dropdown-country-table__cell">Е</td>
+                        <td class="dropdown-country-table__cell">З</td>
+                        <td class="dropdown-country-table__cell">И</td>
+                        <td class="dropdown-country-table__cell">К</td>
+                        <td class="dropdown-country-table__cell">Л</td>
+                      </tr>
+                      <tr class="dropdown-country-table__row">
+                        <td class="dropdown-country-table__cell">М</td>
+                        <td class="dropdown-country-table__cell">Н</td>
+                        <td class="dropdown-country-table__cell">О</td>
+                        <td class="dropdown-country-table__cell">П</td>
+                        <td class="dropdown-country-table__cell">Р</td>
+                      </tr>
+                      <tr class="dropdown-country-table__row">
+                        <td class="dropdown-country-table__cell">С</td>
+                        <td class="dropdown-country-table__cell">Т</td>
+                        <td class="dropdown-country-table__cell">У</td>
+                        <td class="dropdown-country-table__cell">Ф</td>
+                        <td class="dropdown-country-table__cell">Х</td>
+                      </tr>
+                      <tr class="dropdown-country-table__row">
+                        <td class="dropdown-country-table__cell">Ч</td>
+                        <td class="dropdown-country-table__cell">Ш</td>
+                        <td class="dropdown-country-table__cell">Э</td>
+                        <td class="dropdown-country-table__cell">Ю</td>
+                        <td class="dropdown-country-table__cell">Я</td>
+                      </tr>
+                    </table>
+                    <ul class="dropdown-country-table__content list">
+                      <li class="dropdown-country-table__content-item">
+                        <a class="dropdown-country-table__content-link" href="">Австралия</a>
+                      </li>
 
-                    <li class="dropdown-country-table__content-item">
-                      <a class="dropdown-country-table__content-link" href="">Австрия</a>
-                    </li>
+                      <li class="dropdown-country-table__content-item">
+                        <a class="dropdown-country-table__content-link" href="">Австрия</a>
+                      </li>
 
-                    <li class="dropdown-country-table__content-item">
-                      <a class="dropdown-country-table__content-link" href="">Азербайджан</a>
-                    </li>
+                      <li class="dropdown-country-table__content-item">
+                        <a class="dropdown-country-table__content-link" href="">Азербайджан</a>
+                      </li>
 
-                    <li class="dropdown-country-table__content-item">
-                      <a class="dropdown-country-table__content-link" href="">Албания</a>
-                    </li>
+                      <li class="dropdown-country-table__content-item">
+                        <a class="dropdown-country-table__content-link" href="">Албания</a>
+                      </li>
 
-                    <li class="dropdown-country-table__content-item">
-                      <a class="dropdown-country-table__content-link" href="">Алжир</a>
-                    </li>
+                      <li class="dropdown-country-table__content-item">
+                        <a class="dropdown-country-table__content-link" href="">Алжир</a>
+                      </li>
 
-                    <li class="dropdown-country-table__content-item">
-                      <a class="dropdown-country-table__content-link" href="">Ангола</a>
-                    </li>
+                      <li class="dropdown-country-table__content-item">
+                        <a class="dropdown-country-table__content-link" href="">Ангола</a>
+                      </li>
 
-                    <li class="dropdown-country-table__content-item">
-                      <a class="dropdown-country-table__content-link" href="">Андорра</a>
-                    </li>
+                      <li class="dropdown-country-table__content-item">
+                        <a class="dropdown-country-table__content-link" href="">Андорра</a>
+                      </li>
 
-                    <li class="dropdown-country-table__content-item">
-                      <a class="dropdown-country-table__content-link" href="">Антигуа и Барбуда</a>
-                    </li>
+                      <li class="dropdown-country-table__content-item">
+                        <a class="dropdown-country-table__content-link" href="">Антигуа и Барбуда</a>
+                      </li>
 
-                    <li class="dropdown-country-table__content-item">
-                      <a class="dropdown-country-table__content-link" href="">Аргентина</a>
-                    </li>
+                      <li class="dropdown-country-table__content-item">
+                        <a class="dropdown-country-table__content-link" href="">Аргентина</a>
+                      </li>
 
-                    <li class="dropdown-country-table__content-item">
-                      <a class="dropdown-country-table__content-link" href="">Армения</a>
-                    </li>
-                  </ul>
+                      <li class="dropdown-country-table__content-item">
+                        <a class="dropdown-country-table__content-link" href="">Армения</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <button class="country__cancel" type="button" aria-label="Отменить страну в плане"></button>
+                <button class="country__cancel button" type="button" aria-label="Отменить страну в плане"></button>
               </li>
 
               <li class="planning-countries__item country">
@@ -608,9 +620,11 @@
                 <div class="entertainment__flag-wrapper">
                   <img
                     class="entertainment__flag tooltip"
-                    src="https://via.placeholder.com/35x25"
+                    src="img/flag-bosnia.svg"
                     data-tooltip="Босния и Герцеговина"
                     alt="Флаг Боснии и Герцеговины"
+                    width="35"
+                    height="24"
                   >
                 </div>
                 <textarea
@@ -629,9 +643,11 @@
                 <div class="entertainment__flag-wrapper">
                   <img
                     class="entertainment__flag tooltip"
-                    src="https://via.placeholder.com/35x25"
+                    src="img/flag-czech.svg"
                     data-tooltip="Чехия"
                     alt="Флаг Чехии"
+                    width="35"
+                    height="24"
                   >
                 </div>
                 <textarea
@@ -647,7 +663,12 @@
               </li>
             </ul>
             <div class="step__footer">
-              <button class="step__button button button--primary button--rounded" type="submit">Отправить</button>
+              <button class="step__button button button--rounded button--primary" href="#step-3" type="submit">
+                Отправить
+                <svg class="step__button-icon button__append-icon" width="13" height="13">
+                  <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+                </svg>
+              </button>
               <a class="step__button button button--rounded button--transparent" href="#step-2">На шаг назад</a>
             </div>
           </li>
@@ -706,11 +727,18 @@
     })
 
   const dropdownActivator = document.querySelector('.country__dropdown--activator');
+
+    const dropdownCountryTableHeaderToggle = document.querySelector('.dropdown-country-table__toggle');
   const dropdownCountryTable = document.querySelector('.dropdown-country-table');
+
     dropdownActivator.addEventListener('click', () => {
-        dropdownActivator.classList.toggle('country__dropdown--clicked');
         dropdownCountryTable.classList.toggle('dropdown-country-table--opened');
     })
+
+  dropdownCountryTableHeaderToggle.addEventListener('click', () => {
+      dropdownCountryTable.classList.remove('dropdown-country-table--opened');
+  })
+
 </script>
 </body>
 </html>

@@ -1,66 +1,109 @@
 .map {
-  padding-top: 30px;
+  position: relative;
+  z-index: $map-z-index;
 
-  background-color: $basic-yellow;
+  margin-top: -$index-mobile-border-radius;
+
+  background-color: transparent;
+
+  @media #{$tablet-width} {
+    margin-top: -$index-tablet-border-radius;
+  }
 }
 
 .map__header {
+  position: relative;
+  z-index: $map-z-index - 1;
+
+  padding-top: 30px + $index-mobile-border-radius;
+
+  border-bottom-right-radius: $index-mobile-border-radius;
+  border-bottom-left-radius: $index-mobile-border-radius;
+
+  background-color: $basic-yellow;
+
   @media #{$tablet-width} {
-    padding-left: 35px;
+    padding-top: 50px + $index-tablet-border-radius;
+    padding-bottom: 49px;
+
+    border-bottom-right-radius: $index-tablet-border-radius;
+    border-bottom-left-radius: $index-tablet-border-radius;
+  }
+
+  @media #{$desktop-width} {
+    padding-top: 50px + $index-tablet-border-radius;
+    padding-bottom: 20px;
+  }
+}
+
+.map__wrapper {
+  @media #{$tablet-width} {
+    padding-left: 75px;
+    padding-right: 75px;
   }
 
   @media #{$desktop-width} {
     display: flex;
     justify-content: flex-start;
-    padding-top: 21px;
-    padding-left: 225px;
-    padding-right: 75px;
+    align-items: center;
 
-    margin-bottom: 28px;
+    padding-left: 283px;
+    padding-right: 135px;
   }
 }
 
 .map__contacts {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   padding-right: 19px;
 
   @media #{$tablet-width} {
     padding-right: 0;
+    margin-bottom: 42px;
   }
 }
 
 .map__image-wrapper {
-  width: 100%;
+  margin-top: -52px;
+  z-index: $map-z-index - 1;
+  width: 320px;
+  height: 424px;
+
+  overflow: hidden;
+
+  @media #{$tablet-width} {
+    margin-top: -60px;
+    width: 768px;
+    height: 581px;
+  }
+
+  @media #{$desktop-width} {
+    margin-top: -123px;
+    width: 1440px;
+    height: 584px;
+  }
 }
 
 .map__image {
+  width: 100%;
   max-width: 100%;
-
-  display: none;
-
-  &--mobile {
-    @media #{$only-phone-width} {
-      display: block;
-    }
-  }
-
-  &--tablet {
-    @media #{$only-tablet-width} {
-      display: block;
-    }
-  }
-
-  &--desktop {
-    @media #{$desktop-width} {
-      display: block;
-    }
-  }
 }
 
 .map__make-path {
   margin-bottom: 35px;
 
+  padding-top: 18px;
+  padding-left: 19px;
+  padding-right: 19px;
+  padding-bottom: 19px;
+
   width: 100%;
+
+  @media #{$tablet-width} {
+    padding-top: 26px;
+    padding-left: 34px;
+    padding-right: 32px;
+    padding-bottom: 24px;
+  }
 
   @media #{$desktop-width} {
     max-width: 324px;

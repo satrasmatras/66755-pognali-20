@@ -1,12 +1,32 @@
 .footer {
-  padding-top: 35px;
+  position: relative;
+  z-index: $footer-z-index;
+  padding-top: 37px;
 
   background-color: $basic-white;
   color: $special-grey;
 
+  border-top-right-radius: $index-mobile-border-radius;
+  border-top-left-radius: $index-mobile-border-radius;
+
+  &--index {
+    margin-top: -110px;
+
+    @media #{$tablet-width} {
+      margin-top: -57px;
+    }
+
+    @media #{$desktop-width} {
+      margin-top: -65px;
+    }
+  }
+
   @media #{$tablet-width} {
     padding-top: 48px;
     padding-bottom: 32px;
+
+    border-top-right-radius: $index-tablet-border-radius;
+    border-top-left-radius: $index-tablet-border-radius;
   }
 
   @media #{$desktop-width} {

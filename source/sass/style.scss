@@ -1,6 +1,7 @@
 // Начните писать стили здесь
 @import "base/_colors.scss";
 @import "base/_generic.scss";
+@import "abstracts/_mixins.scss";
 @import "base/_animations.scss";
 @import "abstracts/_settings.scss";
 @import "blocks/text.scss";
@@ -31,7 +32,6 @@
 @import "blocks/tags.scss";
 @import "blocks/transports.scss";
 @import "blocks/checkboxes.scss";
-@import "blocks/services.scss";
 @import "blocks/tariffs.scss";
 @import "blocks/footer.scss";
 @import "blocks/users.scss";
@@ -68,3 +68,4 @@
 @import "blocks/profile.scss";
 @import "blocks/plans.scss";
 @import "blocks/step.scss";
+@import "blocks/services.scss";

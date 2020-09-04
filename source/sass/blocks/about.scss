@@ -1,29 +1,116 @@
 $padding-left: 25px;
 
 .about {
+  position: relative;
   padding-top: 70px;
   padding-bottom: 82px;
-  background-color: $basic-blue;
+
+  border-bottom-left-radius: $index-mobile-border-radius;
+  border-bottom-right-radius: $index-mobile-border-radius;
+
+  z-index: $about-z-index;
+
+  background-color: $basic-blue-light;
+
+  background-image: url("../../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 292px 353px;
+  background-position: calc(50% + 4px) 38px;
+
+  @include retina {
+    background-image: url("../../img/about-mobile@2x.png");
+  }
 
   @media #{$tablet-width} {
-    padding-top: 138px;
-    padding-bottom: 88px;
+    border-bottom-left-radius: $index-tablet-border-radius;
+    border-bottom-right-radius: $index-tablet-border-radius;
+
+    background-image: none;
+
+    padding-top: 135px;
+    padding-bottom: 89px;
+    background-color: $basic-blue-promo;
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      background-color: $decoration-block;
+      width: 688px;
+      height: 212px;
+
+      border-radius: 20px;
+
+      top: 92px;
+      left: calc(50% - 344px);
+
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 139px;
+      right: calc(50% + -377px);
+
+      z-index: $about-z-index - 1;
+      width: 376px;
+      height: 548px;
+
+      background-image: url("../../img/about-tablet@1x.png");
+
+      background-repeat: no-repeat;
+      background-size: 376px 548px;
+      background-position: 0 0;
+
+      @include retina {
+        background-image: url("../../img/about-tablet@2x.png");
+      }
+    }
   }
 
   @media #{$desktop-width} {
-    padding-top: 132px;
+    background-image: none;
     padding-bottom: 163px;
+
+    &::before {
+      width: 212px;
+      height: 212px;
+
+      top: 73px;
+      left: 140px;
+    }
+
+    &::after {
+      top: 88px;
+      right: calc(50% + -660px);
+
+      z-index: $about-z-index - 1;
+      width: 630px;
+      height: 665px;
+
+      background-image: url("../../img/about-desktop@1x.png");
+
+      background-repeat: no-repeat;
+      background-size: 630px 665px;
+      background-position: 0 0;
+
+      // TODO: почему тут не загружается 2х?
+      @include retina {
+        background-image: url("../../img/about-desktop@2x.png");
+      }
+    }
   }
 }
 
 .about__wrapper {
   @media #{$tablet-width} {
-    padding-left: 89px;
+    padding-left: 75px;
     padding-right: 61px;
   }
 
   @media #{$desktop-width} {
-    padding-left: 117px;
+    padding-left: 130px;
   }
 }
 
@@ -31,7 +118,7 @@ $padding-left: 25px;
   color: $special-orange;
   padding-left: $padding-left;
 
-  margin-bottom: 22px;
+  margin-bottom: 19px;
 
   @media #{$tablet-width} {
     padding: 0;
@@ -39,7 +126,7 @@ $padding-left: 25px;
   }
 
   @media #{$desktop-width} {
-    margin-bottom: 62px;
+    margin-bottom: 58px;
   }
 }
 
@@ -49,31 +136,31 @@ $padding-left: 25px;
   padding-right: 34px;
   padding-left: $padding-left;
 
-  margin-bottom: 21px;
-
-  &:last-of-type {
-    margin-bottom: 0;
-
-    @media #{$tablet-width} {
-      margin-bottom: 53px;
-    }
-
-    @media #{$desktop-width} {
-      margin-bottom: 84px;
-    }
-  }
+  margin-bottom: 19px;
 
   @media #{$tablet-width} {
-    width: 304px;
+    width: 302px;
     padding: 0;
 
-    margin-bottom: 38px;
+    margin-bottom: 33px;
   }
 
   @media #{$desktop-width} {
     width: 619px;
 
-    margin-bottom: 42px;
+    margin-bottom: 38px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+
+    @media #{$tablet-width} {
+      margin-bottom: 50px;
+    }
+
+    @media #{$desktop-width} {
+      margin-bottom: 84px;
+    }
   }
 }
 
@@ -82,5 +169,7 @@ $padding-left: 25px;
 
   @media #{$tablet-width} {
     display: inline-flex;
+    width: 276px;
   }
 }
+

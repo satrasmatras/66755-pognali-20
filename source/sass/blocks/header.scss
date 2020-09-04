@@ -1,8 +1,12 @@
 .header {
   width: 100%;
   position: relative;
-  background-color: $basic-blue;
+  top: 0;
+
+  background-color: transparent;
   color: white;
+
+  z-index: 20;
 
   @media (min-width: 320px) {
     padding-top: 30px;
@@ -43,22 +47,28 @@
 
 .header__logo {
   order: -3;
+  width: 100px;
 
   @media #{$tablet-width} {
     width: 166px;
     height: 42px;
 
-    background-color: $basic-white;
+    background-color: rgba($basic-white, 0.3);
   }
 
   @media #{$desktop-width} {
     width: 200px;
     height: 52px;
 
-    background: $basic-white;
+    background-color: rgba($basic-white, 0.3);
 
     margin-right: 145px;
   }
+}
+
+.header__logo-image {
+  max-width: 100%;
+  width: 100px;
 }
 
 .header__wrapper {
@@ -135,13 +145,15 @@
   border: none;
 
   margin-left: auto;
+  margin-right: 3px;
   order: -2;
 
   @media #{$tablet-width} {
     width: 25px;
     height: 11px;
     margin-left: 165px;
-    margin-top: 19px;
+    margin-top: -4px;
+    margin-right: 0;
     order: -1;
   }
 

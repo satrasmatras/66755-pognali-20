@@ -1,15 +1,73 @@
 .promo {
-  padding-top: 15px;
+  position: relative;
+  padding-top: 97px;
+
+  z-index: $promo-z-index;
+
   background-color: $basic-blue;
   color: $basic-white;
 
   @media #{$tablet-width} {
-    padding-top: 0;
+    padding-top: 160px;
+
+    background-color: $basic-blue-promo;
   }
 
   @media #{$desktop-width} {
-    padding-top: 83px;
+    background-color: $basic-blue;
+    padding-top: 206px;
     padding-bottom: 121px;
+  }
+
+  background-image:
+    linear-gradient(to bottom, $basic-blue, $basic-blue),
+    url("../../img/traveller-illustration-mobile@1x.png"),
+    url("../../img/globe-back-mobile@1x.jpg");
+
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center 480px, calc(50% + 16px) 225px, calc(50% - 1px) 1px;
+  background-size: 100% 92px, 192px 255px, 320px 569px;
+
+  @include retina {
+    background-image:
+      linear-gradient(to bottom, $basic-blue, $basic-blue),
+      url("../../img/traveller-illustration-mobile@2x.png"),
+      url("../../img/globe-back-mobile@2x.jpg");
+  }
+
+  @media #{$tablet-width} {
+    background-image:
+      url("../../img/traveller-illustration-tablet@1x.png"),
+      url("../../img/globe-back-tablet@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: calc(50% + 86px) 402px, calc(50% - -1px) 381px;
+    background-size: 382px 457px, 1479px 612px;
+
+    // TODO: здесь цвет не совпадает (У цвета фона луны на картинке. Хотя взял пипеткой с луны. На планшете он более голубой. $basic-blue-promo цвет
+
+    // TODO: как сделать чтобы фон wrapper был виден снаружи в promo? так будет красивее)
+
+    @include retina {
+      background-image:
+        url("../../img/traveller-illustration-tablet@2x.png"),
+        url("../../img/globe-back-tablet@2x.jpg");
+    }
+  }
+
+
+  @media #{$desktop-width} {
+    background-image:
+      url("../../img/traveller-illustration-desktop@1x.png"),
+      url("../../img/globe-back-desktop@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: calc(50% + 99px) 107px, calc(50% - -1px) 0;
+    background-size: 431px 640px, cover;
+
+    @include retina {
+      background-image:
+        url("../../img/traveller-illustration-desktop@2x.png"),
+        url("../../img/globe-back-desktop@2x.jpg");
+    }
   }
 }
 
@@ -28,7 +86,7 @@
 
   text-align: center;
 
-  margin-bottom: 245px;
+  margin-bottom: 243px;
 
   padding-left: 7px;
   padding-right: 6px;
@@ -55,13 +113,13 @@
 }
 
 .promo__user-nav {
-  margin-bottom: 23px;
+  position: relative;
+  margin-bottom: 27px;
 
   @media #{$tablet-width} {
     display: none;
   }
 }
-
 
 .promo__blockquote {
   display: flex;
@@ -73,7 +131,7 @@
   padding-left: 25px;
 
   width: 185px;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 
   color: $basic-white;
 
@@ -81,7 +139,7 @@
     font-size: 28px;
     line-height: 33px;
 
-    margin-bottom: 211px;
+    margin-bottom: 210px;
 
     padding: 0;
     padding-left: 33px;
@@ -94,7 +152,7 @@
     margin-left: auto;
     width: 285px;
     padding-top: 10px;
-    margin-bottom: 120px;
+    margin-bottom: 116px;
   }
 }
 
@@ -154,7 +212,8 @@ $additional-height: 60px;
   padding-top: 22px;
   padding-left: 24px;
   padding-right: 21px;
-  padding-bottom: 23px + $additional-height;
+
+  padding-bottom: 22px + $additional-height;
 
   border-radius: 10px;
 
@@ -209,6 +268,24 @@ $additional-height: 60px;
     flex-grow: 1;
     flex-shrink: 0;
     width: 344px;
+
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: 20px;
+    }
+
+    &:nth-child(2) {
+      border-top-right-radius: 20px;
+    }
+
+    &:nth-last-child(2) {
+      border-bottom-left-radius: 20px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 20px;
+    }
   }
 
   @media #{$desktop-width} {
@@ -217,8 +294,8 @@ $additional-height: 60px;
     flex-direction: row;
 
     padding: 0;
-    padding-left: 34px;
-    padding-top: 26px;
+    padding-left: 30px;
+    padding-top: 28px;
     padding-bottom: 30px;
     padding-right: 30px;
 
@@ -244,6 +321,8 @@ $additional-height: 60px;
 
     &:not(:nth-child(4n)) {
       padding-right: $additional-width + 30px;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
     }
   }
 

@@ -36,6 +36,10 @@
     @media #{$tablet-width} {
       margin-bottom: 11px;
     }
+
+    @media #{$only-tablet-width} {
+      padding-right: 120px;
+    }
   }
 
   &--third {
@@ -299,7 +303,7 @@
   align-items: center;
 
   padding-top: 7px;
-  padding-bottom: 2px;
+  padding-bottom: 3px;
 
   border-radius: 20px;
 
@@ -338,6 +342,8 @@
 }
 
 .step__planning-countries {
+  margin-bottom: 25px;
+
   @media #{$tablet-width} {
     margin-bottom: 28px;
     border-top: 1px solid $fieldset-border;
@@ -348,4 +354,3 @@
     padding-top: 63px;
   }
 }
-
