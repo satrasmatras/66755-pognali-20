@@ -1,8 +1,12 @@
 .header {
   width: 100%;
   position: relative;
-  background-color: $basic-blue;
+  top: 0;
+
+  background-color: transparent;
   color: white;
+
+  z-index: 20;
 
   @media (min-width: 320px) {
     padding-top: 30px;
@@ -141,13 +145,15 @@
   border: none;
 
   margin-left: auto;
+  margin-right: 3px;
   order: -2;
 
   @media #{$tablet-width} {
     width: 25px;
     height: 11px;
     margin-left: 165px;
-    margin-top: 19px;
+    margin-top: -4px;
+    margin-right: 0;
     order: -1;
   }
 

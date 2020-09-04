@@ -24,6 +24,8 @@ $direction-padding-top: 11px;
   overflow: hidden;
 
   border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 
   @media #{$tablet-width} {
     width: 186px;
@@ -61,6 +63,11 @@ $direction-padding-top: 11px;
     left: auto;
     right: 150px;
     background-color: rgba(tomato, 0.3);
+  }
+
+  @media #{$desktop-width}
+  {
+    top: 24px;
   }
 }
 
@@ -134,8 +141,31 @@ $direction-padding-top: 11px;
   text-align: left;
 
   margin-left: auto;
+  padding-left: 19px;
 
   order: 2;
+
+  @media #{$only-phone-width} {
+    width: 61px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 1px;
+    top: 2px;
+    content: url("../../img/user.svg");
+    width: 11px;
+    height: 13px;
+    opacity: 0.15;
+
+    @media #{$desktop-width} {
+      left: 4px;
+      top: -2px;
+
+      width: 18px;
+      height: 20px;
+    }
+  }
 
   @media #{$tablet-width} {
     font-size: 20px;
@@ -148,16 +178,6 @@ $direction-padding-top: 11px;
     padding-left: 30px;
 
     order: 0;
-  }
-
-  &::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: url("../../img/user.svg");
-    width: 14px;
-    height: 14px;
-    color: rgba($basic-blue-light, 0.1);
   }
 }
 

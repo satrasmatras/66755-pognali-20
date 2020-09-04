@@ -3,43 +3,80 @@
 
   background-color: $basic-grey-light;
   color: $special-grey;
-  padding-top: 53px;
+
+  padding-top: 53px + $index-mobile-border-radius;
+  margin-top: -$index-mobile-border-radius;
+
+  border-bottom-left-radius: $index-mobile-border-radius;
+  border-bottom-right-radius: $index-mobile-border-radius;
+
+  padding-bottom: 17px;
+
+  z-index: $services-z-index;
 
   @media #{$tablet-width} {
-    padding-top: 74px;
-    padding-bottom: 63px;
+    padding-top: 74px + $index-tablet-border-radius;
+    margin-top: -$index-tablet-border-radius;
+    padding-bottom: 34px;
+
+    border-bottom-left-radius: $index-tablet-border-radius;
+    border-bottom-right-radius: $index-tablet-border-radius;
   }
 
   @media #{$desktop-width} {
-    padding-top: 107px;
-    padding-bottom: 165px;
+    padding-top: 107px + $index-tablet-border-radius;
+    padding-bottom: 136px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    width: 100px;
+    height: 100px;
+
+    z-index: 2;
+
+    background-image: url("../../img/rates@1x.png");
+
+    @include retina {
+      background-image: url("../../img/rates@2x.png");
+    }
+
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+
+    top: 67px;
+    left: calc(50% + 35px);
+
+    @media #{$tablet-width} {
+      bottom: 45px;
+      top: auto;
+      left: calc(50% + 199px);
+    }
+
+    @media #{$desktop-width} {
+      width: 198px;
+      height: 198px;
+      background-size: 198px 198px;
+
+      top: calc(50% - 58px);
+      bottom: auto;
+      left: calc(50% + 388px);
+    }
   }
 }
 
 .services__wrapper {
   padding-left: 50px;
 
-  background-image: url("../../img/rates@1x.png");
-  background-repeat: no-repeat;
-  background-size: 100px 100px;
-  background-position: calc(100% - 25px) -16px;
-
-  @include retina {
-    background-image: url("../../img/rates@2x.png");
-  }
-
   @media #{$tablet-width} {
     padding-left: 40px;
     padding-right: 75px;
-
-    background-position: calc(100% - 85px) bottom;
   }
 
   @media #{$desktop-width} {
     padding-left: 130px;
-
-    background-size: 198px 198px;
-    background-position: calc(100% - 133px) calc(50% + 31px);
   }
 }
 
@@ -56,7 +93,6 @@
 
   width: 125px;
 
-
   &--business {
     width: 100%;
     margin-bottom: 28px;
@@ -67,20 +103,23 @@
 
   @media #{$tablet-width} {
     margin-bottom: 74px;
+    padding-left: 39px;
     width: auto;
   }
 
   @media #{$desktop-width} {
     margin-bottom: 127px;
+    padding-left: 0;
+    padding-right: 51px;
   }
 }
 
 .services__tariffs {
-  margin-bottom: 40px;
+  margin-bottom: 21px;
 
   @media #{$tablet-width} {
     position: relative;
-    margin-bottom: 31px;
+    margin-bottom: 7px;
 
     &:not(.services__tariffs--business)::before {
       position: absolute;
@@ -92,22 +131,49 @@
       height: calc(100% + 81px);
       width: 200px;
 
-      z-index: 0;
+      z-index: -1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: linear-gradient(to right, rgba($services-border, 0) 0, $services-border, rgba($services-border, 0));
+      height: 1px;
+      width: 100%;
+      bottom: 0;
     }
   }
 
   @media #{$desktop-width} {
     padding-right: 0;
     margin-right: auto;
-    width: 880px;
+    margin-bottom: 4px;
+    width: 906px;
 
     &:not(.services__tariffs--business)::before {
-      right: -187px;
+      right: -161px;
       top: -35px;
-      height: calc(100% + 96px);
-      width: 446px;
+      height: calc(100% + 84px);
+      width: 447px;
       z-index: 0;
     }
+  }
+}
+
+.services__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background: linear-gradient(to right, rgba($services-border, 0) 0, $services-border, rgba($services-border, 0));
+    height: 1px;
+    width: 100%;
+    top: 1px;
+  }
+
+  @media #{$desktop-width} {
+    padding-top: 2px;
   }
 }
 
@@ -118,7 +184,8 @@
 
   text-align: center;
 
-  margin-bottom: 38px;
+  padding-left: 0;
+  padding-right: 0;
 
   @media #{$tablet-width} {
     width: 490px;
@@ -160,14 +227,16 @@
   }
 }
 
-.services__business {
-  //position: fixed;
-  //top: 0;
-  //right: 0;
-  //bottom: 0;
-  //left: 0;
-  //margin: auto;
+.services__button-svg {
+  @media #{$tablet-width} {
+    width: 20px;
+    height: 22px;
 
+    margin-top: -5px;
+  }
+}
+
+.services__business {
   display: none;
 
   &--opened {

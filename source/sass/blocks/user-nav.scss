@@ -93,12 +93,18 @@
 }
 
 .user-nav__link--promo {
-  padding: 12px;
+  padding: 11px;
 }
 
-.user-nav__link--promo.user-nav__item--auth {
+.user-nav__link--auth.user-nav__link--promo{
   padding-top: 13px;
   padding-bottom: 7px;
   font-size: 17px;
   line-height: 20px;
+
+  font-style: normal;
+  font-weight: bold;
+
+  text-align: center;
+  text-transform: uppercase;
 }

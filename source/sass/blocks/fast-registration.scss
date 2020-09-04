@@ -1,18 +1,31 @@
 .fast-registration {
+  position: relative;
+  z-index: $fast-registration-z-index;
+
   background-color: $basic-blue-light;
   color: $basic-white;
 
-  padding-top: 64px;
-  padding-bottom: 30px;
+  padding-top: 71px + $index-mobile-border-radius;
+  margin-top: -$index-mobile-border-radius;
+  padding-bottom: 28px;
+
+  border-bottom-right-radius: $index-mobile-border-radius;
+  border-bottom-left-radius: $index-mobile-border-radius;
 
   @media #{$tablet-width} {
-    padding-top: 57px;
-    padding-bottom: 60px;
+    padding-top: 76px + $index-tablet-border-radius;
+    padding-bottom: 59px;
+
+    margin-top: -$index-tablet-border-radius;
+
+
+    border-bottom-right-radius: $index-tablet-border-radius;
+    border-bottom-left-radius: $index-tablet-border-radius;
   }
 
   @media #{$desktop-width} {
-    padding-top: 55px;
-    padding-bottom: 90px;
+    padding-top: 109px + $index-tablet-border-radius;
+    padding-bottom: 100px;
   }
 }
 
@@ -60,6 +73,10 @@
     font-size: 28px;
     line-height: 32px;
     margin-bottom: 65px;
+
+    &--questions {
+      margin-bottom: 40px;
+    }
   }
 
   @media #{$desktop-width} {
@@ -68,6 +85,10 @@
     line-height: 31px;
 
     margin-bottom: 60px;
+
+    &--questions {
+      margin-bottom: 45px;
+    }
   }
 }
 
@@ -85,24 +106,32 @@
 }
 
 .fast-registration__form {
+  position: relative;
   display: flex;
   align-items: flex-start;
 
   margin-bottom: 30px;
 
+  @media #{$tablet-width} {
+    margin-bottom: 59px;
+  }
+
   @media #{$desktop-width} {
-    margin-bottom: 10px;
+    margin-bottom: 70px;
   }
 }
 
+$fast-registration-mobile-step: 5px;
+
 .fast-registration__input {
+  width: 100%;
   font: inherit;
 
   border-radius: 10px;
-  flex-grow: 1;
 
   padding: 20px 21px;
   padding-bottom: 17px;
+  padding-right: 21px + 5px;
 
   border: 4px solid transparent;
   color: rgba($special-grey, 0.3);
@@ -116,19 +145,13 @@
     padding-left: 32px;
     padding-bottom: 24px;
 
-    margin-bottom: 60px;
-
     font-size: 24px;
     line-height: 24px;
 
-    border-radius: 0;
-
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-radius: 20px;
   }
 
   @media #{$desktop-width} {
-    margin-bottom: 60px;
   }
 
   &:hover {
@@ -165,12 +188,14 @@
 }
 
 .fast-registration__button {
+  position: absolute;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 
   height: 60px;
-  width: 62px;
+  width: 60px;
 
   padding: 0;
 
@@ -186,14 +211,15 @@
 
   @media #{$desktop-width} {
     font-weight: bold;
-    min-width: 326px;
-    min-height: 82px;
+    height: 100%;
+    width: 324px;
     text-align: left;
     justify-content: space-between;
 
     padding-left: 37px;
     padding-right: 36px;
     padding-top: 7px;
+    padding-bottom: 6px;
   }
 }
 
