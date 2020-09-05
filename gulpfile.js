@@ -55,7 +55,7 @@ const images = () => {
 exports.images = images;
 
 const towebp = () => {
-  return gulp.src("source/img/**/*.{png, jpg}")
+  return gulp.src("source/img/**/*.{png, jpg, jpeg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"))
 }
@@ -126,7 +126,7 @@ const watcher = () => {
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff, woff2}",
-    "source/img/**/*.{png, jpg, jpeg, svg}",
+    // "source/img/**/*.{png, jpg, jpeg, svg}",
     "source/js/**",
     "source//*.ico",
   ], {
