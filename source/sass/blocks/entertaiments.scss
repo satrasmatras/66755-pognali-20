@@ -1,6 +1,8 @@
 // Entertaiments.scss
 
 .entertainments {
+  margin-bottom: 20px;
+
   @media #{$tablet-width} {
     padding-top: 36px;
     border-top: 1px solid $fieldset-border;
