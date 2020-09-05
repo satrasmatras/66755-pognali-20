@@ -43,10 +43,10 @@ exports.styles = styles;
 // Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg, png}")
+  return gulp.src("source/img/**/*.{jpg, png, jpeg}")
     .pipe(imagemin([
         imagemin.mozjpeg({quality: 75, progressive: true}),
-        imagemin.optipng({optimizationLevel: 3})
+        imagemin.optipng({optimizationLevel: 5}),
       ])
     )
     .pipe(gulp.dest("build/img"))
@@ -58,7 +58,9 @@ const towebp = () => {
   return gulp.src("source/img/**/*.{png, jpg, jpeg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"))
-}
+};
+
+// TODO: в билд не попадают вебпишки от jpg
 
 exports.towebp = towebp;
 
@@ -72,6 +74,7 @@ const prepareSvg = () => {
     .pipe(gulp.dest("build/img"))
 }
 
+// TODO: Некоторые свг даже с currentColor не меняют цвет
 
 const sprite = () => {
   return gulp.src("source/img/**/*.svg")
