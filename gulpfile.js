@@ -21,7 +21,8 @@ const svgmin = require('gulp-svgmin');
 const cheerio = require('gulp-cheerio');
 const replace = require('gulp-replace');
 
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
+
 
 const styles = () => {
   return gulp.src('source/sass/style.scss')
@@ -47,6 +48,7 @@ exports.html = html;
 
 const js = () => {
   return gulp.src('source/js/*.js')
+    .pipe(terser())
     .pipe(gulp.dest('build/js'))
 };
 exports.js = js;
@@ -117,7 +119,6 @@ const watcher = () => {
 
 const copy = () => {
   return gulp.src([
-    // 'source//*.html',
     'source/fonts/**/*.{woff, woff2}',
     'source/img/**/*.{png,jpg,jpeg,svg}',
     'source/img/**/*.webp',
