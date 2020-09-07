@@ -94,7 +94,7 @@
 
     &::after {
 
-      content: url("../../img/triangle-arrow-left.svg");
+      content: url("../../img/triangle-arrow-left-icon.svg");
     }
   }
 
@@ -103,7 +103,7 @@
     border-top-right-radius: 20px;
 
     &::after {
-      content: url("../../img/triangle-arrow-right.svg");
+      content: url("../../img/triangle-arrow-right-icon.svg");
     }
   }
 }

@@ -1,17 +1,19 @@
 $tooltip-triangle-height: 7px;
 
+
 .tooltip {
   position: relative;
 
   &::after {
     min-height: 100%;
     border-radius: 4px;
-    z-index: 9999;
+    z-index: $tooltip-z-index ;
   }
 
   &:hover::after {
-    bottom: -60px;
-    left: calc(-50% - 17px);
+    bottom: -69px;
+    left: 50%;
+    transform: translateX(-50%);
     position: absolute;
     display: block;
     content: attr(data-tooltip);
@@ -22,9 +24,35 @@ $tooltip-triangle-height: 7px;
 
     text-align: center;
 
+    white-space: nowrap;
+
     color: $basic-white;
     background-color: $tooltip-background;
 
     padding: 18px 20px;
+
+    z-index: $tooltip-z-index;
+  }
+
+  &::before {
+    display: none;
+    position: absolute;
+    content: "";
+
+    height: 0;
+    width: 0;
+
+    border-style: solid;
+    border-width: 0 6px 7px 6px;
+    border-color: transparent transparent $basic-blue transparent;
+  }
+
+  &:hover::before {
+    left: 50%;
+    bottom: -13px;
+
+    transform: translateX(-50%);
+    display: block;
+    z-index: 0;
   }
 }

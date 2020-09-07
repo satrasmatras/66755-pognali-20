@@ -12,6 +12,9 @@
 }
 
 .country__dropdown {
+  outline: none;
+  cursor: pointer;
+
   position: relative;
   width: 168px;
   font-family: inherit;
@@ -34,6 +37,10 @@
   padding-top: 12px;
 
   text-align: left;
+
+  &:hover {
+    border: 1px solid $number-hover;
+  }
 
   &::after {
     position: absolute;
@@ -75,6 +82,30 @@
     background-color: $basic-grey;
     border: 1px solid $basic-grey;
 
+    &::before {
+      background-size: 14px;
+      background-image: url("../img/show-more-plus-icon.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 9.4px;
+      z-index: 1;
+      opacity: 0.2;
+    }
+
+    &:hover {
+      background-color: $basic-change-photo;
+
+      &::before {
+        opacity: 0.3;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.1;
+      }
+    }
+
     &::after {
       background-color: $basic-grey;
     }
@@ -97,7 +128,7 @@
 
   &:not(.country__dropdown--add-new)::before {
     background-size: 12px 16px;
-    background-image: url("../../img/dropdown-form.svg");
+    background-image: url("../../img/dropdown-form-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 9.4px;
@@ -108,16 +139,6 @@
       background-size: 16px 10px;
       background-position: right 26px center;
     }
-  }
-
-  &--add-new::before {
-    background-size: 14px;
-    background-image: url("../../img/show-more-plus.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 9.4px;
-    z-index: 1;
-    opacity: 0.3;
   }
 
   &--activator {
@@ -218,7 +239,7 @@
     height: 9px;
     width: 9px;
 
-    background-image: url("../../img/close.svg");
+    background-image: url("../img/close-icon.svg");
     background-position: center;
     background-size: 9px;
     background-repeat: no-repeat;

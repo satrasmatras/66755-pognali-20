@@ -39,11 +39,6 @@ $large-button-size: 324px;
     background-color: $basic-yellow;
   }
 
-  &--transparent {
-    background-color: transparent;
-    text-transform: none;
-  }
-
   &--grey {
     background-color: $special-grey-light;
   }
@@ -66,6 +61,26 @@ $large-button-size: 324px;
 
     &:active {
       color: rgba($special-blue-light, 0.3);
+
+      .button__prepend-icon {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--primary-hover {
+    &:hover {
+      background-color: $special-yellow-dark;
+      color: rgba($basic-blue, 0.6);
+
+      .button__prepend-icon {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      background-color: $special-yellow-dark;
+      color: rgba($basic-blue, 0.3);
 
       .button__prepend-icon {
         opacity: 0.3;
@@ -101,8 +116,6 @@ $large-button-size: 324px;
     &:hover {
       background-color: $special-yellow-dark;
 
-      // В стайлгайде какой-то левый цвет показан пока указал нормальный!
-
       .button__prepend-icon {
         opacity: 0.6;
       }
@@ -114,6 +127,21 @@ $large-button-size: 324px;
       .button__prepend-icon {
         opacity: 0.3;
       }
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    text-transform: none;
+
+    &:hover {
+      background-color: transparent;
+      color: rgba($basic-blue, 0.6);
+    }
+
+    &:active {
+      background-color: transparent;
+      color: rgba($basic-blue, 0.3);
     }
   }
 }

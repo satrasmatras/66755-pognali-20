@@ -49,12 +49,31 @@
   .countries-filter__close {
     display: block;
   }
+
+  .countries-filter__toggle-open {
+    display: none;
+  }
+
+  .countries-filter__toggle-icon {
+    @media #{$tablet-width} {
+      width: 22px;
+      height: 24px;
+    }
+  }
+
+  .countries-filter__toggle-close {
+    display: block;
+
+    @media #{$tablet-width} {
+      width: 22px;
+      height: 24px;
+    }
+  }
 }
 
 .countries-filter__country-table {
   display: none;
 }
-
 
 .countries-filter__wrapper {
   display: flex;

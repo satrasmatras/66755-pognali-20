@@ -21,6 +21,13 @@
   }
 }
 
+.preview-card:hover {
+  .preview-card__avatar {
+    transition: transform $transition-duration-very-slow;
+    transform: scale(1.2);
+  }
+}
+
 .preview-card__avatar-wrapper {
   width: 270px;
   height: 270px;
@@ -128,6 +135,8 @@
 
   top: 16px;
   left: 17px;
+
+  z-index: 1;
 
   @media #{$tablet-width} {
     left: 22px;

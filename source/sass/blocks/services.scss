@@ -93,14 +93,6 @@
 
   width: 125px;
 
-  &--business {
-    width: 100%;
-    margin-bottom: 28px;
-
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
   @media #{$tablet-width} {
     margin-bottom: 74px;
     padding-left: 39px;
@@ -111,6 +103,20 @@
     margin-bottom: 127px;
     padding-left: 0;
     padding-right: 51px;
+  }
+
+  &--business {
+    width: 100%;
+    margin-bottom: 27px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @media #{$tablet-width} {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 36px;
+    }
   }
 }
 
@@ -198,13 +204,16 @@
     font-size: 20px;
     line-height: 20px;
 
-    &:hover {
-      color: rgba($show-tariffs-button, 0.6);
-    }
+  }
+
+  &:hover {
+    color: rgba($show-tariffs-button, 0.6);
+    background-color: transparent;
   }
 
   &:active {
     color: rgba($basic-blue, 0.3);
+    background-color: transparent;
   }
 }
 
@@ -261,6 +270,58 @@
   }
 }
 
+.services__modal {
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: calc(50% - 135px);
+
+  // TODO: не могу поднять модалку выше блока companions, даже при огромном z-index
+  z-index: 100;
+  width: 270px;
+
+  padding: 65px 0 0;
+  border-radius: 20px;
+
+  background-color: $basic-white;
+
+  box-shadow: 0 2px 8px rgba(29, 46, 91, 0.14);
+
+  @media #{$tablet-width} {
+    width: 688px;
+    left: calc(50% - 357px);
+
+    box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
+  }
+
+  @media #{$desktop-width} {
+    width: 750px;
+    box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
+    border-radius: 30px;
+
+    top: 169px;
+    left: calc(50% + -373px);
+    padding-top: 55px;
+  }
+
+  &--opened {
+    display: block;
+  }
+}
+
+.services__tariffs--business {
+  padding: 0 25px 34px;
+
+  @media #{$tablet-width} {
+    padding: 10px 93px 0 90px;
+    margin-bottom: 52px;
+  }
+
+  @media #{$desktop-width} {
+    padding: 8px 61px 0 60px;
+  }
+}
+
 .services__close {
   width: 100%;
   font-size: 16px;
@@ -276,7 +337,19 @@
   background-color: $special-grey-light;
 
   padding-top: 21px;
-  padding-bottom: 21px;
+  padding-bottom: 14px;
+
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  &:hover {
+    background-color: $close-modal-button-hover;
+  }
+
+  &:active {
+    background-color: $close-modal-button-hover;
+    color: rgba($close-modal-button-text-active, 0.3);
+  }
 
   @media #{$tablet-width} {
     text-transform: none;
@@ -285,13 +358,16 @@
     line-height: 24px;
 
     padding-top: 41px;
-    padding-bottom: 41px;
+    padding-bottom: 43px;
   }
 
   @media #{$desktop-width} {
     font-size: 24px;
     line-height: 26px;
 
-    padding-bottom: 45px;
+    padding-bottom: 42px;
+
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
   }
 }

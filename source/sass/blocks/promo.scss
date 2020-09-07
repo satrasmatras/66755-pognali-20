@@ -1,6 +1,6 @@
 .promo {
   position: relative;
-  padding-top: 97px;
+  padding-top: 17px;
 
   z-index: $promo-z-index;
 
@@ -8,15 +8,16 @@
   color: $basic-white;
 
   @media #{$tablet-width} {
-    padding-top: 160px;
+    padding-top: 27px;
 
     background-color: $basic-blue-promo;
   }
 
   @media #{$desktop-width} {
     background-color: $basic-blue;
-    padding-top: 206px;
+    padding-top: 76px + 30px;
     padding-bottom: 121px;
+    margin-top: -30px;
   }
 
   background-image:
@@ -25,7 +26,7 @@
     url("../../img/globe-back-mobile@1x.jpg");
 
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center 480px, calc(50% + 16px) 225px, calc(50% - 1px) 1px;
+  background-position: center 400px, calc(50% + 16px) 145px,calc(50% - 1px) -79px;
   background-size: 100% 92px, 192px 255px, 320px 569px;
 
   @include retina {
@@ -40,12 +41,8 @@
       url("../../img/traveller-illustration-tablet@1x.png"),
       url("../../img/globe-back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: calc(50% + 86px) 402px, calc(50% - -1px) 381px;
+    background-position: calc(50% + 86px) 266px, calc(50% - -1px) 243px;
     background-size: 382px 457px, 1479px 612px;
-
-    // TODO: здесь цвет не совпадает (У цвета фона луны на картинке. Хотя взял пипеткой с луны. На планшете он более голубой. $basic-blue-promo цвет
-
-    // TODO: как сделать чтобы фон wrapper был виден снаружи в promo? так будет красивее)
 
     @include retina {
       background-image:
@@ -54,14 +51,13 @@
     }
   }
 
-
   @media #{$desktop-width} {
     background-image:
       url("../../img/traveller-illustration-desktop@1x.png"),
       url("../../img/globe-back-desktop@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: calc(50% + 99px) 107px, calc(50% - -1px) 0;
-    background-size: 431px 640px, cover;
+    background-position: calc(50% + 99px) 12px, calc(50% - -1px) 0;
+    background-size: 431px 640px, 1800px 750px;
 
     @include retina {
       background-image:

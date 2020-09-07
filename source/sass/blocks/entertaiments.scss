@@ -24,7 +24,6 @@
   }
 
   &:not(:last-child)::before {
-    // TODO: у меня не отображается псевдо, а у тебя? :)
     position: absolute;
     content: "";
 

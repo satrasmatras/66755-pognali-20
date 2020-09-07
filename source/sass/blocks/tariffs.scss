@@ -31,10 +31,37 @@
 
   .tariffs__name {
     width: 300px;
+
+    @media #{$tablet-width} {
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+
+  .tariffs__value {
+    @media #{$tablet-width} {
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 28px;
+    }
   }
 
   .tariffs__item {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid rgba($basic-black, 0.05);
+    padding-bottom: 13px;
+
+    @media #{$tablet-width} {
+      font-size: 22px;
+      line-height: 28px;
+      padding-bottom: 12px;
+    }
+
+    &:first-child {
+      padding-top: 14px;
+      border-top: 1px solid rgba($basic-black, 0.05);
+    }
   }
 }
 

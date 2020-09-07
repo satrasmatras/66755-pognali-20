@@ -1,15 +1,11 @@
-.page__body--light {
-  background-color: $basic-grey;
+.page__body {
+  background-color: $basic-blue;
 }
 
 .page__main {
-  margin-top: -79px;
+  background-color: $basic-grey;
+}
 
-  @media #{$tablet-width} {
-    margin-top: -164px;
-  }
-
-  @media #{$desktop-width} {
-    margin-top: -128px;
-  }
+.page__body--light {
+  background-color: $basic-grey;
 }

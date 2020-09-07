@@ -19,22 +19,6 @@
 
   width: 100%;
 
-  overflow-x: hidden;
-  overflow-y: hidden;
-  white-space: nowrap;
-
-  &::before {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    content: linear-gradient(to left, $basic-white 80%, rgba($basic-white, 0));
-    width: 70px;
-    height: 100%;
-
-    z-index: 1;
-  }
-
   &::after {
     display: block;
     width: 12px;
@@ -70,6 +54,25 @@
   margin-bottom: 14px;
 }
 
+.entertainment__country-text {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: linear-gradient(to left, $basic-white 80%, rgba($basic-white, 0));
+    width: 70px;
+    height: 100%;
+
+    z-index: 1;
+  }
+}
+
 .entertainment__flag-wrapper {
   position: absolute;
   right: 0;
@@ -102,14 +105,23 @@
 }
 
 .entertainment__description {
+  // TODO: мог здесь напутать со стайлгайдом фокус и актив -_-
   padding: 25px;
   border: 1px solid $fieldset-border;
-  color: $special-grey;
+  color: rgba($special-grey, 0.3);
+
+  outline: none;
+
+  &:hover, &:focus {
+    border: 1px solid $number-hover;
+  }
+
+  &:active {
+    color: rgba($special-grey, 1);
+    border: 1px solid $basic-blue;
+  }
 
   @media #{$tablet-width} {
-    margin-right: 30px;
-    margin-left: 3px;
-
     font-size: 20px;
     line-height: 23px;
 
@@ -124,5 +136,57 @@
     padding-top: 22px;
     padding-left: 22px;
     padding-right: 10px;
+  }
+
+  &--error {
+    position: relative;
+    z-index: 0;
+    border: 1px solid $input-invalid-border;
+  }
+}
+
+.entertainment__description-wrapper {
+  position: relative;
+  width: 100%;
+
+  @media #{$tablet-width} {
+    margin-right: 30px;
+    margin-left: 3px;
+  }
+
+  &--error {
+    &::after {
+      font: inherit;
+      font-weight: normal;
+      font-size: inherit;
+      line-height: inherit;
+      position: absolute;
+      content: attr(data-error);
+      color: $input-invalid;
+      background-color: $input-invalid-background;
+
+      display: block;
+
+      height: 56px;
+      width: calc(100% - 4px);
+
+      left: 3px;
+      right: 0;
+      top: auto;
+      bottom: 9px;
+
+      z-index: 1;
+
+      padding: 20px 20px 16px;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @media #{$tablet-width} {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
   }
 }

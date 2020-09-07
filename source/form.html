@@ -7,42 +7,125 @@
   <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body class="page__body page__body--light">
-<header class="header header--with-body">
+<header class="header header--with-body header--no-js">
   <nav class="container header__container">
     <a class="header__logo logo" href="index.html">
-      <img class="logo__image logo-image--blue" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
-      <img class="logo__image logo-image--light" src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="100" height="19">
+      <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.webp 1x,
+                  img/logo-desktop-blue@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.webp 1x,
+                  img/logo-tablet-blue@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          srcset="img/logo-mobile-blue@1x.webp 1x,
+                  img/logo-mobile-blue@2x.webp 2x"
+        >
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.png 1x,
+                  img/logo-desktop-blue@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.png 1x,
+                  img/logo-tablet-blue@2x.png 2x"
+        >
+        <img
+          class="logo__image logo-image--blue"
+          src="img/logo-mobile-blue@1x.png"
+          srcset="img/logo-mobile-blue@2x.png"
+          alt="Логотип Погнали"
+        >
+      </picture>
+      <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-white@1x.webp 1x,
+                  img/logo-desktop-white@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-white@1x.webp 1x,
+                  img/logo-tablet-white@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          srcset="img/logo-mobile-white@1x.webp 1x,
+                  img/logo-mobile-white@2x.webp 2x"
+        >
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-white@1x.png 1x,
+                  img/logo-desktop-white@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-white@1x.png 1x,
+                  img/logo-tablet-white@2x.png 2x"
+        >
+        <img
+          class="logo__image logo-image--light"
+          src="img/logo-mobile-white@1x.png"
+          srcset="img/logo-mobile-white@2x.png"
+          alt="Логотип Погнали"
+        >
+      </picture>
     </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню">
-      <svg class="header__icon" aria-hidden="true" width="19" height="19">
-        <use class="header__icon-menu" href="img/sprite.svg#menu"></use>
-        <use class="header__icon-close" href="img/menu-close.svg#menu-close"></use>
+      <svg class="header__icon" aria-hidden="true" width="25" height="11">
+        <use class="header__icon-menu" href="img/sprite.svg#menu-icon"></use>
+        <use class="header__icon-close" href="img/sprite.svg#menu-close-icon"></use>
       </svg>
     </button>
     <ul class="header__list site-list list">
       <li class="site-list__item">
-        <a class="site-list__link" href="">О сервисе</a>
+        <a class="site-list__link" href="index.html">
+          <span class="site-list__text" data-text="О сервисе">
+            О сервисе
+          </span>
+        </a>
       </li>
       <li class="site-list__item">
-        <a class="site-list__link" href="form.html">Направления</a>
+        <a class="site-list__link">
+          <span class="site-list__text" data-text="Направления">
+            Направления
+          </span>
+        </a>
       </li>
       <li class="site-list__item">
-        <a class="site-list__link" href="catalog.html">Попутчики</a>
+        <a class="site-list__link" href="catalog.html">
+          <span class="site-list__text" data-text="Попутчики">
+            Попутчики
+          </span>
+        </a>
       </li>
     </ul>
     <ul class="header__user-nav user-nav user-nav--header list">
       <li class="user-nav__item user-nav__item--icon">
         <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel" aria-label="8 800 555-86-28">
           <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-$            <use href="img/sprite.svg#topmenu-phone"></use>
+            $
+            <use href="img/sprite.svg#topmenu-phone-icon"></use>
           </svg>
         </a>
       </li>
 
       <li class="user-nav__item user-nav__item--icon">
-        <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email" aria-label="mail@htmlacademy.ru">
+        <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email"
+           aria-label="mail@htmlacademy.ru">
           <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-$            <use href="img/sprite.svg#topmenu-mail"></use>
+            $
+            <use href="img/sprite.svg#topmenu-mail-icon"></use>
           </svg>
         </a>
       </li>
@@ -60,7 +143,7 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
         >
           <div class="contacts__icon-wrapper">
             <svg class="contacts__icon" width="13.5" height="14">
-              <use href="./img/sprite.svg#contacts-phone"></use>
+              <use href="./img/sprite.svg#contacts-phone-icon"></use>
             </svg>
           </div>
           8 800 555-86-28
@@ -74,7 +157,7 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
         >
           <div class="contacts__icon-wrapper">
             <svg class="contacts__icon" width="19" height="13">
-              <use href="./img/sprite.svg#contacts-mail"></use>
+              <use href="./img/sprite.svg#contacts-mail-icon"></use>
             </svg>
           </div>
           mail@htmlacademy.ru
@@ -84,34 +167,36 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
     <ul class="header__socials socials socials--white list">
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Facebook">
-          <svg class="socials__icon" width="11" height="21">
-            <use href="./img/sprite.svg#facebook"></use></svg>
+          <svg class="socials__icon socials__icon--facebook" width="11" height="21">
+            <use href="./img/sprite.svg#facebook-icon"></use></svg>
         </a>
       </li>
 
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="VK">
-          <svg class="socials__icon" width="23" height="12">
-            <use href="./img/sprite.svg#vk"></use>
+          <svg class="socials__icon socials__icon--vk" width="23" height="12">
+            <use href="./img/sprite.svg#vk-icon"></use>
           </svg>
         </a>
       </li>
 
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Instagram">
-          <svg class="socials__icon" width="18" height="18">
-            <use href="img/sprite.svg#instagram"></use>
+          <svg class="socials__icon socials__icon--instagram" width="18" height="18">
+            <use href="img/sprite.svg#instagram-icon"></use>
           </svg>
         </a>
       </li>
     </ul>
   </nav>
-  <div class="header__body container">
-    <h1 class="header__body-title title">Направления</h1>
-  </div>
 </header>
 
 <main class="page__main">
+  <div class="header-body">
+    <div class="header-body__wrapper container">
+      <h1 class="header-body__title title">Направления</h1>
+    </div>
+  </div>
   <section class="profile-form">
     <div class="container">
       <form class="profile-form__form profile" action="https://echo.htmlacademy.ru" method="POST">
@@ -140,14 +225,24 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
           </div>
         </div>
         <div class="profile__avatar-wrapper">
-          <img class="profile__avatar" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" alt="Аватар Петя Демин">
+          <picture>
+            <img
+              class="profile__avatar"
+              src="img/demin-desktop@1x.jpg"
+              srcset="img/demin-desktop@2x.jpg 2x"
+              alt="Аватар Петя Демин">
+          </picture>
         </div>
         <a class="button button--rounded profile__photo-change">
           <span class="profile__photo-change-hidden-text">Сменить</span><span>фото</span>
         </a>
         <div class="profile__fieldset profile__fieldset--tags fieldset fieldset--tags">
           <label class="profile__label fieldset__title" for="tags-field">Тэги</label>
-          <textarea class="profile__textarea textarea fieldset__content" name="tags" id="tags-field">#бургер #бар #футбол #концерт #крафт</textarea>
+          <textarea
+            class="profile__textarea textarea fieldset__content"
+            name="tags"
+            id="tags-field"
+          >#бургер #бар #футбол #концерт #крафт</textarea>
         </div>
         <fieldset class="profile__fieldset profile__fieldset--transport fieldset fieldset--transport">
           <legend class="fieldset__title">Транспорт</legend>
@@ -161,13 +256,13 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
                 aria-label="Авиаперелет"
               >
                 <svg class="checkboxes-transports__icon checkboxes-transports__icon--plane" width="14" height="16">
-                  <use href="img/sprite.svg#plane"></use>
+                  <use href="img/sprite.svg#plane-icon"></use>
                 </svg>
               </label>
             </li>
 
             <li class="checkboxes-transports__item">
-              <input class="checkboxes-transports__control sr-only" type="checkbox" name="bus" id="bus-field">
+              <input class="checkboxes-transports__control sr-only" type="checkbox" name="bus" id="bus-field" checked>
               <label
                 class="checkboxes-transports__label tooltip"
                 for="bus-field"
@@ -175,7 +270,8 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
                 aria-label="Автотранспорт"
               >
                 <svg class="checkboxes-transports__icon checkboxes-transports__icon--bus" width="13" height="16">
-                  <use href="img/sprite.svg#bus"></use></svg>
+                  <use href="img/sprite.svg#bus-icon"></use>
+                </svg>
               </label>
             </li>
 
@@ -188,13 +284,14 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
                 aria-label="Велосипед"
               >
                 <svg class="checkboxes-transports__icon checkboxes-transports__icon--bike" width="15" height="17">
-                  <use href="img/sprite.svg#bike"></use>
+                  <use href="img/sprite.svg#bike-icon"></use>
                 </svg>
               </label>
             </li>
 
             <li class="checkboxes-transports__item">
-              <input class="checkboxes-transports__control sr-only" type="checkbox" name="walking" id="walking-field">
+              <input class="checkboxes-transports__control sr-only" type="checkbox" name="walking" id="walking-field"
+                     checked>
               <label
                 class="checkboxes-transports__label tooltip"
                 for="walking-field"
@@ -202,7 +299,7 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
                 aria-label="Пешком"
               >
                 <svg class="checkboxes-transports__icon checkboxes-transports__icon--run" width="13" height="17">
-                  <use href="img/sprite.svg#run"></use>
+                  <use href="img/sprite.svg#run-icon"></use>
                 </svg>
               </label>
             </li>
@@ -268,7 +365,8 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
               </ul>
               <p class="step__description text">
                 Укажите предпочтительное количество попутчиков,
-                которых <br class="break break--desktop"> вы хотели бы позвать в поездку и ее предполагаемую длительность.
+                которых <br class="break break--desktop"> вы хотели бы позвать в поездку и ее предполагаемую
+                длительность.
               </p>
             </div>
             <div class="step__inputs">
@@ -278,20 +376,21 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
                 <div class="number__input-wrapper">
                   <button class="number__button number__icon--minus" type="button" aria-label="Понизить на 1">
                     <svg class="number__icon" width="14" height="14">
-                      <use href="img/sprite.svg#minus-mobile"></use>
+                      <use href="img/sprite.svg#qty-minus-mobile-icon"></use>
                     </svg>
                   </button>
-                  <input class="number__input" type="number" name="companions-count" id="companions-count-field" value="2">
+                  <input class="number__input" type="number" name="companions-count" id="companions-count-field"
+                         value="2">
                   <button class="number__button number__icon--plus" type="button" aria-label="Увеличить на 1">
                     <svg class="number__icon" width="14" height="14">
-                      <use href="img/sprite.svg#plus-mobile"></use>
+                      <use href="img/sprite.svg#qty-plus-mobile-icon"></use>
                     </svg>
                   </button>
                 </div>
               </div>
-              <div class="step__check step__check--children check check--bordered check--large">
+              <div class="step__check step__check--children check check--large">
                 <input class="check__control sr-only" type="checkbox" name="with-children" id="with-children-field">
-                <label class="check__label" for="with-children-field">Можно с детьми</label>
+                <label class="check__label check__label--form" for="with-children-field">Можно с детьми</label>
               </div>
               <div class="step__number-input step__number-input--duration number">
                 <label for="days-count-field" class="number__label">Длительность:</label>
@@ -299,13 +398,13 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
                 <div class="number__input-wrapper">
                   <button class="number__button number__icon--minus" type="button" aria-label="Понизить на 1">
                     <svg class="number__icon" width="14" height="14">
-                      <use href="img/sprite.svg#minus-mobile"></use>
+                      <use href="img/sprite.svg#qty-minus-mobile-icon"></use>
                     </svg>
                   </button>
                   <input class="number__input" type="number" name="days-count" id="days-count-field" value="2">
                   <button class="number__button number__icon--plus" type="button" aria-label="Увеличить на 1">
                     <svg class="number__icon" width="14" height="14">
-                      <use href="img/sprite.svg#plus-mobile"></use>
+                      <use href="img/sprite.svg#qty-plus-mobile-icon"></use>
                     </svg>
                   </button>
                 </div>
@@ -317,13 +416,13 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
               <div class="calendar__header">
                 <button class="calendar__button calendar__button--back" type="button" aria-label="На месяц назад">
                   <svg class="calendar__icon" width="9" height="18">
-                    <use href="img/sprite.svg#month-arrow-left"></use>
+                    <use href="img/sprite.svg#month-arrow-left-icon"></use>
                   </svg>
                 </button>
                 <p class="calendar__current-month title">Март 2019</p>
                 <button class="calendar__button calendar__button--next" type="button" aria-label="На месяц вперед">
                   <svg class="calendar__icon" width="9" height="18">
-                    <use href="img/sprite.svg#month-arrow-right"></use>
+                    <use href="img/sprite.svg#month-arrow-right-icon"></use>
                   </svg>
                 </button>
               </div>
@@ -359,7 +458,7 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
                   <td class="table__cell">26</td>
                   <td class="table__cell">27</td>
                   <td class="table__cell">28</td>
-                  <td class="table__cell">1</td>
+                  <td class="table__cell">1 <span class="table__cell-text">мар</span></td>
                 </tr>
 
                 <tr class="table__row">
@@ -396,16 +495,16 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
                   <td class="table__cell">23</td>
                   <td class="table__cell">24</td>
                   <td class="table__cell">25</td>
-                  <td class="table__cell table__cell--selected">26</td>
+                  <td class="table__cell table__cell--selected">26 <p class="table__cell-text table__cell-text--start text">Заезд</p></td>
                   <td class="table__cell table__cell--selected">27</td>
-                  <td class="table__cell table__cell--selected">28</td>
+                  <td class="table__cell table__cell--selected">28 <p class="table__cell-text table__cell-text--end text">Выезд</p></td>
                   <td class="table__cell table__cell--available">29</td>
                 </tr>
 
                 <tr class="table__row">
                   <td class="table__cell table__cell--available">30</td>
                   <td class="table__cell table__cell--available">31</td>
-                  <td class="table__cell table__cell--available">1</td>
+                  <td class="table__cell table__cell--available">1 <span class="table__cell-text">апр</span></td>
                   <td class="table__cell table__cell--available">2</td>
                   <td class="table__cell table__cell--available">3</td>
                   <td class="table__cell table__cell--available">4</td>
@@ -414,11 +513,11 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
               </table>
             </div>
             <div class="step__footer">
-              <a class="step__button button button--rounded button--primary" href="#step-2">
+              <a class="step__button button button--rounded button--primary button--primary-hover" href="#step-2">
                 Следующий шаг
                 <svg class="step__button-icon button__append-icon" width="13" height="13">
-                  <use href="img/sprite.svg#triangle-arrow-right"></use>
-</svg>
+                  <use href="img/sprite.svg#triangle-arrow-right-icon"></use>
+                </svg>
               </a>
             </div>
           </li>
@@ -441,7 +540,8 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
                 </li>
               </ul>
               <p class="step__description step__description--step-2 text">
-                Укажите страны, которые вы хотели посетить. <br class="break break--desktop">Это может быть одна или сразу несколько.
+                Укажите страны, которые вы хотели посетить. <br class="break break--desktop">Это может быть одна или
+                сразу несколько.
               </p>
             </div>
 
@@ -452,12 +552,10 @@ $            <use href="img/sprite.svg#topmenu-mail"></use>
                       Босния и Герцеговина
                     </span>
                 </button>
-                <div class="country__flag-wrapper">
+                <div class="country__flag-wrapper tooltip" data-tooltip="Босния и Герцеговина">
                   <img
-                    class="country__flag tooltip"
+                    class="country__flag"
                     src="img/flag-bosnia.svg"
-
-data-tooltip="Босния и Герцеговина"
                     alt="Флаг Боснии и Герцеговины"
                     width="26"
                     height="18"
@@ -468,11 +566,10 @@ data-tooltip="Босния и Герцеговина"
 
               <li class="planning-countries__item country">
                 <button class="country__dropdown country__dropdown--selected" type="button">Чехия</button>
-                <div class="country__flag-wrapper">
+                <div class="country__flag-wrapper tooltip" data-tooltip="Чехия">
                   <img
-                    class="country__flag tooltip"
+                    class="country__flag"
                     src="img/flag-czech.svg"
-data-tooltip="Чехия"
                     alt="Флаг Чехии"
                     width="26"
                     height="18"
@@ -488,7 +585,7 @@ data-tooltip="Чехия"
                     <button class="dropdown-country-table__toggle" type="button">
                       Выберите страну
                       <svg class="dropdown-country-table__toggle-icon" width="8" height="9">
-                        <use href="img/sprite.svg#close"></use>
+                        <use href="img/sprite.svg#close-icon"></use>
                       </svg>
                     </button>
                   </div>
@@ -581,13 +678,17 @@ data-tooltip="Чехия"
               </li>
             </ul>
             <div class="step__footer">
-              <a class="step__button button button--rounded button--primary" href="#step-3">
+              <a class="step__button button button--rounded button--primary button--primary-hover" href="#step-3">
                 Следующий шаг
                 <svg class="step__button-icon button__append-icon" width="13" height="13">
-                  <use href="img/sprite.svg#triangle-arrow-right"></use>
-</svg>
+                  <use href="img/sprite.svg#triangle-arrow-right-icon"></use>
+                </svg>
               </a>
-              <a class="step__button button button--rounded button--transparent" href="#step-1">На шаг назад</a>
+              <a class="step__button button button--rounded button--transparent" href="#step-1">
+                <svg class="step__button-prepend-icon button__prepend-icon" width="16" height="16">
+                  <use href="img/sprite.svg#triangle-arrow-left-icon"></use>
+                </svg>
+                На шаг назад</a>
             </div>
           </li>
 
@@ -615,61 +716,78 @@ data-tooltip="Чехия"
 
             <ul class="entertainments list">
               <li class="entertainments__item entertainment">
-                <label class="entertainment__country" for="entertainment-country-1-field">Босния и Герцеговина</label>
-                <div class="entertainment__flag-wrapper">
+                <label class="entertainment__country" for="entertainment-country-1-field">
+                  <span class="entertainment__country-text">Босния и Герцеговина</span>
+                </label>
+                <div class="entertainment__flag-wrapper tooltip" data-tooltip="Босния и Герцеговина">
                   <img
-                    class="entertainment__flag tooltip"
+                    class="entertainment__flag"
                     src="img/flag-bosnia.svg"
-
-data-tooltip="Босния и Герцеговина"
                     alt="Флаг Боснии и Герцеговины"
                     width="35"
                     height="24"
                   >
                 </div>
-                <textarea
-                  class="entertainment__description textarea"
-                  name="entertainment-country-1"
-                  id="entertainment-country-1-field"
-                  cols="30"
-                  rows="10"
-                  placeholder="План действий"
-                  aria-label="Описание развлечений в первой запланированной стране"
-                ></textarea>
+                <div
+                  class="entertainment__description-wrapper entertainment__description-wrapper--error"
+                  data-error="Это поле должно быть заполнено"
+                >
+                  <textarea
+                    class="entertainment__description entertainment__description--error textarea"
+                    name="entertainment-country-1"
+                    id="entertainment-country-1-field"
+                    cols="30"
+                    rows="10"
+                    placeholder="План действий"
+                    aria-label="Описание развлечений в первой запланированной стране"
+                  ></textarea>
+                </div>
               </li>
 
               <li class="entertainments__item entertainment">
-                <label class="entertainment__country" for="entertainment-country-2-field">Чехия</label>
-                <div class="entertainment__flag-wrapper">
+                <label class="entertainment__country" for="entertainment-country-2-field">
+                  <span class="entertainment__country-text">Чехия</span>
+                </label>
+                <div class="entertainment__flag-wrapper tooltip" data-tooltip="Чехия">
                   <img
-                    class="entertainment__flag tooltip"
+                    class="entertainment__flag"
                     src="img/flag-czech.svg"
-data-tooltip="Чехия"
                     alt="Флаг Чехии"
                     width="35"
                     height="24"
                   >
                 </div>
-                <textarea
-                  class="entertainment__description textarea"
-                  name="entertainment-country-2"
-                  id="entertainment-country-2-field"
-                  cols="30"
-                  rows="10"
-                  placeholder="План действий"
-                  aria-label="Описание развлечений во второй запланированной стране"
-                >Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-              </textarea>
+                <div
+                  class="entertainment__description-wrapper entertainment__description-wrapper--error"
+                  data-error="Это поле должно быть заполнено"
+                >
+                  <textarea
+                    class="entertainment__description textarea"
+                    name="entertainment-country-2"
+                    id="entertainment-country-2-field"
+                    cols="30"
+                    rows="10"
+                    placeholder="План действий"
+                    aria-label="Описание развлечений во второй запланированной стране"
+                  >Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                </textarea>
+                </div>
               </li>
             </ul>
             <div class="step__footer">
-              <button class="step__button button button--rounded button--primary" href="#step-3" type="submit">
+              <button class="step__button button button--rounded button--primary button--primary-hover" href="#step-3"
+                      type="submit">
                 Отправить
                 <svg class="step__button-icon button__append-icon" width="13" height="13">
-                  <use href="img/sprite.svg#triangle-arrow-right"></use>
-</svg>
+                  <use href="img/sprite.svg#triangle-arrow-right-icon"></use>
+                </svg>
               </button>
-              <a class="step__button button button--rounded button--transparent" href="#step-2">На шаг назад</a>
+              <a class="step__button button button--rounded button--primary button--transparent" href="#step-2">
+                <svg class="step__button-prepend-icon button__prepend-icon" width="16" height="16">
+                  <use href="img/sprite.svg#triangle-arrow-left-icon"></use>
+                </svg>
+                На шаг назад
+              </a>
             </div>
           </li>
         </ol>
@@ -681,28 +799,61 @@ data-tooltip="Чехия"
 <footer class="footer">
   <div class="footer__wrapper container">
     <a class="footer__logo logo" href="index.html">
-      <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
+      <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.webp 1x,
+                  img/logo-desktop-blue@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.webp 1x,
+                  img/logo-tablet-blue@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          srcset="img/logo-mobile-blue@1x.webp 1x,
+                  img/logo-mobile-blue@2x.webp 2x"
+        >
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.png 1x,
+                  img/logo-desktop-blue@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.png 1x,
+                  img/logo-tablet-blue@2x.png 2x"
+        >
+        <img
+          src="img/logo-mobile-blue@1x.png"
+          srcset="img/logo-mobile-blue@2x.png"
+          alt="Логотип Погнали"
+        >
+      </picture>
     </a>
     <ul class="footer__socials socials socials--yellow list">
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Facebook">
-          <svg class="socials__icon" width="11" height="21">
-            <use href="./img/sprite.svg#facebook"></use></svg>
+          <svg class="socials__icon socials__icon--facebook" width="11" height="21">
+            <use href="./img/sprite.svg#facebook-icon"></use></svg>
         </a>
       </li>
 
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="VK">
-          <svg class="socials__icon" width="23" height="12">
-            <use href="./img/sprite.svg#vk"></use>
+          <svg class="socials__icon socials__icon--vk" width="23" height="12">
+            <use href="./img/sprite.svg#vk-icon"></use>
           </svg>
         </a>
       </li>
 
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Instagram">
-          <svg class="socials__icon" width="18" height="18">
-            <use href="img/sprite.svg#instagram"></use>
+          <svg class="socials__icon socials__icon--instagram" width="18" height="18">
+            <use href="img/sprite.svg#instagram-icon"></use>
           </svg>
         </a>
       </li>
@@ -710,34 +861,14 @@ data-tooltip="Чехия"
     <div class="footer__copyright copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text text">Разработано</span>
-        <img class="copyright__logo" src="img/sprite.svg#htmlacademy" width="27" height="34" alt="HTML Academy">
+        <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
       </a>
     </div>
   </div>
 </footer>
-<script>
-    const header = document.querySelector('.header');
-    const headerLogo = document.querySelector('.header .logo');
-    const menuToggle = document.querySelector('.header__toggle');
-    menuToggle.addEventListener('click', () => {
-        headerLogo.classList.toggle('logo--light');
-        header.classList.toggle('header--white');
-        header.classList.toggle('header--opened');
-    })
-
-  const dropdownActivator = document.querySelector('.country__dropdown--activator');
-
-    const dropdownCountryTableHeaderToggle = document.querySelector('.dropdown-country-table__toggle');
-  const dropdownCountryTable = document.querySelector('.dropdown-country-table');
-
-    dropdownActivator.addEventListener('click', () => {
-        dropdownCountryTable.classList.toggle('dropdown-country-table--opened');
-    })
-
-  dropdownCountryTableHeaderToggle.addEventListener('click', () => {
-      dropdownCountryTable.classList.remove('dropdown-country-table--opened');
-  })
-
-</script>
+<script src="js/header.js"></script>
+<script src="js/dropdown-country.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/number.js"></script>
 </body>
 </html>

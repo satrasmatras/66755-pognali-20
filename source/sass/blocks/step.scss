@@ -328,6 +328,14 @@
   }
 }
 
+.step__button-prepend-icon {
+  display: none;
+
+  @media #{$tablet-width} {
+    display: flex;
+  }
+}
+
 .step__button-icon {
   display: none;
 

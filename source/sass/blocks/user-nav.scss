@@ -83,6 +83,15 @@
 
     font-size: 20px;
     line-height: 20px;
+
+    &:hover {
+      background-color: $button-primary-hover;
+    }
+
+    &:active {
+      background-color: $button-primary-hover;
+      color: rgba($basic-blue, 0.3);
+    }
   }
 
   &:active {
