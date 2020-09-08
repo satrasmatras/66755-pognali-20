@@ -8,6 +8,7 @@ $retina: "(min-resolution: 2dppx)";
 $index-tablet-border-radius: 60px;
 $index-mobile-border-radius: 30px;
 
+$header-scroll-z-index: 100;
 $promo-z-index: 11;
 $about-z-index: 10;
 $directions-z-index: 9;
@@ -16,3 +17,4 @@ $services-z-index: 7;
 $fast-registration-z-index: 6;
 $map-z-index: 5;
 $footer-z-index: 10;
+$tooltip-z-index: 50;

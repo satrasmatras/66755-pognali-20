@@ -4,14 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Погнали</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body class="page__body">
 
-<header class="header">
+<!-- TODO: при открытом хедере не скроллится ничего :C(C(C((C(C(C(C((C(C(-->
+<header class="header header--no-js header--index">
   <nav class="container header__container">
     <a class="header__logo logo">
       <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.webp 1x,
+                  img/logo-desktop-blue@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.webp 1x,
+                  img/logo-tablet-blue@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          srcset="img/logo-mobile-blue@1x.webp 1x,
+                  img/logo-mobile-blue@2x.webp 2x"
+        >
         <source
           media="(min-width: 1440px)"
           srcset="img/logo-desktop-blue@1x.png 1x,
@@ -27,11 +45,26 @@
           src="img/logo-mobile-blue@1x.png"
           srcset="img/logo-mobile-blue@2x.png"
           alt="Логотип Погнали"
-
         >
       </picture>
-
       <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-white@1x.webp 1x,
+                  img/logo-desktop-white@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-white@1x.webp 1x,
+                  img/logo-tablet-white@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          srcset="img/logo-mobile-white@1x.webp 1x,
+                  img/logo-mobile-white@2x.webp 2x"
+        >
         <source
           media="(min-width: 1440px)"
           srcset="img/logo-desktop-white@1x.png 1x,
@@ -41,7 +74,6 @@
           media="(min-width: 768px)"
           srcset="img/logo-tablet-white@1x.png 1x,
                   img/logo-tablet-white@2x.png 2x"
-
         >
         <img
           class="logo__image logo-image--light"
@@ -53,26 +85,38 @@
     </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню">
       <svg class="header__icon" aria-hidden="true" width="25" height="11">
-        <use class="header__icon-menu" href="img/menu.svg#menu"></use>
-        <use class="header__icon-close" href="img/menu-close.svg#menu-close"></use>
+        <use class="header__icon-menu" href="img/sprite.svg#menu-icon"></use>
+        <use class="header__icon-close" href="img/sprite.svg#menu-close-icon"></use>
       </svg>
     </button>
     <ul class="header__list site-list list">
       <li class="site-list__item">
-        <a class="site-list__link" href="">О сервисе</a>
+        <a class="site-list__link" href="">
+          <span class="site-list__text" data-text="О сервисе">
+            О сервисе
+          </span>
+        </a>
       </li>
       <li class="site-list__item">
-        <a class="site-list__link" href="form.html">Направления</a>
+        <a class="site-list__link" href="form.html">
+          <span class="site-list__text" data-text="Направления">
+            Направления
+          </span>
+        </a>
       </li>
       <li class="site-list__item">
-        <a class="site-list__link" href="catalog.html">Попутчики</a>
+        <a class="site-list__link" href="catalog.html">
+          <span class="site-list__text" data-text="Попутчики">
+            Попутчики
+          </span>
+        </a>
       </li>
     </ul>
     <ul class="header__user-nav user-nav user-nav--header list">
       <li class="user-nav__item user-nav__item--icon">
         <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel" aria-label="8 800 555-86-28">
           <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-            <use href="img/topmenu-phone.svg#topmenu-phone"></use>
+$            <use href="img/sprite.svg#topmenu-phone-icon"></use>
           </svg>
         </a>
       </li>
@@ -80,7 +124,7 @@
       <li class="user-nav__item user-nav__item--icon">
         <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email" aria-label="mail@htmlacademy.ru">
           <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-            <use href="img/topmenu-mail.svg#topmenu-mail"></use>
+$            <use href="img/sprite.svg#topmenu-mail-icon"></use>
           </svg>
         </a>
       </li>
@@ -98,7 +142,7 @@
         >
           <div class="contacts__icon-wrapper">
             <svg class="contacts__icon" width="13.5" height="14">
-              <use href="./img/contacts-phone.svg#contacts-phone"></use>
+              <use href="./img/sprite.svg#contacts-phone-icon"></use>
             </svg>
           </div>
           8 800 555-86-28
@@ -112,7 +156,7 @@
         >
           <div class="contacts__icon-wrapper">
             <svg class="contacts__icon" width="19" height="13">
-              <use href="./img/contacts-mail.svg#contacts-mail"></use>
+              <use href="./img/sprite.svg#contacts-mail-icon"></use>
             </svg>
           </div>
           mail@htmlacademy.ru
@@ -122,24 +166,23 @@
     <ul class="header__socials socials socials--white list">
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Facebook">
-          <svg class="socials__icon" width="11" height="21">
-            <use href="img/facebook.svg#facebook"></use>
-          </svg>
+          <svg class="socials__icon socials__icon--facebook" width="11" height="21">
+            <use href="./img/sprite.svg#facebook-icon"></use></svg>
         </a>
       </li>
 
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="VK">
-          <svg class="socials__icon" width="23" height="12">
-            <use href="img/vk.svg#vk"></use>
+          <svg class="socials__icon socials__icon--vk" width="23" height="12">
+            <use href="./img/sprite.svg#vk-icon"></use>
           </svg>
         </a>
       </li>
 
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Instagram">
-          <svg class="socials__icon" width="18" height="18">
-            <use href="img/instagram.svg#instagram"></use>
+          <svg class="socials__icon socials__icon--instagram" width="18" height="18">
+            <use href="img/sprite.svg#instagram-icon"></use>
           </svg>
         </a>
       </li>
@@ -147,7 +190,7 @@
   </nav>
 </header>
 
-<main class="page__main">
+<main class="page__main page__main--index">
   <h1 class="sr-only">Приложение Погнали для поиска попутчиков в путешествиях</h1>
 
   <section class="promo">
@@ -157,7 +200,7 @@
         <li class="user-nav__item user-nav__item--icon">
           <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel user-nav__link--promo" aria-label="8 800 555-86-28">
             <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-              <use href="img/topmenu-phone.svg#topmenu-phone"></use>
+  $            <use href="img/sprite.svg#topmenu-phone-icon"></use>
             </svg>
           </a>
         </li>
@@ -165,7 +208,7 @@
         <li class="user-nav__item user-nav__item--icon">
           <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email user-nav__link--promo" aria-label="mail@htmlacademy.ru">
             <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-              <use href="img/topmenu-mail.svg#topmenu-mail"></use>
+  $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
             </svg>
           </a>
         </li>
@@ -212,7 +255,7 @@
       >
         <span class="button__text">Подробнее</span>
         <svg class="button__append-icon" width="13" height="13">
-          <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+          <use href="img/sprite.svg#triangle-arrow-right-icon"></use>
         </svg>
       </a>
     </div>
@@ -231,11 +274,18 @@
         <li class="direction directions__item">
           <div class="direction__image-wrapper">
             <picture>
-              <source media="(min-width: 768px)"
-                      srcset="
-                      img/thailand-desktop@1x.jpg 1x,
-                      img/thailand-desktop@2x.jpg 2x
-                      "
+              <source
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset="img/thailand-desktop@1x.webp 1x, img/thailand-desktop@2x.webp 2x"
+              >
+              <source
+                type="image/webp"
+                srcset="img/thailand-mobile@1x.webp 1x, img/thailand-mobile@2x.webp 2x"
+              >
+              <source
+                media="(min-width: 768px)"
+                srcset="img/thailand-desktop@1x.jpg 1x,img/thailand-desktop@2x.jpg 2x"
               >
               <img
                 class="direction__image"
@@ -245,11 +295,10 @@
               >
             </picture>
           </div>
-          <div class="direction__flag-wrapper">
+          <div class="direction__flag-wrapper tooltip" data-tooltip="Тайланд">
             <img
               class="direction__flag tooltip"
               src="img/flag-thailand.svg"
-              data-tooltip="Тайланд"
               alt="Флаг Тайланда"
             >
           </div>
@@ -263,6 +312,19 @@
         <li class="direction directions__item">
           <div class="direction__image-wrapper">
             <picture>
+              <source
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset=
+                  "img/france-desktop@1x.webp 1x,
+                   img/france-desktop@2x.webp 2x">
+
+              <source
+                type="image/webp"
+                srcset=
+                  "img/france-mobile@1x.webp 1x,
+                  img/france-mobile@2x.webp 2x">
+
               <source media="(min-width: 768px)"
                       srcset="
                       img/france-desktop@1x.jpg 1x,
@@ -277,11 +339,10 @@
               >
             </picture>
           </div>
-          <div class="direction__flag-wrapper">
+          <div class="direction__flag-wrapper tooltip" data-tooltip="Франция">
             <img
               class="direction__flag tooltip"
               src="img/flag-france.svg"
-              data-tooltip="Франция"
               alt="Флаг Франции"
             >
           </div>
@@ -295,6 +356,19 @@
         <li class="direction directions__item">
           <div class="direction__image-wrapper">
             <picture>
+              <source
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset=
+                  "img/czech-desktop@1x.webp 1x,
+                  img/czech-desktop@2x.webp 2x">
+
+              <source
+                type="image/webp"
+                srcset=
+                  "img/czech-mobile@1x.webp 1x,
+                  img/czech-mobile@2x.webp 2x">
+
               <source media="(min-width: 768px)"
                       srcset="
                       img/czech-desktop@1x.jpg 1x,
@@ -309,11 +383,10 @@
               >
             </picture>
           </div>
-          <div class="direction__flag-wrapper">
+          <div class="direction__flag-wrapper tooltip" data-tooltip="Чехия">
             <img
               class="direction__flag tooltip"
               src="img/flag-czech.svg"
-              data-tooltip="Чехия"
               alt="Флаг Чехии"
             >
           </div>
@@ -326,10 +399,11 @@
       </ul>
       <a
         class="directions__show-all button button--normal-size button--primary button--yellow"
+        href="form.html"
       >
         Показать все
         <svg class="button__append-icon" width="13" height="13">
-          <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+          <use href="img/sprite.svg#triangle-arrow-right-icon"></use>
         </svg>
       </a>
     </div>
@@ -375,11 +449,11 @@
           </div>
           <ul class="preview-card__flags flags flags--row list">
             <li class="flags__item">
-              <div class="flags__image-wrapper">
+              <div class="flags__image-wrapper tooltip" data-tooltip="Шри-Ланка"
+              >
                 <img
-                  class="flags__image tooltip"
+                  class="flags__image"
                   src="img/flag-sri-lanka.svg"
-                  data-tooltip="Шри-Ланка"
                   alt="Флаг Шри-Ланки"
                   width="35"
                   height="25"
@@ -388,11 +462,10 @@
             </li>
 
             <li class="flags__item">
-              <div class="flags__image-wrapper">
+              <div class="flags__image-wrapper tooltip" data-tooltip="Тайланд">
                 <img
-                  class="flags__image tooltip"
+                  class="flags__image"
                   src="img/flag-thailand.svg"
-                  data-tooltip="Тайланд"
                   alt="Флаг Тайланда"
                   width="35"
                   height="25"
@@ -401,11 +474,10 @@
             </li>
 
             <li class="flags__item">
-              <div class="flags__image-wrapper">
+              <div class="flags__image-wrapper tooltip" data-tooltip="Сейшеллы">
                 <img
-                  class="flags__image tooltip"
+                  class="flags__image"
                   src="img/flag-seychelles.svg"
-                  data-tooltip="Сейшеллы"
                   alt="Флаг Сейшеллов"
                   width="35"
                   height="25"
@@ -435,18 +507,18 @@
               data-tooltip="Авиаперелет"
               aria-label="Авиаперелет"
             >
-              <svg class="transports__icon" width="18" height="19">
-                <use href="img/plane.svg#plane"></use>
+              <svg class="transports__icon transports__icon--plane" width="18" height="19">
+                <use href="img/sprite.svg#plane-icon"></use>
               </svg>
             </li>
 
             <li
-              class="transports__item tooltip"
+              class="transports__item transports__item--disabled tooltip"
               data-tooltip="Автотранспорт"
               aria-label="Автотранспорт"
             >
-              <svg class="transports__icon" width="17" height="19">
-                <use href="img/bus.svg#bus"></use>
+              <svg class="transports__icon transports__icon--bus" width="17" height="19">
+                <use href="img/sprite.svg#bus-icon"></use>
               </svg>
             </li>
 
@@ -455,18 +527,18 @@
               data-tooltip="Велосипед"
               aria-label="Велосипед"
             >
-              <svg class="transports__icon" width="21" height="18">
-                <use href="img/bike.svg#bike"></use>
+              <svg class="transports__icon transports__icon--bike" width="21" height="18">
+                <use href="img/sprite.svg#bike-icon"></use>
               </svg>
             </li>
 
             <li
-              class="transports__item tooltip"
+              class="transports__item transports__item--disabled tooltip"
               data-tooltip="Пешком"
               aria-label="Пешком"
             >
-              <svg class="transports__icon" width="16" height="19">
-                <use href="img/run.svg#run"></use>
+              <svg class="transports__icon transports__icon--run" width="16" height="19">
+                <use href="img/sprite.svg#run-icon"></use>
               </svg>
             </li>
           </ul>
@@ -501,11 +573,10 @@
           </div>
           <ul class="preview-card__flags flags flags--row list">
             <li class="flags__item">
-              <div class="flags__image-wrapper">
+              <div class="flags__image-wrapper tooltip" data-tooltip="Бельгия">
                 <img
                   class="flags__image tooltip"
                   src="img/flag-belgium.svg"
-                  data-tooltip="Бельгия"
                   alt="Флаг Бельгии"
                   width="35"
                   height="25"
@@ -513,11 +584,10 @@
               </div>
             </li>
             <li class="flags__item">
-              <div class="flags__image-wrapper">
+              <div class="flags__image-wrapper tooltip" data-tooltip="Чехия">
                 <img
                   class="flags__image tooltip"
                   src="img/flag-czech.svg"
-                  data-tooltip="Чехия"
                   alt="Флаг Чехии"
                   width="35"
                   height="25"
@@ -545,8 +615,8 @@
               data-tooltip="Авиаперелет"
               aria-label="Авиаперелет"
             >
-              <svg class="transports__icon" width="14" height="16">
-                <use href="img/plane.svg#plane"></use>
+              <svg class="transports__icon transports__icon--plane" width="14" height="16">
+                <use href="img/sprite.svg#plane-icon"></use>
               </svg>
             </li>
 
@@ -555,9 +625,8 @@
               data-tooltip="Автотранспорт"
               aria-label="Автотранспорт"
             >
-              <svg class="transports__icon" width="13" height="16">
-                <use href="img/bus.svg#bus"></use>
-              </svg>
+              <svg class="transports__icon transports__icon--bus" width="13" height="16">
+                <use href="img/sprite.svg#bus-icon"></use></svg>
             </li>
 
             <li
@@ -565,8 +634,8 @@
               data-tooltip="Велосипед"
               aria-label="Велосипед"
             >
-              <svg class="transports__icon" width="15" height="17">
-                <use href="img/bike.svg#bike"></use>
+              <svg class="transports__icon transports__icon--bike" width="15" height="17">
+                <use href="img/sprite.svg#bike-icon"></use>
               </svg>
             </li>
 
@@ -575,28 +644,28 @@
               data-tooltip="Пешком"
               aria-label="Пешком"
             >
-              <svg class="transports__icon" width="13" height="17">
-                <use href="img/run.svg#run"></use>
+              <svg class="transports__icon transports__icon--run" width="13" height="17">
+                <use href="img/sprite.svg#run-icon"></use>
               </svg>
             </li>
           </ul>
         </li>
       </ul>
       <a
-        href=""
         class="companions__show-all companions__show-all--top button button--normal-size button--primary button--yellow"
+        href="catalog.html"
       >
         Показать всех
         <svg class="button__append-icon" width="13" height="13">
-          <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
-        </svg>
+          <use href="img/sprite.svg#triangle-arrow-right-icon"></use>
+</svg>
       </a>
     </div>
   </section>
 
   <section class="services">
     <div class="services__wrapper container">
-      <h2 href="form.html" class="services__title title title--normal">Добавьте свой профиль</h2>
+      <h2 class="services__title title title--normal" href="form.html">Добавьте свой профиль</h2>
       <ol class="services__tariffs tariffs list">
         <li class="services__item tariffs__item">
           <span class="tariffs__name">Базовое размещение</span>
@@ -616,36 +685,37 @@
       <a class="services__show-tariffs button button--rounded button--primary button--transparent" href="">
         <span class="services__button-svg-wrapper">
           <svg class="services__button-svg" width="27" height="27">
-            <use сlass="services__button-icon" href="img/user.svg#user"></use>
+            <use сlass="services__button-icon" href="img/sprite.svg#business-icon"></use>
           </svg>
         </span>
         Показать тарифы для бизнеса
       </a>
-<!--      <div class="services__business">-->
-<!--        <h3 class="services__title services__title&#45;&#45;business title title&#45;&#45;normal">Бизнес-тарифы</h3>-->
-<!--        <ol class="services__tariffs services__tariffs&#45;&#45;business tariffs tariffs&#45;&#45;business tariffs&#45;&#45;no-counter list">-->
-<!--          <li class="tariffs__item">-->
-<!--            <span class="tariffs__name">Реклама у блоггера</span>-->
-<!--            <span class="tariffs__value">300 000 руб./пост</span>-->
-<!--          </li>-->
+      <!-- services__modal--opened  -->
+      <div class="services__modal">
+        <h3 class="services__title services__title--business title title--normal">Бизнес-тарифы</h3>
+        <ol class="services__tariffs--business tariffs tariffs--business tariffs--no-counter list">
+          <li class="tariffs__item">
+            <span class="tariffs__name">Реклама у блоггера</span>
+            <span class="tariffs__value">300 000 руб./пост</span>
+          </li>
 
-<!--          <li class="tariffs__item">-->
-<!--            <span class="tariffs__name">Накрутка подписчиков</span>-->
-<!--            <span class="tariffs__value">от 1 руб./шт.</span>-->
-<!--          </li>-->
+          <li class="tariffs__item">
+            <span class="tariffs__name">Накрутка подписчиков</span>
+            <span class="tariffs__value">от 1 руб./шт.</span>
+          </li>
 
-<!--          <li class="tariffs__item">-->
-<!--            <span class="tariffs__name">Лайки от ботов</span>-->
-<!--            <span class="tariffs__value">от 20 коп./лайк</span>-->
-<!--          </li>-->
+          <li class="tariffs__item">
+            <span class="tariffs__name">Лайки от ботов</span>
+            <span class="tariffs__value">от 20 коп./лайк</span>
+          </li>
 
-<!--          <li class="tariffs__item">-->
-<!--            <span class="tariffs__name">Ваш продакт-плейсмент</span>-->
-<!--            <span class="tariffs__value">Индивидуально</span>-->
-<!--          </li>-->
-<!--        </ol>-->
-<!--        <button class="services__close button button&#45;&#45;uppercase" type="button">Закрыть окно</button>-->
-<!--      </div>-->
+          <li class="tariffs__item">
+            <span class="tariffs__name">Ваш продакт-плейсмент</span>
+            <span class="tariffs__value">Индивидуально</span>
+          </li>
+        </ol>
+        <button class="services__close button button--uppercase" type="button">Закрыть окно</button>
+      </div>
     </div>
   </section>
 
@@ -663,7 +733,7 @@
         <button class="fast-registration__button button button--primary button--yellow" type="submit" aria-label="Отправить">
           <span class="fast-registration__button-text">Регистрация</span>
           <svg class="button__append-icon button__append-icon--center" width="13" height="13">
-            <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
+            <use href="img/sprite.svg#triangle-arrow-right-icon"></use>
           </svg>
         </button>
       </form>
@@ -676,7 +746,7 @@
           >
             <div class="contacts__icon-wrapper">
               <svg class="contacts__icon" width="13.5" height="14">
-                <use href="./img/contacts-phone.svg#contacts-phone"></use>
+                <use href="./img/sprite.svg#contacts-phone-icon"></use>
               </svg>
             </div>
             8 800 555-86-28
@@ -690,7 +760,7 @@
           >
             <div class="contacts__icon-wrapper">
               <svg class="contacts__icon" width="19" height="13">
-                <use href="./img/contacts-mail.svg#contacts-mail"></use>
+                <use href="./img/sprite.svg#contacts-mail-icon"></use>
               </svg>
             </div>
             mail@htmlacademy.ru
@@ -708,7 +778,7 @@
               <div class="contacts__link">
                 <div class="contacts__icon-wrapper">
                   <svg class="contacts__icon" width="21" height="21">
-                    <use href="./img/contacts-location.svg#contacts-location"></use>
+                    <use href="./img/sprite.svg#contacts-location-icon"></use>
                   </svg>
                 </div>
                 ул. Большая Конюшенная, 19/8
@@ -717,35 +787,17 @@
           </ul>
           <a
             class="map__make-path button button--primary button--normal-size button--bordered"
-            href=""
+            href="https://yandex.ru/maps/-/CCQxiYbVCC"
           >
             Проложить маршрут
             <svg class="button__append-icon" width="13" height="13">
-              <use href="img/triangle-arrow-right.svg#triangle-arrow-right"></use>
-            </svg>
+              <use href="img/sprite.svg#triangle-arrow-right-icon"></use>
+</svg>
           </a>
         </div>
       </div>
 
-    <div class="map__image-wrapper">
-        <picture>
-          <source
-            media="(min-width: 1440px)"
-            srcset="img/map-desktop@1x.jpg 1x,
-                  img/map-desktop@2x.jpg 2x"
-          >
-          <source
-            media="(min-width: 768px)"
-            srcset="img/map-tablet@1x.jpg 1x,
-                    img/map-tablet@2x.jpg 2x"
-          >
-          <img
-            class="map__image"
-            src="img/map-mobile@1x.jpg"
-            srcset="img/map-mobile@2x.jpg 2x"
-            alt="Карта. Ул. Большая Конюшенная, 19/8"
-          >
-        </picture>
+    <div class="map__image-wrapper" id="map">
       </div>
   </section>
 </main>
@@ -753,29 +805,61 @@
 <footer class="footer footer--index">
   <div class="footer__wrapper container">
     <a class="footer__logo logo">
-      <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
+      <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.webp 1x,
+                  img/logo-desktop-blue@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.webp 1x,
+                  img/logo-tablet-blue@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          srcset="img/logo-mobile-blue@1x.webp 1x,
+                  img/logo-mobile-blue@2x.webp 2x"
+        >
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.png 1x,
+                  img/logo-desktop-blue@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.png 1x,
+                  img/logo-tablet-blue@2x.png 2x"
+        >
+        <img
+          src="img/logo-mobile-blue@1x.png"
+          srcset="img/logo-mobile-blue@2x.png"
+          alt="Логотип Погнали"
+        >
+      </picture>
     </a>
     <ul class="footer__socials socials socials--yellow list">
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Facebook">
-          <svg class="socials__icon" width="11" height="21">
-            <use href="img/facebook.svg#facebook"></use>
-          </svg>
+          <svg class="socials__icon socials__icon--facebook" width="11" height="21">
+            <use href="./img/sprite.svg#facebook-icon"></use></svg>
         </a>
       </li>
 
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="VK">
-          <svg class="socials__icon" width="23" height="12">
-            <use href="img/vk.svg#vk"></use>
+          <svg class="socials__icon socials__icon--vk" width="23" height="12">
+            <use href="./img/sprite.svg#vk-icon"></use>
           </svg>
         </a>
       </li>
 
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Instagram">
-          <svg class="socials__icon" width="18" height="18">
-            <use href="img/instagram.svg#instagram"></use>
+          <svg class="socials__icon socials__icon--instagram" width="18" height="18">
+            <use href="img/sprite.svg#instagram-icon"></use>
           </svg>
         </a>
       </li>
@@ -788,17 +872,10 @@
     </div>
   </div>
 </footer>
-<script>
-  const header = document.querySelector('.header');
-  const headerLogo = document.querySelector('.header .logo');
-  const menuToggle = document.querySelector('.header__toggle');
-  menuToggle.addEventListener('click', () => {
-      headerLogo.classList.toggle('logo--light');
-      header.classList.toggle('header--white');
-      header.classList.toggle('header--opened');
-  });
-
-
-</script>
+<script src="js/header.js"></script>
+<script src="js/business.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e51197fb-1c4f-4f1c-a349-4f1e066455a1"
+        type="text/javascript"></script>
+<script src="js/map.js"></script>
 </body>
 </html>

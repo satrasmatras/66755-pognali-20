@@ -4,38 +4,118 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Погнали</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body class="page__body page__body--light">
 
-<header class="header header--with-body">
+<header class="header header--with-body header--no-js">
   <nav class="container header__container">
     <a class="header__logo logo" href="index.html">
-      <img class="logo__image logo-image--blue" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
-      <img class="logo__image logo-image--light" src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="100" height="19">
+      <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.webp 1x,
+                  img/logo-desktop-blue@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.webp 1x,
+                  img/logo-tablet-blue@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          srcset="img/logo-mobile-blue@1x.webp 1x,
+                  img/logo-mobile-blue@2x.webp 2x"
+        >
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.png 1x,
+                  img/logo-desktop-blue@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.png 1x,
+                  img/logo-tablet-blue@2x.png 2x"
+        >
+        <img
+          class="logo__image logo-image--blue"
+          src="img/logo-mobile-blue@1x.png"
+          srcset="img/logo-mobile-blue@2x.png"
+          alt="Логотип Погнали"
+        >
+      </picture>
+      <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-white@1x.webp 1x,
+                  img/logo-desktop-white@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-white@1x.webp 1x,
+                  img/logo-tablet-white@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          srcset="img/logo-mobile-white@1x.webp 1x,
+                  img/logo-mobile-white@2x.webp 2x"
+        >
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-white@1x.png 1x,
+                  img/logo-desktop-white@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-white@1x.png 1x,
+                  img/logo-tablet-white@2x.png 2x"
+        >
+        <img
+          class="logo__image logo-image--light"
+          src="img/logo-mobile-white@1x.png"
+          srcset="img/logo-mobile-white@2x.png"
+          alt="Логотип Погнали"
+        >
+      </picture>
     </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню">
-      <svg class="header__icon" aria-hidden="true" width="19" height="19">
-        <use class="header__icon-menu" href="img/menu.svg#menu"></use>
-        <use class="header__icon-close" href="img/menu-close.svg#menu-close"></use>
+      <svg class="header__icon" aria-hidden="true" width="25" height="11">
+        <use class="header__icon-menu" href="img/sprite.svg#menu-icon"></use>
+        <use class="header__icon-close" href="img/sprite.svg#menu-close-icon"></use>
       </svg>
     </button>
     <ul class="header__list site-list list">
       <li class="site-list__item">
-        <a class="site-list__link" href="">О сервисе</a>
+        <a class="site-list__link" href="">
+          <span class="site-list__text" data-text="О сервисе">
+            О сервисе
+          </span>
+        </a>
       </li>
       <li class="site-list__item">
-        <a class="site-list__link" href="form.html">Направления</a>
+        <a class="site-list__link" href="form.html">
+          <span class="site-list__text" data-text="Направления">
+            Направления
+          </span>
+        </a>
       </li>
       <li class="site-list__item">
-        <a class="site-list__link" href="catalog.html">Попутчики</a>
+        <a class="site-list__link" href="catalog.html">
+          <span class="site-list__text" data-text="Попутчики">
+            Попутчики
+          </span>
+        </a>
       </li>
     </ul>
     <ul class="header__user-nav user-nav user-nav--header list">
       <li class="user-nav__item user-nav__item--icon">
         <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel" aria-label="8 800 555-86-28">
           <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-            <use href="img/topmenu-phone.svg#topmenu-phone"></use>
+            <use href="img/sprite.svg#topmenu-phone-icon"></use>
           </svg>
         </a>
       </li>
@@ -43,7 +123,7 @@
       <li class="user-nav__item user-nav__item--icon">
         <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email" aria-label="mail@htmlacademy.ru">
           <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-            <use href="img/topmenu-mail.svg#topmenu-mail"></use>
+            $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
           </svg>
         </a>
       </li>
@@ -61,7 +141,7 @@
         >
           <div class="contacts__icon-wrapper">
             <svg class="contacts__icon" width="13.5" height="14">
-              <use href="./img/contacts-phone.svg#contacts-phone"></use>
+              <use href="./img/sprite.svg#contacts-phone-icon"></use>
             </svg>
           </div>
           8 800 555-86-28
@@ -75,7 +155,7 @@
         >
           <div class="contacts__icon-wrapper">
             <svg class="contacts__icon" width="19" height="13">
-              <use href="./img/contacts-mail.svg#contacts-mail"></use>
+              <use href="./img/sprite.svg#contacts-mail-icon"></use>
             </svg>
           </div>
           mail@htmlacademy.ru
@@ -85,41 +165,42 @@
     <ul class="header__socials socials socials--white list">
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Facebook">
-          <svg class="socials__icon" width="11" height="21">
-            <use href="img/facebook.svg#facebook"></use>
-          </svg>
+          <svg class="socials__icon socials__icon--facebook" width="11" height="21">
+            <use href="./img/sprite.svg#facebook-icon"></use></svg>
         </a>
       </li>
 
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="VK">
-          <svg class="socials__icon" width="23" height="12">
-            <use href="img/vk.svg#vk"></use>
+          <svg class="socials__icon socials__icon--vk" width="23" height="12">
+            <use href="./img/sprite.svg#vk-icon"></use>
           </svg>
         </a>
       </li>
 
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Instagram">
-          <svg class="socials__icon" width="18" height="18">
-            <use href="img/instagram.svg#instagram"></use>
+          <svg class="socials__icon socials__icon--instagram" width="18" height="18">
+            <use href="img/sprite.svg#instagram-icon"></use>
           </svg>
         </a>
       </li>
     </ul>
   </nav>
-  <div class="header__body container">
-    <h1 class="header__body-title title">Попутчики</h1>
-    <a class="header__aside-link" href="index.html">
-      На главную
-      <svg class="header__aside-icon" width="32" height="16">
-        <use href="img/return.svg#return" width="32" height="16"></use>
-      </svg>
-    </a>
-  </div>
 </header>
 
 <main class="page__main">
+  <div class="header-body">
+    <div class="header-body__wrapper container">
+      <h1 class="header-body__title title">Попутчики</h1>
+      <a class="header-body__aside-link" href="index.html">
+        На главную
+        <svg class="header-body__aside-icon" width="32" height="16">
+          <use href="img/sprite.svg#return-icon" width="32" height="16"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
   <section class="countries-filter">
     <div class="countries-filter__wrapper container">
       <svg class="countries-filter__filter-icon" width="15" height="10">
@@ -128,10 +209,9 @@
       <h2 class="countries-filter__title title">Фильтрация по странам:</h2>
       <button class="countries-filter__toggle button" type="button">
         <span class="countries-filter__toggle-text">Показать все</span>
-<!--        <span class="countries-filter__toggle-text">Свернуть</span>-->
         <svg class="countries-filter__toggle-icon" width="16" height="16">
-          <use class="countries-filter__toggle-open" href="img/dots.svg#dots"></use>
-          <use class="countries-filter__toggle-close" href="img/filter-close.svg#filter-close"></use>
+          <use class="countries-filter__toggle-open" href="img/sprite.svg#dots-icon"></use>
+          <use class="countries-filter__toggle-close" href="img/sprite.svg#filter-close-icon"></use>
         </svg>
       </button>
       <ul class="countries-filter__countries list">
@@ -967,7 +1047,7 @@
           type="button"
         >
           <svg class="button__prepend-icon countries-filter__close-icon" width="12" height="12">
-            <use href="img/filter-close.svg#filter-close"></use>
+            <use href="img/sprite.svg#filter-close-icon"></use>
           </svg>
           Свернуть
         </button>
@@ -985,7 +1065,7 @@
               <div class="expander__header">
                 <h3 class="expander__title title">Хобби</h3>
                 <svg class="expander__icon" width="10" height="6">
-                  <use href="img/dropdown.svg#dropdown"></use>
+                  <use href="img/sprite.svg#dropdown-icon"></use>
                 </svg>
               </div>
               <div class="expander__content">
@@ -1018,7 +1098,7 @@
               <div class="expander__header">
                 <h3 class="expander__title title">Музыка</h3>
                 <svg class="expander__icon" width="10" height="6">
-                  <use href="img/dropdown.svg#dropdown"></use>
+                  <use href="img/sprite.svg#dropdown-icon"></use>
                 </svg>
               </div>
               <div class="expander__content">
@@ -1051,7 +1131,7 @@
               <div class="expander__header">
                 <h3 class="expander__title title">Еда</h3>
                 <svg class="expander__icon" width="10" height="6">
-                  <use href="img/dropdown.svg#dropdown"></use>
+                  <use href="img/sprite.svg#dropdown-icon"></use>
                 </svg>
               </div>
               <div class="expander__content">
@@ -1084,7 +1164,7 @@
               <div class="expander__header">
                 <h3 class="expander__title title">Транспорт</h3>
                 <svg class="expander__icon" width="10" height="6">
-                  <use href="img/dropdown.svg#dropdown"></use>
+                  <use href="img/sprite.svg#dropdown-icon"></use>
                 </svg>
               </div>
               <div class="expander__content expander__content--transport">
@@ -1098,7 +1178,7 @@
                       aria-label="Авиаперелет"
                     >
                       <svg class="checkboxes-transports__icon checkboxes-transports__icon--plane" width="14" height="16">
-                        <use href="img/plane.svg#plane"></use>
+                        <use href="img/sprite.svg#plane-icon"></use>
                       </svg>
                     </label>
                   </li>
@@ -1112,8 +1192,7 @@
                       aria-label="Автотранспорт"
                     >
                       <svg class="checkboxes-transports__icon checkboxes-transports__icon--bus" width="13" height="16">
-                        <use href="img/bus.svg#bus"></use>
-                      </svg>
+                        <use href="img/sprite.svg#bus-icon"></use></svg>
                     </label>
                   </li>
 
@@ -1126,7 +1205,7 @@
                       aria-label="Велосипед"
                     >
                       <svg class="checkboxes-transports__icon checkboxes-transports__icon--bike" width="15" height="17">
-                        <use href="img/bike.svg#bike"></use>
+                        <use href="img/sprite.svg#bike-icon"></use>
                       </svg>
                     </label>
                   </li>
@@ -1140,7 +1219,7 @@
                       aria-label="Пешком"
                     >
                       <svg class="checkboxes-transports__icon checkboxes-transports__icon--run" width="13" height="17">
-                        <use href="img/run.svg#run"></use>
+                        <use href="img/sprite.svg#run-icon"></use>
                       </svg>
                     </label>
                   </li>
@@ -1152,7 +1231,7 @@
               <div class="expander__header">
                 <h3 class="expander__title title">Левел</h3>
                 <svg class="expander__icon" width="10" height="6">
-                  <use href="img/dropdown.svg#dropdown"></use>
+                  <use href="img/sprite.svg#dropdown-icon"></use>
                 </svg>
               </div>
               <div class="expander__content">
@@ -1212,8 +1291,28 @@
           <li class="users__list-item card">
             <div class="card__avatar-wrapper">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                <source
+                  type="image/webp"
+                  media="(min-width: 1440px)"
+                  srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x"
+                >
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x"
+                >
+                <source
+                  type="image/webp"
+                  srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x"
+                >
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x"
+                >
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x"
+                >
                 <img class="card__avatar" src="img/firsova-mobile@1x.jpg" alt="Аватар Таня Фирсова" srcset="img/firsova-mobile@2x.jpg">
               </picture>
             </div>
@@ -1223,8 +1322,8 @@
             <div class="card__likes-wrapper">
               <button class="card__like card__like--checked" type="button" aria-label="Поставить лайк">
                 <svg class="card__like-svg" width="12" height="12">
-                  <use class="card__like-icon--no-checked" href="img/heart.svg#heart"></use>
-                  <use class="card__like-icon--checked" href="img/heart-active.svg#heart-active"></use>
+                  <use class="card__like-icon--no-checked" href="img/sprite.svg#heart-icon"></use>
+                  <use class="card__like-icon--checked" href="img/sprite.svg#heart-active-icon"></use>
                 </svg>
               </button>
               <span class="card__likes-count">1,5 м</span>
@@ -1250,7 +1349,8 @@
                     <img
                       class="card__flag-image flag__image tooltip"
                       src="img/flag-sri-lanka.svg"
-                      data-tooltip="Шри-Ланка" alt="Флаг Шри-Ланки"
+                      data-tooltip="Шри-Ланка"
+                      alt="Флаг Шри-Ланки"
                       width="26"
                       height="18"
                     >
@@ -1276,7 +1376,7 @@
                   <div class="card__image-wrapper flag__image-wrapper">
                     <img
                       class="card__flag-image flag__image tooltip"
-                      src="img/flag-seychelles.svg"
+                      src="img/flag-seychelles.svg#"
                       data-tooltip="Сейшелы"
                       alt="Флаг Сейшелов"
                       width="26"
@@ -1296,7 +1396,7 @@
                   aria-label="Авиаперелет"
                 >
                   <svg class="transports__icon transports__icon--plane" width="14" height="16">
-                    <use href="img/plane.svg#plane"></use>
+                    <use href="img/sprite.svg#plane-icon"></use>
                   </svg>
                 </li>
 
@@ -1306,8 +1406,7 @@
                   aria-label="Автотранспорт"
                 >
                   <svg class="transports__icon transports__icon--bus" width="13" height="16">
-                    <use href="img/bus.svg#bus"></use>
-                  </svg>
+                    <use href="img/sprite.svg#bus-icon"></use></svg>
                 </li>
 
                 <li
@@ -1316,7 +1415,7 @@
                   aria-label="Велосипед"
                 >
                   <svg class="transports__icon transports__icon--bike" width="15" height="17">
-                    <use href="img/bike.svg#bike"></use>
+                    <use href="img/sprite.svg#bike-icon"></use>
                   </svg>
                 </li>
 
@@ -1326,7 +1425,7 @@
                   aria-label="Пешком"
                 >
                   <svg class="transports__icon transports__icon--run" width="13" height="17">
-                    <use href="img/run.svg#run"></use>
+                    <use href="img/sprite.svg#run-icon"></use>
                   </svg>
                 </li>
               </ul>
@@ -1360,6 +1459,23 @@
           <li class="users__list-item card">
             <div class="card__avatar-wrapper">
               <picture>
+                <source
+                  type="image/webp"
+                  media="(min-width: 1440px)"
+                  srcset="img/demin-desktop@1x.webp 1x,
+                          img/demin-desktop@2x.webp 2x"
+                >
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/demin-tablet@1x.webp 1x,
+                          img/demin-tablet@2x.webp 2x"
+                >
+                <source
+                  type="image/webp"
+                  srcset="img/demin-mobile@1x.webp 1x,
+                          img/demin-mobile@2x.webp 2x"
+                >
                 <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
                 <img class="card__avatar" src="img/demin-mobile@1x.jpg" alt="Аватар Петя Демин" srcset="img/demin-mobile@2x.jpg">
@@ -1371,8 +1487,8 @@
             <div class="card__likes-wrapper">
               <button class="card__like" type="button" aria-label="Поставить лайк">
                 <svg class="card__like-svg" width="12" height="12">
-                  <use class="card__like-icon--no-checked" href="img/heart.svg#heart"></use>
-                  <use class="card__like-icon--checked" href="img/heart-active.svg#heart-active"></use>
+                  <use class="card__like-icon--no-checked" href="img/sprite.svg#heart-icon"></use>
+                  <use class="card__like-icon--checked" href="img/sprite.svg#heart-active-icon"></use>
                 </svg>
               </button>
               <span class="card__likes-count">1,5 м</span>
@@ -1409,8 +1525,7 @@
                   <div class="card__image-wrapper flag__image-wrapper">
                     <img
                       class="card__flag-image flag__image tooltip"
-                      src="img/flag-czech.svg"
-                      data-tooltip="Чехия"
+                      src="img/flag-czech.svg"data-tooltip="Чехия"
                       alt="Флаг Чехии"
                       width="26"
                       height="18"
@@ -1429,7 +1544,7 @@
                   aria-label="Авиаперелет"
                 >
                   <svg class="transports__icon transports__icon--plane" width="14" height="16">
-                    <use href="img/plane.svg#plane"></use>
+                    <use href="img/sprite.svg#plane-icon"></use>
                   </svg>
                 </li>
 
@@ -1439,8 +1554,7 @@
                   aria-label="Автотранспорт"
                 >
                   <svg class="transports__icon transports__icon--bus" width="13" height="16">
-                    <use href="img/bus.svg#bus"></use>
-                  </svg>
+                    <use href="img/sprite.svg#bus-icon"></use></svg>
                 </li>
 
                 <li
@@ -1449,7 +1563,7 @@
                   aria-label="Велосипед"
                 >
                   <svg class="transports__icon transports__icon--bike" width="15" height="17">
-                    <use href="img/bike.svg#bike"></use>
+                    <use href="img/sprite.svg#bike-icon"></use>
                   </svg>
                 </li>
 
@@ -1459,7 +1573,7 @@
                   aria-label="Пешком"
                 >
                   <svg class="transports__icon transports__icon--run" width="13" height="17">
-                    <use href="img/run.svg#run"></use>
+                    <use href="img/sprite.svg#run-icon"></use>
                   </svg>
                 </li>
               </ul>
@@ -1493,6 +1607,23 @@
           <li class="users__list-item card">
             <div class="card__avatar-wrapper">
               <picture>
+                <source
+                  type="image/webp"
+                  media="(min-width: 1440px)"
+                  srcset="img/smolov-desktop@1x.webp 1x,
+                          img/smolov-desktop@2x.webp 2x"
+                >
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/smolov-tablet@1x.webp 1x,
+                          img/smolov-tablet@2x.webp 2x"
+                >
+                <source
+                  type="image/webp"
+                  srcset="img/smolov-mobile@1x.webp 1x,
+                          img/smolov-mobile@2x.webp 2x"
+                >
                 <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
                 <img class="card__avatar" src="img/smolov-mobile@1x.jpg" alt="Аватар Марк Смолов" srcset="img/smolov-mobile@2x.jpg">
@@ -1504,8 +1635,8 @@
             <div class="card__likes-wrapper">
               <button class="card__like" type="button" aria-label="Поставить лайк">
                 <svg class="card__like-svg" width="12" height="12">
-                  <use class="card__like-icon--no-checked" href="img/heart.svg#heart"></use>
-                  <use class="card__like-icon--checked" href="img/heart-active.svg#heart-active"></use>
+                  <use class="card__like-icon--no-checked" href="img/sprite.svg#heart-icon"></use>
+                  <use class="card__like-icon--checked" href="img/sprite.svg#heart-active-icon"></use>
                 </svg>
               </button>
               <span class="card__likes-count">1,5 м</span>
@@ -1577,7 +1708,7 @@
                   aria-label="Авиаперелет"
                 >
                   <svg class="transports__icon transports__icon--plane" width="12" height="12">
-                    <use href="img/plane.svg#plane"></use>
+                    <use href="img/sprite.svg#plane-icon"></use>
                   </svg>
                 </li>
 
@@ -1587,8 +1718,7 @@
                   aria-label="Автотранспорт"
                 >
                   <svg class="transports__icon transports__icon--bus" width="13" height="16">
-                    <use href="img/bus.svg#bus"></use>
-                  </svg>
+                    <use href="img/sprite.svg#bus-icon"></use></svg>
                 </li>
 
                 <li
@@ -1597,7 +1727,7 @@
                   aria-label="Велосипед"
                 >
                   <svg class="transports__icon transports__icon--bike" width="15" height="17">
-                    <use href="img/bike.svg#bike"></use>
+                    <use href="img/sprite.svg#bike-icon"></use>
                   </svg>
                 </li>
 
@@ -1607,7 +1737,7 @@
                   aria-label="Пешком"
                 >
                   <svg class="transports__icon transports__icon--run" width="13" height="17">
-                    <use href="img/run.svg#run"></use>
+                    <use href="img/sprite.svg#run-icon"></use>
                   </svg>
                 </li>
               </ul>
@@ -1641,6 +1771,24 @@
           <li class="users__list-item card">
             <div class="card__avatar-wrapper">
               <picture>
+                <source
+                  type="image/webp"
+                  media="(min-width: 1440px)"
+                  srcset=
+                    "img/rogovaya-desktop@1x.webp 1x,
+                     img/rogovaya-desktop@2x.webp 2x
+                    ">
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset=
+                    "img/rogovaya-tablet@1x.webp 1x,
+                     img/rogovaya-tablet@2x.webp 2x">
+                <source
+                  type="image/webp"
+                  srcset=
+                    "img/rogovaya-mobile@1x.webp 1x,
+                     img/rogovaya-mobile@2x.webp 2x">
                 <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
                 <img class="card__avatar" src="img/rogovaya-mobile@1x.jpg" alt="Аватар Лариса Роговая" srcset="img/rogovaya-mobile@2x.jpg">
@@ -1652,8 +1800,8 @@
             <div class="card__likes-wrapper">
               <button class="card__like" type="button" aria-label="Поставить лайк">
                 <svg class="card__like-svg" width="12" height="12">
-                  <use class="card__like-icon--no-checked" href="img/heart.svg#heart"></use>
-                  <use class="card__like-icon--checked" href="img/heart-active.svg#heart-active"></use>
+                  <use class="card__like-icon--no-checked" href="img/sprite.svg#heart-icon"></use>
+                  <use class="card__like-icon--checked" href="img/sprite.svg#heart-active-icon"></use>
                 </svg>
               </button>
               <span class="card__likes-count">1,5 м</span>
@@ -1709,7 +1857,7 @@
                   aria-label="Авиаперелет"
                 >
                   <svg class="transports__icon transports__icon--plane" width="14" height="16">
-                    <use href="img/plane.svg#plane"></use>
+                    <use href="img/sprite.svg#plane-icon"></use>
                   </svg>
                 </li>
 
@@ -1719,8 +1867,7 @@
                   aria-label="Автотранспорт"
                 >
                   <svg class="transports__icon transports__icon--bus" width="13" height="16">
-                    <use href="img/bus.svg#bus"></use>
-                  </svg>
+                    <use href="img/sprite.svg#bus-icon"></use></svg>
                 </li>
 
                 <li
@@ -1729,7 +1876,7 @@
                   aria-label="Велосипед"
                 >
                   <svg class="transports__icon transports__icon--bike" width="15" height="17">
-                    <use href="img/bike.svg#bike"></use>
+                    <use href="img/sprite.svg#bike-icon"></use>
                   </svg>
                 </li>
 
@@ -1739,7 +1886,7 @@
                   aria-label="Пешком"
                 >
                   <svg class="transports__icon transports__icon--run" width="13" height="17">
-                    <use href="img/run.svg#run"></use>
+                    <use href="img/sprite.svg#run-icon"></use>
                   </svg>
                 </li>
               </ul>
@@ -1772,7 +1919,7 @@
         </ul>
         <a href="" class="users__show-more button button--transparent button--borderless">
           <svg class="button__prepend-icon users__show-more-icon" width="18" height="18">
-            <use href="img/show-more-plus.svg#show-more-plus"></use>
+            <use href="img/sprite.svg#show-more-plus-icon"></use>
           </svg>
           Показать еще
         </a>
@@ -1804,29 +1951,61 @@
 <footer class="footer">
   <div class="footer__wrapper container">
     <a class="footer__logo logo" href="index.html">
-      <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
+      <picture>
+        <source
+          type="image/webp"
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.webp 1x,
+                  img/logo-desktop-blue@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.webp 1x,
+                  img/logo-tablet-blue@2x.webp 2x"
+        >
+        <source
+          type="image/webp"
+          srcset="img/logo-mobile-blue@1x.webp 1x,
+                  img/logo-mobile-blue@2x.webp 2x"
+        >
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.png 1x,
+                  img/logo-desktop-blue@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.png 1x,
+                  img/logo-tablet-blue@2x.png 2x"
+        >
+        <img
+          src="img/logo-mobile-blue@1x.png"
+          srcset="img/logo-mobile-blue@2x.png"
+          alt="Логотип Погнали"
+        >
+      </picture>
     </a>
     <ul class="footer__socials socials socials--yellow list">
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Facebook">
-          <svg class="socials__icon" width="11" height="21">
-            <use href="img/facebook.svg#facebook"></use>
-          </svg>
+          <svg class="socials__icon socials__icon--facebook" width="11" height="21">
+            <use href="./img/sprite.svg#facebook-icon"></use></svg>
         </a>
       </li>
 
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="VK">
-          <svg class="socials__icon" width="23" height="12">
-            <use href="img/vk.svg#vk"></use>
+          <svg class="socials__icon socials__icon--vk" width="23" height="12">
+            <use href="./img/sprite.svg#vk-icon"></use>
           </svg>
         </a>
       </li>
 
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Instagram">
-          <svg class="socials__icon" width="18" height="18">
-            <use href="img/instagram.svg#instagram"></use>
+          <svg class="socials__icon socials__icon--instagram" width="18" height="18">
+            <use href="img/sprite.svg#instagram-icon"></use>
           </svg>
         </a>
       </li>
@@ -1839,46 +2018,9 @@
     </div>
   </div>
 </footer>
-<script>
-    const header = document.querySelector('.header');
-    const headerLogo = document.querySelector('.header .logo');
-    const menuToggle = document.querySelector('.header__toggle');
-    menuToggle.addEventListener('click', () => {
-        headerLogo.classList.toggle('logo--light');
-        header.classList.toggle('header--white');
-        header.classList.toggle('header--opened');
-    })
-
-    const expanderHeaders = document.querySelectorAll('.expander__header');
-
-    expanderHeaders.forEach(expanderHeader => {
-        expanderHeader.addEventListener('click', (event) => {
-            let expander = expanderHeader.parentElement;
-            console.log(expander);
-            expander.classList.toggle('expander--opened')
-        })
-    })
-
-    const filter = document.querySelector('.countries-filter');
-    const filterToggle = document.querySelector('.countries-filter__toggle');
-
-    filterToggle.addEventListener('click', (event) => {
-        filter.classList.toggle('countries-filter--opened');
-    });
-
-    const filterCloseButton = document.querySelector('.countries-filter__close');
-    filterCloseButton.addEventListener('click', () => {
-        filter.classList.toggle('countries-filter--opened');
-    })
-
-    const likeButtons = document.querySelectorAll('.card__like');
-
-    likeButtons.forEach(likeButton => {
-        likeButton.addEventListener('click', () => {
-            likeButton.classList.toggle('card__like--checked')
-        })
-    })
-
-</script>
+<script src="js/header.js"></script>
+<script src="js/expander.js"></script>
+<script src="js/country-filter.js"></script>
+<script src="js/like.js"></script>
 </body>
 </html>

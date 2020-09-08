@@ -124,6 +124,7 @@
 $fast-registration-mobile-step: 5px;
 
 .fast-registration__input {
+  outline: none;
   width: 100%;
   font: inherit;
 
@@ -154,11 +155,16 @@ $fast-registration-mobile-step: 5px;
   @media #{$desktop-width} {
   }
 
+  &--error {
+    color: $input-invalid;
+    background-color: $basic-white;
+  }
+
   &:hover {
     color: rgba($special-grey, 0.5);
 
     &::placeholder {
-      color: rgba($special-grey, 0.5);
+      color: rgba($basic-white, 0.5);
     }
   }
 
@@ -175,19 +181,16 @@ $fast-registration-mobile-step: 5px;
 
     color: rgba($special-grey, 0.3);
 
+
     @media #{$tablet-width} {
       font-size: 24px;
       line-height: 24px;
     }
   }
-
-  &:invalid {
-    color: $input-invalid;
-    background-color: $basic-white;
-  }
 }
 
 .fast-registration__button {
+  outline: none;
   position: absolute;
   right: 0;
   display: flex;

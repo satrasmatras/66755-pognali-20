@@ -78,7 +78,7 @@ $padding-left: 25px;
       height: 212px;
 
       top: 73px;
-      left: 140px;
+      left: calc(50% - 661px);
     }
 
     &::after {

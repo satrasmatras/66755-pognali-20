@@ -5,9 +5,17 @@
 
   border: 1px solid $fieldset-border;
   border-radius: 10px;
+
+  &:hover {
+    border: 1px solid $fieldset-border-hover;
+  }
+
+  &:focus-within {
+    border: 1px solid $basic-black;
+  }
 }
 
-.fieldset__title {;
+.fieldset__title {
   $font-size: 16px;
   display: flex;
   justify-content: center;

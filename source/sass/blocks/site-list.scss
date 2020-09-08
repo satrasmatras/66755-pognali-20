@@ -23,6 +23,9 @@
 }
 
 .site-list__link {
+  display: block;
+
+  position: relative;
   font-weight: 500;
   font-size: 30px;
   line-height: 35px;
@@ -42,11 +45,45 @@
     line-height: 20px;
   }
 
+  overflow-y: hidden;
+
   &:hover {
     opacity: 0.6;
+
+    @media #{$desktop-width} {
+      opacity: 1;
+    }
   }
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.site-list__link:hover {
+  @media #{$desktop-width} {
+    .site-list__text {
+      transform: translateY(-200%);
+    }
+  }
+}
+
+.site-list__text {
+  display: block;
+  position: relative;
+  transition: $transition-duration-normal transform;
+  height: 100%;
+
+  &::after {
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 200%;
+    left: 0;
+    position: absolute;
+    content: attr(data-text);
+
+    font: inherit;
+    color: $basic-yellow;
   }
 }

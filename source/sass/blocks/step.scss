@@ -310,6 +310,10 @@
   padding-left: 0;
   padding-right: 0;
 
+  @media #{$only-phone-width} {
+    width: 100%;
+  }
+
   @media #{$tablet-width} {
     border-radius: 20px;
     padding-top: 29px;
@@ -321,6 +325,14 @@
     text-transform: none;
 
     min-width: 212px;
+  }
+}
+
+.step__button-prepend-icon {
+  display: none;
+
+  @media #{$tablet-width} {
+    display: flex;
   }
 }
 

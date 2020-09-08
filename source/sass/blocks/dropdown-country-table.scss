@@ -37,6 +37,7 @@
 }
 
 .dropdown-country-table__toggle {
+  cursor: pointer;
   position: relative;
   width: 100%;
   font-family: inherit;
@@ -95,12 +96,28 @@
   top: 50%;
   transform: translateY(-50%);
 
+  color: rgba($basic-white, 0.3);
+
   @media #{$tablet-width} {
     right: 22px;
     width: 22px;
     height: 21px;
+  }
+}
 
-    color: rgba($basic-white, 0.3);
+.dropdown-country-table__toggle:hover {
+  color: rgba($basic-white, 0.6);
+
+  .dropdown-country-table__toggle-icon {
+    color: rgba($basic-white, 1);
+  }
+}
+
+.dropdown-country-table__toggle:active {
+  color: rgba($basic-white, 0.3);
+
+  .dropdown-country-table__toggle-icon {
+    color: rgba($basic-white, 0.1);
   }
 }
 
@@ -192,10 +209,7 @@
     &:hover,
     &:focus {
       color: rgba($basic-blue-light, 0.6);
-    }
-
-    &:active {
-      color: rgba($basic-blue-light, 1);
+      border: 1px solid $weekend-selected-background;
     }
   }
 
@@ -206,19 +220,19 @@
     border-radius: 4px;
   }
 
-  &--selected {
+
+  &--selected, &:active {
     background-color: $basic-grey;
     border-bottom: 1px solid $basic-grey;
 
     @media #{$tablet-width} {
       background-color: $special-blue-light;
-      border: 1px solid $fieldset-border;
+      border: 1px solid $special-blue-light;
       color: $basic-white;
 
       position: relative;
 
       &::before {
-        // TODO: Осторожно. Возможно гавнокод!!!
         position: absolute;
         display: block;
         width: calc(100% + 4px);

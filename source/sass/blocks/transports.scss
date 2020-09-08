@@ -71,4 +71,24 @@
 .transports__icon {
   display: flex;
   margin: auto;
+
+  &--plane {
+    width: 21px;
+    height: 21px;
+  }
+
+  &--bus {
+    width: 17px;
+    height: 19px;
+  }
+
+  &--bike {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--run {
+    width: 21px;
+    height: 23px;
+  }
 }

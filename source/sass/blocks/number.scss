@@ -89,10 +89,34 @@
   }
 }
 
+.number__input-wrapper:hover {
+  .number__button {
+    color: $number-hover;
+  }
+
+  .number__input {
+    border: 1px solid $number-hover;
+  }
+}
+
+.number__input-wrapper:focus-within {
+  .number__button {
+    color: $basic-blue;
+  }
+
+  .number__input {
+    border: 1px solid $basic-blue;
+  }
+}
+
+
 .number__input {
+  outline: none;
+
   background-color: transparent;
   border: 1px solid $fieldset-border;
   border-radius: 4px;
+
 
   font: inherit;
   font-weight: 500;
@@ -114,6 +138,10 @@
 
     padding-top: 23px;
     padding-bottom: 23px;
+  }
+
+  &:hover {
+    color: $special-blue-light;
   }
 
   &::-webkit-inner-spin-button,

@@ -1,0 +1,129 @@
+.header-body {
+  padding-top: 58px;
+  padding-bottom: 11px;
+
+  display: flex;
+
+  border-bottom-left-radius: $index-mobile-border-radius;
+  border-bottom-right-radius: $index-mobile-border-radius;
+
+  background-color: $basic-blue;
+  color: white;
+
+  position: relative;
+
+  @media #{$tablet-width} {
+    padding-left: 74px;
+    padding-top: 133px;
+    padding-bottom: 0;
+    display: flex;
+
+    background-color: $basic-blue-promo;
+
+    border-bottom-left-radius: $index-tablet-border-radius;
+    border-bottom-right-radius: $index-tablet-border-radius;
+  }
+
+  @media #{$desktop-width} {
+    padding-right: 90px;
+    padding-left: 126px;
+    padding-top: 91px;
+
+    background-color: $basic-blue;
+  }
+}
+
+.header-body__wrapper {
+  display: flex;
+
+  @media #{$tablet-width} {
+    padding-left: 74px;
+    display: flex;
+  }
+
+  @media #{$desktop-width} {
+    padding-right: 90px;
+    padding-left: 126px;
+  }
+}
+
+.header-body__title {
+  position: relative;
+  font-size: 36px;
+  line-height: 36px;
+
+  width: fit-content;
+
+  color: $basic-white;
+
+  &::after {
+    position: absolute;
+
+    top: 44px;
+    left: 0;
+
+    content: "";
+    width: 100%;
+    height: 5px;
+
+    background-color: $special-orange;
+    border-radius: 4px;
+
+    @media #{$tablet-width} {
+      top: calc(100% + -3px);
+      left: 3px;
+      height: 8px;
+    }
+  }
+
+  @media #{$tablet-width} {
+    font-size: 60px;
+    line-height: 60px;
+
+    min-height: 127px;
+  }
+
+  @media #{$desktop-width} {
+    max-width: 700px;
+    word-break: break-all;
+  }
+}
+
+.header-body__aside-link {
+  display: none;
+
+  @media #{$tablet-width} {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    align-items: flex-start;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    text-transform: uppercase;
+
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding-top: 22px;
+    padding-right: 34px;
+    padding-left: 20px;
+
+    flex-wrap: wrap;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.header-body__aside-icon {
+  flex-grow: 0;
+
+  margin-left: 28px;
+}
