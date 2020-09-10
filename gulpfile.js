@@ -5,6 +5,7 @@ const sync = require('browser-sync').create();
 const path = require('path');
 const rename = require('gulp-rename');
 const del = require('del');
+const concat = require('gulp-concat');
 
 const validator = require('gulp-html');
 
@@ -50,6 +51,7 @@ exports.html = html;
 
 const js = () => {
   return gulp.src('source/js/*.js')
+    .pipe(concat('script.min.js'))
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
 };
@@ -124,7 +126,6 @@ const copy = () => {
     'source/fonts/**/*.{woff, woff2}',
     'source/img/**/*.{png,jpg,jpeg,svg}',
     'source/img/**/*.webp',
-    'source/js/**',
     'source//*.ico',
   ], {
     base: 'source'

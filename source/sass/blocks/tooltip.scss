@@ -1,13 +1,13 @@
 $tooltip-triangle-height: 7px;
 
-
 .tooltip {
   position: relative;
 
   &::after {
     min-height: 100%;
     border-radius: 4px;
-    z-index: $tooltip-z-index ;
+
+    z-index: $tooltip-z-index;
   }
 
   &:hover::after,
@@ -46,15 +46,16 @@ $tooltip-triangle-height: 7px;
     border-style: solid;
     border-width: 0 6px 7px 6px;
     border-color: transparent transparent $basic-blue transparent;
+
+    z-index: $tooltip-z-index;
   }
 
   &:hover::before,
   &:focus::before {
     left: 50%;
-    bottom: -13px;
+    bottom: -14px;
 
     transform: translateX(-50%);
     display: block;
-    z-index: 0;
   }
 }

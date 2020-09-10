@@ -21,11 +21,16 @@
   }
 }
 
-.preview-card:hover {
+.preview-card:hover,
+.preview-card:focus-within {
   .preview-card__avatar {
     transition: transform $transition-duration-very-slow;
     transform: scale(1.2);
   }
+}
+
+.preview-card__avatar-link {
+  tab-index: 0;
 }
 
 .preview-card__avatar-wrapper {

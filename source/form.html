@@ -92,14 +92,14 @@
     </button>
     <ul class="header__list site-list list">
       <li class="site-list__item">
-        <a class="site-list__link">
+        <a class="site-list__link" href="index.html">
           <span class="site-list__text" data-text="О сервисе">
             О сервисе
           </span>
         </a>
       </li>
       <li class="site-list__item">
-        <a class="site-list__link" href="form.html">
+        <a class="site-list__link">
           <span class="site-list__text" data-text="Направления">
             Направления
           </span>
@@ -285,8 +285,7 @@
             </li>
 
             <li class="checkboxes-transports__item">
-              <input class="checkboxes-transports__control sr-only" type="checkbox" name="walking" id="walking-field"
-                     checked>
+              <input class="checkboxes-transports__control sr-only" type="checkbox" name="walking" id="walking-field" checked>
               <label
                 class="checkboxes-transports__label tooltip"
                 for="walking-field"
@@ -351,11 +350,11 @@
                 </li>
 
                 <li class="step__navigation-item">
-                  <a class="step__navigation-link" href="#step-2">Маршрут</a>
+                  <a class="step__navigation-link">Маршрут</a>
                 </li>
 
                 <li class="step__navigation-item">
-                  <a class="step__navigation-link" href="#step-3">Развлечения</a>
+                  <a class="step__navigation-link">Развлечения</a>
                 </li>
               </ul>
               <p class="step__description step__description--first text">
@@ -365,7 +364,7 @@
               </p>
             </div>
             <div class="step__inputs">
-              <div class="step__number-input step__number-input--companions number">
+              <div class="step__number-input step__number-input--companions number" data-min="1">
                 <label for="companions-count-field" class="number__label">Ищу попутчиков:</label>
                 <span class="number__unit">чел.</span>
                 <div class="number__input-wrapper">
@@ -374,8 +373,7 @@
                       <use href="img/sprite.svg#qty-minus-mobile-icon"></use>
                     </svg>
                   </button>
-                  <input class="number__input" type="number" name="companions-count" id="companions-count-field"
-                         value="2">
+                  <input class="number__input" type="number" name="companions-count" id="companions-count-field" value="2">
                   <button class="number__button number__icon--plus" type="button" aria-label="Увеличить на 1">
                     <svg class="number__icon" width="14" height="14">
                       <use href="img/sprite.svg#qty-plus-mobile-icon"></use>
@@ -384,10 +382,10 @@
                 </div>
               </div>
               <div class="step__check step__check--children check check--large">
-                <input class="check__control sr-only" type="checkbox" name="with-children" id="with-children-field">
+                <input class="check__control sr-only" type="checkbox" name="with-children" id="with-children-field" checked>
                 <label class="check__label check__label--form" for="with-children-field">Можно с детьми</label>
               </div>
-              <div class="step__number-input step__number-input--duration number">
+              <div class="step__number-input step__number-input--duration number" data-min="2">
                 <label for="days-count-field" class="number__label">Длительность:</label>
                 <span class="number__unit">дн.</span>
                 <div class="number__input-wrapper">
@@ -490,20 +488,20 @@
                   <td class="table__cell">23</td>
                   <td class="table__cell">24</td>
                   <td class="table__cell">25</td>
-                  <td class="table__cell table__cell--selected">26 <p class="table__cell-text table__cell-text--start text">Заезд</p></td>
-                  <td class="table__cell table__cell--selected">27</td>
-                  <td class="table__cell table__cell--selected">28 <p class="table__cell-text table__cell-text--end text">Выезд</p></td>
-                  <td class="table__cell table__cell--available">29</td>
+                  <td class="table__cell table__cell--selected" tabindex="0">26 <p class="table__cell-text table__cell-text--start text">Заезд</p></td>
+                  <td class="table__cell table__cell--selected" tabindex="0">27</td>
+                  <td class="table__cell table__cell--selected" tabindex="0">28 <p class="table__cell-text table__cell-text--end text">Выезд</p></td>
+                  <td class="table__cell table__cell--available" tabindex="0">29</td>
                 </tr>
 
                 <tr class="table__row">
-                  <td class="table__cell table__cell--available">30</td>
-                  <td class="table__cell table__cell--available">31</td>
-                  <td class="table__cell table__cell--available">1 <span class="table__cell-text">апр</span></td>
-                  <td class="table__cell table__cell--available">2</td>
-                  <td class="table__cell table__cell--available">3</td>
-                  <td class="table__cell table__cell--available">4</td>
-                  <td class="table__cell table__cell--available">5</td>
+                  <td class="table__cell table__cell--available" tabindex="0">30</td>
+                  <td class="table__cell table__cell--available" tabindex="0">31</td>
+                  <td class="table__cell table__cell--available" tabindex="0">1 <span class="table__cell-text">апр</span></td>
+                  <td class="table__cell table__cell--available" tabindex="0">2</td>
+                  <td class="table__cell table__cell--available" tabindex="0">3</td>
+                  <td class="table__cell table__cell--available" tabindex="0">4</td>
+                  <td class="table__cell table__cell--available" tabindex="0">5</td>
                 </tr>
               </table>
             </div>
@@ -523,7 +521,7 @@
               <h3 class="step__title step__title--second title" id="step-2">Маршрут</h3>
               <ul class="step__navigation list">
                 <li class="step__navigation-item">
-                  <a class="step__navigation-link" href="#step-1">Даты</a>
+                  <a class="step__navigation-link">Даты</a>
                 </li>
 
                 <li class="step__navigation-item">
@@ -531,7 +529,7 @@
                 </li>
 
                 <li class="step__navigation-item">
-                  <a class="step__navigation-link" href="#step-3">Развлечения</a>
+                  <a class="step__navigation-link">Развлечения</a>
                 </li>
               </ul>
               <p class="step__description step__description--step-2 text">
@@ -701,7 +699,7 @@
               <h3 class="step__title step__title--third title" id="step-3">Развлечения</h3>
               <ul class="step__navigation list">
                 <li class="step__navigation-item">
-                  <a class="step__navigation-link" href="#step-1">Даты</a>
+                  <a class="step__navigation-link">Даты</a>
                 </li>
 
                 <li class="step__navigation-item">
@@ -709,7 +707,7 @@
                 </li>
 
                 <li class="step__navigation-item">
-                  <a class="step__navigation-link step__navigation-link--current" href="#step-3">Развлечения</a>
+                  <a class="step__navigation-link step__navigation-link--current">Развлечения</a>
                 </li>
               </ul>
               <p class="step__description step__description--third text">
@@ -867,9 +865,6 @@
     </div>
   </div>
 </footer>
-<script src="js/header.js"></script>
-<script src="js/dropdown-country.js"></script>
-<script src="js/calendar.js"></script>
-<script src="js/number.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

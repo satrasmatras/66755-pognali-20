@@ -52,7 +52,7 @@
   }
 
   @media #{$desktop-width} {
-    margin-bottom: 57px;
+    margin-bottom: 58px;
   }
 }
 
@@ -153,9 +153,6 @@ $fast-registration-mobile-step: 5px;
     border-radius: 20px;
   }
 
-  @media #{$desktop-width} {
-  }
-
   &--error {
     color: $input-invalid;
     background-color: $basic-white;
@@ -166,7 +163,7 @@ $fast-registration-mobile-step: 5px;
     color: rgba($special-grey, 0.5);
 
     &::placeholder {
-      color: rgba($basic-white, 0.5);
+      color: rgba($special-grey, 0.5);
     }
   }
 
@@ -174,6 +171,10 @@ $fast-registration-mobile-step: 5px;
     background-color: transparent;
     color: $basic-white;
     border: 4px solid $basic-white;
+
+    &::placeholder {
+      color: rgba($basic-white, 0.7);
+    }
   }
 
   &::placeholder {

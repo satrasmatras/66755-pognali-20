@@ -15,7 +15,7 @@
 
   @media #{$desktop-width} {
     background-color: $basic-blue;
-    padding-top: 112px;
+    padding-top: 103px;
     padding-bottom: 123px;
     margin-top: -30px;
   }
@@ -25,7 +25,7 @@
     linear-gradient(to bottom, $basic-blue-light, $basic-blue-light),
     url("../../img/traveller-illustration-mobile@1x.png"),
     url("../../img/globe-back-mobile@1x.jpg");
-  background-repeat: no-repeat,no-repeat, no-repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: center 404px, center 689px, calc(50% + 16px) 149px, calc(50% - 1px) -75px;
   background-size: 100% 200px, 100% calc(50% - -62px), 192px 255px, 320px 569px;
 
@@ -57,7 +57,7 @@
       url("../../img/traveller-illustration-desktop@1x.png"),
       url("../../img/globe-back-desktop@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: calc(50% + 99px) 12px, calc(50% - -1px) 0;
+    background-position: calc(50% + 99px) 0, calc(50% + 1px) -109px;
     background-size: 431px 640px, 1800px 750px;
 
     @include retina {
@@ -136,7 +136,7 @@
     font-size: 28px;
     line-height: 33px;
 
-    margin-bottom: 210px;
+    margin-bottom: 211px;
 
     padding: 0;
     padding-left: 33px;
@@ -274,7 +274,7 @@ $additional-height: 60px;
     }
 
     &:nth-child(2n - 1) {
-      width: $step-item-width + $additional-width;
+      width: $step-item-width + $additional-width - 2px;
       padding-right: $additional-width + 20px;
     }
 

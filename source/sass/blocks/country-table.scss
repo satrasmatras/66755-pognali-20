@@ -181,9 +181,11 @@
   padding-left: 3px;
   margin-bottom: 31px;
 
-  @media #{$tablet-width} {
-    padding-top: 15px;
+  @media #{$only-phone-width} {
+    padding-top: 11px;
+  }
 
+  @media #{$tablet-width} {
     width: 172px;
     padding: 0;
     margin: 0;
@@ -202,7 +204,7 @@
 
   color: $special-grey;
 
-  margin-bottom: 0px;
+  margin-bottom: 0;
 
   @media #{$tablet-width} {
     font-size: 20px;

@@ -92,7 +92,7 @@
     </button>
     <ul class="header__list site-list list">
       <li class="site-list__item">
-        <a class="site-list__link">
+        <a class="site-list__link" href="index.html">
           <span class="site-list__text" data-text="О сервисе">
             О сервисе
           </span>
@@ -106,7 +106,7 @@
         </a>
       </li>
       <li class="site-list__item">
-        <a class="site-list__link" href="catalog.html">
+        <a class="site-list__link">
           <span class="site-list__text" data-text="Попутчики">
             Попутчики
           </span>
@@ -1068,7 +1068,7 @@
           <ul class="users-filter__criteries criteries list">
             <!-- expander--opened -->
             <li class="criteries__item expander">
-              <div class="expander__header">
+              <div class="expander__header" tabindex="0">
                 <h3 class="expander__title title">Хобби</h3>
                 <svg class="expander__icon" width="10" height="6">
                   <use href="img/sprite.svg#dropdown-icon"></use>
@@ -1079,21 +1079,21 @@
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="gym" id="gym-field" checked>
-                      <label class="check__label" for="gym-field">Спортзал</label>
+                      <label class="check__label check__label--common" for="gym-field">Спортзал</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="hookah" id="hookah-field">
-                      <label class="check__label" for="hookah-field">Кальян</label>
+                      <label class="check__label check__label--common" for="hookah-field">Кальян</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="sofa" id="sofa-field">
-                      <label class="check__label" for="sofa-field">Диван</label>
+                      <label class="check__label check__label--common" for="sofa-field">Диван</label>
                     </div>
                   </li>
                 </ul>
@@ -1101,7 +1101,7 @@
             </li>
 
             <li class="criteries__item expander">
-              <div class="expander__header">
+              <div class="expander__header" tabindex="0">
                 <h3 class="expander__title title">Музыка</h3>
                 <svg class="expander__icon" width="10" height="6">
                   <use href="img/sprite.svg#dropdown-icon"></use>
@@ -1112,21 +1112,21 @@
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="heavy-rock" id="heavy-rock-field" checked>
-                      <label class="check__label" for="heavy-rock-field">Тяжелый рок</label>
+                      <label class="check__label check__label--common" for="heavy-rock-field">Тяжелый рок</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="russian-rap" id="russian-rap-field" checked>
-                      <label class="check__label" for="russian-rap-field">Русский рэп</label>
+                      <label class="check__label check__label--common" for="russian-rap-field">Русский рэп</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="eurodance" id="eurodance-field">
-                      <label class="check__label" for="eurodance-field">Евроденс</label>
+                      <label class="check__label check__label--common" for="eurodance-field">Евроденс</label>
                     </div>
                   </li>
                 </ul>
@@ -1134,7 +1134,7 @@
             </li>
 
             <li class="criteries__item expander">
-              <div class="expander__header">
+              <div class="expander__header" tabindex="0">
                 <h3 class="expander__title title">Еда</h3>
                 <svg class="expander__icon" width="10" height="6">
                   <use href="img/sprite.svg#dropdown-icon"></use>
@@ -1145,29 +1145,29 @@
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="meat-eater" id="meat-eater-field" checked>
-                      <label class="check__label" for="meat-eater-field">Мясоед</label>
+                      <label class="check__label check__label--common" for="meat-eater-field">Мясоед</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="healthy-diet" id="healthy-diet-field">
-                      <label class="check__label" for="healthy-diet-field">Сидит на ПП</label>
+                      <label class="check__label check__label--common" for="healthy-diet-field">Сидит на ПП</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="raw-vegan" id="raw-vegan-field">
-                      <label class="check__label" for="raw-vegan-field">Веган-сыроед</label>
+                      <label class="check__label check__label--common" for="raw-vegan-field">Веган-сыроед</label>
                     </div>
                   </li>
                 </ul>
               </div>
             </li>
 
-            <li class="criteries__item expander expander--opened">
-              <div class="expander__header">
+            <li class="criteries__item expander">
+              <div class="expander__header" tabindex="0">
                 <h3 class="expander__title title">Транспорт</h3>
                 <svg class="expander__icon" width="10" height="6">
                   <use href="img/sprite.svg#dropdown-icon"></use>
@@ -1175,12 +1175,11 @@
               </div>
               <div class="expander__content expander__content--transport">
                 <ul class="criteries__checkboxes criteries__checkboxes--transports checkboxes-transports list">
-                  <li class="checkboxes-transports__item">
+                  <li class="checkboxes-transports__item tooltip" data-tooltip="Авиаперелет">
                     <input class="checkboxes-transports__control sr-only" type="checkbox" name="air" id="air-field" checked>
                     <label
-                      class="checkboxes-transports__label tooltip"
+                      class="checkboxes-transports__label"
                       for="air-field"
-                      data-tooltip="Авиаперелет"
                       aria-label="Авиаперелет"
                     >
                       <svg class="checkboxes-transports__icon checkboxes-transports__icon--plane" width="14" height="16">
@@ -1189,12 +1188,11 @@
                     </label>
                   </li>
 
-                  <li class="checkboxes-transports__item">
+                  <li class="checkboxes-transports__item tooltip" data-tooltip="Автотранспорт">
                     <input class="checkboxes-transports__control sr-only" type="checkbox" name="bus" id="bus-field" checked>
                     <label
-                      class="checkboxes-transports__label tooltip"
+                      class="checkboxes-transports__label"
                       for="bus-field"
-                      data-tooltip="Автотранспорт"
                       aria-label="Автотранспорт"
                     >
                       <svg class="checkboxes-transports__icon checkboxes-transports__icon--bus" width="13" height="16">
@@ -1202,12 +1200,11 @@
                     </label>
                   </li>
 
-                  <li class="checkboxes-transports__item">
+                  <li class="checkboxes-transports__item tooltip" data-tooltip="Велосипед">
                     <input class="checkboxes-transports__control sr-only" type="checkbox" name="bicycle" id="bicycle-field">
                     <label
-                      class="checkboxes-transports__label tooltip"
+                      class="checkboxes-transports__label"
                       for="bicycle-field"
-                      data-tooltip="Велосипед"
                       aria-label="Велосипед"
                     >
                       <svg class="checkboxes-transports__icon checkboxes-transports__icon--bike" width="15" height="17">
@@ -1216,10 +1213,10 @@
                     </label>
                   </li>
 
-                  <li class="checkboxes-transports__item">
+                  <li class="checkboxes-transports__item tooltip" data-tooltip="Пешком">
                     <input class="checkboxes-transports__control sr-only" type="checkbox" name="walking" id="walking-field" checked>
                     <label
-                      class="checkboxes-transports__label tooltip"
+                      class="checkboxes-transports__label"
                       for="walking-field"
                       data-tooltip="Пешком"
                       aria-label="Пешком"
@@ -1233,8 +1230,8 @@
               </div>
             </li>
 
-            <li class="criteries__item expander expander--opened">
-              <div class="expander__header">
+            <li class="criteries__item expander">
+              <div class="expander__header" tabindex="0">
                 <h3 class="expander__title title">Левел</h3>
                 <svg class="expander__icon" width="10" height="6">
                   <use href="img/sprite.svg#dropdown-icon"></use>
@@ -1296,33 +1293,33 @@
         <ul class="users__list list">
           <li class="users__list-item card card--firsova">
             <div class="card__avatar-wrapper">
-              <picture>
-                <source
-                  type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x"
-                >
-                <source
-                  type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x"
-                >
-                <source
-                  type="image/webp"
-                  srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x"
-                >
-                <source
-                  media="(min-width: 1440px)"
-                  srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x"
-                >
-                <source
-                  media="(min-width: 768px)"
-                  srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x"
-                >
-                <a href="profile.html">
+              <a href="profile.html">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x"
+                  >
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x"
+                  >
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x"
+                  >
                   <img class="card__avatar" src="img/firsova-mobile@1x.jpg" alt="Аватар Таня Фирсова" srcset="img/firsova-mobile@2x.jpg">
-                </a>
               </picture>
+              </a>
             </div>
             <h2 class="card__name card__name--offline title">
               <a class="card__name-link" href="profile.html">Таня Фирсова</a>
@@ -1463,30 +1460,30 @@
 
           <li class="users__list-item card card--demin">
             <div class="card__avatar-wrapper">
-              <picture>
-                <source
-                  type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset="img/demin-desktop@1x.webp 1x,
-                          img/demin-desktop@2x.webp 2x"
-                >
-                <source
-                  type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset="img/demin-tablet@1x.webp 1x,
-                          img/demin-tablet@2x.webp 2x"
-                >
-                <source
-                  type="image/webp"
-                  srcset="img/demin-mobile@1x.webp 1x,
-                          img/demin-mobile@2x.webp 2x"
-                >
-                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-                <a href="profile.html">
+              <a href="profile.html">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="img/demin-desktop@1x.webp 1x,
+                            img/demin-desktop@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="img/demin-tablet@1x.webp 1x,
+                            img/demin-tablet@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    srcset="img/demin-mobile@1x.webp 1x,
+                            img/demin-mobile@2x.webp 2x"
+                  >
+                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
                   <img class="card__avatar" src="img/demin-mobile@1x.jpg" alt="Аватар Петя Демин" srcset="img/demin-mobile@2x.jpg">
-                </a>
-              </picture>
+                </picture>
+              </a>
             </div>
             <h2 class="card__name card__name--online title">
               <a href="profile.html" class="card__name-link">Петя Демин</a>
@@ -1607,35 +1604,35 @@
                 </svg>
               </div>
             </div>
-            <a href="" class="card__invite button button--rounded" href="invite.html">Позвать!</a>
+            <a class="card__invite button button--rounded" href="invite.html">Позвать!</a>
           </li>
 
           <li class="users__list-item card card--smolov">
             <div class="card__avatar-wrapper">
-              <picture>
-                <source
-                  type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset="img/smolov-desktop@1x.webp 1x,
-                          img/smolov-desktop@2x.webp 2x"
-                >
-                <source
-                  type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset="img/smolov-tablet@1x.webp 1x,
-                          img/smolov-tablet@2x.webp 2x"
-                >
-                <source
-                  type="image/webp"
-                  srcset="img/smolov-mobile@1x.webp 1x,
-                          img/smolov-mobile@2x.webp 2x"
-                >
-                <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
-                <a href="profile.html">
+              <a href="profile.html">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="img/smolov-desktop@1x.webp 1x,
+                            img/smolov-desktop@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="img/smolov-tablet@1x.webp 1x,
+                            img/smolov-tablet@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    srcset="img/smolov-mobile@1x.webp 1x,
+                            img/smolov-mobile@2x.webp 2x"
+                  >
+                  <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
                   <img class="card__avatar" src="img/smolov-mobile@1x.jpg" alt="Аватар Марк Смолов" srcset="img/smolov-mobile@2x.jpg">
-                </a>
-              </picture>
+                </picture>
+              </a>
             </div>
             <h2 class="card__name card__name--offline title">
               <a href="profile.html" class="card__name-link">Марк Смолов</a>
@@ -1769,36 +1766,38 @@
                 </svg>
               </div>
             </div>
-            <a href="" class="card__invite button button--rounded" href="invite.html">Позвать!</a>
+            <a class="card__invite button button--rounded" href="invite.html">Позвать!</a>
           </li>
 
           <li class="users__list-item card card--rogovaya">
             <div class="card__avatar-wrapper">
-              <picture>
-                <source
-                  type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset=
-                    "img/rogovaya-desktop@1x.webp 1x,
-                     img/rogovaya-desktop@2x.webp 2x
-                    ">
-                <source
-                  type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset=
-                    "img/rogovaya-tablet@1x.webp 1x,
-                     img/rogovaya-tablet@2x.webp 2x">
-                <source
-                  type="image/webp"
-                  srcset=
-                    "img/rogovaya-mobile@1x.webp 1x,
-                     img/rogovaya-mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
-                <a href="profile.html">
+              <a href="profile.html" tabindex="-1">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset=
+                      "img/rogovaya-desktop@1x.webp 1x,
+                      img/rogovaya-desktop@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset=
+                      "img/rogovaya-tablet@1x.webp 1x,
+                      img/rogovaya-tablet@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    srcset=
+                      "img/rogovaya-mobile@1x.webp 1x,
+                      img/rogovaya-mobile@2x.webp 2x"
+                  >
+                  <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
                   <img class="card__avatar" src="img/rogovaya-mobile@1x.jpg" alt="Аватар Лариса Роговая" srcset="img/rogovaya-mobile@2x.jpg">
-                </a>
-              </picture>
+                </picture>
+              </a>
             </div>
             <h2 class="card__name card__name--online title">
               <a href="profile.html" class="card__name-link">Лариса Роговая</a>
@@ -1917,7 +1916,7 @@
                 </svg>
               </div>
             </div>
-            <a href="" class="card__invite button button--rounded" href="invite.html">Позвать!</a>
+            <a class="card__invite button button--rounded" href="invite.html">Позвать!</a>
           </li>
         </ul>
         <a href="" class="users__show-more button button--transparent button--borderless">
@@ -2030,9 +2029,6 @@
     </div>
   </div>
 </footer>
-<script src="js/header.js"></script>
-<script src="js/expander.js"></script>
-<script src="js/country-filter.js"></script>
-<script src="js/like.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

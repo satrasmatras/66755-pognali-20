@@ -40,6 +40,7 @@
 }
 
 .user-nav__link {
+  outline: none;
   width: 100%;
   border-radius: 25px;
 
@@ -111,7 +112,7 @@
   padding: 11px;
 }
 
-.user-nav__link--auth.user-nav__link--promo{
+.user-nav__link--auth.user-nav__link--promo {
   padding-top: 13px;
   padding-bottom: 7px;
   font-size: 20px;

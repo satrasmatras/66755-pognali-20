@@ -75,7 +75,7 @@ $direction-padding-left: 25px;
 
     position: relative;
 
-    margin-bottom: 47px;
+    margin-bottom: 43px;
     padding-top: 0;
 
     grid-column: 1/-1;
@@ -127,6 +127,14 @@ $direction-padding-left: 25px;
 
       overflow: hidden;
     }
+  }
+
+  @media #{$tablet-width} {
+    margin-bottom: 6px;
+  }
+
+  @media #{$desktop-width} {
+    margin-bottom: 7px;
   }
 }
 

@@ -51,6 +51,7 @@ $toggle-hover-size: 19px;
 }
 
 .filter-range__input {
+  outline: none;
   width: 50%;
 
   padding-top: 12px;
@@ -70,6 +71,14 @@ $toggle-hover-size: 19px;
   color: $special-blue-light;
 
   text-align: center;
+
+  &:hover {
+    border: 1px solid $number-hover;
+  }
+
+  &:focus {
+    border: 1px solid $basic-blue;
+  }
 
   @media #{$tablet-width} {
     font-size: 20px;
@@ -161,8 +170,8 @@ $toggle-hover-size: 19px;
   }
 
   @media #{$desktop-width} {
-    left: 41%;
-    width: 60%;
+    left: 34%;
+    width: 62%;
   }
 }
 
@@ -199,9 +208,17 @@ $toggle-hover-size: 19px;
 
   &--min {
     left: 67px;
+
+    @media #{$desktop-width} {
+      left: 61px;
+    }
   }
 
   &--max {
     left: 96%;
+
+    @media #{$desktop-width} {
+      left: 94%;
+    }
   }
 }

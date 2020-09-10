@@ -55,19 +55,15 @@
 
     @media #{$desktop-width} {
       opacity: 1;
+
+      .site-list__text {
+        transform: translateY(-200%);
+      }
     }
   }
 
   &:active {
     opacity: 0.3;
-  }
-}
-
-.site-list__link:hover {
-  @media #{$desktop-width} {
-    .site-list__text {
-      transform: translateY(-200%);
-    }
   }
 }
 

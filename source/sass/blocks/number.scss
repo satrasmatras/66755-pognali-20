@@ -92,20 +92,12 @@
 }
 
 .number__input-wrapper:hover {
-  .number__button {
-    color: $number-hover;
-  }
-
   .number__input {
     border: 1px solid $number-hover;
   }
 }
 
 .number__input-wrapper:focus-within {
-  .number__button {
-    color: $basic-blue;
-  }
-
   .number__input {
     border: 1px solid $basic-blue;
   }
@@ -155,6 +147,8 @@
 }
 
 .number__button {
+  outline: none;
+
   width: 14px;
   height: 14px;
   position: absolute;

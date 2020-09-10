@@ -76,6 +76,25 @@
       background-color: $special-blue-light;
       border: 1px solid $special-blue-light;
     }
+
+    .country__dropdown-text {
+      &:not(&--activator)::before {
+        position: absolute;
+        top: 1px;
+        right: 0;
+        height: calc(100% - 2px);
+        content: linear-gradient(to left, $basic-white 80%, rgba($basic-white, 0));
+        width: 50px;
+
+        border-radius: 9px;
+      }
+
+      @media #{$tablet-width} {
+        &:not(&--activator)::before {
+          display: none;
+        }
+      }
+    }
   }
 
   &--add-new {
@@ -199,27 +218,6 @@
   white-space: nowrap;
 }
 
-.country__dropdown--selected {
-  .country__dropdown-text {
-    &:not(&--activator)::before {
-      position: absolute;
-      top: 1px;
-      right: 0;
-      height: calc(100% - 2px);
-      content: linear-gradient(to left, $basic-white 80%, rgba($basic-white, 0));
-      width: 50px;
-
-      border-radius: 9px;
-    }
-
-    @media #{$tablet-width} {
-      &:not(&--activator)::before {
-        display: none;
-      }
-    }
-  }
-}
-
 .country__cancel {
   position: absolute;
   right: -10px;
@@ -337,12 +335,4 @@
   top: 0;
   z-index: 50;
   background-color: $basic-white;
-
-  @media #{$tablet-width} {
-
-  }
-
-  @media #{$desktop-width} {
-
-  }
 }

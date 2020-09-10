@@ -15,8 +15,6 @@
   z-index: $countries-filter-z-index;
 
   @media #{$tablet-width} {
-    padding-top: 124px;
-
     padding-top: 64px + 60px;
     padding-bottom: 35px;
 
@@ -284,8 +282,7 @@
   }
 
   @media #{$desktop-width} {
-    margin-right: 32px;
-
+    margin-right: 28px;
 
     &:last-child {
       margin-right: 0;
@@ -354,4 +351,9 @@
     width: 21px;
     height: 20px;
   }
+}
+
+.countries-filter--no-js {
+  position: relative;
+  top: 1px;
 }

@@ -19,6 +19,9 @@
 
   .transports__icon {
     &--plane {
+      width: 14px;
+      height: 16px;
+
       @media #{$tablet-width} {
         width: 23px;
         height: 22px;
@@ -26,6 +29,9 @@
     }
 
     &--bus {
+      width: 13px;
+      height: 16px;
+
       @media #{$tablet-width} {
         width: 19px;
         height: 20px;
@@ -33,6 +39,9 @@
     }
 
     &--bike {
+      width: 15px;
+      height: 17px;
+
       @media #{$tablet-width} {
         width: 26px;
         height: 25px;
@@ -40,6 +49,9 @@
     }
 
     &--run {
+      width: 13px;
+      height: 17px;
+
       @media #{$tablet-width} {
         width: 23px;
         height: 24px;
@@ -90,49 +102,5 @@
   &--run {
     width: 21px;
     height: 23px;
-  }
-}
-
-.transports--card {
-  .transports__icon {
-    &--plane {
-      width: 14px;
-      height: 16px;
-
-      @media #{$tablet-width} {
-        width: 23px;
-        height: 22px;
-      }
-    }
-
-    &--bus {
-      width: 13px;
-      height: 16px;
-
-      @media #{$tablet-width} {
-        width: 19px;
-        height: 20px;
-      }
-    }
-
-    &--bike {
-      width: 15px;
-      height: 17px;
-
-      @media #{$tablet-width} {
-        width: 26px;
-        height: 25px;
-      }
-    }
-
-    &--run {
-      width: 13px;
-      height: 17px;
-
-      @media #{$tablet-width} {
-        width: 23px;
-        height: 24px;
-      }
-    }
   }
 }

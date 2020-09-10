@@ -40,7 +40,8 @@ $card-tablet-padding: 36px;
   }
 }
 
-.card:hover {
+.card:hover,
+.card:focus-within {
   .card__avatar {
     transform: scale(1.1);
     transition: transform 0.2s;
@@ -143,7 +144,6 @@ $card-tablet-padding: 36px;
     font-size: 30px;
     line-height: 30px;
 
-    padding-left: 0;
     padding-right: 0;
     padding-left: 4px;
 
@@ -395,9 +395,6 @@ $card-tablet-padding: 36px;
 
     .progress__description {
       padding-right: 3px;
-    }
-
-    .progress__svg {
     }
   }
 }

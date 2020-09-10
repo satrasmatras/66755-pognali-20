@@ -59,6 +59,8 @@
   @media #{$tablet-width} {
     padding-right: 0;
     margin-bottom: 42px;
+
+    flex-wrap: wrap;
   }
 }
 
