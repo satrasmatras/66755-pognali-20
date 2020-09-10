@@ -31,20 +31,6 @@
 
     background-color: $basic-blue;
   }
-
-  &--form {
-    @media #{$tablet-width} {
-      padding-left: 1px;
-      padding-top: 89px;
-    }
-
-    @media #{$desktop-width} {
-      padding-top: 95px;
-
-      border-bottom-left-radius: 56px;
-      border-bottom-right-radius: 56px;
-    }
-  }
 }
 
 .header-body--catalog {
@@ -69,7 +55,17 @@
 }
 
 .header-body--form {
+  @media #{$tablet-width} {
+    padding-left: 1px;
+    padding-top: 89px;
+  }
+
   @media #{$desktop-width} {
+    padding-top: 95px;
+
+    border-bottom-left-radius: 56px;
+    border-bottom-right-radius: 56px;
+
     .header-body__wrapper {
       padding-left: 170px;
     }
