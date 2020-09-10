@@ -1,9 +1,27 @@
 const expanderHeaders = document.querySelectorAll('.expander__header');
 
-expanderHeaders.forEach(expanderHeader => {
-  expanderHeader.addEventListener('click', (event) => {
-    let expander = expanderHeader.parentElement;
-    console.log(expander);
-    expander.classList.toggle('expander--opened')
-  })
-})
+if (expanderHeaders) {
+  function eventFire(el, etype){
+    if (el.fireEvent) {
+      el.fireEvent('on' + etype);
+    } else {
+      var evObj = document.createEvent('Events');
+      evObj.initEvent(etype, true, false);
+      el.dispatchEvent(evObj);
+    }
+  }
+
+  expanderHeaders.forEach(expanderHeader => {
+    expanderHeader.addEventListener('click', (event) => {
+      const expander = expanderHeader.parentElement;
+      expander.classList.toggle('expander--opened')
+    });
+
+    expanderHeader.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        eventFire(expanderHeader, 'click');
+      }
+    });
+  });
+}

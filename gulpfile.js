@@ -5,6 +5,7 @@ const sync = require('browser-sync').create();
 const path = require('path');
 const rename = require('gulp-rename');
 const del = require('del');
+const concat = require('gulp-concat');
 
 const validator = require('gulp-html');
 
@@ -32,6 +33,8 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer
     ]))
+    .pipe(rename('styles.css'))
+    .pipe(gulp.dest('build/css'))
     .pipe(csso())
     .pipe(rename('styles.min.css'))
     .pipe(sourcemap.write('.'))
@@ -48,6 +51,7 @@ exports.html = html;
 
 const js = () => {
   return gulp.src('source/js/*.js')
+    .pipe(concat('script.min.js'))
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
 };
@@ -111,7 +115,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/*.html', gulp.series(html));
-  gulp.watch('source/*.js', js);
+  gulp.watch('source/*.js', gulp.series(js));
   gulp.watch('source/img/**/*.{png,img}', images);
   gulp.watch('source/img/**/*.webp', webp);
   gulp.watch('source/img/**/*.svg', sprite);
@@ -119,10 +123,9 @@ const watcher = () => {
 
 const copy = () => {
   return gulp.src([
-    'source/fonts/**/*.{woff, woff2}',
+    'source/fonts/**/*.{woff,woff2}',
     'source/img/**/*.{png,jpg,jpeg,svg}',
     'source/img/**/*.webp',
-    'source/js/**',
     'source//*.ico',
   ], {
     base: 'source'

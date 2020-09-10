@@ -1,14 +1,15 @@
 const numbers = document.querySelectorAll('.number');
-const minLimit = 0;
 
 numbers.forEach(number => {
-  let minus = number.querySelector('.number__icon--minus');
-  let plus = number.querySelector('.number__icon--plus');
-  let input = number.querySelector('.number__input');
+  const minus = number.querySelector('.number__icon--minus');
+  const plus = number.querySelector('.number__icon--plus');
+  const input = number.querySelector('.number__input');
+  const min = number.dataset.min ?? 0;
 
   const changeValue = (value) => {
-    let inputValue = parseInt(input.value);
-    if (value + inputValue >= 0) {
+    const inputValue = parseInt(input.value);
+
+    if (value + inputValue >= min) {
       input.value = value + inputValue;
     }
   };

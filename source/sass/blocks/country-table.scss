@@ -28,9 +28,12 @@
   }
 
   @media #{$desktop-width} {
+    margin-top: 0;
     width: 100%;
     border-collapse: separate;
-    border-spacing: 16px;
+    border-spacing: 14px 16px;
+
+    padding-top: 5px;
   }
 }
 
@@ -42,6 +45,37 @@
   border: 1px solid $fieldset-border;
   text-align: center;
   vertical-align: center;
+
+  cursor: pointer;
+
+  position: relative;
+
+  @media #{$only-phone-width} {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      position: relative;
+      color: $special-blue-light;
+      background-color: transparent;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      content: "";
+      box-shadow: 0 0 0 1px $number-hover;
+      z-index: 10;
+    }
+  }
+
 
   @media #{$tablet-width} {
     font-weight: bold;
@@ -86,10 +120,11 @@
     color: $basic-blue-light;
   }
 
+  &:active,
   &--selected {
     @media #{$only-phone-width} {
-      position: relative;
-      background-color: $basic-grey;
+      background-color: $special-blue-light;
+      color: $basic-white;
 
       &::before {
         position: absolute;
@@ -142,9 +177,13 @@
 }
 
 .country-table__content {
-  padding-top: 15px;
+  padding-top: 17px;
   padding-left: 3px;
   margin-bottom: 31px;
+
+  @media #{$only-phone-width} {
+    padding-top: 11px;
+  }
 
   @media #{$tablet-width} {
     width: 172px;
@@ -177,7 +216,8 @@
   color: $special-grey;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $special-blue-light;
   }
 

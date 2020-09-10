@@ -3,7 +3,7 @@
   color: $special-blue-light;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   position: relative;
@@ -21,11 +21,16 @@
   }
 }
 
-.preview-card:hover {
+.preview-card:hover,
+.preview-card:focus-within {
   .preview-card__avatar {
     transition: transform $transition-duration-very-slow;
     transform: scale(1.2);
   }
+}
+
+.preview-card__avatar-link {
+  tab-index: 0;
 }
 
 .preview-card__avatar-wrapper {
@@ -71,7 +76,8 @@
     margin-bottom: 23px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
@@ -133,7 +139,7 @@
 .preview-card__progress {
   position: absolute;
 
-  top: 16px;
+  top: 20px;
   left: 17px;
 
   z-index: 1;
@@ -161,6 +167,6 @@
   }
 
   @media #{$desktop-width} {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 }

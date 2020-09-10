@@ -1,28 +1,39 @@
 const header = document.querySelector('.header');
-const headerLogo = document.querySelector('.header .logo');
 const menuToggle = document.querySelector('.header__toggle');
+const footer = document.querySelector('.footer');
 
-header.classList.remove('header--no-js');
+const HEADER_NO_JS_CLASS = 'header--no-js';
+const HEADER_OPENED_CLASS = 'header--opened';
+const HEADER_WHITE_CLASS = 'header--white';
+const HEADER_STICKY_CLASS = 'header--sticky';
 
-menuToggle.addEventListener('click', () => {
-  headerLogo.classList.toggle('logo--light');
-  header.classList.toggle('header--white');
-  header.classList.toggle('header--opened');
-});
+if (header) {
+  header.classList.remove(HEADER_NO_JS_CLASS);
+  header.classList.remove(HEADER_OPENED_CLASS);
+  header.classList.remove(HEADER_WHITE_CLASS);
 
-const pageMain = document.querySelector('.page__main');
-const pageMainPaddingTop = parseInt(getComputedStyle(pageMain).paddingTop.replace('px', ''));
+  menuToggle.addEventListener('click', () => {
+    const headerIsSticky = header.classList.contains(HEADER_STICKY_CLASS);
 
-window.addEventListener('scroll', function() {
-  if (pageYOffset > 0){
-    header.classList.add('header--sticky');
-    pageMain.style.paddingTop = `${pageMainPaddingTop + header.clientHeight}px`;
-    headerLogo.classList.add('logo--light');
+    if (!headerIsSticky){
+      header.classList.toggle(HEADER_WHITE_CLASS);
+    }
+    header.classList.toggle(HEADER_OPENED_CLASS);
+  });
 
-  } else {
-    header.classList.remove('header--sticky');
-    pageMain.style.paddingTop = `${pageMainPaddingTop}px`;
-    headerLogo.classList.remove('logo--light');
-  }
-});
+  const pageMain = document.querySelector('.page__main');
+  const pageMainPaddingTop = parseInt(getComputedStyle(pageMain).paddingTop.replace('px', ''));
 
+  window.addEventListener('scroll', function() {
+    if (pageYOffset > 0){
+      header.classList.add(HEADER_STICKY_CLASS);
+      pageMain.style.paddingTop = `${pageMainPaddingTop + header.clientHeight}px`;
+      header.classList.add(HEADER_WHITE_CLASS);
+
+    } else {
+      header.classList.remove(HEADER_STICKY_CLASS);
+      pageMain.style.paddingTop = `${pageMainPaddingTop}px`;
+      header.classList.remove(HEADER_WHITE_CLASS);
+    }
+  });
+}

@@ -14,11 +14,12 @@
 }
 
 .table__cell {
+  outline: none;
   font-size: 14px;
   line-height: 18px;
 
   padding-top: 7px;
-  padding-bottom: 6.1px;
+  padding-bottom: 5px;
   font-weight: normal;
   width: calc(100% / 7);
 
@@ -29,10 +30,7 @@
     font-size: 18px;
     line-height: 18px;
 
-    padding-top: 25px;
-    padding-bottom: 26px;
-    padding-left: 29px;
-    padding-right: 29px;
+    padding: 25px 0;
   }
 
   @media #{$desktop-width} {
@@ -62,10 +60,6 @@
   &--selected {
     color: $basic-white;
     background-color: $weekend-selected-background;
-
-    @media #{$desktop-width} {
-      padding-bottom: 0;
-    }
   }
 
   &--available,
@@ -77,13 +71,16 @@
       font-weight: normal;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       position: relative;
       color: $basic-white;
       background-color: $weekend-selected-background;
     }
 
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
+
       position: absolute;
       display: block;
       width: 100%;
@@ -99,12 +96,12 @@
       @media #{$tablet-width} {
         position: absolute;
         display: block;
-        width: calc(100% + 1.5px);
-        height: calc(100% + 1px);
-        left: -0.5px;
-        right: -0.5px;
-        top: -0.5px;
-        bottom: -0.5px;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        left: -1px;
+        right: -1px;
+        top: -1px;
+        bottom: -1px;
         content: "";
         box-shadow: inset 0 0 0 4px $weekend-orange;
         z-index: 10;
@@ -120,7 +117,7 @@
         top: -4px;
         bottom: -2px;
         content: "";
-        box-shadow: inset 0 0 0 4px #ff5c23;
+        box-shadow: inset 0 0 0 4px $weekend-orange;
         z-index: 10;
       }
     }
@@ -173,9 +170,7 @@
     &--end {
       display: block;
 
-      margin-top: 3px;
+      margin-top: 11px;
     }
   }
-
-
 }

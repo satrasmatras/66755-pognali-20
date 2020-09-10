@@ -71,15 +71,17 @@
 
     color: rgba($special-blue-light, 1);
     letter-spacing: 0;
+
     margin-left: auto;
-    width: 60px;
-    text-align: right;
+    width: 52px;
+    text-align: center;
+    margin-right: -3px;
   }
 }
 
 .number__input-wrapper {
   position: relative;
-  margin-top: 8px;
+  margin-top: 7px;
   width: 100%;
 
   @media #{$desktop-width} {
@@ -90,20 +92,12 @@
 }
 
 .number__input-wrapper:hover {
-  .number__button {
-    color: $number-hover;
-  }
-
   .number__input {
     border: 1px solid $number-hover;
   }
 }
 
 .number__input-wrapper:focus-within {
-  .number__button {
-    color: $basic-blue;
-  }
-
   .number__input {
     border: 1px solid $basic-blue;
   }
@@ -140,7 +134,8 @@
     padding-bottom: 23px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $special-blue-light;
   }
 
@@ -152,6 +147,8 @@
 }
 
 .number__button {
+  outline: none;
+
   width: 14px;
   height: 14px;
   position: absolute;
@@ -162,7 +159,8 @@
 
   color: $qty-button;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $qty-button-hover;
   }
 

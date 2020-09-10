@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Погнали</title>
   <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
 </head>
 <body class="page__body page__body--light">
 
-<header class="header header--with-body header--no-js">
+<header class="header header--no-js header--opened">
   <nav class="container header__container">
     <a class="header__logo logo" href="index.html">
       <picture>
@@ -40,7 +42,7 @@
                   img/logo-tablet-blue@2x.png 2x"
         >
         <img
-          class="logo__image logo-image--blue"
+          class="header__image header__image--blue logo__image"
           src="img/logo-mobile-blue@1x.png"
           srcset="img/logo-mobile-blue@2x.png"
           alt="Логотип Погнали"
@@ -75,7 +77,7 @@
                   img/logo-tablet-white@2x.png 2x"
         >
         <img
-          class="logo__image logo-image--light"
+          class="header__image header__image--white logo__image"
           src="img/logo-mobile-white@1x.png"
           srcset="img/logo-mobile-white@2x.png"
           alt="Логотип Погнали"
@@ -83,14 +85,16 @@
       </picture>
     </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню">
-      <svg class="header__icon" aria-hidden="true" width="25" height="11">
-        <use class="header__icon-menu" href="img/sprite.svg#menu-icon"></use>
-        <use class="header__icon-close" href="img/sprite.svg#menu-close-icon"></use>
+      <svg class="header__icon header__icon--menu" aria-hidden="true" width="25" height="11">
+        <use href="img/sprite.svg#menu-icon"></use>
+      </svg>
+      <svg class="header__icon header__icon--close" aria-hidden="true" width="19" height="19">
+        <use href="img/sprite.svg#menu-close-icon"></use>
       </svg>
     </button>
     <ul class="header__list site-list list">
       <li class="site-list__item">
-        <a class="site-list__link" href="">
+        <a class="site-list__link" href="index.html">
           <span class="site-list__text" data-text="О сервисе">
             О сервисе
           </span>
@@ -104,7 +108,7 @@
         </a>
       </li>
       <li class="site-list__item">
-        <a class="site-list__link" href="catalog.html">
+        <a class="site-list__link">
           <span class="site-list__text" data-text="Попутчики">
             Попутчики
           </span>
@@ -123,13 +127,13 @@
       <li class="user-nav__item user-nav__item--icon">
         <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email" aria-label="mail@htmlacademy.ru">
           <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-            $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
+            <use href="img/sprite.svg#topmenu-mail-icon"></use>
           </svg>
         </a>
       </li>
 
       <li class="user-nav__item user-nav__item--grow user-nav__item--auth">
-        <a href="" class="button button--rounded user-nav__link user-nav__link--auth">Авторизация</a>
+        <a href="auth.html" class="button button--rounded user-nav__link user-nav__link--auth">Авторизация</a>
       </li>
     </ul>
 
@@ -140,7 +144,7 @@
           href="tel:+88005558628"
         >
           <div class="contacts__icon-wrapper">
-            <svg class="contacts__icon" width="13.5" height="14">
+            <svg class="contacts__icon contacts__icon--map-phone" width="14" height="14">
               <use href="./img/sprite.svg#contacts-phone-icon"></use>
             </svg>
           </div>
@@ -154,7 +158,7 @@
           href="mailto:mail@htmlacademy.ru"
         >
           <div class="contacts__icon-wrapper">
-            <svg class="contacts__icon" width="19" height="13">
+            <svg class="contacts__icon contacts__icon--map-mail" width="19" height="13">
               <use href="./img/sprite.svg#contacts-mail-icon"></use>
             </svg>
           </div>
@@ -190,47 +194,50 @@
 </header>
 
 <main class="page__main">
-  <div class="header-body">
+  <div class="header-body header-body--catalog">
     <div class="header-body__wrapper container">
       <h1 class="header-body__title title">Попутчики</h1>
       <a class="header-body__aside-link" href="index.html">
         На главную
         <svg class="header-body__aside-icon" width="32" height="16">
-          <use href="img/sprite.svg#return-icon" width="32" height="16"></use>
+          <use href="img/sprite.svg#return-icon"></use>
         </svg>
       </a>
     </div>
   </div>
-  <section class="countries-filter">
-    <div class="countries-filter__wrapper container">
-      <svg class="countries-filter__filter-icon" width="15" height="10">
-        <use href="img/filter.svg#filter"></use>
-      </svg>
-      <h2 class="countries-filter__title title">Фильтрация по странам:</h2>
-      <button class="countries-filter__toggle button" type="button">
-        <span class="countries-filter__toggle-text">Показать все</span>
-        <svg class="countries-filter__toggle-icon" width="16" height="16">
-          <use class="countries-filter__toggle-open" href="img/sprite.svg#dots-icon"></use>
-          <use class="countries-filter__toggle-close" href="img/sprite.svg#filter-close-icon"></use>
+  <!-- countries-filter--opened  -->
+  <section class="countries-filter countries-filter--no-js countries-filter--opened">
+      <div class="countries-filter__wrapper container">
+        <svg class="countries-filter__filter-icon" width="15" height="10">
+          <use href="img/sprite.svg#filter-icon"></use>
         </svg>
-      </button>
-      <ul class="countries-filter__countries list">
-        <li class="countries-filter__countries-item">
-          <a class="countries-filter__countries-link countries-filter__countries-link--highlighted" href="">Европа</a>
-        </li>
+        <h2 class="countries-filter__title title">Фильтрация по странам:</h2>
+        <button class="countries-filter__toggle button" type="button">
+          <span class="countries-filter__toggle-text">Показать все</span>
+          <svg class="countries-filter__toggle-icon countries-filter__toggle-icon--open" width="16" height="16">
+            <use href="img/sprite.svg#dots-icon"></use>
+          </svg>
+          <svg class="countries-filter__toggle-icon countries-filter__toggle-icon--close" width="16" height="16">
+            <use href="img/sprite.svg#filter-close-icon"></use>
+          </svg>
+        </button>
+        <ul class="countries-filter__countries list">
+          <li class="countries-filter__countries-item">
+            <a class="countries-filter__countries-link countries-filter__countries-link--highlighted" href="/europe">Европа</a>
+          </li>
 
-        <li class="countries-filter__countries-item">
-          <a class="countries-filter__countries-link" href="">Азия</a>
-        </li>
+          <li class="countries-filter__countries-item">
+            <a class="countries-filter__countries-link" href="/asia">Азия</a>
+          </li>
 
-        <li class="countries-filter__countries-item">
-          <a class="countries-filter__countries-link" href="">Америка</a>
-        </li>
+          <li class="countries-filter__countries-item">
+            <a class="countries-filter__countries-link" href="/usa">Америка</a>
+          </li>
 
-        <li class="countries-filter__countries-item">
-          <a class="countries-filter__countries-link" href="">Острова</a>
-        </li>
-      </ul>
+          <li class="countries-filter__countries-item">
+            <a class="countries-filter__countries-link" href="/islands">Острова</a>
+          </li>
+        </ul>
         <div class="countries-filter__country-table country-table">
           <table class="country-table__table">
             <tr class="country-table__row">
@@ -270,7 +277,7 @@
                   </li>
 
                   <li class="country-table__letter-country">
-                    <a class="country-table__letter-link" href="">Аргентина</a>
+                    <a class="country-table__letter-link" href="america/argentina">Аргентина</a>
                   </li>
 
                   <li class="country-table__letter-country">
@@ -362,7 +369,7 @@
                   </li>
 
                   <li class="country-table__letter-country">
-                    <a class="country-table__letter-link" href="">Великобритания</a>
+                    <a class="country-table__letter-link" href="/europe/united-kingdom">Великобритания</a>
                   </li>
 
                   <li class="country-table__letter-country">
@@ -418,7 +425,7 @@
                   </li>
 
                   <li class="country-table__letter-country">
-                    <a class="country-table__letter-link" href="">Германия</a>
+                    <a class="country-table__letter-link" href="/europe/germany">Германия</a>
                   </li>
 
                   <li class="country-table__letter-country">
@@ -442,7 +449,7 @@
                 <span class="country-table__letter">Д</span>
                 <ul class="country-table__letter-countries list">
                   <li class="country-table__letter-country">
-                    <a class="country-table__letter-link" href="">Дания</a>
+                    <a class="country-table__letter-link" href="/europe/danmark">Дания</a>
                   </li>
 
                   <li class="country-table__letter-country">
@@ -516,11 +523,11 @@
                   </li>
 
                   <li class="country-table__letter-country">
-                    <a class="country-table__letter-link" href="">Испания</a>
+                    <a class="country-table__letter-link" href="/europe/spain">Испания</a>
                   </li>
 
                   <li class="country-table__letter-country">
-                    <a class="country-table__letter-link" href="">Италия</a>
+                    <a class="country-table__letter-link" href="/europe/italy">Италия</a>
                   </li>
                 </ul>
               </td>
@@ -568,7 +575,7 @@
                   </li>
 
                   <li class="country-table__letter-country">
-                    <a class="country-table__letter-link" href="">Китай</a>
+                    <a class="country-table__letter-link" href="/asia/china">Китай</a>
                   </li>
 
                   <li class="country-table__letter-country">
@@ -682,7 +689,7 @@
                   </li>
 
                   <li class="country-table__letter-country">
-                    <a class="country-table__letter-link" href="">Нидерланды</a>
+                    <a class="country-table__letter-link" href="/europe/nederland">Нидерланды</a>
                   </li>
 
                   <li class="country-table__letter-country">
@@ -694,7 +701,7 @@
                   </li>
 
                   <li class="country-table__letter-country">
-                    <a class="country-table__letter-link" href="">Норвегия</a>
+                    <a class="country-table__letter-link" href="/europe/norway">Норвегия</a>
                   </li>
                 </ul>
               </td>
@@ -702,7 +709,7 @@
                 <span class="country-table__letter">О</span>
                 <ul class="country-table__letter-countries list">
                   <li class="country-table__letter-country">
-                    <a class="country-table__letter-link" href="">ОАЭ</a>
+                    <a class="country-table__letter-link" href="/east/united-arab-emirates">ОАЭ</a>
                   </li>
 
                   <li class="country-table__letter-country">
@@ -758,7 +765,7 @@
                   </li>
 
                   <li class="country-table__letter-country">
-                    <a class="country-table__letter-link" href="">Россия</a>
+                    <a class="country-table__letter-link" href="/europe/russia">Россия</a>
                   </li>
                 </ul>
               </td>
@@ -812,7 +819,7 @@
                   </li>
 
                   <li class="country-table__letter-country">
-                    <a class="country-table__letter-link" href="">США</a>
+                    <a class="country-table__letter-link" href="america/usa">США</a>
                   </li>
                 </ul>
               </td>
@@ -1030,7 +1037,7 @@
             </li>
 
             <li class="country-table__content-item">
-              <a class="country-table__content-link" href="">Аргентина</a>
+              <a class="country-table__content-link" href="america/argentina">Аргентина</a>
             </li>
 
             <li class="country-table__content-item">
@@ -1051,7 +1058,7 @@
           </svg>
           Свернуть
         </button>
-    </div>
+      </div>
   </section>
 
   <div class="two-columns-wrapper container">
@@ -1061,8 +1068,9 @@
         <p class="users-filter__title title">Подберите идеального попутчика</p>
         <form class="users-filter__form" action="https://echo.htmlacademy.ru" method="GET">
           <ul class="users-filter__criteries criteries list">
+            <!-- expander--opened -->
             <li class="criteries__item expander">
-              <div class="expander__header">
+              <div class="expander__header" tabindex="0">
                 <h3 class="expander__title title">Хобби</h3>
                 <svg class="expander__icon" width="10" height="6">
                   <use href="img/sprite.svg#dropdown-icon"></use>
@@ -1072,30 +1080,30 @@
                 <ul class="criteries__checkboxes checkboxes list">
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
-                      <input class="check__control sr-only" type="checkbox" name="gym" id="gym-field">
-                      <label class="check__label" for="gym-field">Спортзал</label>
+                      <input class="check__control sr-only" type="checkbox" name="gym" id="gym-field" checked>
+                      <label class="check__label check__label--common" for="gym-field">Спортзал</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="hookah" id="hookah-field">
-                      <label class="check__label" for="hookah-field">Кальян</label>
+                      <label class="check__label check__label--common" for="hookah-field">Кальян</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="sofa" id="sofa-field">
-                      <label class="check__label" for="sofa-field">Диван</label>
+                      <label class="check__label check__label--common" for="sofa-field">Диван</label>
                     </div>
                   </li>
                 </ul>
               </div>
             </li>
 
-            <li class="criteries__item expander expander--opened">
-              <div class="expander__header">
+            <li class="criteries__item expander">
+              <div class="expander__header" tabindex="0">
                 <h3 class="expander__title title">Музыка</h3>
                 <svg class="expander__icon" width="10" height="6">
                   <use href="img/sprite.svg#dropdown-icon"></use>
@@ -1105,22 +1113,22 @@
                 <ul class="criteries__checkboxes checkboxes list">
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
-                      <input class="check__control sr-only" type="checkbox" name="heavy-rock" id="heavy-rock-field">
-                      <label class="check__label" for="heavy-rock-field">Тяжелый рок</label>
+                      <input class="check__control sr-only" type="checkbox" name="heavy-rock" id="heavy-rock-field" checked>
+                      <label class="check__label check__label--common" for="heavy-rock-field">Тяжелый рок</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
-                      <input class="check__control sr-only" type="checkbox" name="russian-rap" id="russian-rap-field">
-                      <label class="check__label" for="russian-rap-field">Русский рэп</label>
+                      <input class="check__control sr-only" type="checkbox" name="russian-rap" id="russian-rap-field" checked>
+                      <label class="check__label check__label--common" for="russian-rap-field">Русский рэп</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="eurodance" id="eurodance-field">
-                      <label class="check__label" for="eurodance-field">Евроденс</label>
+                      <label class="check__label check__label--common" for="eurodance-field">Евроденс</label>
                     </div>
                   </li>
                 </ul>
@@ -1128,7 +1136,7 @@
             </li>
 
             <li class="criteries__item expander">
-              <div class="expander__header">
+              <div class="expander__header" tabindex="0">
                 <h3 class="expander__title title">Еда</h3>
                 <svg class="expander__icon" width="10" height="6">
                   <use href="img/sprite.svg#dropdown-icon"></use>
@@ -1138,30 +1146,30 @@
                 <ul class="criteries__checkboxes checkboxes list">
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
-                      <input class="check__control sr-only" type="checkbox" name="meat-eater" id="meat-eater-field">
-                      <label class="check__label" for="meat-eater-field">Мясоед</label>
+                      <input class="check__control sr-only" type="checkbox" name="meat-eater" id="meat-eater-field" checked>
+                      <label class="check__label check__label--common" for="meat-eater-field">Мясоед</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="healthy-diet" id="healthy-diet-field">
-                      <label class="check__label" for="healthy-diet-field">Сидит на ПП</label>
+                      <label class="check__label check__label--common" for="healthy-diet-field">Сидит на ПП</label>
                     </div>
                   </li>
 
                   <li class="checkboxes__item">
                     <div class="check criteries__check">
                       <input class="check__control sr-only" type="checkbox" name="raw-vegan" id="raw-vegan-field">
-                      <label class="check__label" for="raw-vegan-field">Веган-сыроед</label>
+                      <label class="check__label check__label--common" for="raw-vegan-field">Веган-сыроед</label>
                     </div>
                   </li>
                 </ul>
               </div>
             </li>
 
-            <li class="criteries__item expander expander--opened">
-              <div class="expander__header">
+            <li class="criteries__item expander">
+              <div class="expander__header" tabindex="0">
                 <h3 class="expander__title title">Транспорт</h3>
                 <svg class="expander__icon" width="10" height="6">
                   <use href="img/sprite.svg#dropdown-icon"></use>
@@ -1169,12 +1177,11 @@
               </div>
               <div class="expander__content expander__content--transport">
                 <ul class="criteries__checkboxes criteries__checkboxes--transports checkboxes-transports list">
-                  <li class="checkboxes-transports__item">
+                  <li class="checkboxes-transports__item tooltip" data-tooltip="Авиаперелет">
                     <input class="checkboxes-transports__control sr-only" type="checkbox" name="air" id="air-field" checked>
                     <label
-                      class="checkboxes-transports__label tooltip"
+                      class="checkboxes-transports__label"
                       for="air-field"
-                      data-tooltip="Авиаперелет"
                       aria-label="Авиаперелет"
                     >
                       <svg class="checkboxes-transports__icon checkboxes-transports__icon--plane" width="14" height="16">
@@ -1183,12 +1190,11 @@
                     </label>
                   </li>
 
-                  <li class="checkboxes-transports__item">
-                    <input class="checkboxes-transports__control sr-only" type="checkbox" name="bus" id="bus-field">
+                  <li class="checkboxes-transports__item tooltip" data-tooltip="Автотранспорт">
+                    <input class="checkboxes-transports__control sr-only" type="checkbox" name="bus" id="bus-field" checked>
                     <label
-                      class="checkboxes-transports__label tooltip"
+                      class="checkboxes-transports__label"
                       for="bus-field"
-                      data-tooltip="Автотранспорт"
                       aria-label="Автотранспорт"
                     >
                       <svg class="checkboxes-transports__icon checkboxes-transports__icon--bus" width="13" height="16">
@@ -1196,12 +1202,11 @@
                     </label>
                   </li>
 
-                  <li class="checkboxes-transports__item">
+                  <li class="checkboxes-transports__item tooltip" data-tooltip="Велосипед">
                     <input class="checkboxes-transports__control sr-only" type="checkbox" name="bicycle" id="bicycle-field">
                     <label
-                      class="checkboxes-transports__label tooltip"
+                      class="checkboxes-transports__label"
                       for="bicycle-field"
-                      data-tooltip="Велосипед"
                       aria-label="Велосипед"
                     >
                       <svg class="checkboxes-transports__icon checkboxes-transports__icon--bike" width="15" height="17">
@@ -1210,10 +1215,10 @@
                     </label>
                   </li>
 
-                  <li class="checkboxes-transports__item">
-                    <input class="checkboxes-transports__control sr-only" type="checkbox" name="walking" id="walking-field">
+                  <li class="checkboxes-transports__item tooltip" data-tooltip="Пешком">
+                    <input class="checkboxes-transports__control sr-only" type="checkbox" name="walking" id="walking-field" checked>
                     <label
-                      class="checkboxes-transports__label tooltip"
+                      class="checkboxes-transports__label"
                       for="walking-field"
                       data-tooltip="Пешком"
                       aria-label="Пешком"
@@ -1227,8 +1232,8 @@
               </div>
             </li>
 
-            <li class="criteries__item expander expander--opened">
-              <div class="expander__header">
+            <li class="criteries__item expander">
+              <div class="expander__header" tabindex="0">
                 <h3 class="expander__title title">Левел</h3>
                 <svg class="expander__icon" width="10" height="6">
                   <use href="img/sprite.svg#dropdown-icon"></use>
@@ -1288,36 +1293,38 @@
     <section class="two-columns-wrapper__users users">
       <div class="users__wrapper container">
         <ul class="users__list list">
-          <li class="users__list-item card">
+          <li class="users__list-item card card--firsova">
             <div class="card__avatar-wrapper">
-              <picture>
-                <source
-                  type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x"
-                >
-                <source
-                  type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x"
-                >
-                <source
-                  type="image/webp"
-                  srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x"
-                >
-                <source
-                  media="(min-width: 1440px)"
-                  srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x"
-                >
-                <source
-                  media="(min-width: 768px)"
-                  srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x"
-                >
-                <img class="card__avatar" src="img/firsova-mobile@1x.jpg" alt="Аватар Таня Фирсова" srcset="img/firsova-mobile@2x.jpg">
+              <a href="profile.html">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x"
+                  >
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x"
+                  >
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x"
+                  >
+                  <img class="card__avatar" src="img/firsova-mobile@1x.jpg" alt="Аватар Таня Фирсова" srcset="img/firsova-mobile@2x.jpg">
               </picture>
+              </a>
             </div>
             <h2 class="card__name card__name--offline title">
-              <a class="card__name-link" href="">Таня Фирсова</a>
+              <a class="card__name-link" href="profile.html">Таня Фирсова</a>
             </h2>
             <div class="card__likes-wrapper">
               <button class="card__like card__like--checked" type="button" aria-label="Поставить лайк">
@@ -1328,7 +1335,7 @@
               </button>
               <span class="card__likes-count">1,5 м</span>
             </div>
-            <ul class="card__tags tags list">
+            <ul class="card__tags tags tags--card list">
               <li class="tags__tag">#ЗОЖ</li>
 
               <li class="tags__tag">#ПП</li>
@@ -1345,11 +1352,10 @@
               <p class="card__flags-text text">Хочет посетить:</p>
               <ul class="card__flags flags flags--column flags--card list">
                 <li class="card__flag flags__item flag">
-                  <div class="card__image-wrapper flag__image-wrapper">
+                  <div class="card__image-wrapper flag__image-wrapper tooltip" data-tooltip="Шри-Ланка">
                     <img
-                      class="card__flag-image flag__image tooltip"
+                      class="card__flag-image flag__image"
                       src="img/flag-sri-lanka.svg"
-                      data-tooltip="Шри-Ланка"
                       alt="Флаг Шри-Ланки"
                       width="26"
                       height="18"
@@ -1359,11 +1365,10 @@
                 </li>
 
                 <li class="card__flag flags__item flag">
-                  <div class="card__image-wrapper flag__image-wrapper">
+                  <div class="card__image-wrapper flag__image-wrapper tooltip" data-tooltip="Тайланд">
                     <img
-                      class="card__flag-image flag__image tooltip"
+                      class="card__flag-image flag__image"
                       src="img/flag-thailand.svg"
-                      data-tooltip="Тайланд"
                       alt="Флаг Тайланда"
                       width="26"
                       height="18"
@@ -1373,11 +1378,10 @@
                 </li>
 
                 <li class="card__flag flags__item flag">
-                  <div class="card__image-wrapper flag__image-wrapper">
+                  <div class="card__image-wrapper flag__image-wrapper tooltip" data-tooltip="Сейшелы">
                     <img
-                      class="card__flag-image flag__image tooltip"
+                      class="card__flag-image flag__image"
                       src="img/flag-seychelles.svg#"
-                      data-tooltip="Сейшелы"
                       alt="Флаг Сейшелов"
                       width="26"
                       height="18"
@@ -1432,13 +1436,13 @@
             </div>
             <div class="card__level-wrapper">
               <span class="card__level-text text">Левел:</span>
-              <div class="card__progress progress progress--card progress--no-level">
+              <div class="card__progress progress progress--card">
                 <div class="progress__description">
                   <span class="progress__value">99</span>
                   <span class="progress__level">level</span>
                 </div>
                 <svg class="progress__svg" width="45" height="45">
-                  <circle class="progress__svg-circle"
+                  <circle class="progress__svg-circle progress__svg-circle--firsova"
                           vector-effect="non-scaling-stroke"
                           data-stroke="red"
                           style="--progress-level: 99;"
@@ -1453,36 +1457,38 @@
                 </svg>
               </div>
             </div>
-            <a href="" class="card__invite button button--rounded">Позвать!</a>
+            <a class="card__invite button button--rounded" href="invite.html">Позвать!</a>
           </li>
 
-          <li class="users__list-item card">
+          <li class="users__list-item card card--demin">
             <div class="card__avatar-wrapper">
-              <picture>
-                <source
-                  type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset="img/demin-desktop@1x.webp 1x,
-                          img/demin-desktop@2x.webp 2x"
-                >
-                <source
-                  type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset="img/demin-tablet@1x.webp 1x,
-                          img/demin-tablet@2x.webp 2x"
-                >
-                <source
-                  type="image/webp"
-                  srcset="img/demin-mobile@1x.webp 1x,
-                          img/demin-mobile@2x.webp 2x"
-                >
-                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-                <img class="card__avatar" src="img/demin-mobile@1x.jpg" alt="Аватар Петя Демин" srcset="img/demin-mobile@2x.jpg">
-              </picture>
+              <a href="profile.html">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="img/demin-desktop@1x.webp 1x,
+                            img/demin-desktop@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="img/demin-tablet@1x.webp 1x,
+                            img/demin-tablet@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    srcset="img/demin-mobile@1x.webp 1x,
+                            img/demin-mobile@2x.webp 2x"
+                  >
+                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                  <img class="card__avatar" src="img/demin-mobile@1x.jpg" alt="Аватар Петя Демин" srcset="img/demin-mobile@2x.jpg">
+                </picture>
+              </a>
             </div>
             <h2 class="card__name card__name--online title">
-              <a href="" class="card__name-link">Петя Демин</a>
+              <a href="profile.html" class="card__name-link">Петя Демин</a>
             </h2>
             <div class="card__likes-wrapper">
               <button class="card__like" type="button" aria-label="Поставить лайк">
@@ -1491,9 +1497,9 @@
                   <use class="card__like-icon--checked" href="img/sprite.svg#heart-active-icon"></use>
                 </svg>
               </button>
-              <span class="card__likes-count">1,5 м</span>
+              <span class="card__likes-count">1500</span>
             </div>
-            <ul class="card__tags tags list">
+            <ul class="card__tags tags tags--card list">
               <li class="tags__tag">#бургер</li>
 
               <li class="tags__tag">#бар</li>
@@ -1504,15 +1510,14 @@
 
               <li class="tags__tag">#крафт</li>
             </ul>
-            <div class="card__flags-wrapper">
+            <div class="card__flags-wrapper card__flags-wrapper--demin">
               <p class="card__flags-text text">Хочет посетить:</p>
               <ul class="card__flags flags flags--column flags--card list">
                 <li class="card__flag flags__item flag">
-                  <div class="card__image-wrapper flag__image-wrapper">
+                  <div class="card__image-wrapper flag__image-wrapper tooltip" data-tooltip="Бельгия">
                     <img
-                      class="card__flag-image flag__image tooltip"
+                      class="card__flag-image flag__image"
                       src="img/flag-belgium.svg"
-                      data-tooltip="Бельгия"
                       alt="Флаг Бельгии"
                       width="26"
                       height="18"
@@ -1522,10 +1527,10 @@
                 </li>
 
                 <li class="card__flag flags__item flag">
-                  <div class="card__image-wrapper flag__image-wrapper">
+                  <div class="card__image-wrapper flag__image-wrapper tooltip" data-tooltip="Чехия">
                     <img
-                      class="card__flag-image flag__image tooltip"
-                      src="img/flag-czech.svg"data-tooltip="Чехия"
+                      class="card__flag-image flag__image"
+                      src="img/flag-czech.svg"
                       alt="Флаг Чехии"
                       width="26"
                       height="18"
@@ -1580,13 +1585,13 @@
             </div>
             <div class="card__level-wrapper">
               <span class="card__level-text text">Левел:</span>
-              <div class="card__progress progress progress--card progress--no-level">
+              <div class="card__progress progress progress--card">
                 <div class="progress__description">
-                  <span class="progress__value">99</span>
+                  <span class="progress__value">80</span>
                   <span class="progress__level">level</span>
                 </div>
                 <svg class="progress__svg" width="45" height="45">
-                  <circle class="progress__svg-circle"
+                  <circle class="progress__svg-circle progress__svg-circle--demin"
                           vector-effect="non-scaling-stroke"
                           data-stroke="red"
                           style="--progress-level: 99;"
@@ -1601,36 +1606,38 @@
                 </svg>
               </div>
             </div>
-            <a href="" class="card__invite button button--rounded">Позвать!</a>
+            <a class="card__invite button button--rounded" href="invite.html">Позвать!</a>
           </li>
 
-          <li class="users__list-item card">
+          <li class="users__list-item card card--smolov">
             <div class="card__avatar-wrapper">
-              <picture>
-                <source
-                  type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset="img/smolov-desktop@1x.webp 1x,
-                          img/smolov-desktop@2x.webp 2x"
-                >
-                <source
-                  type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset="img/smolov-tablet@1x.webp 1x,
-                          img/smolov-tablet@2x.webp 2x"
-                >
-                <source
-                  type="image/webp"
-                  srcset="img/smolov-mobile@1x.webp 1x,
-                          img/smolov-mobile@2x.webp 2x"
-                >
-                <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
-                <img class="card__avatar" src="img/smolov-mobile@1x.jpg" alt="Аватар Марк Смолов" srcset="img/smolov-mobile@2x.jpg">
-              </picture>
+              <a href="profile.html">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="img/smolov-desktop@1x.webp 1x,
+                            img/smolov-desktop@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="img/smolov-tablet@1x.webp 1x,
+                            img/smolov-tablet@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    srcset="img/smolov-mobile@1x.webp 1x,
+                            img/smolov-mobile@2x.webp 2x"
+                  >
+                  <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                  <img class="card__avatar" src="img/smolov-mobile@1x.jpg" alt="Аватар Марк Смолов" srcset="img/smolov-mobile@2x.jpg">
+                </picture>
+              </a>
             </div>
             <h2 class="card__name card__name--offline title">
-              <a href="" class="card__name-link">Марк Смолов</a>
+              <a href="profile.html" class="card__name-link">Марк Смолов</a>
             </h2>
             <div class="card__likes-wrapper">
               <button class="card__like" type="button" aria-label="Поставить лайк">
@@ -1639,9 +1646,9 @@
                   <use class="card__like-icon--checked" href="img/sprite.svg#heart-active-icon"></use>
                 </svg>
               </button>
-              <span class="card__likes-count">1,5 м</span>
+              <span class="card__likes-count">170</span>
             </div>
-            <ul class="card__tags tags list">
+            <ul class="card__tags tags tags--card list">
               <li class="tags__tag">#рэп</li>
 
               <li class="tags__tag">#тату</li>
@@ -1652,16 +1659,14 @@
 
               <li class="tags__tag">#суприм</li>
             </ul>
-            <p class="card__tags tags"></p>
             <div class="card__flags-wrapper">
               <p class="card__flags-text text">Хочет посетить:</p>
               <ul class="card__flags flags flags--column flags--card list">
                 <li class="card__flag flags__item flag">
-                  <div class="card__image-wrapper flag__image-wrapper">
+                  <div class="card__image-wrapper flag__image-wrapper tooltip" data-tooltip="США">
                     <img
-                      class="card__flag-image flag__image tooltip"
+                      class="card__flag-image flag__image"
                       src="img/flag-usa.svg"
-                      data-tooltip="США"
                       alt="Флаг США"
                       width="26"
                       height="18"
@@ -1671,11 +1676,10 @@
                 </li>
 
                 <li class="card__flag flags__item flag">
-                  <div class="card__image-wrapper flag__image-wrapper">
+                  <div class="card__image-wrapper flag__image-wrapper tooltip" data-tooltip="Австралия">
                     <img
-                      class="card__flag-image flag__image tooltip"
+                      class="card__flag-image flag__image"
                       src="img/flag-australia.svg"
-                      data-tooltip="Австралия"
                       alt="Флаг Австралии"
                       width="26"
                       height="18"
@@ -1685,11 +1689,10 @@
                 </li>
 
                 <li class="card__flag flags__item flag">
-                  <div class="card__image-wrapper flag__image-wrapper">
+                  <div class="card__image-wrapper flag__image-wrapper tooltip" data-tooltip="Доминика">
                     <img
-                      class="card__flag-image flag__image tooltip"
+                      class="card__flag-image flag__image"
                       src="img/flag-dominica.svg"
-                      data-tooltip="Доминика"
                       alt="Флаг Доминики"
                       width="26"
                       height="18"
@@ -1744,13 +1747,13 @@
             </div>
             <div class="card__level-wrapper">
               <span class="card__level-text text">Левел:</span>
-              <div class="card__progress progress progress--card progress--no-level">
+              <div class="card__progress progress progress--card">
                 <div class="progress__description">
-                  <span class="progress__value">99</span>
+                  <span class="progress__value">25</span>
                   <span class="progress__level">level</span>
                 </div>
                 <svg class="progress__svg" width="45" height="45">
-                  <circle class="progress__svg-circle"
+                  <circle class="progress__svg-circle progress__svg-circle--smolov"
                           vector-effect="non-scaling-stroke"
                           data-stroke="red"
                           style="--progress-level: 99;"
@@ -1765,37 +1768,41 @@
                 </svg>
               </div>
             </div>
-            <a href="" class="card__invite button button--rounded">Позвать!</a>
+            <a class="card__invite button button--rounded" href="invite.html">Позвать!</a>
           </li>
 
-          <li class="users__list-item card">
+          <li class="users__list-item card card--rogovaya">
             <div class="card__avatar-wrapper">
-              <picture>
-                <source
-                  type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset=
-                    "img/rogovaya-desktop@1x.webp 1x,
-                     img/rogovaya-desktop@2x.webp 2x
-                    ">
-                <source
-                  type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset=
-                    "img/rogovaya-tablet@1x.webp 1x,
-                     img/rogovaya-tablet@2x.webp 2x">
-                <source
-                  type="image/webp"
-                  srcset=
-                    "img/rogovaya-mobile@1x.webp 1x,
-                     img/rogovaya-mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
-                <img class="card__avatar" src="img/rogovaya-mobile@1x.jpg" alt="Аватар Лариса Роговая" srcset="img/rogovaya-mobile@2x.jpg">
-              </picture>
+              <a href="profile.html" tabindex="-1">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset=
+                      "img/rogovaya-desktop@1x.webp 1x,
+                      img/rogovaya-desktop@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset=
+                      "img/rogovaya-tablet@1x.webp 1x,
+                      img/rogovaya-tablet@2x.webp 2x"
+                  >
+                  <source
+                    type="image/webp"
+                    srcset=
+                      "img/rogovaya-mobile@1x.webp 1x,
+                      img/rogovaya-mobile@2x.webp 2x"
+                  >
+                  <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                  <img class="card__avatar" src="img/rogovaya-mobile@1x.jpg" alt="Аватар Лариса Роговая" srcset="img/rogovaya-mobile@2x.jpg">
+                </picture>
+              </a>
             </div>
             <h2 class="card__name card__name--online title">
-              <a href="" class="card__name-link">Лариса Роговая</a>
+              <a href="profile.html" class="card__name-link">Лариса Роговая</a>
             </h2>
             <div class="card__likes-wrapper">
               <button class="card__like" type="button" aria-label="Поставить лайк">
@@ -1804,9 +1811,9 @@
                   <use class="card__like-icon--checked" href="img/sprite.svg#heart-active-icon"></use>
                 </svg>
               </button>
-              <span class="card__likes-count">1,5 м</span>
+              <span class="card__likes-count">23</span>
             </div>
-            <ul class="card__tags tags list">
+            <ul class="card__tags tags tags--card list">
               <li class="tags__tag">#образование</li>
 
               <li class="tags__tag">#карьера</li>
@@ -1815,16 +1822,14 @@
 
               <li class="tags__tag">#линкедин</li>
             </ul>
-            <p class="card__tags tags"></p>
             <div class="card__flags-wrapper">
               <p class="card__flags-text text">Хочет посетить:</p>
               <ul class="card__flags flags flags--column flags--card list">
                 <li class="card__flag flags__item flag">
-                  <div class="card__image-wrapper flag__image-wrapper">
+                  <div class="card__image-wrapper flag__image-wrapper tooltip" data-tooltip="Великобритания">
                     <img
-                      class="card__flag-image flag__image tooltip"
+                      class="card__flag-image flag__image"
                       src="img/flag-united-kingdom.svg"
-                      data-tooltip="Великобритания"
                       alt="Флаг Великобритании"
                       width="26"
                       height="18"
@@ -1834,11 +1839,10 @@
                 </li>
 
                 <li class="card__flag flags__item flag">
-                  <div class="card__image-wrapper flag__image-wrapper">
+                  <div class="card__image-wrapper flag__image-wrapper tooltip" data-tooltip="Германия">
                     <img
-                      class="card__flag-image flag__image tooltip"
+                      class="card__flag-image flag__image"
                       src="img/flag-germany.svg"
-                      data-tooltip="Германия"
                       alt="Флаг Германии"
                       width="26"
                       height="18"
@@ -1893,13 +1897,13 @@
             </div>
             <div class="card__level-wrapper">
               <span class="card__level-text text">Левел:</span>
-              <div class="card__progress progress progress--card progress--no-level">
+              <div class="card__progress progress progress--card">
                 <div class="progress__description">
-                  <span class="progress__value">99</span>
+                  <span class="progress__value">50</span>
                   <span class="progress__level">level</span>
                 </div>
                 <svg class="progress__svg" width="45" height="45">
-                  <circle class="progress__svg-circle"
+                  <circle class="progress__svg-circle progress__svg-circle--rogovaya"
                           vector-effect="non-scaling-stroke"
                           data-stroke="red"
                           style="--progress-level: 99;"
@@ -1914,7 +1918,7 @@
                 </svg>
               </div>
             </div>
-            <a href="" class="card__invite button button--rounded">Позвать!</a>
+            <a class="card__invite button button--rounded" href="invite.html">Позвать!</a>
           </li>
         </ul>
         <a href="" class="users__show-more button button--transparent button--borderless">
@@ -1939,8 +1943,16 @@
             </li>
           </ul>
           <div class="pagination__arrows">
-            <a class="pagination__button pagination__button--previous" href="" aria-label="Перейти на предыдущую страницу"></a>
-            <a class="pagination__button pagination__button--next" href="" aria-label="Перейти на следующую страницу"></a>
+            <a class="pagination__button pagination__button--previous" href="" aria-label="Перейти на предыдущую страницу">
+              <svg width="10" height="18">
+                <use href="img/sprite.svg#triangle-arrow-left-icon"></use>
+              </svg>
+            </a>
+            <a class="pagination__button pagination__button--next" href="" aria-label="Перейти на следующую страницу">
+              <svg width="10" height="18">
+                <use href="img/sprite.svg#triangle-arrow-right-icon"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -1980,6 +1992,7 @@
                   img/logo-tablet-blue@2x.png 2x"
         >
         <img
+          class="footer__image footer__image--blue logo__image"
           src="img/logo-mobile-blue@1x.png"
           srcset="img/logo-mobile-blue@2x.png"
           alt="Логотип Погнали"
@@ -2018,9 +2031,6 @@
     </div>
   </div>
 </footer>
-<script src="js/header.js"></script>
-<script src="js/expander.js"></script>
-<script src="js/country-filter.js"></script>
-<script src="js/like.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

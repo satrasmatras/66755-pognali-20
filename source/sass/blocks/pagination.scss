@@ -60,13 +60,19 @@
 
   text-transform: uppercase;
 
-  color: $special-blue-light;
+  color: $pagination-link;
   text-decoration: none;
 
   padding: 17px 19px 16px 20px;
   border-radius: 50%;
 
-  &--current {
+  &:hover,
+  &:focus {
+    color: rgba($pagination-link, 0.6);
+  }
+
+  &--current,
+  &:active {
     background-color: $basic-yellow;
   }
 }
@@ -83,27 +89,24 @@
 
   background-color: $basic-white;
 
-  &::after {
-    width: 10px;
-    height: 18px;
-  }
+  color: $special-blue-light;
 
   &--previous {
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
-
-    &::after {
-
-      content: url("../../img/triangle-arrow-left-icon.svg");
-    }
   }
 
   &--next {
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+  }
 
-    &::after {
-      content: url("../../img/triangle-arrow-right-icon.svg");
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

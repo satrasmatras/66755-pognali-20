@@ -29,71 +29,64 @@
   background-color: $basic-white;
   border-radius: 100%;
 
-  &:hover {
-    filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
-    color: rgba($transport-unchecked-hover, 1);
-  }
-
-  &:active {
-    filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
-    color: rgba($special-blue-light, 0.1);
-  }
-
   @media #{$tablet-width} {
     width: 43px;
     height: 43px;
   }
 }
 
-.checkboxes-transports__control:checked + .checkboxes-transports__label {
-  color: $special-blue-light;
-
-  &:hover {
-    color: rgba($special-blue-light, 0.7);
-  }
-
-  &:active {
-    color: rgba($special-blue-light, 0.3);
-  }
+.checkboxes-transports__control:hover + .checkboxes-transports__label,
+.checkboxes-transports__control:focus + .checkboxes-transports__label {
+  filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
+  color: rgba($transport-unchecked-hover, 1);
 }
 
+.checkboxes-transports__control:active + .checkboxes-transports__label {
+  filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
+  color: rgba($special-blue-light, 0.1);
+}
+
+.checkboxes-transports__control:checked + .checkboxes-transports__label {
+  color: rgba($special-blue-light, 1);
+}
+
+.checkboxes-transports__control:checked:hover + .checkboxes-transports__label,
+.checkboxes-transports__control:checked:focus + .checkboxes-transports__label {
+  color: rgba($special-blue-light, 0.7);
+}
+
+.checkboxes-transports__control:checked:active + .checkboxes-transports__label {
+  color: rgba($special-blue-light, 0.3);
+}
 
 .checkboxes-transports__icon {
   flex-shrink: 0;
+
   &--plane {
     @media #{$tablet-width} {
       width: 23px;
       height: 22px;
     }
-    @media #{$desktop-width} {
-
-    }
   }
+
   &--bus {
     @media #{$tablet-width} {
       width: 23px;
       height: 22px;
     }
-    @media #{$desktop-width} {
-
-    }
   }
+
   &--bike {
     @media #{$tablet-width} {
       width: 21px;
       height: 17px;
     }
-    @media #{$desktop-width} {
-
-    }
   }
+
   &--run {
     @media #{$tablet-width} {
       width: 17.5px;
       height: 18px;
-    }
-    @media #{$desktop-width} {
-
     }
   }
 }

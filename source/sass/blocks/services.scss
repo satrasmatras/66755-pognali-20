@@ -1,11 +1,10 @@
 .services {
   position: relative;
 
-  background-color: $basic-grey-light;
+  background-color: $basic-grey;
   color: $special-grey;
 
-  padding-top: 53px + $index-mobile-border-radius;
-  margin-top: -$index-mobile-border-radius;
+  padding-top: 23px + $index-mobile-border-radius;
 
   border-bottom-left-radius: $index-mobile-border-radius;
   border-bottom-right-radius: $index-mobile-border-radius;
@@ -15,8 +14,7 @@
   z-index: $services-z-index;
 
   @media #{$tablet-width} {
-    padding-top: 74px + $index-tablet-border-radius;
-    margin-top: -$index-tablet-border-radius;
+    padding-top: 74px;
     padding-bottom: 34px;
 
     border-bottom-left-radius: $index-tablet-border-radius;
@@ -24,7 +22,7 @@
   }
 
   @media #{$desktop-width} {
-    padding-top: 107px + $index-tablet-border-radius;
+    padding-top: 107px;
     padding-bottom: 136px;
   }
 
@@ -46,7 +44,7 @@
     background-repeat: no-repeat;
     background-size: 100px 100px;
 
-    top: 67px;
+    top: 37px;
     left: calc(50% + 35px);
 
     @media #{$tablet-width} {
@@ -60,9 +58,9 @@
       height: 198px;
       background-size: 198px 198px;
 
-      top: calc(50% - 58px);
+      top: calc(50% - 90px);
       bottom: auto;
-      left: calc(50% + 388px);
+      left: calc(50% + 389px);
     }
   }
 }
@@ -100,7 +98,7 @@
   }
 
   @media #{$desktop-width} {
-    margin-bottom: 127px;
+    margin-bottom: 131px;
     padding-left: 0;
     padding-right: 51px;
   }
@@ -122,6 +120,24 @@
 
 .services__tariffs {
   margin-bottom: 21px;
+  position: relative;
+
+  &::after {
+    bottom: -13px;
+    position: absolute;
+    content: "";
+    background: linear-gradient(to right, rgba($services-border, 0) 0, $services-border, rgba($services-border, 0));
+    height: 1px;
+    width: 100%;
+
+    @media #{$tablet-width} {
+      bottom: -2px;
+    }
+
+    @media #{$desktop-width} {
+      bottom: 6px;
+    }
+  }
 
   @media #{$tablet-width} {
     position: relative;
@@ -132,34 +148,25 @@
       content: "";
       border-radius: 20px;
       background-color: $countries-filter-background;
-      right: -37px;
+      right: -36px;
       top: -42px;
-      height: calc(100% + 81px);
+      height: calc(100% + 88px);
       width: 200px;
 
       z-index: -1;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      background: linear-gradient(to right, rgba($services-border, 0) 0, $services-border, rgba($services-border, 0));
-      height: 1px;
-      width: 100%;
-      bottom: 0;
     }
   }
 
   @media #{$desktop-width} {
     padding-right: 0;
     margin-right: auto;
-    margin-bottom: 4px;
+    margin-bottom: 0;
     width: 906px;
 
     &:not(.services__tariffs--business)::before {
       right: -161px;
-      top: -35px;
-      height: calc(100% + 84px);
+      top: -48px;
+      height: calc(100% + 93px);
       width: 447px;
       z-index: 0;
     }
@@ -175,7 +182,14 @@
     background: linear-gradient(to right, rgba($services-border, 0) 0, $services-border, rgba($services-border, 0));
     height: 1px;
     width: 100%;
-    top: 1px;
+    top: -15px;
+    left: 0;
+
+    @media #{$tablet-width} {
+      top: 1px;
+      width: 561px;
+      left: 30px;
+    }
   }
 
   @media #{$desktop-width} {
@@ -203,10 +217,10 @@
 
     font-size: 20px;
     line-height: 20px;
-
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: rgba($show-tariffs-button, 0.6);
     background-color: transparent;
   }
@@ -273,14 +287,16 @@
 .services__modal {
   position: absolute;
   display: none;
-  top: 50px;
-  left: calc(50% - 135px);
 
-  // TODO: не могу поднять модалку выше блока companions, даже при огромном z-index
-  z-index: 100;
+  top: -11px;
+  left: calc(50%);
+
+  transform: translateX(-50%);
+
+  z-index: 1000;
   width: 270px;
 
-  padding: 65px 0 0;
+  padding: 34px 0 0;
   border-radius: 20px;
 
   background-color: $basic-white;
@@ -289,7 +305,9 @@
 
   @media #{$tablet-width} {
     width: 688px;
-    left: calc(50% - 357px);
+    top: 0;
+
+    padding: 54px 0 0;
 
     box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
   }
@@ -299,8 +317,7 @@
     box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
     border-radius: 30px;
 
-    top: 169px;
-    left: calc(50% + -373px);
+    top: 109px;
     padding-top: 55px;
   }
 
@@ -342,7 +359,8 @@
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $close-modal-button-hover;
   }
 

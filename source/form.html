@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Погнали</title>
   <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
 </head>
 <body class="page__body page__body--light">
-<header class="header header--with-body header--no-js">
+
+<header class="header header--no-js header--opened">
   <nav class="container header__container">
     <a class="header__logo logo" href="index.html">
       <picture>
@@ -39,7 +42,7 @@
                   img/logo-tablet-blue@2x.png 2x"
         >
         <img
-          class="logo__image logo-image--blue"
+          class="header__image header__image--blue logo__image"
           src="img/logo-mobile-blue@1x.png"
           srcset="img/logo-mobile-blue@2x.png"
           alt="Логотип Погнали"
@@ -74,7 +77,7 @@
                   img/logo-tablet-white@2x.png 2x"
         >
         <img
-          class="logo__image logo-image--light"
+          class="header__image header__image--white logo__image"
           src="img/logo-mobile-white@1x.png"
           srcset="img/logo-mobile-white@2x.png"
           alt="Логотип Погнали"
@@ -82,9 +85,11 @@
       </picture>
     </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню">
-      <svg class="header__icon" aria-hidden="true" width="25" height="11">
-        <use class="header__icon-menu" href="img/sprite.svg#menu-icon"></use>
-        <use class="header__icon-close" href="img/sprite.svg#menu-close-icon"></use>
+      <svg class="header__icon header__icon--menu" aria-hidden="true" width="25" height="11">
+        <use href="img/sprite.svg#menu-icon"></use>
+      </svg>
+      <svg class="header__icon header__icon--close" aria-hidden="true" width="19" height="19">
+        <use href="img/sprite.svg#menu-close-icon"></use>
       </svg>
     </button>
     <ul class="header__list site-list list">
@@ -114,24 +119,21 @@
       <li class="user-nav__item user-nav__item--icon">
         <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel" aria-label="8 800 555-86-28">
           <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-            $
             <use href="img/sprite.svg#topmenu-phone-icon"></use>
           </svg>
         </a>
       </li>
 
       <li class="user-nav__item user-nav__item--icon">
-        <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email"
-           aria-label="mail@htmlacademy.ru">
+        <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email" aria-label="mail@htmlacademy.ru">
           <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-            $
             <use href="img/sprite.svg#topmenu-mail-icon"></use>
           </svg>
         </a>
       </li>
 
       <li class="user-nav__item user-nav__item--grow user-nav__item--auth">
-        <a href="" class="button button--rounded user-nav__link user-nav__link--auth">Авторизация</a>
+        <a href="auth.html" class="button button--rounded user-nav__link user-nav__link--auth">Авторизация</a>
       </li>
     </ul>
 
@@ -142,7 +144,7 @@
           href="tel:+88005558628"
         >
           <div class="contacts__icon-wrapper">
-            <svg class="contacts__icon" width="13.5" height="14">
+            <svg class="contacts__icon contacts__icon--map-phone" width="14" height="14">
               <use href="./img/sprite.svg#contacts-phone-icon"></use>
             </svg>
           </div>
@@ -156,7 +158,7 @@
           href="mailto:mail@htmlacademy.ru"
         >
           <div class="contacts__icon-wrapper">
-            <svg class="contacts__icon" width="19" height="13">
+            <svg class="contacts__icon contacts__icon--map-mail" width="19" height="13">
               <use href="./img/sprite.svg#contacts-mail-icon"></use>
             </svg>
           </div>
@@ -192,7 +194,7 @@
 </header>
 
 <main class="page__main">
-  <div class="header-body">
+  <div class="header-body header-body--form">
     <div class="header-body__wrapper container">
       <h1 class="header-body__title title">Направления</h1>
     </div>
@@ -205,24 +207,19 @@
             <span class="progress__value">80</span>
             <span class="progress__level">level</span>
           </div>
-          <div class="progress__circle">
-            <svg class="progress__svg" height="100" width="100">
-              <circle class="progress__svg-circle"
-                      data-stroke="red"
-                      style="
-                        --progress-level: 80;
-                        --progress-radius: 44;
-"
-                      cx="50"
-                      cy="50"
-                      r="44"
-                      stroke="orange"
-                      stroke-width="3"
-                      fill="transparent"
-                      stroke-linecap="round"
-              />
-            </svg>
-          </div>
+          <svg class="progress__svg" width="100" height="100" viewBox="0 0 100 100">
+            <circle
+              class="progress__svg-circle"
+              vector-effect="non-scaling-stroke"
+              cx="50"
+              cy="50"
+              r="48"
+              stroke-width="3"
+              fill="transparent"
+              stroke-linecap="round"
+            >
+            </circle>
+          </svg>
         </div>
         <div class="profile__avatar-wrapper">
           <picture>
@@ -290,8 +287,7 @@
             </li>
 
             <li class="checkboxes-transports__item">
-              <input class="checkboxes-transports__control sr-only" type="checkbox" name="walking" id="walking-field"
-                     checked>
+              <input class="checkboxes-transports__control sr-only" type="checkbox" name="walking" id="walking-field" checked>
               <label
                 class="checkboxes-transports__label tooltip"
                 for="walking-field"
@@ -346,31 +342,31 @@
       </div>
       <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="POST">
         <ol class="steps list">
-          <li class="steps__item step">
-            <div class="step__header">
+          <li class="steps__item step step--first">
+            <div class="step__header step__header--first">
               <span class="step__count">Шаг 1.</span>
-              <h3 class="step__title title" id="step-1">Даты пребывания</h3>
+              <h3 class="step__title step__title--first title" id="step-1">Даты пребывания</h3>
               <ul class="step__navigation list">
                 <li class="step__navigation-item">
                   <a class="step__navigation-link step__navigation-link--current">Даты</a>
                 </li>
 
                 <li class="step__navigation-item">
-                  <a class="step__navigation-link" href="#step-2">Маршрут</a>
+                  <a class="step__navigation-link">Маршрут</a>
                 </li>
 
                 <li class="step__navigation-item">
-                  <a class="step__navigation-link" href="#step-3">Развлечения</a>
+                  <a class="step__navigation-link">Развлечения</a>
                 </li>
               </ul>
-              <p class="step__description text">
+              <p class="step__description step__description--first text">
                 Укажите предпочтительное количество попутчиков,
                 которых <br class="break break--desktop"> вы хотели бы позвать в поездку и ее предполагаемую
                 длительность.
               </p>
             </div>
             <div class="step__inputs">
-              <div class="step__number-input step__number-input--companions number">
+              <div class="step__number-input step__number-input--companions number" data-min="1">
                 <label for="companions-count-field" class="number__label">Ищу попутчиков:</label>
                 <span class="number__unit">чел.</span>
                 <div class="number__input-wrapper">
@@ -379,8 +375,7 @@
                       <use href="img/sprite.svg#qty-minus-mobile-icon"></use>
                     </svg>
                   </button>
-                  <input class="number__input" type="number" name="companions-count" id="companions-count-field"
-                         value="2">
+                  <input class="number__input" type="number" name="companions-count" id="companions-count-field" value="2">
                   <button class="number__button number__icon--plus" type="button" aria-label="Увеличить на 1">
                     <svg class="number__icon" width="14" height="14">
                       <use href="img/sprite.svg#qty-plus-mobile-icon"></use>
@@ -389,10 +384,10 @@
                 </div>
               </div>
               <div class="step__check step__check--children check check--large">
-                <input class="check__control sr-only" type="checkbox" name="with-children" id="with-children-field">
+                <input class="check__control sr-only" type="checkbox" name="with-children" id="with-children-field" checked>
                 <label class="check__label check__label--form" for="with-children-field">Можно с детьми</label>
               </div>
-              <div class="step__number-input step__number-input--duration number">
+              <div class="step__number-input step__number-input--duration number" data-min="2">
                 <label for="days-count-field" class="number__label">Длительность:</label>
                 <span class="number__unit">дн.</span>
                 <div class="number__input-wrapper">
@@ -495,20 +490,20 @@
                   <td class="table__cell">23</td>
                   <td class="table__cell">24</td>
                   <td class="table__cell">25</td>
-                  <td class="table__cell table__cell--selected">26 <p class="table__cell-text table__cell-text--start text">Заезд</p></td>
-                  <td class="table__cell table__cell--selected">27</td>
-                  <td class="table__cell table__cell--selected">28 <p class="table__cell-text table__cell-text--end text">Выезд</p></td>
-                  <td class="table__cell table__cell--available">29</td>
+                  <td class="table__cell table__cell--selected" tabindex="0">26 <p class="table__cell-text table__cell-text--start text">Заезд</p></td>
+                  <td class="table__cell table__cell--selected" tabindex="0">27</td>
+                  <td class="table__cell table__cell--selected" tabindex="0">28 <p class="table__cell-text table__cell-text--end text">Выезд</p></td>
+                  <td class="table__cell table__cell--available" tabindex="0">29</td>
                 </tr>
 
                 <tr class="table__row">
-                  <td class="table__cell table__cell--available">30</td>
-                  <td class="table__cell table__cell--available">31</td>
-                  <td class="table__cell table__cell--available">1 <span class="table__cell-text">апр</span></td>
-                  <td class="table__cell table__cell--available">2</td>
-                  <td class="table__cell table__cell--available">3</td>
-                  <td class="table__cell table__cell--available">4</td>
-                  <td class="table__cell table__cell--available">5</td>
+                  <td class="table__cell table__cell--available" tabindex="0">30</td>
+                  <td class="table__cell table__cell--available" tabindex="0">31</td>
+                  <td class="table__cell table__cell--available" tabindex="0">1 <span class="table__cell-text">апр</span></td>
+                  <td class="table__cell table__cell--available" tabindex="0">2</td>
+                  <td class="table__cell table__cell--available" tabindex="0">3</td>
+                  <td class="table__cell table__cell--available" tabindex="0">4</td>
+                  <td class="table__cell table__cell--available" tabindex="0">5</td>
                 </tr>
               </table>
             </div>
@@ -522,13 +517,13 @@
             </div>
           </li>
 
-          <li class="steps__item step">
+          <li class="steps__item step step--second">
             <div class="step__header step__header--second">
               <span class="step__count">Шаг 2.</span>
-              <h3 class="step__title title" id="step-2">Маршрут</h3>
+              <h3 class="step__title step__title--second title" id="step-2">Маршрут</h3>
               <ul class="step__navigation list">
                 <li class="step__navigation-item">
-                  <a class="step__navigation-link" href="#step-1">Даты</a>
+                  <a class="step__navigation-link">Даты</a>
                 </li>
 
                 <li class="step__navigation-item">
@@ -536,7 +531,7 @@
                 </li>
 
                 <li class="step__navigation-item">
-                  <a class="step__navigation-link" href="#step-3">Развлечения</a>
+                  <a class="step__navigation-link">Развлечения</a>
                 </li>
               </ul>
               <p class="step__description step__description--step-2 text">
@@ -565,7 +560,11 @@
               </li>
 
               <li class="planning-countries__item country">
-                <button class="country__dropdown country__dropdown--selected" type="button">Чехия</button>
+                <button class="country__dropdown country__dropdown--selected" type="button">
+                  <span class="country__dropdown-text">
+                    Чехия
+                  </span>
+                </button>
                 <div class="country__flag-wrapper tooltip" data-tooltip="Чехия">
                   <img
                     class="country__flag"
@@ -622,8 +621,8 @@
                       <tr class="dropdown-country-table__row">
                         <td class="dropdown-country-table__cell">Ч</td>
                         <td class="dropdown-country-table__cell">Ш</td>
+                        <td class="dropdown-country-table__cell">Щ</td>
                         <td class="dropdown-country-table__cell">Э</td>
-                        <td class="dropdown-country-table__cell">Ю</td>
                         <td class="dropdown-country-table__cell">Я</td>
                       </tr>
                     </table>
@@ -667,6 +666,10 @@
                       <li class="dropdown-country-table__content-item">
                         <a class="dropdown-country-table__content-link" href="">Армения</a>
                       </li>
+
+                      <li class="dropdown-country-table__content-item">
+                        <a class="dropdown-country-table__content-link" href="">Афганистан</a>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -678,13 +681,13 @@
               </li>
             </ul>
             <div class="step__footer">
-              <a class="step__button button button--rounded button--primary button--primary-hover" href="#step-3">
+              <a class="step__button step__button--second button button--rounded button--primary button--primary-hover" href="#step-3">
                 Следующий шаг
                 <svg class="step__button-icon button__append-icon" width="13" height="13">
                   <use href="img/sprite.svg#triangle-arrow-right-icon"></use>
                 </svg>
               </a>
-              <a class="step__button button button--rounded button--transparent" href="#step-1">
+              <a class="step__button step__button--back button button--rounded button--transparent" href="#step-1">
                 <svg class="step__button-prepend-icon button__prepend-icon" width="16" height="16">
                   <use href="img/sprite.svg#triangle-arrow-left-icon"></use>
                 </svg>
@@ -692,13 +695,13 @@
             </div>
           </li>
 
-          <li class="steps__item step">
+          <li class="steps__item step step--third">
             <div class="step__header step__header--third">
               <span class="step__count">Шаг 3.</span>
-              <h3 class="step__title title" id="step-3">Развлечения</h3>
+              <h3 class="step__title step__title--third title" id="step-3">Развлечения</h3>
               <ul class="step__navigation list">
                 <li class="step__navigation-item">
-                  <a class="step__navigation-link" href="#step-1">Даты</a>
+                  <a class="step__navigation-link">Даты</a>
                 </li>
 
                 <li class="step__navigation-item">
@@ -706,11 +709,11 @@
                 </li>
 
                 <li class="step__navigation-item">
-                  <a class="step__navigation-link step__navigation-link--current" href="#step-3">Развлечения</a>
+                  <a class="step__navigation-link step__navigation-link--current">Развлечения</a>
                 </li>
               </ul>
-              <p class="step__description step__description--step-3 text">
-                Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.
+              <p class="step__description step__description--third text">
+                Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
               </p>
             </div>
 
@@ -757,10 +760,7 @@
                     height="24"
                   >
                 </div>
-                <div
-                  class="entertainment__description-wrapper entertainment__description-wrapper--error"
-                  data-error="Это поле должно быть заполнено"
-                >
+                <div class="entertainment__description-wrapper">
                   <textarea
                     class="entertainment__description textarea"
                     name="entertainment-country-2"
@@ -775,14 +775,14 @@
               </li>
             </ul>
             <div class="step__footer">
-              <button class="step__button button button--rounded button--primary button--primary-hover" href="#step-3"
+              <button class="step__button step__button--third button button--rounded button--primary button--primary-hover"
                       type="submit">
                 Отправить
                 <svg class="step__button-icon button__append-icon" width="13" height="13">
                   <use href="img/sprite.svg#triangle-arrow-right-icon"></use>
                 </svg>
               </button>
-              <a class="step__button button button--rounded button--primary button--transparent" href="#step-2">
+              <a class="step__button step__button--back button button--rounded button--primary button--transparent" href="#step-2">
                 <svg class="step__button-prepend-icon button__prepend-icon" width="16" height="16">
                   <use href="img/sprite.svg#triangle-arrow-left-icon"></use>
                 </svg>
@@ -796,7 +796,7 @@
   </section>
 </main>
 
-<footer class="footer">
+<footer class="footer footer--form">
   <div class="footer__wrapper container">
     <a class="footer__logo logo" href="index.html">
       <picture>
@@ -828,6 +828,7 @@
                   img/logo-tablet-blue@2x.png 2x"
         >
         <img
+          class="footer__image footer__image--blue logo__image"
           src="img/logo-mobile-blue@1x.png"
           srcset="img/logo-mobile-blue@2x.png"
           alt="Логотип Погнали"
@@ -866,9 +867,6 @@
     </div>
   </div>
 </footer>
-<script src="js/header.js"></script>
-<script src="js/dropdown-country.js"></script>
-<script src="js/calendar.js"></script>
-<script src="js/number.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

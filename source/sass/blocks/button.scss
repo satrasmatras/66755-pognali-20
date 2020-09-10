@@ -51,7 +51,8 @@ $large-button-size: 324px;
     color: $special-blue-light;
     background-color: $basic-yellow;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $special-orange;
 
       .button__prepend-icon {
@@ -69,7 +70,8 @@ $large-button-size: 324px;
   }
 
   &--primary-hover {
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $special-yellow-dark;
       color: rgba($basic-blue, 0.6);
 
@@ -113,7 +115,8 @@ $large-button-size: 324px;
       padding-bottom: 27px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $special-yellow-dark;
 
       .button__prepend-icon {
@@ -134,7 +137,8 @@ $large-button-size: 324px;
     background-color: transparent;
     text-transform: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: transparent;
       color: rgba($basic-blue, 0.6);
     }

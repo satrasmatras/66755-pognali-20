@@ -65,7 +65,8 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $qty-button-hover;
   }
 

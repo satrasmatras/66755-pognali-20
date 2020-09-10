@@ -38,33 +38,32 @@
   @media #{$tablet-width} {
     font-size: 60px;
     line-height: 71px;
+    color: $special-blue-light;
   }
 
   @media #{$desktop-width} {
     font-size: 20px;
     line-height: 20px;
+    color: inherit;
   }
 
   overflow-y: hidden;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
 
     @media #{$desktop-width} {
       opacity: 1;
+
+      .site-list__text {
+        transform: translateY(-200%);
+      }
     }
   }
 
   &:active {
     opacity: 0.3;
-  }
-}
-
-.site-list__link:hover {
-  @media #{$desktop-width} {
-    .site-list__text {
-      transform: translateY(-200%);
-    }
   }
 }
 

@@ -72,6 +72,51 @@
     height: 19px;
     width: 28px;
   }
+
+  &--map-phone {
+    width: 18px;
+    height: 17px;
+
+    @media #{$tablet-width} {
+      width: 27px;
+      height: 26px;
+    }
+
+    @media #{$desktop-width} {
+      width: 36px;
+      height: 34px;
+    }
+  }
+
+  &--map-mail {
+    width: 19px;
+    height: 13px;
+
+    @media #{$tablet-width} {
+      width: 28px;
+      height: 19px;
+    }
+
+    @media #{$desktop-width} {
+      width: 37px;
+      height: 25px;
+    }
+  }
+
+  &--geo {
+    width: 21px;
+    height: 21px;
+
+    @media #{$tablet-width} {
+      width: 32px;
+      height: 32px;
+    }
+
+    @media #{$desktop-width} {
+      width: 32px;
+      height: 42px;
+    }
+  }
 }
 
 .contacts--light {
@@ -80,7 +125,8 @@
       color: rgba($basic-yellow, 1);
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: rgba($basic-blue-light, 0.6);
 
       .contacts__icon-wrapper {
@@ -102,7 +148,8 @@
   .contacts__link {
     color: $basic-yellow;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $special-orange-dark;
     }
 

@@ -4,6 +4,10 @@
 
 .page__main {
   background-color: $basic-grey;
+
+  &--catalog {
+    position: relative;
+  }
 }
 
 .page__body--light {

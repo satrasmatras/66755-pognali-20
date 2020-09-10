@@ -17,5 +17,13 @@
 }
 
 .tags__tag {
-  margin-right: 5px;
+  margin-right: 2px;
+}
+
+.tags--card {
+  .tags__tag {
+    @media #{$only-tablet-width} {
+      margin-right: 6px;
+    }
+  }
 }

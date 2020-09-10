@@ -1,5 +1,4 @@
 .progress {
-  --pi: 3.141592653589793238462643383279502884197169399375105820974;
   position: relative;
 
   display: flex;
@@ -7,127 +6,102 @@
   align-items: center;
 
   border-radius: 50%;
-
-  --progress-radius: 20px;
-
-  &--preview {
-    background-color: rgba($basic-black, 0.6);
-
-    width: 60px;
-    height: 60px;
-
-    color: $basic-white;
-
-    .progress__level {
-      font-size: 14px;
-      line-height: 14px;
-    }
-  }
 }
-
-.progress__svg-circle[data-stroke] {
-  stroke-dasharray: calc(var(--progress-radius) * var(--pi) * 2);
-  stroke-dashoffset: calc(var(--progress-radius) * var(--pi) * 2 - var(--progress-level) / 100 * (var(--progress-radius) * var(--pi) * 2));
-}
-
-.progress--card {
-  @media #{$tablet-width} {
-    $progress-size: 60px;
-    $radius: 30px;
-    $stroke-width: 3px;
-
-    width: $progress-size;
-    height: $progress-size;
-
-    .progress__svg {
-      width: $progress-size;
-      height: $progress-size;
-
-      overflow: visible;
-    }
-
-    .progress__svg-circle {
-      width: $progress-size;
-      height: $progress-size;
-
-      cx: $progress-size / 2;
-      cy: $progress-size / 2;
-      r: $progress-size / 2;
-
-      --progress-radius: $progress-size / 2 - $stroke-width / 2;
-
-      stroke-width: $stroke-width;
-      stroke-dasharray: calc(var(--progress-radius) * var(--pi) * 2);
-      stroke-dashoffset: calc(var(--progress-radius) * var(--pi) * 2 - var(--progress-level) / 100 * (var(--progress-radius) * var(--pi) * 2));
-    }
-
-    .progress__description {
-      padding-top: 0;
-    }
-  }
-
-  @media #{$desktop-width} {
-    .progress__description {
-      width: 100%;
-      height: 100%;
-      padding-top: 10px;
-      padding-left: 3px;
-    }
-  }
-}
-
 
 .progress__description {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  margin: auto;
+
   display: flex;
-
   flex-direction: column;
-  align-items: center;
-
-  padding-top: 8px;
-}
-
-.progress__value {
-  display: block;
-
-  font-size: 24px;
-  line-height: 24px;
-
-  text-align: center;
-
-  color: inherit;
-}
-
-.progress--no-level .progress__level {
-  display: none;
 }
 
 .progress__level {
-  display: block;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 18px;
-
   text-align: center;
+}
 
-  color: inherit;
+.progress__value {
+  text-align: center;
 }
 
 .progress__svg {
   position: absolute;
   left: 0;
-  right: 0;
-  bottom: 0;
   top: 0;
+
   transform: rotate(-90deg);
 }
 
-.progress--form {
-  $progress-size: 100px;
-  $radius: 50px;
-  $stroke-width: 3px;
+.progress__svg-circle {
+  stroke-linecap: round;
+  stroke: $special-orange;
+}
 
-  width: $progress-size;
-  height: $progress-size;
+.progress--preview {
+  .progress__description {
+    width: 60px;
+    height: 60px;
+
+    padding-top: 12px;
+  }
+
+  .progress__value {
+    font-size: 24px;
+    line-height: 24px;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 30px;
+
+      background-color: rgba($basic-white, 0.3);
+
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .progress__svg {
+    background-color: rgba($basic-black, 0.6);
+
+    border-radius: 50%;
+
+    top: -3px;
+
+    @media #{$tablet-width} {
+      top: 0;
+    }
+
+    @media #{$desktop-width} {
+      top: -4px;
+    }
+  }
+
+  .progress__level {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.progress--form {
+  width: 100px;
+  height: 100px;
+
+  .progress__description {
+    padding-top: 19px;
+  }
 
   .progress__value {
     font-size: 38px;
@@ -135,108 +109,266 @@
 
     text-align: center;
 
-    color: $special-blue-light;
+    margin-bottom: 6px;
 
-    margin-bottom: 5px;
+    position: relative;
 
-    @media #{$desktop-width} {
-      color: $basic-white;
+    &::after {
+      content: "";
+      position: absolute;
+
+      width: 51px;
+      height: 1px;
+
+      bottom: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      background-color: rgba($special-grey, 0.3);
     }
   }
 
   .progress__level {
+    font-weight: normal;
     font-size: 18px;
     line-height: 18px;
 
     text-align: center;
 
     color: $special-grey;
-
-    @media #{$desktop-width} {
-      color: $basic-white;
-    }
   }
 
   .progress__svg {
-    width: $progress-size;
-    height: $progress-size;
-
-    overflow: visible;
+    left: 1px;
+    top: -1px;
   }
 
   .progress__svg-circle {
-    width: $progress-size;
-    height: $progress-size;
-
-    cx: $progress-size / 2;
-    cy: $progress-size / 2;
-    r: $progress-size / 2;
-  }
-
-  .progress__description {
-    padding-top: 0;
-    margin-top: -8px;
-
-    align-items: flex-start;
+    stroke-dasharray: 250px, 60px;
   }
 
   @media #{$tablet-width} {
-    $progress-size: 94px;
-    $radius: 47px;
-    $stroke-width: 3px;
-
-    width: $progress-size;
-    height: $progress-size;
+    width: 94px;
+    height: 94px;
 
     .progress__svg {
-      width: $progress-size;
-      height: $progress-size;
-
-      overflow: visible;
+      transform: scale(1 - (100/94 - 1));
+      top: -2px;
     }
 
     .progress__svg-circle {
-      width: $progress-size;
-      height: $progress-size;
+      stroke-dasharray: 176px, 52px;
+    }
 
-      cx: $progress-size / 2;
-      cy: $progress-size / 2;
-      r: $progress-size / 2;
+    .progress__description {
+      padding-top: 21px;
+      padding-left: 5px;
+    }
+
+    .progress__value {
+      &::after {
+        width: 48px;
+      }
     }
   }
 
-  //@media #{$tablet-width} {
-  //  $progress-size: 60px;
-  //  $radius: 30px;
-  //  $stroke-width: 3px;
-  //
-  //  width: $progress-size;
-  //  height: $progress-size;
-  //
-  //  .progress__svg {
-  //    width: $progress-size;
-  //    height: $progress-size;
-  //
-  //    overflow: visible;
-  //  }
-  //
-  //  .progress__svg-circle {
-  //    width: $progress-size;
-  //    height: $progress-size;
-  //
-  //    cx: $progress-size / 2;
-  //    cy: $progress-size / 2;
-  //    r: $progress-size / 2;
-  //
-  //    --progress-radius: $progress-size / 2 - $stroke-width / 2;
-  //
-  //    stroke-width: $stroke-width;
-  //    stroke-dasharray: calc(var(--progress-radius) * var(--pi) * 2);
-  //    stroke-dashoffset: calc(var(--progress-radius) * var(--pi) * 2 - var(--progress-level) / 100 * (var(--progress-radius) * var(--pi) * 2));
-  //  }
-  //
-  //  .progress__description {
-  //    padding-top: 0;
-  //  }
-  //}
+  @media #{$desktop-width} {
+    width: 95px;
+    height: 95px;
+
+    color: $basic-white;
+
+    .progress__svg {
+      transform: scale(1 - (100/95 - 1));
+      top: -2px;
+    }
+
+    .progress__svg-circle {
+      stroke-dasharray: 176px, 52px;
+    }
+
+    .progress__description {
+      padding-top: 23px;
+      padding-left: 5px;
+    }
+
+    .progress__value {
+      &::after {
+        width: 50px;
+        height: 2px;
+        background-color: rgba($basic-white, 0.3);
+      }
+    }
+
+    .progress__level {
+      color: $basic-white;
+
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.progress--card {
+  width: 45px;
+  height: 45px;
+
+  .progress__description {
+    padding-top: 13px;
+  }
+
+  .progress__value {
+    font-size: 24px;
+    line-height: 24px;
+
+    color: $special-blue-light;
+
+    position: relative;
+
+    &::after {
+      display: none;
+
+      content: "";
+      position: absolute;
+
+      width: 51px;
+      height: 1px;
+
+      bottom: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      background-color: rgba($special-grey, 0.3);
+    }
+  }
+
+  .progress__level {
+    display: none;
+  }
+
+  .progress__svg {
+    left: 0;
+    top: 0;
+  }
+
+  .progress__svg-circle {
+    &--firsova {
+      stroke-dasharray: 127px, 44px;
+    }
+
+    &--demin {
+      stroke-dasharray: 106px, 44px;
+    }
+
+    &--smolov {
+      stroke-dasharray: 33px, 104px;
+    }
+
+    &--rogovaya {
+      stroke-dasharray: 67px, 104px;
+    }
+  }
+
+  @media #{$tablet-width} {
+    width: 63px;
+    height: 63px;
+
+    .progress__svg {
+      transform: scale(1.4);
+      left: 8px;
+      top: 14px;
+    }
+
+    .progress__svg-circle {
+      &--firsova {
+        stroke-dasharray: 127px, 44px;
+
+        @media #{$tablet-width} {
+          stroke-dasharray: 96px, 4px;
+        }
+      }
+
+      &--demin {
+        stroke-dasharray: 106px, 44px;
+
+        @media #{$tablet-width} {
+          stroke-dasharray: 75px, 27px;
+        }
+      }
+
+      &--smolov {
+        stroke-dasharray: 33px, 104px;
+
+        @media #{$tablet-width} {
+          stroke-dasharray: 2px, 100px, 40px;
+        }
+      }
+
+      &--rogovaya {
+        stroke-dasharray: 67px, 104px;
+
+        @media #{$tablet-width} {
+          stroke-dasharray: 72%, 148%, 90%, 0;
+        }
+      }
+    }
+
+    .progress__description {
+      width: 60px;
+      height: 60px;
+
+      padding-top: 17px;
+    }
+
+    .progress__value {
+      font-size: 24px;
+      line-height: 24px;
+
+      position: relative;
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 31px;
+
+        background-color: rgba($basic-black, 0.1);
+
+        bottom: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .progress__level {
+      display: block;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 14px;
+
+      color: rgba($basic-black, 0.4);
+    }
+  }
+
+  @media #{$desktop-width} {
+    .progress__svg {
+      left: 8px;
+      top: 4px;
+    }
+
+    .progress__description {
+
+      padding-top: 9px;
+    }
+  }
+}
+
+.progress--white {
+  .progress__level {
+    color: $basic-white;
+  }
+
+  .progress__value {
+    color: $basic-white;
+  }
 }
