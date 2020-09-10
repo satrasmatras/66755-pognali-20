@@ -11,13 +11,13 @@
       right: 136px;
       bottom: 0;
 
-      background: linear-gradient(to top, rgba($fieldset-border, 0) 0, $fieldset-border 100%);
+      background: linear-gradient(to top, rgba($fieldset-border, 0.2) 0, $fieldset-border 100%);
       z-index: 0;
     }
 
     @media #{$desktop-width} {
       right: 226px;
-      height: calc(100% + 148px);
+      height: calc(100% + 153px);
     }
   }
 }
@@ -28,6 +28,10 @@
 
   @media #{$tablet-width} {
     margin-bottom: 17px;
+  }
+
+  @media #{$desktop-width} {
+    margin-bottom: 16px;
   }
 
   &:last-child {

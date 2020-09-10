@@ -1,6 +1,6 @@
 .promo {
   position: relative;
-  padding-top: 17px;
+  padding-top: 21px;
 
   z-index: $promo-z-index;
 
@@ -15,23 +15,24 @@
 
   @media #{$desktop-width} {
     background-color: $basic-blue;
-    padding-top: 76px + 30px;
-    padding-bottom: 121px;
+    padding-top: 112px;
+    padding-bottom: 123px;
     margin-top: -30px;
   }
 
   background-image:
     linear-gradient(to bottom, $basic-blue, $basic-blue),
+    linear-gradient(to bottom, $basic-blue-light, $basic-blue-light),
     url("../../img/traveller-illustration-mobile@1x.png"),
     url("../../img/globe-back-mobile@1x.jpg");
-
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center 400px, calc(50% + 16px) 145px,calc(50% - 1px) -79px;
-  background-size: 100% 92px, 192px 255px, 320px 569px;
+  background-repeat: no-repeat,no-repeat, no-repeat, no-repeat;
+  background-position: center 404px, center 689px, calc(50% + 16px) 149px, calc(50% - 1px) -75px;
+  background-size: 100% 200px, 100% calc(50% - -62px), 192px 255px, 320px 569px;
 
   @include retina {
     background-image:
       linear-gradient(to bottom, $basic-blue, $basic-blue),
+      linear-gradient(to bottom, $basic-blue-light, $basic-blue-light),
       url("../../img/traveller-illustration-mobile@2x.png"),
       url("../../img/globe-back-mobile@2x.jpg");
   }
@@ -41,7 +42,7 @@
       url("../../img/traveller-illustration-tablet@1x.png"),
       url("../../img/globe-back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: calc(50% + 86px) 266px, calc(50% - -1px) 243px;
+    background-position: calc(50% + 87px) 265px, calc(50% - -1px) 243px;
     background-size: 382px 457px, 1479px 612px;
 
     @include retina {
@@ -148,7 +149,7 @@
     margin-left: auto;
     width: 285px;
     padding-top: 10px;
-    margin-bottom: 116px;
+    margin-bottom: 114px;
   }
 }
 
@@ -247,6 +248,7 @@ $additional-height: 60px;
 
   @media #{$tablet-width} {
     $additional-width: 21px;
+    $step-item-width: 344px;
 
     flex-direction: column;
 
@@ -255,15 +257,15 @@ $additional-height: 60px;
 
     padding-top: 31px;
     padding-left: 33px;
-    padding-right: $additional-width;
+    padding-right: 20px + $additional-width;
     padding-bottom: 21px;
 
     font-size: 24px;
     line-height: 24px;
 
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 0;
-    width: 344px;
+    width: $step-item-width;
 
     border-radius: 0;
 
@@ -271,8 +273,19 @@ $additional-height: 60px;
       border-top-left-radius: 20px;
     }
 
+    &:nth-child(2n - 1) {
+      width: $step-item-width + $additional-width;
+      padding-right: $additional-width + 20px;
+    }
+
+    &:nth-child(2n) {
+      padding-left: 33px;
+      margin-left: -$additional-width;
+    }
+
     &:nth-child(2) {
       border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
     }
 
     &:nth-last-child(2) {
@@ -281,6 +294,7 @@ $additional-height: 60px;
 
     &:last-child {
       border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
     }
   }
 

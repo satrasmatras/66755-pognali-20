@@ -10,7 +10,8 @@ $tooltip-triangle-height: 7px;
     z-index: $tooltip-z-index ;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus::after {
     bottom: -69px;
     left: 50%;
     transform: translateX(-50%);
@@ -47,7 +48,8 @@ $tooltip-triangle-height: 7px;
     border-color: transparent transparent $basic-blue transparent;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     left: 50%;
     bottom: -13px;
 

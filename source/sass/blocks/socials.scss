@@ -28,7 +28,8 @@
   .socials__link {
     background-color: $basic-yellow;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $special-yellow-dark;
     }
 
@@ -42,7 +43,8 @@
   .socials__link {
     background-color: transparent;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: rgba($special-blue-light, 0.6);
     }
 

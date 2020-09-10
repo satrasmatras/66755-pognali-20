@@ -11,7 +11,7 @@
     display: block;
 
     padding-top: 2px;
-    padding-bottom: 19px;
+    padding-bottom: 18px;
 
     @media #{$only-tablet-width} {
       padding-top: 0;
@@ -54,7 +54,8 @@
 
   color: $special-blue-light;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 

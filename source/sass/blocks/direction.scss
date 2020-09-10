@@ -93,7 +93,6 @@ $direction-padding-top: 11px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  // Без направления не робило 0_ooo
   align-items: flex-start;
 
   @media #{$tablet-width} {
@@ -114,7 +113,7 @@ $direction-padding-top: 11px;
   }
 
   @media #{$desktop-width} {
-    padding-top: 22px;
+    padding-top: 24px;
   }
 }
 
@@ -191,6 +190,8 @@ $direction-padding-top: 11px;
   font-size: 16px;
   line-height: 18px;
 
+  max-width: 150px;
+
   color: rgba($special-grey, 0.3);
 
   flex-grow: 1;
@@ -203,6 +204,7 @@ $direction-padding-top: 11px;
     line-height: 20px;
 
     width: 100%;
+    max-width: none;
 
     order: 0;
   }

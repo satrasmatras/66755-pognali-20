@@ -18,7 +18,7 @@
   line-height: 18px;
 
   padding-top: 7px;
-  padding-bottom: 6.1px;
+  padding-bottom: 5px;
   font-weight: normal;
   width: calc(100% / 7);
 
@@ -29,10 +29,7 @@
     font-size: 18px;
     line-height: 18px;
 
-    padding-top: 25px;
-    padding-bottom: 26px;
-    padding-left: 29px;
-    padding-right: 29px;
+    padding: 25px 0;
   }
 
   @media #{$desktop-width} {
@@ -63,9 +60,6 @@
     color: $basic-white;
     background-color: $weekend-selected-background;
 
-    @media #{$desktop-width} {
-      padding-bottom: 0;
-    }
   }
 
   &--available,
@@ -77,13 +71,16 @@
       font-weight: normal;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       position: relative;
       color: $basic-white;
       background-color: $weekend-selected-background;
     }
 
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
+
       position: absolute;
       display: block;
       width: 100%;
@@ -173,9 +170,7 @@
     &--end {
       display: block;
 
-      margin-top: 3px;
+      margin-top: 11px;
     }
   }
-
-
 }

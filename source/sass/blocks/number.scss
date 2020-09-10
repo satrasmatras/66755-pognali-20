@@ -71,15 +71,17 @@
 
     color: rgba($special-blue-light, 1);
     letter-spacing: 0;
+
     margin-left: auto;
-    width: 60px;
-    text-align: right;
+    width: 52px;
+    text-align: center;
+    margin-right: -3px;
   }
 }
 
 .number__input-wrapper {
   position: relative;
-  margin-top: 8px;
+  margin-top: 7px;
   width: 100%;
 
   @media #{$desktop-width} {
@@ -140,7 +142,8 @@
     padding-bottom: 23px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $special-blue-light;
   }
 
@@ -162,7 +165,8 @@
 
   color: $qty-button;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $qty-button-hover;
   }
 

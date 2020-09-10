@@ -81,10 +81,16 @@
   &--auth {
     padding: 16px 28px 14px 29px;
 
-    font-size: 20px;
+    font-size: 17px;
     line-height: 20px;
 
-    &:hover {
+    @media #{$tablet-width} {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &:hover,
+    &:focus {
       background-color: $button-primary-hover;
     }
 
@@ -108,11 +114,8 @@
 .user-nav__link--auth.user-nav__link--promo{
   padding-top: 13px;
   padding-bottom: 7px;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 20px;
-
-  font-style: normal;
-  font-weight: bold;
 
   text-align: center;
   text-transform: uppercase;

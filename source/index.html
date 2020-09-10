@@ -8,8 +8,8 @@
 </head>
 <body class="page__body">
 
-<!-- TODO: при открытом хедере не скроллится ничего :C(C(C((C(C(C(C((C(C(-->
-<header class="header header--no-js header--index">
+<!-- header--opened -->
+<header class="header header--no-js header--opened header--index">
   <nav class="container header__container">
     <a class="header__logo logo">
       <picture>
@@ -41,7 +41,7 @@
                   img/logo-tablet-blue@2x.png 2x"
         >
         <img
-          class="logo__image logo-image--blue"
+          class="header__image header__image--blue logo__image"
           src="img/logo-mobile-blue@1x.png"
           srcset="img/logo-mobile-blue@2x.png"
           alt="Логотип Погнали"
@@ -76,7 +76,7 @@
                   img/logo-tablet-white@2x.png 2x"
         >
         <img
-          class="logo__image logo-image--light"
+          class="header__image header__image--white logo__image"
           src="img/logo-mobile-white@1x.png"
           srcset="img/logo-mobile-white@2x.png"
           alt="Логотип Погнали"
@@ -84,14 +84,16 @@
       </picture>
     </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню">
-      <svg class="header__icon" aria-hidden="true" width="25" height="11">
-        <use class="header__icon-menu" href="img/sprite.svg#menu-icon"></use>
-        <use class="header__icon-close" href="img/sprite.svg#menu-close-icon"></use>
+      <svg class="header__icon header__icon--menu" aria-hidden="true" width="25" height="11">
+        <use href="img/sprite.svg#menu-icon"></use>
+      </svg>
+      <svg class="header__icon header__icon--close" aria-hidden="true" width="19" height="19">
+        <use href="img/sprite.svg#menu-close-icon"></use>
       </svg>
     </button>
     <ul class="header__list site-list list">
       <li class="site-list__item">
-        <a class="site-list__link" href="">
+        <a class="site-list__link" href="about.html">
           <span class="site-list__text" data-text="О сервисе">
             О сервисе
           </span>
@@ -116,7 +118,7 @@
       <li class="user-nav__item user-nav__item--icon">
         <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel" aria-label="8 800 555-86-28">
           <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-$            <use href="img/sprite.svg#topmenu-phone-icon"></use>
+            <use href="img/sprite.svg#topmenu-phone-icon"></use>
           </svg>
         </a>
       </li>
@@ -124,13 +126,13 @@ $            <use href="img/sprite.svg#topmenu-phone-icon"></use>
       <li class="user-nav__item user-nav__item--icon">
         <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email" aria-label="mail@htmlacademy.ru">
           <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-$            <use href="img/sprite.svg#topmenu-mail-icon"></use>
+            <use href="img/sprite.svg#topmenu-mail-icon"></use>
           </svg>
         </a>
       </li>
 
-      <li class="user-nav__item user-nav__item--grow user-nav__item--auth">
-        <a href="" class="button button--rounded user-nav__link user-nav__link--auth">Авторизация</a>
+      <li class="user-nav__item user-nav__item--grow user-nav__item--auth user-nav__item--header">
+        <a href="auth.html" class="button button--rounded user-nav__link user-nav__link--auth">Авторизация</a>
       </li>
     </ul>
 
@@ -141,7 +143,7 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
           href="tel:+88005558628"
         >
           <div class="contacts__icon-wrapper">
-            <svg class="contacts__icon" width="13.5" height="14">
+            <svg class="contacts__icon contacts__icon--map-phone" width="14" height="14">
               <use href="./img/sprite.svg#contacts-phone-icon"></use>
             </svg>
           </div>
@@ -155,7 +157,7 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
           href="mailto:mail@htmlacademy.ru"
         >
           <div class="contacts__icon-wrapper">
-            <svg class="contacts__icon" width="19" height="13">
+            <svg class="contacts__icon contacts__icon--map-mail" width="19" height="13">
               <use href="./img/sprite.svg#contacts-mail-icon"></use>
             </svg>
           </div>
@@ -200,7 +202,7 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
         <li class="user-nav__item user-nav__item--icon">
           <a href="tel:+88005558628" class="user-nav__link user-nav__link--tel user-nav__link--promo" aria-label="8 800 555-86-28">
             <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-  $            <use href="img/sprite.svg#topmenu-phone-icon"></use>
+              <use href="img/sprite.svg#topmenu-phone-icon"></use>
             </svg>
           </a>
         </li>
@@ -208,13 +210,13 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
         <li class="user-nav__item user-nav__item--icon">
           <a href="mailto:mail@htmlacademy.ru" class="user-nav__link user-nav__link--email user-nav__link--promo" aria-label="mail@htmlacademy.ru">
             <svg class="user-nav__icon" aria-hidden="true" width="19" height="19">
-  $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
+              <use href="img/sprite.svg#topmenu-mail-icon"></use>
             </svg>
           </a>
         </li>
 
         <li class="user-nav__item user-nav__item--grow">
-          <a href="" class="button button--rounded user-nav__link user-nav__link--auth user-nav__link--promo">Авторизация</a>
+          <a href="auth.html" class="button button--rounded user-nav__link user-nav__link--auth user-nav__link--promo">Авторизация</a>
         </li>
       </ul>
       <blockquote class="promo__blockquote blockquote">
@@ -250,7 +252,7 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
       <p class="about__text text text--normal text--small-tablet text--bold">А если найдете кого-то близкого по духу —
         <br class="break break--desktop"> скорее зовите в совместный трип!</p>
       <a
-        href=""
+        href="about.html"
         class="about__more button button--primary button--yellow"
       >
         <span class="button__text">Подробнее</span>
@@ -421,31 +423,36 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
 
       <ul class="companions__list list">
         <li class="companions__item preview-card">
-          <div class="preview-card__progress progress progress--preview">
+          <div class="preview-card__progress progress progress--preview progress--white">
             <div class="progress__description">
               <span class="progress__value">99</span>
               <span class="progress__level">level</span>
             </div>
               <svg class="progress__svg" width="60" height="60" viewBox="0 0 60 60">
-                <circle class="progress__svg-circle"
-                        vector-effect="non-scaling-stroke"
-                        data-stroke="red"
-                        style="
-                        --progress-level: 99;
-                        --progress-radius: 28;
-"
-                        cx="30"
-                        cy="30"
-                        r="28"
-                        stroke="orange"
-                        stroke-width="4"
-                        fill="transparent"
-                        stroke-linecap="round"
-                />
+                <circle
+                  class="progress__svg-circle"
+                  vector-effect="non-scaling-stroke"
+                  cx="30"
+                  cy="30"
+                  r="28"
+                  stroke="red"
+                  stroke-width="4"
+                  fill="transparent"
+                  stroke-linecap="round"
+                  stroke-dasharray="168px 9px">
+                </circle>
               </svg>
           </div>
           <div class="preview-card__avatar-wrapper">
-            <img class="preview-card__avatar" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg" alt="Аватар Таня Фирсова">
+            <a href="profile.html">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x"
+                >
+                <img class="preview-card__avatar" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg" alt="Аватар Таня Фирсова">
+              </picture>
+            </a>
           </div>
           <ul class="preview-card__flags flags flags--row list">
             <li class="flags__item">
@@ -486,7 +493,7 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
             </li>
           </ul>
           <h3 class="preview-card__name preview-card__name--offline title">
-            <a class="preview-card__name-link" href="">Таня Фирсова</a>
+            <a class="preview-card__name-link" href="profile.html">Таня Фирсова</a>
           </h3>
           <ul class="preview-card__tags tags tags--center list">
             <li class="tags__tag">#ЗОЖ</li>
@@ -545,31 +552,36 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
         </li>
 
         <li class="companions__item preview-card">
-          <div class="preview-card__progress progress progress--preview">
+          <div class="preview-card__progress progress progress--preview progress--white">
             <div class="progress__description">
               <span class="progress__value">80</span>
               <span class="progress__level">level</span>
             </div>
             <svg class="progress__svg" width="60" height="60" viewBox="0 0 60 60">
-              <circle class="progress__svg-circle"
-                      vector-effect="non-scaling-stroke"
-                      data-stroke="red"
-                      style="
-                        --progress-level: 80;
-                        --progress-radius: 28;
-"
-                      cx="30"
-                      cy="30"
-                      r="28"
-                      stroke="orange"
-                      stroke-width="4"
-                      fill="transparent"
-                      stroke-linecap="round"
-              />
+              <circle
+                class="progress__svg-circle"
+                vector-effect="non-scaling-stroke"
+                cx="30"
+                cy="30"
+                r="28"
+                stroke="red"
+                stroke-width="4"
+                fill="transparent"
+                stroke-linecap="round"
+                stroke-dasharray="144px 32px">
+              </circle>
             </svg>
           </div>
           <div class="preview-card__avatar-wrapper">
-            <img class="preview-card__avatar" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg" alt="Аватар Петя Демин">
+            <a href="profile.html">
+              <picture>
+                <source
+                type="image/webp"
+                srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x"
+              >
+                <img class="preview-card__avatar" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg" alt="Аватар Петя Демин">
+              </picture>
+            </a>
           </div>
           <ul class="preview-card__flags flags flags--row list">
             <li class="flags__item">
@@ -596,7 +608,7 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
             </li>
           </ul>
           <h3 class="preview-card__name preview-card__name--online title">
-            <a href="" class="preview-card__name-link">Петя Демин</a>
+            <a href="profile.html" class="preview-card__name-link">Петя Демин</a>
           </h3>
           <ul class="preview-card__tags tags tags--center list">
             <li class="tags__tag">#бургер</li>
@@ -665,7 +677,7 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
 
   <section class="services">
     <div class="services__wrapper container">
-      <h2 class="services__title title title--normal" href="form.html">Добавьте свой профиль</h2>
+      <h2 class="services__title title title--normal">Добавьте свой профиль</h2>
       <ol class="services__tariffs tariffs list">
         <li class="services__item tariffs__item">
           <span class="tariffs__name">Базовое размещение</span>
@@ -685,37 +697,37 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
       <a class="services__show-tariffs button button--rounded button--primary button--transparent" href="">
         <span class="services__button-svg-wrapper">
           <svg class="services__button-svg" width="27" height="27">
-            <use сlass="services__button-icon" href="img/sprite.svg#business-icon"></use>
+            <use href="img/sprite.svg#business-icon"></use>
           </svg>
         </span>
         Показать тарифы для бизнеса
       </a>
-      <!-- services__modal--opened  -->
-      <div class="services__modal">
-        <h3 class="services__title services__title--business title title--normal">Бизнес-тарифы</h3>
-        <ol class="services__tariffs--business tariffs tariffs--business tariffs--no-counter list">
-          <li class="tariffs__item">
-            <span class="tariffs__name">Реклама у блоггера</span>
-            <span class="tariffs__value">300 000 руб./пост</span>
-          </li>
+    </div>
+    <!-- services__modal--opened  -->
+    <div class="services__modal">
+      <h3 class="services__title services__title--business title title--normal">Бизнес-тарифы</h3>
+      <ol class="services__tariffs--business tariffs tariffs--business tariffs--no-counter list">
+        <li class="tariffs__item">
+          <span class="tariffs__name">Реклама у блоггера</span>
+          <span class="tariffs__value">300 000 руб./пост</span>
+        </li>
 
-          <li class="tariffs__item">
-            <span class="tariffs__name">Накрутка подписчиков</span>
-            <span class="tariffs__value">от 1 руб./шт.</span>
-          </li>
+        <li class="tariffs__item">
+          <span class="tariffs__name">Накрутка подписчиков</span>
+          <span class="tariffs__value">от 1 руб./шт.</span>
+        </li>
 
-          <li class="tariffs__item">
-            <span class="tariffs__name">Лайки от ботов</span>
-            <span class="tariffs__value">от 20 коп./лайк</span>
-          </li>
+        <li class="tariffs__item">
+          <span class="tariffs__name">Лайки от ботов</span>
+          <span class="tariffs__value">от 20 коп./лайк</span>
+        </li>
 
-          <li class="tariffs__item">
-            <span class="tariffs__name">Ваш продакт-плейсмент</span>
-            <span class="tariffs__value">Индивидуально</span>
-          </li>
-        </ol>
-        <button class="services__close button button--uppercase" type="button">Закрыть окно</button>
-      </div>
+        <li class="tariffs__item">
+          <span class="tariffs__name">Ваш продакт-плейсмент</span>
+          <span class="tariffs__value">Индивидуально</span>
+        </li>
+      </ol>
+      <button class="services__close button button--uppercase" type="button">Закрыть окно</button>
     </div>
   </section>
 
@@ -745,7 +757,7 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
             href="tel:+88005558628"
           >
             <div class="contacts__icon-wrapper">
-              <svg class="contacts__icon" width="13.5" height="14">
+              <svg class="contacts__icon contacts__icon--map-phone" width="13.5" height="14">
                 <use href="./img/sprite.svg#contacts-phone-icon"></use>
               </svg>
             </div>
@@ -759,7 +771,7 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
             href="mailto:mail@htmlacademy.ru"
           >
             <div class="contacts__icon-wrapper">
-              <svg class="contacts__icon" width="19" height="13">
+              <svg class="contacts__icon contacts__icon--map-mail" width="19" height="13">
                 <use href="./img/sprite.svg#contacts-mail-icon"></use>
               </svg>
             </div>
@@ -777,7 +789,7 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
             <li class="contacts__item">
               <div class="contacts__link">
                 <div class="contacts__icon-wrapper">
-                  <svg class="contacts__icon" width="21" height="21">
+                  <svg class="contacts__icon contacts__icon--geo" width="21" height="21">
                     <use href="./img/sprite.svg#contacts-location-icon"></use>
                   </svg>
                 </div>
@@ -792,13 +804,13 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
             Проложить маршрут
             <svg class="button__append-icon" width="13" height="13">
               <use href="img/sprite.svg#triangle-arrow-right-icon"></use>
-</svg>
+            </svg>
           </a>
         </div>
       </div>
 
     <div class="map__image-wrapper" id="map">
-      </div>
+    </div>
   </section>
 </main>
 
@@ -834,6 +846,7 @@ $            <use href="img/sprite.svg#topmenu-mail-icon"></use>
                   img/logo-tablet-blue@2x.png 2x"
         >
         <img
+          class="footer__image footer__image--blue logo__image"
           src="img/logo-mobile-blue@1x.png"
           srcset="img/logo-mobile-blue@2x.png"
           alt="Логотип Погнали"

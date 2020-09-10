@@ -66,26 +66,11 @@
   margin-top: -52px;
   z-index: $map-z-index - 1;
   width: 100%;
-  height: 424px;
+
+  min-height: 424px;
+  height: 100%;
 
   overflow: hidden;
-
-    //<source
-    //media="(min-width: 1440px)"
-    //srcset="img/map-desktop@1x.jpg 1x,
-    //img/map-desktop@2x.jpg 2x"
-    //>
-    //<source
-    //media="(min-width: 768px)"
-    //srcset="img/map-tablet@1x.jpg 1x,
-    //img/map-tablet@2x.jpg 2x"
-    //>
-    //<img
-    //class="map__image"
-    //src="img/map-mobile@1x.jpg"
-    //srcset="img/map-mobile@2x.jpg 2x"
-    //alt="Карта. Ул. Большая Конюшенная, 19/8"
-    //>
 
   background-image: url("../img/map-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -104,7 +89,6 @@
     @include retina {
       background-image: url("../img/map-tablet@2x.jpg");
     }
-
   }
 
   @media #{$desktop-width} {
@@ -116,7 +100,6 @@
     @include retina {
       background-image: url("../img/map-desktop@2x.jpg");
     }
-
   }
 }
 
@@ -148,7 +131,8 @@
     margin-left: auto;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $basic-blue-light;
     color: $basic-white;
   }

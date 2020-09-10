@@ -1,5 +1,9 @@
 .two-columns-wrapper {
-  padding-top: 21px;
+  padding-top: 21px + 54px;
+
+  @media #{$tablet-width} {
+    padding-top: 181px;
+  }
 
   @media #{$desktop-width} {
     display: grid;
@@ -7,6 +11,7 @@
     grid-template-rows: 1fr;
 
     margin-bottom: 32px;
+    padding-top: 0;
 
     .two-columns-wrapper__filter {
       width: 285px;

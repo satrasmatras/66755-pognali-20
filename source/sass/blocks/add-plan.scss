@@ -2,12 +2,24 @@
   padding-top: 30px;
   background-color: $add-plan-background;
 
+  padding-bottom: $index-mobile-border-radius;
+
+  border-top-left-radius: $index-mobile-border-radius;
+  border-top-right-radius: $index-mobile-border-radius;
+
+  margin-top: -$index-mobile-border-radius;
+
   @media #{$tablet-width} {
     padding-top: 53px;
+    padding-bottom: 79px;
   }
 
   @media #{$desktop-width} {
     padding-top: 58px;
+    padding-bottom: 90px;
+
+    border-top-left-radius: 56px;
+    border-top-right-radius: 56px;
   }
 }
 

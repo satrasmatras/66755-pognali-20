@@ -32,6 +32,8 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer
     ]))
+    .pipe(rename('styles.css'))
+    .pipe(gulp.dest('build/css'))
     .pipe(csso())
     .pipe(rename('styles.min.css'))
     .pipe(sourcemap.write('.'))
@@ -111,7 +113,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/*.html', gulp.series(html));
-  gulp.watch('source/*.js', js);
+  gulp.watch('source/*.js', gulp.series(js));
   gulp.watch('source/img/**/*.{png,img}', images);
   gulp.watch('source/img/**/*.webp', webp);
   gulp.watch('source/img/**/*.svg', sprite);

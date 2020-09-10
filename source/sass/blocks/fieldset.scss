@@ -6,7 +6,8 @@
   border: 1px solid $fieldset-border;
   border-radius: 10px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 1px solid $fieldset-border-hover;
   }
 
