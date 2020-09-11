@@ -208,8 +208,8 @@ $card-tablet-padding: 36px;
 
   &:hover,
   &:focus {
-    background-color: rgba($countries-filter-background, 0.6);
-    color: rgba($basic-blue, 1);
+    background-color: rgba($countries-filter-background, 1);
+    color: rgba($basic-blue, 0.5);
   }
 
   &:active {
@@ -220,11 +220,11 @@ $card-tablet-padding: 36px;
     color: $liked-color;
     background-color: $special-red-light;
 
-    .card__like-icon--checked {
+    .card__like-svg--checked {
       display: block;
     }
 
-    .card__like-icon--no-checked {
+    .card__like-svg--no-checked {
       display: none;
     }
 
@@ -240,17 +240,17 @@ $card-tablet-padding: 36px;
   }
 }
 
-.card__like-icon--checked {
-  display: none;
-}
-
-.card__like-icon--no-checked {
-  display: block;
-}
-
 .card__like-svg {
   width: 12px;
   height: 12px;
+
+  &--checked {
+    display: none;
+  }
+
+  &--no-checked {
+    display: block;
+  }
 
   @media #{$tablet-width} {
     width: 20px;
@@ -271,7 +271,6 @@ $card-tablet-padding: 36px;
     line-height: 20px;
   }
 }
-
 
 .card__flags {
   margin-bottom: 0;
@@ -392,7 +391,6 @@ $card-tablet-padding: 36px;
     margin-right: 0;
     padding-left: 0;
 
-
     .progress__description {
       padding-right: 3px;
     }
@@ -469,7 +467,6 @@ $card-tablet-padding: 36px;
       margin-bottom: 10px;
     }
   }
-
 
   @media #{$only-phone-width} {
     &::before {

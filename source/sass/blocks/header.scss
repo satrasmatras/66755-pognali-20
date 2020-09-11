@@ -87,6 +87,30 @@
   }
 }
 
+.header--no-js.header--white {
+  @media #{$desktop-width} {
+    background-color: $basic-blue;
+
+    .header__image--blue {
+      display: none;
+    }
+
+    .header__image--white {
+      display: block;
+    }
+
+    .header__list {
+      color: $basic-white;
+    }
+  }
+}
+
+.header--no-js.header--white.header--index {
+  @media #{$desktop-width} {
+    background-color: transparent;
+  }
+}
+
 .header__image {
   max-width: 100%;
 
@@ -298,7 +322,7 @@
   }
 
   .header__list {
-    color: $basic-blue;
+    color: $special-blue-light;
   }
 
   .header__list::before {

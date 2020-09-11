@@ -56,7 +56,6 @@
 
   color: rgba($special-blue-light, 0.3);
 
-
   @media #{$tablet-width} {
     font-size: 20px;
     line-height: 18px;
@@ -102,7 +101,6 @@
     border: 1px solid $basic-blue;
   }
 }
-
 
 .number__input {
   outline: none;
@@ -167,38 +165,45 @@
   &:active {
     color: $qty-button-active;
   }
+
+  padding: 0;
+
+  @media #{$tablet-width} {
+    width: 20px;
+    height: 20px;
+  }
+
+  &--minus {
+    left: 14px;
+    top: 16px;
+
+    @media #{$tablet-width} {
+      left: 25px;
+      top: 26px;
+    }
+
+    @media #{$desktop-width} {
+      left: 20px;
+    }
+  }
+
+  &--plus {
+    right: 14px;
+    top: 16px;
+
+    @media #{$tablet-width} {
+      top: 26px;
+      right: 20px;
+    }
+  }
 }
 
 .number__icon {
   width: 14px;
   height: 14px;
 
-  &--minus {
-    left: 8px;
-    top: 15px;
-
-    @media #{$tablet-width} {
-      left: 19px;
-      top: 27px;
-
-      .number__icon {
-        width: 20px;
-      }
-    }
-  }
-
-  &--plus {
-    right: 20px;
-    top: 15px;
-
-    @media #{$tablet-width} {
-      top: 25px;
-      right: 32px;
-
-      .number__icon {
-        width: 20px;
-        height: 19px;
-      }
-    }
+  @media #{$tablet-width} {
+    width: 20px;
+    height: 20px;
   }
 }

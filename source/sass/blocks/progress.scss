@@ -113,6 +113,8 @@
 
     position: relative;
 
+    color: $basic-blue;
+
     &::after {
       content: "";
       position: absolute;
@@ -193,6 +195,8 @@
     }
 
     .progress__value {
+      color: $basic-white;
+
       &::after {
         width: 50px;
         height: 2px;

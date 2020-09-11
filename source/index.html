@@ -11,7 +11,7 @@
 <body class="page__body">
 
 <!-- header--opened -->
-<header class="header header--no-js header--opened header--index">
+<header class="header header--no-js header--opened header--index header--white">
   <nav class="container header__container">
     <a class="header__logo logo">
       <picture>
@@ -138,10 +138,10 @@
       </li>
     </ul>
 
-    <ul class="header__contacts contacts contacts--light list list--resetted">
+    <ul class="header__contacts contacts list list--resetted">
       <li class="contacts__item">
         <a
-          class="contacts__link contacts__link--tel"
+          class="contacts__link contacts__link--light contacts__link--tel"
           href="tel:+88005558628"
         >
           <div class="contacts__icon-wrapper">
@@ -155,7 +155,7 @@
 
       <li class="contacts__item">
         <a
-          class="contacts__link contacts__link--email"
+          class="contacts__link contacts__link--light contacts__link--email"
           href="mailto:mail@htmlacademy.ru"
         >
           <div class="contacts__icon-wrapper">
@@ -167,6 +167,7 @@
         </a>
       </li>
     </ul>
+
     <ul class="header__socials socials socials--white list">
       <li class="socials__item">
         <a href="" class="socials__link" aria-label="Facebook">
@@ -696,7 +697,7 @@
           <span class="tariffs__value">59 руб./мес</span>
         </li>
       </ol>
-      <a class="services__show-tariffs button button--rounded button--primary button--transparent" href="">
+      <a class="services__show-tariffs button button--rounded button--primary button--transparent" href="business.html">
         <span class="services__button-svg-wrapper">
           <svg class="services__button-svg" width="27" height="27">
             <use href="img/sprite.svg#business-icon"></use>
@@ -708,7 +709,7 @@
     <!-- services__modal--opened  -->
     <div class="services__modal">
       <h3 class="services__title services__title--business title title--normal">Бизнес-тарифы</h3>
-      <ol class="services__tariffs--business tariffs tariffs--business tariffs--no-counter list">
+      <ol class="services__business-tariffs tariffs tariffs--business tariffs--no-counter list">
         <li class="tariffs__item">
           <span class="tariffs__name">Реклама у блоггера</span>
           <span class="tariffs__value">300 000 руб./пост</span>
@@ -739,7 +740,7 @@
       <p class="fast-registration__title title title--normal">Заинтересовались?</p>
       <p class="fast-registration__text text text--normal">
         Зарегистрируйтесь, <br class="break break--mobile"> это быстро и бесплатно! <br class="break break--block"> Уже зарегистрированы? Тогда скорее
-        <a href="" class="fast-registration__link">авторизуйтесь</a>.
+        <a class="fast-registration__link" href="auth.html">авторизуйтесь</a>.
       </p>
       <form class="fast-registration__form" action="https://echo.htmlacademy.ru" method="POST">
         <label class="sr-only" for="email-field">E-mail</label>
@@ -752,10 +753,10 @@
         </button>
       </form>
       <p class="fast-registration__text fast-registration__text--questions text text--normal">Остались вопросы?<br class="break break--mobile"> Мы с радостью на них ответим!</p>
-      <ul class="fast-registration__contacts contacts contacts--dark contacts--row list list--resetted">
+      <ul class="fast-registration__contacts contacts contacts--row list list--resetted">
         <li class="contacts__item">
           <a
-            class="contacts__link contacts__link--tel"
+            class="contacts__link contacts__link--dark contacts__link--tel"
             href="tel:+88005558628"
           >
             <div class="contacts__icon-wrapper">
@@ -769,7 +770,7 @@
 
         <li class="contacts__item">
           <a
-            class="contacts__link contacts__link--email"
+            class="contacts__link contacts__link--dark contacts__link--email"
             href="mailto:mail@htmlacademy.ru"
           >
             <div class="contacts__icon-wrapper">
@@ -787,9 +788,9 @@
   <section class="map">
       <div class="map__header">
         <div class="map__wrapper container">
-          <ul class="map__contacts contacts contacts--light list list--resetted">
+          <ul class="map__contacts contacts list list--resetted">
             <li class="contacts__item">
-              <div class="contacts__link">
+              <div class="contacts__link contacts__link--light">
                 <div class="contacts__icon-wrapper">
                   <svg class="contacts__icon contacts__icon--geo" width="21" height="21">
                     <use href="./img/sprite.svg#contacts-location-icon"></use>

@@ -119,42 +119,38 @@
   }
 }
 
-.contacts--light {
-  .contacts__link {
+.contacts__link--light {
+  .contacts__icon-wrapper {
+    color: rgba($basic-yellow, 1);
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba($basic-blue-light, 0.6);
+
     .contacts__icon-wrapper {
-      color: rgba($basic-yellow, 1);
+      color: rgba($basic-yellow, 0.6);
     }
+  }
 
-    &:hover,
-    &:focus {
-      color: rgba($basic-blue-light, 0.6);
+  &:active {
+    color: rgba($basic-blue-light, 0.3);
 
-      .contacts__icon-wrapper {
-        color: rgba($basic-yellow, 0.6);
-      }
-    }
-
-    &:active {
-      color: rgba($basic-blue-light, 0.3);
-
-      .contacts__icon-wrapper {
-        color: rgba($basic-yellow, 0.3);
-      }
+    .contacts__icon-wrapper {
+      color: rgba($basic-yellow, 0.3);
     }
   }
 }
 
-.contacts--dark {
-  .contacts__link {
-    color: $basic-yellow;
+.contacts__link--dark {
+  color: $basic-yellow;
 
-    &:hover,
-    &:focus {
-      color: $special-orange-dark;
-    }
+  &:hover,
+  &:focus {
+    color: $special-orange-dark;
+  }
 
-    &:active {
-      color: rgba($special-orange-dark, 0.3);
-    }
+  &:active {
+    color: rgba($special-orange-dark, 0.3);
   }
 }
