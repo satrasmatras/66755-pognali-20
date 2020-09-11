@@ -6,7 +6,8 @@
   }
 }
 
-.expander--opened {
+.expander--opened,
+.expander--no-js {
   .expander__content {
     display: block;
 
