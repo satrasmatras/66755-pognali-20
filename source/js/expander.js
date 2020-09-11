@@ -1,9 +1,10 @@
 const expanderHeaders = document.querySelectorAll('.expander__header');
 const expanders = document.querySelectorAll('.expander');
+
 if (expanderHeaders) {
 
   expanders.forEach(expander => {
-    expander.classList.remove('expander--no-js')
+    expander.classList.remove('expander--no-js');
   });
 
   function eventFire(el, etype){
